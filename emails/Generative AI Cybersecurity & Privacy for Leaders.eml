@@ -1,0 +1,655 @@
+Delivered-To: anush.sankaran@gmail.com
+Received: by 2002:a05:6130:f83:b0:85c:96ba:6fb with SMTP id cy3csp6370212uab;
+        Mon, 20 Jan 2025 15:09:31 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IEo0vF8lBcRe8kKNGE8P8Jna3NX0WFXRsJM/YBmbU6HdtcgIG0ZmabA2qGHisUb73cYrUsY
+X-Received: by 2002:a17:902:ebce:b0:21c:15b3:e3a8 with SMTP id d9443c01a7336-21c355b78d9mr202190475ad.37.1737414571227;
+        Mon, 20 Jan 2025 15:09:31 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1737414571; cv=none;
+        d=google.com; s=arc-20240605;
+        b=lDOmVjnE3cDW8XzVdiNdva6083zVsWxkcQyBRb+5rzJw4lqxKA3fIUCo9wBOLyR232
+         3aHRjONyej4XPoCc0ioEVZwYElHi1rmJmudSl741B5h3pbwhdG9Tn6+lS5rtiKI5TMj6
+         BcbhVjcSMAC2jgUQ2fteRwub+05/5q+CyrdiiGFnNFvIN94YiEk6PxB44KBl1FWlIFsF
+         XOZ5bihSBXm0qBj/4ObmxOXqqrh8iqvNebEZLLjuPqXM724VVinjbzXaEF7sXHfdPEo7
+         DCzO14K4Pu9WzOAWZoH2bQveJh6H7jWQQuff+ii/KfFc4fU9S5z4TrvTltBzflrRMTMT
+         FH8A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=from:subject:mime-version:date:message-id:to:dkim-signature;
+        bh=1Z1koHcv7GnUr5hY2XQFjZ+1R4u7oUi8HNfWmLJkN+s=;
+        fh=y3xtKXzYBBSqO84iLPzdBTM3tMeyJBeQZKn7O+AjBYA=;
+        b=Ztevxym87lEUq8aQvnRzP9UseVAFu8CPfvlUkr/YkXUkTuk2v2uQ4ecT7exq128QnA
+         1k5HvRs5SG2F6jxRgi0SyOfQNWMftE6HAfnFP2ZffcA/4DGX3q2TFJSlf0QdwWnvDNPg
+         vcPmxTWeMDHcTLEIrUHstbyS7nzMhsZ38KIouL9HS9Fw8qJ5bDoUz3i2MNDUMkMQRNxa
+         PpHccrVWL8jIU9FPvTVG9jbiJbbz9WbIUrvkQNe5JxLvNRr5OlTFAhk5OndVW6oB1SGb
+         1M4r9bHW7ZK6orO2BqoIgzUbM4JgbebYs8lZt+Bay/u1qV93U8EruP+s8vAz1COIoyBN
+         WyZg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@t.mail.coursera.org header.s=scph0616 header.b=t7rU286c;
+       spf=pass (google.com: domain of bounce@t.mail.coursera.org designates 192.174.83.13 as permitted sender) smtp.mailfrom=bounce@t.mail.coursera.org;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=coursera.org
+Return-Path: <bounce@t.mail.coursera.org>
+Received: from mta-83-13.sparkpostmail.com (mta-83-13.sparkpostmail.com. [192.174.83.13])
+        by mx.google.com with ESMTPS id d9443c01a7336-21c2d3ad0e2si105829055ad.228.2025.01.20.15.09.30
+        for <anush.sankaran@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 20 Jan 2025 15:09:31 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounce@t.mail.coursera.org designates 192.174.83.13 as permitted sender) client-ip=192.174.83.13;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@t.mail.coursera.org header.s=scph0616 header.b=t7rU286c;
+       spf=pass (google.com: domain of bounce@t.mail.coursera.org designates 192.174.83.13 as permitted sender) smtp.mailfrom=bounce@t.mail.coursera.org;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=coursera.org
+X-MSFBL: 0Xs91NI7NZm2DtUsPRKwIevaPfgr/Ah6Tcw70WX8INI=|eyJyIjoiYW51c2guc2F
+	ua2FyYW5AZ21haWwuY29tIiwibWVzc2FnZV9pZCI6IjY3N2ZhYWQ3OGU2N2UxZDI
+	wZWE5IiwiY3VzdG9tZXJfaWQiOiIxIiwidGVuYW50X2lkIjoiY291cnNlcmEiLCJ
+	zdWJhY2NvdW50X2lkIjoiMCJ9
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=t.mail.coursera.org;
+	s=scph0616; t=1737414570; i=@t.mail.coursera.org;
+	bh=1Z1koHcv7GnUr5hY2XQFjZ+1R4u7oUi8HNfWmLJkN+s=;
+	h=To:Message-ID:Date:Content-Type:Subject:From:From:To:Cc:Subject;
+	b=t7rU286cuI1t/bzQU5ym913FsGBOKPQZ6aqWd5LDWpdr5mj9qH2xsUuuc162wKA9o
+	 QXsAo7+B1uDxjXlABRg1QBGn1HIsGm1GVQsIQHUVeoY6F1RzJykhytwaZe1362ushN
+	 Vt6ZyGUIhD6U0Sf4UgIg3D86yAuycUo04CF10QLI=
+To: anush.sankaran@gmail.com
+Message-ID: <9A.E8.53892.AA7DE876@i-0ce2304cdf1c24af3.mta2vrest.sd.prd.sparkpost>
+Date: Mon, 20 Jan 2025 23:09:30 +0000
+Content-Type: multipart/alternative; boundary="_----s7QV9Z4kd2FHdY/DhI2EfQ===_6A/E8-53892-AA7DE876"
+MIME-Version: 1.0
+Subject: Generative AI Cybersecurity & Privacy for Leaders
+From: "Prompt Engineering for ChatGPT" <no-reply@t.mail.coursera.org>
+
+--_----s7QV9Z4kd2FHdY/DhI2EfQ===_6A/E8-53892-AA7DE876
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="UTF-8"
+
+Dear Anush Sankaran,=0D=0A=0D=0A=0D=0AGenerative AI is reshaping industries=
+ at an incredible pace, bringing with =0D=0Ait exciting opportunities along=
+side questions about security, privacy, and =0D=0Apotential risks. As a lea=
+der, how can you cut through the hype, separate =0D=0Afact from fiction, an=
+d harness this transformative technology responsibly=3F=0D=0A=0D=0A=0D=0AWe=
+=E2=80=99re excited to introduce our new specialization: "Generative AI =0D=
+=0ACybersecurity & Privacy for Leaders=0D=0A<https://eventing.coursera.org/=
+redirect/eOkJLAMk_s-GNMiqNDBjiDneZKSouf7pyfyhwcuotjuDnrKIDwLLq0AEa40hfHtKhz=
+D1AhpDIkdC-8qBk5jRkg.l0bLP8dhAdexT7XZA7roHQ.knTcxcqBqrIpzXnY-04JLTp5AO0EYvE=
+gRO76NN0I1lLaVeAbTBsRY6WYozqQlB6nzt0fLdEkfQL7TJUdVukLV2AN9bxO7eOCUSqxaoPsw8=
+KGeoIaA3_2yfpQcVDk7Cu3bGvzoEHr-94hPGbOw4QXy7Dug1f_WmssAhc3-BFNSI8Cy7tnGjMHZ=
+qA5KpXEzHoLQb3xQLubA2s6ftCd1BeG9xzIYfqQMmeaunt1K3GeIPAdTo555NOiZB7d-HSi-vD3=
+TZ9_uZt-IN_Q82UmvGENdZcH9knrd768i9rEh6cHipVJ8ivGA6JTQVmdw4xgWwx7HZ3gTlEL0N3=
+xecbLdYgxQOJntoPA3NNP4KKHz9q9DQE5K0B7T1I8KjiQFuov-NzjXWd1_o2K6PUsLP7vsDtvjr=
+wi-heMkgo6pX3CvW-8vLm6T8ffh72pR6cyRkYP1lT5UHtFt9Oa0JVRPIEAKYj1G7GqmXJHcg3Nu=
+KUt7wD8IF-JWk1eTo4CrgHSHwx7JHjCQwhpmRXy6ZhuH9nwU7GXUi6vXyjnMNDLb4RHnaqJM2qe=
+96Blt_1wcQ_O6AkERhjFSRygG53kTTSia3lZINVNfrft3vmEWLxgLIASRvPzzoTEecZENFJb2iV=
+StMDsH-LlR6-wvVmjotfSTZTNlGfOHFPzmcZ7TdC57VfWoSHXjg6wb6Wu57EgMt6ylgWqrVnxCN=
+p8ApdPwzcnknjZpIWriqLTHsgvBbX52Hip2LClR8c> =0D=0A."=0D=0A=0D=0A=0D=0AThis s=
+pecialization equips leaders like you with the knowledge and tools to =0D=
+=0Aaddress AI=E2=80=99s unique challenges while tackling one of the hardest=
+ areas of =0D=0Acybersecurity: improving our own practice.=0D=0A=0D=0A=0D=
+=0AHere=E2=80=99s what you=E2=80=99ll gain:=0D=0A=0D=0A=0D=0A      * Clarit=
+y on AI-Specific Security Issues. In the course "Generative=0D=0A        AI=
+ Cybersecurity & Privacy for Leaders: A Primer=0D=0A        <https://eventi=
+ng.coursera.org/redirect/WoaWLJdWrcHT7bxj5qIX4Nr3xLQOOzoa1WETzhSpoQs3lTN2ew=
+6414D-fgnrvKb6ULGsmsnsDQ8ss8OpJ_VsJA.LHATE0AtPqKGQqerIJyuWQ.yjP01ExfuQfcOMK=
+7EYmO2XbcctQyhAVUN59b9QxzgSFyGxNOdbo5_HMtb641-lxcfbMo5QaS49nyzwzqCXigFdLqAD=
+BMnNGqlG-wUrf2al1gx4q2kuUQLGGALWIIjMpONBUyMBssGz05YpLoySlHpgmv5-CRiNZk7FmVP=
+wz8k2gBhnDdbovfY6xQery1y7fPtP_omYFtN2rIJjQTZVg3Xr1GOn4ONDQcD3H1q1LsP2pQIIzZ=
+huLha60bqIZwGX5eb1hV9J19LeEXZpvuj4CQw6oZ3NGKiMtOsDZ-lhJZEjJqLhVOxlW7PeQsjBW=
+Sb_oZTTgKUscL7Cy9jzsuKJKBxUbPNMTF3rbjX9Ih4oHqon6FOCInxQoS268bbW-iZExdn71FP9=
+voI8pvyj_ByjLGTD6iy3Cwy1ykxJCcz-wclEdATMDGOyIB8Ewh-nTqY9GFub65GtrFl6ccwa-nk=
+pAbD0v4pNUBJIiqOi9Eb0bG38m5gOBKEvpND7jMAY2t7KlVXap-ZwYpESVRtc-mm2a03BGziUUH=
+lIqzMtRnZgjzHACt-JkOmqD5eSNnua5g3eNwX4Ol8dXNKod6Wcha4t-tA6Or7eJx9J2wa5XIlc-=
+oksRzWnuzyaZaCwFToL9zzDKjfKjKYc-0eUuB_mg-Trw8g0kFAcaM-YoH6GWbo_xF8s9gW_dQaZ=
+AfxTnwUXC3tfpug8MMBFdMLU29wGfTdXuY_Q> =0D=0A        ,=E2=80=9D we explore t=
+he real vulnerabilities of generative AI=E2=80=94like prompt=0D=0A        i=
+njection and deepfakes=E2=80=94and how to prepare for them. You'll learn=0D=
+=0A        to separate legitimate concerns from overblown fears, empowering=
+=0D=0A        you to make informed, strategic decisions.=0D=0A=0D=0A=0D=0A =
+     * Proven Tools to Strengthen Cybersecurity Preparedness. In "ChatGPT=
+=0D=0A        + Cybersecurity: AI-Powered Tabletops & Training=0D=0A       =
+ <https://eventing.coursera.org/redirect/th6qIU8LNmJOTvu7Lfla9oiCgYFMcq4eeF=
+tesuXa9kaOQKCbj4ak9l0OyyEUJcGcseqqF_qfrAzpCsCmUo8hAA.dsdDkcKEra9EGu5evlwNhw=
+=2EuyAqlmkjUMTtoG7CfHVJV_3ffLekl4Br2Q34Rvj6OOwb2jTKwl7GqU1jvbPeYXBXcZ148hqH=
+gI53dqr2P9oBk4_gh9H27__9zJD7ggc-0Fe9Ph0gqRh0B6N30FyML2T4DfJb6DS_6oKJ72CN-IG=
+4xBRTtmJkidITBssVSOK5AVYaTWn5l5zeDfmrk9vG4qrjBqxGqzgWuRKzMBgrg9a75esaq9tgkI=
+ka_GM1HY9Vb2ajN4H-JWWIviKbf5heA9Xc7VXQF5flrL-6eqPpqtQRjnBHGAuHLiukonK-ZD1rU=
+9UuPsNcRnUZhYSDlUDYJlsjwT8KTzG5nt7dDWWKpCZmxh8OGQJjscYAanEFpN08HyK9qHH8CEQ3=
+eK6PP-MzIgnctMOiydXluonjeWVjVUSByRL9koJRZzjTNJ4dkCCzTVJ8ft0gumvBDIBqgVC0Q61=
+QYbHd7uJ1haOvuwcE-h9PISfmLq8eKn8JDB09BnE-d2rh69zsgPa7NpsudqYg8ghCXZcx8tVpIW=
+mCYk-Pffp_1oMIcZ-WwfT3maqG7AwlAw74IvdG7mQzWGX6Kyc5fowbFQGSnyJfQ7O-zEGKr6iH7=
+3a_iyKiaiTZReoaKORl-pJ1wqjiGk_QsC7lZYLKoqaV6s_nPdTBX8udiYD1JgiCC_AxwSa7XE3U=
+N58jrhTYC1h6qHKx2F3c6DjGmb-c_AptHHCp0F9J2rsvMl253Me9iw> =0D=0A        ,=E2=
+=80=9D you=E2=80=99ll discover how generative AI can enhance your=0D=0A    =
+    organization=E2=80=99s readiness. Use GPTs to test your cybersecurity=
+=0D=0A        posture, uncover areas for improvement, and create opportunit=
+ies=0D=0A        for your team to practice more often with AI-driven=0D=0A =
+       Micro-Tabletops. With hyper-realistic, adaptive scenarios, your=0D=
+=0A        team can train for real-world cybersecurity challenges more=0D=
+=0A        effectively and frequently.=0D=0A=0D=0A=0D=0AWhether you're just=
+ beginning to explore generative AI or looking to =0D=0Astrengthen your org=
+anization=E2=80=99s overall readiness, this specialization =0D=0Aprovides t=
+he tools and insights to lead securely and effectively.=0D=0A=0D=0A=0D=0AJo=
+in today: Generative AI Cybersecurity & Privacy for Leaders=0D=0A<https://e=
+venting.coursera.org/redirect/NMueJGCii1pWATL3t0ZLrUuCRuAeT2cfF33bJh1znVVoK=
+2ChSAAsY5_IXHQ49UM1zWgW_-BnqpZH-XY5Zb45WQ.9aDCgQUMkTzMIiaxoW63gA.koAR6ba-oE=
+PD4bJdZPUWtQJ5LqKJQZl03fhRzvjcvSvUWoSE21n319Onzan46xiw4T9qFWw-U_Z1wMEzoQF7g=
+ZaYBNja6927RmNRwG_sTDPozV16bOAnRffxpcvY8n5gRtDDYlBb3ezQCYc-ZMdx3hT-4AmZyleU=
+KoF22tx4JtbxtG3sHsHaN7Nxej-N7JpgAZXOBgx7X9rgwmAgTKH0B5z54Bamz9PBDhtyEftWz2j=
+_rUQ3a_bMP34a60HMr3cmYUQ7Yy4vvv_Yt4OnBX32L1uhKEV82rx7TLW5T_3jFPiD_XVY9dIGpw=
+XQisOan0lC7y7L8w5wFyQIb4HeKD0j88fEsibaFkTTs_ZMZt1lBHLLvg9GrYwzWb-L92MuA3Lfy=
+eKusgXR-tV44Q0XEWsNFCkEh-0YdqSN8_DOIqjgWIT4mjUEnPsZ_byvIAs7G5muiW7CGbziJjdL=
+Kr8cprOJfwdAvPUS_FQDj7Bixmx7mH86Av9gN-1yeG--cfYr9PmTw-WBmX8LaTqp6wGnQ9AtLEI=
+7WwQmQLVxHlWYbxIWdb1EgQsZLs0vPVcNp1oRifDpxoFvNMhEAPg1-TuqKDhmRURAhUoJvsMT0z=
+5PmHuejBBvgfVTNxf29GlYAy9fu1BdG3gDhImkIraeJ2m-aCBlvf8BHnOzVb9wOLjFibi6r0Xth=
+yo2EfzbmPSO-4Of309_sO7poxBszrojGfXTUbjvu_EFp_gODSQ9nRoPI-8WW6Y>=0D=0A=0D=0A=
+=0D=0ABest, Jules & Sam=0D=0A=0D=0A=0D=0AGo to course=0D=0A<https://eventin=
+g.coursera.org/redirect/1i5q5S3wy52VAMX6OKId2uBqmSHLcuRdbWAcEF58nwJbwLOkxt0=
+KI_ia_snnCBQqrWtUk5mORZDoLBQV0pjLDg.A6UswRm3eDlt_3_2odNIDQ.XIu7mAeY6Lwu-A-Q=
+HFJHx4xjpMkVU6-dH4ZyUF3FSxeMH6a-kbNGx_qQNgaJNuCfTzp3WwslXpOD35kOvR1BrM-8GoO=
+3IyHmj1ljiGUTdiTOUa0IWZWVmEpiZSo8HA9ZvprZyyvaCWOdO7D-_i9L-F_kLs4Vnw75Ta7NEP=
+e6_cBOWXNVXDxKfc5-cyEnW9AJxLwA0BEJWYRtUMSkj5YxhYAmimQllYvI5JogFMe52nKCLnXbP=
+V7tgF_vyLyQWvSsMSzOba2Xrx5gxIxg5wqeKh09pEcMDxUrTvS06XaZC9yvlqHSLVty1Xt7YpM5=
+Tf-SCHJnLkqxADFi3f61IvqSTTbdzy20AYCHb7b20S6_eubPAwUrtV7mEByL9-YpR2-p0HDedI9=
+TPb40BV0O362kUNLABmqePRf0IgyPQ3QPOQjUK14axZktztGnEF46_4fhsu0DG4G29KOmeqFeyL=
+0Pg0LPt90BoSJMl2w2OBrwLBP4KZuyR6F9rT9wV_taDiPueikJTRdIFeSlv89kzGpeoNdVtq5tr=
+nQoifI4-sIa8gHdSzIw5kQkOxfKcSirht_vhW5dNIaVBoECYULf3Ow4D4ghZFSlj-aqtHeU1863=
+g6UX31MlYk2zul6Ohlxt05pS3eh1_5bt1h1jIuRi5nnh7Bn3yuGShH0m38N-gY7NLtF4tjXlMsE=
+viveOYOjOBEhYm693mMCj5wW7KkBb2NnNvw>=0D=0A[ Coursera ]=0D=0A<https://eventi=
+ng.coursera.org/redirect/5c4N4vMd53I6BMBTo2VjAtCnKigdmkFoeqPtLX-2ZrnXx1uiwC=
+MeVk_Fao4UeEhGXJ9CAGxX1Bj4z1GH59XFqg.5JuIbv4BjkGzC8sfv9j8nA.9zP3Pon2ISw6I41=
+BncFgFXEGMBz-WNT-wYGMB71y1VBrg1TzcBGwcnvXqNly3PQ1uecjusVDuy4xIPWvUyjHs_-kwI=
+eIOuxiHA6df1CC0hFSAYp9L2baVTcRepKxcFTN8qQ8jUvQyeSw4jo7lWlY5POjYV1QZmWMUXapD=
+Io-J5gOVK4FmspeZu3fLjQcA_UjBh6YkMsDaoIDRyzUzJ0_TLbO9cDui31Kccz2ubZTpnLrcPcD=
+sC7hNf_c-r0yCRCSpr9NjoT8rt-tQqpXFUcSYXxROTOTquPM0rUpnVN8FNU_0ufPQmzFtxCR9Fy=
+19cA3yblpEokOn9sHP1JGffy57Z8a8CyxdKcEa_Jw0vGH5pvmm-ty9zNPOqin_onlgZt4ulafda=
+Gb2OQ8gn5WEUxWH3Qcy8vy8v5U-iEzkOzN_MhhUp0B-BFGKlP6CJ2-8AA_9O0dck0nVkf-E4_gI=
+8MjnmjNmO5tjX_Ey98nV7Oo7uY9Gk3QM5FQw4PJoJVcC93JSefyKHWtjajQTZcqMWHPjyhrjjG1=
+PsIxEtgLl5rDzGalqYNVnzwFBPKk1G_Kz__b4XFtXUag5b05uMbdBxdMYL4Ky2QdlxeVFntN3fz=
+CLzjepx4WLABstgptMd-X37J2GkxDCL0gF3nOlYDTsKGi_A>=0D=0A[Co-branding logo]=0D=
+=0A[facebook]=0D=0A<https://eventing.coursera.org/redirect/7I-4SLXO68KaOn-H=
+p2pxRAe5OXb9LDVgeGw6HNxWFSmtEKGhuMHQ9q-okkULs0V9k0BRpEkmCO8Mmx8vgzDbtQ.RKsD=
+YhSecxfRzhHcDuWMbw.vAQrQxZOztxp6xYYCKFb8_KpOHlUhFf8aMWNdUiVOLD3qh728tQDdUnM=
+mT2fQrzgin01wwUSI609FixFUWWzR9fJhQfnIRqbvfYTz-QxrZpYxsZNLzJStCQ3-twnLEcSrX1=
+JrtUQp9SedO5a0YDjIhEdN_dahKf1LJHOU5qGkipFDJMbwAs91j1M2w_XO8tE38dTg7plCpc1EZ=
+M25PcKN3yBHNOsgcyXhm-UdwZmBJk1iK2aTmnGifkK51b5z8YMBFJyBiEfI58GyHjTK1ueaO3GA=
+IPvbeL5r5iE0SpXlOvd1tVU4Nfmh_y6a3XUXjD4MIghaLImVxVp-TDKzWoFFn5OMemqJ4YXbjgV=
+efrIu7RvmX5pRVLy_M6cuuR_a7Q6HXtkWrsf9bmiI1hD8mctQs3HWIx6YkjJwK3b-wTj7snuhSt=
+bDWrIb1qdYbkoJ176-asJL3S0I6T9Q-kp0qhKJj9sPo7Z_dWECFl8PkJE6BImLkO8a1S6HNnf3-=
+MN1ZKuTNuDiQuib_DJ1tiZdLIit3ik70GBmRujEd1_Af0Pq4TbyHqAmcUXOICZpcx9P-xPI5c7q=
+X7evC3rMZ-SHV0cfxTsTa6Ca5Kx87QaDbhXKMJGq858nM_EVeTDv0UjobKxTHv9DrOuy73o7T-w=
+yvV5NYRF2zv9PIYOmxB8S7XQtFo> =0D=0A[twitter]=0D=0A<https://eventing.courser=
+a.org/redirect/MBNggJGS4i0igvyRwQ_SToCxdEvM4AqsHAzDUMwOKc3DRK67XFan13rUhOXJ=
+EGmTAbNAjD-ZvWmTQm1dslTdBQ.f6mec8TqliCQTqEHmXTBqQ.D9pgpykv8KGExR_QNCXyFqOUx=
+4fjjkcAbSG1Sw9BcobIsIpnxP1ajHVNGn5jmtLD_4BFJXd6rMmdDG1YZgiozfrN4_lEmFBiYKhz=
+OvS-xU1P770zs5Ch0Uoj2FtBhmqLGNxscgs0XckIkMY82V7SYUFd7qjR-rX6ZFVLefW7cssW09P=
+SnaZNp8i76jqNf1mxAz380EVP_yrXcfoDoLNOXGtFmUwzNW6Gl-YltUHpQ1rISo-GCm_9Xh0L6Y=
+r65iOPKzF6UUocRL70SuI27W46YQoNpy6R40qRdWKeBwZGTN3yYR_3lr54sPHoqtH9EqHVl6_IC=
+qHDeUjumZlYKnY2iqDC9-1qscS9Qj55winA23PJKY0F66Is_iqer2QZMZ-BH8SrumwaNga4yX_F=
+SSF4dy1K09y4svTLVgb-fVk1Fk_5Vfp6JgHr4kjHMXUktgC1bNO_RD-RFx0v8tbbEaZZ_9eMn04=
+HWrvM8rsAQUxpeFa0tnq6O7QtbdKdAEGK-4Q-rYOlEa1T53nywM1ZnycRoVXinmShnM2zWJAKub=
+6Gr4RtaqK2KYaLhmQbv6-2KI2zElqRG06gTAZ89WQUI-AdjcufRmaqW5T6ekSWxdO6Wme4oc3Ey=
+kBHgTWJ8NNgLO7ZFLpR1poSLe_Q67Ng3Dn9gp40_gImCial11vk99BnhBo> =0D=0A[blog]=0D=
+=0A<https://eventing.coursera.org/redirect/0Yo0ICUPrGERob_Mqnh2a9hDCIvR2-d4=
+SR3r65YjscdqFt0SrMLddWZabxgjn_cUOA4W_U2laajVmuiUxnZP2g.kfURZ41Os47AnA_35zW_=
+qg.8OFkzgJvNqcWZrtqFuxcPIPQWnp-JEEhVzA3m3RodCarkJSL8spgFlvuIWk3ZHi1wy1tH592=
+JxP8i8GS9zGD2hUkm6tuM2op1ARjDJUejDdHUjahR-myHjiO2wC40yMVA-86gNdwpiZ0ZHRpCTZ=
+jU8OP0mrTH7lQff9CZyZyaKLhConZhRR_qUP7W8O4tcKKa4FN7UpiGYdP2fUS9jHcr5wROGFOgj=
+7Pl5qMsozivykCUd4_E8GllUjbE1cI4l45m-PIB9qgPM6C72my8yqWepreqjgm_1MsLxTXYoo3t=
+aMa8Uaqy41fHxP3Se79u2HTVUwBxUDtz5DgmRdMa7J9ncTIEhqFwvzOxDR6KVOl5VoAqpbmw5bz=
+os6oDi6-3enGGTGZWlxeJAkYi5EKg0mRanYZWe3yd8OEIGOAZfyuVDoz9vDStXmwyqTQk-ah1wq=
+WAboTwZ5OdU8L4JNyGfs2WKfRDK0a8S06zRN5z_CDPu-x0bEYKvqwWtrnu1AAkk70sOFM6I_fZh=
+SIkwfzwfspR1YAjyODAwD8VyVyLxU-WUqtZjlA5nCz5_XcSUVay2Lgoe269xT2vbHlGbYIyIvPD=
+_v5dyo_4IHHRKx9xg9pws6JLjecfBsKZAUzal5tDLM591pAcWjad8zMOQoCpOrKxw> =0D=0A[b=
+log]=0D=0A<https://eventing.coursera.org/redirect/RituyZ2iUiRo68bXpiPUz04uj=
+mm4mDivRwj8cLzWCm8bjdXA1Xu4XQnskwf-b7V_q-3roGeBwJ1l8wzlLRehWw.4r6unl8Jjep06=
+J7hV0_RTA.N8yiRbCWbvx_iXMFnf-Nb-BS3fR2toHWZBjI8tjPWzZNh09TWXnOLjQ8xB9dx6tBp=
+kzwi-YE03a3chho-3AMWW4N4rA3XB9dvOz1jocGu0pXnx6-VCwwpHnanpxr6n60owmLgS69n5r8=
+GdMIQW1gJw0nXLwaJVc3_pX8leMrHElPOWvMyQR36piOtnybSily7MiY1xdtYHx_AlKF8yRzG8W=
+EveL1y3d4Ivq0_OkwrKG5oktaUsgcSx39yLirrnVXHmToMY2jJ0fsxqSsgk8twXFGuTBN_v1BKL=
+fcnuxL2LyH8v-U-dUQP95BihCHfXEQkljBs9iy8Gys_I3Hd9g22fw4_657QBAwehAmefgDpHYfh=
+n1V5yHRJPjCWdQ2jsyux85pJ1HlXyJn2PXDlvf8t6Gi5K012msOC_UhsdQEMKe3eDXvZ4iAVsYw=
+uEagy8z_miw15KSNLHBIYBvvRxjLu7cA9GOtn3wGa5Ezm5_zfXnBULtceX9EscD3CVrxmKNEsaw=
+pAFxUU2cbVLZrAJFqlWMuUvYV0lNXVsetnz4chDlViAU4nYyhSzx7QtFdCv1BNgNvrYM2_WhMyC=
+v_3YRIBfMRABTOO8R5ttFl7QTZTOCDdXaHni0pjRSEqnSD4y7wKsir5FLh9ipVWZUOWnBpXlZ-F=
+alik92J3eCGTbLMEe1pw36502PSBxoIricP8IJN>=0D=0AYou are receiving this email =
+because anush.sankaran@gmail.com is registered =0D=0Ato the=0D=0APrompt Eng=
+ineering for ChatGPT course at Coursera.=0D=0APlease do not reply directly =
+to this email. If you have any questions or =0D=0Afeedback,=0D=0Aplease vis=
+it our learner help center=0D=0A<https://eventing.coursera.org/redirect/q1D=
+495qi74qPGEhXi2qiAP21nWhlqTl0__rkR0nQjjSyzko3skCyJ5huELBo93BF17UTgwzGaptbg_=
+D2ccuavw.at-UouwWiWGiuM7mLAtolQ.ONNnOW-eND2CHt68fAJg9CMeL1BEOEvPvO749NSNhu2=
+jbjmh7cy9UkpRWcFOkg4hfFZjy9B3ohM0bZc8WBdu2awIVnyP9LzfCxHyxLdz96SDjBzCe-xSJU=
+A0IAeCZbCppm1-ohhgFIfiBHdWZv5iuLAYXpIc6CTCj2G2HvVTelwdHKWQMyP1BTgAHrGy_e4ne=
+oIWMG74ILMmifwadRRocRo4Ceg0CtWOHH0tjf8kUjakwjVEuDmVL3rXH_l93-_pkBBwiBr9BakX=
+9nC2CnpkeJe4l9UHR1lxlSwsK2U4WHFlHqX0E5KT_6vqP31XVoYH_IJVQAUNc3joCnl4GHcEe6j=
+hNGtM-0ree0X2zOdkWMhc0fIIwV6v_jwblMQKBCEvGTxZO_vJU6adjJa3Ub7nQvHqJKFq8Da-Eu=
+NYGE8kIPCMlat46qocX76zA9g-noj-ZSfJ4-Cq2S3Shrt2PXibPRZhrsHR6z6h2H-25ViP0fP2a=
+O-DOJ08F4Kd3cXwwGglsOFdjTo2k14Vlt3RzjVxvJsJbSBZx4IMaxbXfsys6dRF6DwbPvYHrXc-=
+yCmEn2ltangDC0PeVsJio7Z_nqHnaRUoOwuIFtGbvTudhBYZK_Eyl4hNGenrafFwBfPjpmtnUxB=
+RQZYpJ-oihJO9BV27PZ0lDSB7FTlGfj6RgI9Of3lBFj7Lz9kv5qlteXBxw1d5> =0D=0A.=0D=
+=0ACopyright (c) 2025 Coursera, Inc | 381 E. Evelyn Avenue, Mountain View, =
+CA =0D=0A94041 USA=0D=0Aunsubscribe from this list=0D=0A<https://eventing.c=
+oursera.org/redirect/RtLJM9Pxcw51AGnCpUBa1GERoEAzEYRX2UvosiD57bsSWJf9_Vrbnh=
+Rg6KYAwmD2YLOVv2vym9xByME7DY4MjA.6jQRgrPjgk6wnkx2wEyUag.pWmfSUifVCZG0naJJGR=
+-ayxSRNhl7ShzzUcZPQQ5bzvBzLsUnSjWkK4SMyjSpIDxsQVj7GviYylakwVlnHfwPBzckGZW8d=
+RJ6uuOLixd9R5JYfmsAgOFfu-nDA9GB_kFoWer44J6WiMjIBivPyTOjuUBMTOCUr3IWTzKrU2mc=
+ScEv_Lc2z2tVuAB707BVWlc08K2K1_xyRe11OdcNAtsfnC_ZkeF2op_ndntCCzY4tOb9EBwuiso=
+XxTrdQP3hN1PvFXPgSFNS70ecgJQpdmDuk_anst5RoX23Fvw8izRaspQJVNjNY4vrA1QdsBSutw=
+JTiuwQCzhn8cSSdO0H8bjsIf3hKzJ7aFiMsEXxcdHPkCNG73qb-M8-BFStruBSRj4aolka8resM=
+1NArxLS3TSI2Sjw0YIL2e3bH2I0fQ4IrOKfQk8JHExHcRXhojCcnY5p-dqGrhEBfe-aRGuIN_xY=
+eLPMuCVGHGhyt_hQkptfRYYvRlWtJELTHokxzSpOXXBYe39szBXNDVGYnOOepq2At4E5S7UN9fv=
+_w_aiuJC4ZIjh3y9klESG2PG8WgbUbZXpyTJWCmXCAC4aubo4a9f5uanxwySDeGAVOKl6eHqLzx=
+KJrhIU_k0YdACWCyDq_105s7hRvIe66R4vTyZ_Q4bHQ1FJboQEjwJ7nCqyODWaXeWHpYEZuyxfz=
+LUX3AMo7NeDPA8mDmJXjEkurDKmC47Ho7Hekps12hMzTK4nWl9L458nARFHyWh-uAeSrQ-8vx6X=
+WcVu9DqI83-_voeH785BxP0s0cy0wz5ht5Mb4OOASk6dfv7CabmsRlgicTbVN1u-WBvVNauPjGX=
+DOVObti_U6UDIHBhFBerBLRl6FTA6brkWDJ1x223bCZfVeParHA8sqQrdgUV2EmCHCEkJsqLIxL=
+win-f-aui-iyMM-mGEpeiVPeGNlqi_ziQTx1jHyCO421Ndrna-M15Lb4NSeX-c6VSUxzKS-9ypt=
+CiVr2Lbv_bV88pBUYcuTcm9BamWjf8HHc2makTTQ2GIdqYwSHaT8TwDKG954LeAmBn-GZmp3I>
+--_----s7QV9Z4kd2FHdY/DhI2EfQ===_6A/E8-53892-AA7DE876
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="UTF-8"
+
+<!--item discussions are nested under items themselves--><!--item discussio=
+ns are nested under items themselves--><!--Grammatically formats an array o=
+f partners into a nice looking string.--><!DOCTYPE html PUBLIC "-//W3C//DTD=
+ XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transi=
+tional.dtd"><html xmlns=3D"http://www.w3.org/1999/xhtml"><head><meta http-e=
+quiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8"/><style type=
+=3D"text/css">/* /\/\/\/\/\/\/\/\/ CLIENT-SPECIFIC STYLES /\/\/\/\/\/\/\/\/=
+ */=0A#outlook a{padding:0;} /* Force Outlook to provide a "view in browser=
+" message */=0A/* Force Hotmail to display emails at full width */=0A.ReadM=
+sgBody{width:100%;}=0A.ExternalClass{width:100%;}=0A/* Prevent Yahoo! from =
+styling links */=0A.yshortcuts, a .yshortcuts, a .yshortcuts:hover, a .ysho=
+rtcuts:active, a .yshortcuts:focus{=0A    background-color:transparent !imp=
+ortant;=0A    border:none !important;=0A    color:inherit !important;=0A}=
+=0A/* /\/\/\/\/\/\/\/\/ RESET STYLES /\/\/\/\/\/\/\/\/ */=0Abody{=0A    mar=
+gin:0;=0A    padding:0;=0A}=0Aimg{=0A    border:0;=0A    height:auto;=0A   =
+ line-height:100%;=0A    outline:none;=0A    text-decoration:none;=0A}=0Ata=
+ble, td{=0A    border-collapse:collapse !important;=0A    mso-table-lspace:=
+0pt;=0A    mso-table-rspace:0pt;=0A}=0A#bodyTable, #bodyCell{=0A    height:=
+100% !important;=0A    margin:0;=0A    padding:0;=0A    width:100% !importa=
+nt;=0A}=0A#bodyCell{padding:20px;}=0A#templateContainer{width:600px;}=0A/* =
+/\/\/\/\/\/\/\/\/ TEMPLATE STYLES /\/\/\/\/\/\/\/\/ */=0A/* =3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D Page Styles =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D */=0Abody, #body=
+Table{background-color:#ffffff;}=0A#bodyCell{border-top:0;}=0A#templateCont=
+ainer{border:0px solid #FFFFFF;}=0Ah1{=0A    color:#232327 !important;=0A  =
+  display:block;=0A    font-family:Helvetica;=0A    font-size:30px;=0A    f=
+ont-style:normal;=0A    font-weight:bold;=0A    line-height:100%;=0A    let=
+ter-spacing:normal;=0A    margin-top:0;=0A    margin-right:0;=0A    margin-=
+bottom:10px;=0A    margin-left:0;=0A    text-align:left;=0A}=0Ah2{=0A    co=
+lor:#232327!important;=0A    display:block;=0A    font-family:Helvetica;=0A=
+    font-size:28px;=0A    font-style:normal;=0A    font-weight:bold;=0A    =
+line-height:100%;=0A    letter-spacing:normal;=0A    margin-top:0;=0A    ma=
+rgin-right:0;=0A    margin-bottom:10px;=0A    margin-left:0;=0A    text-ali=
+gn:left;=0A}=0Ah3{=0A    color:#232327!important;=0A    display:block;=0A  =
+  font-family:Helvetica;=0A    font-size:18px;=0A    font-style:normal;=0A =
+   font-weight:bold;=0A    line-height:100%;=0A    letter-spacing:normal;=
+=0A    margin-top:0;=0A    margin-right:0;=0A    margin-bottom:10px;=0A    =
+margin-left:0;=0A    text-align:right;=0A}=0Ah4{=0A    color:#232327 !impor=
+tant;=0A    display:block;=0A    font-family:Helvetica;=0A    font-size:16p=
+x;=0A    font-style:normal;=0A    font-weight:bold;=0A    line-height:100%;=
+=0A    letter-spacing:normal;=0A    margin-top:0;=0A    margin-right:0;=0A =
+   margin-bottom:10px;=0A    margin-left:0;=0A    text-align:left;=0A}=0A=
+=0A/* =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D Styles for ordered/unordered lists =3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D */=0A/* copied from web, see https://github.com=
+/webedx-spark/web/blob/9cb921bcc7d4b07270b583d21b3b583da0439eb5/static/bund=
+les/phoenix/template/styl/cml.styl#L84 */=0Aul {=0A    list-style-type: dis=
+c;=0A}=0Aul ul, ul > li[aria-level=3D"2"] {=0A    list-style-type: circle !=
+important;=0A}=0Aul ul ul, ul > li[aria-level=3D"3"] {=0A    list-style-typ=
+e: square !important;=0A}=0Aul ul ul ul, ul > li[aria-level=3D"4"] {=0A    =
+list-style-type: disc !important;=0A}=0Aul ul ul ul ul, ul > li[aria-level=
+=3D"5"] {=0A    list-style-type: circle !important;=0A}=0Aol ol, ol > li[ar=
+ia-level=3D"2"] {=0A    list-style-type: lower-alpha !important;=0A}=0Aol o=
+l ol, ol > li[aria-level=3D"3"] {=0A    list-style-type: lower-roman !impor=
+tant;=0A}=0Aol ol ol ol, ol > li[aria-level=3D"4"] {=0A    list-style-type:=
+ decimal !important;=0A}=0Aol ol ol ol ol, ol > li[aria-level=3D"5"] {=0A  =
+  list-style-type: lower-alpha !important;=0A}=0A=0Aol li[aria-posinset]::m=
+arker {=0A    content: attr(aria-posinset) ". ";=0A}=0A=0Aul > li[aria-leve=
+l=3D"2"] {=0A    margin-left: 32px !important;=0A}=0Aul > li[aria-level=3D"=
+3"] {=0A    margin-left: 64px !important;=0A}=0Aul > li[aria-level=3D"4"] {=
+=0A    margin-left: 96px !important;=0A}=0Aul > li[aria-level=3D"5"] {=0A  =
+  margin-left: 128px !important;=0A}=0A=0Aol > li[aria-level=3D"2"] {=0A   =
+ margin-left: 32px !important;=0A}=0Aol > li[aria-level=3D"3"] {=0A    marg=
+in-left: 64px !important;=0A}=0Aol > li[aria-level=3D"4"] {=0A    margin-le=
+ft: 96px !important;=0A}=0Aol > li[aria-level=3D"5"] {=0A    margin-left: 1=
+28px !important;=0A}=0A=0A/* =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D Header Styles =
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D */=0A#templatePreheader{=0A    background-co=
+lor:#FFFFFF;=0A    border-bottom:0;=0A}=0A.preheaderContent{=0A    color:#8=
+08080;=0A    font-family:Helvetica;=0A    font-size:16px;=0A    line-height=
+:125%;=0A    text-align:left;=0A}=0A.preheaderContent a:link, .preheaderCon=
+tent a:visited, /* Yahoo! Mail Override */ .preheaderContent a .yshortcuts =
+/* Yahoo! Mail Override */{=0A    color:#606060;=0A    font-weight:normal;=
+=0A    text-decoration:underline;=0A}=0A#templateHeader{=0A    background-c=
+olor:#F4F4F4;=0A    border-top:5px solid #FFFFFF;=0A    border-bottom:5px s=
+olid #FFFFFF;=0A}=0A.headerContent{=0A    color:#505050;=0A    font-family:=
+Helvetica;=0A    font-size:20px;=0A    font-weight:bold;=0A    line-height:=
+100%;=0A    padding-top:0;=0A    padding-right:0;=0A    padding-bottom:0;=
+=0A    padding-left:0;=0A    text-align:left;=0A    vertical-align:middle;=
+=0A}=0A.headerContent a:link, .headerContent a:visited, /* Yahoo! Mail Over=
+ride */ .headerContent a .yshortcuts /* Yahoo! Mail Override */{=0A    colo=
+r:#0367b0;=0A    font-weight:normal;=0A    text-decoration:underline;=0A}=
+=0A#headerImage{=0A    height:auto;=0A    max-width:600px;=0A}=0A/* =3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D Body Styles =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D */=0A#t=
+emplateBody{=0A    background-color:#232327;=0A    border-top:0;=0A    bord=
+er-bottom:0;=0A}=0A#bodyContentBlock{=0A    background-color:#FFFFFF;=0A}=
+=0A.bodyContent{=0A    color:#505050;=0A    font-family:Helvetica;=0A    fo=
+nt-size:16px;=0A    line-height:150%;=0A    padding-top:15px;=0A    padding=
+-right:0;=0A    padding-bottom:15px;=0A    padding-left:0;=0A    text-align=
+:left;=0A}=0A.bodyContent a:link, .bodyContent a:visited, /* Yahoo! Mail Ov=
+erride */ .bodyContent a .yshortcuts /* Yahoo! Mail Override */{=0A    colo=
+r:#0367b0;=0A    font-weight:normal;=0A    text-decoration:underline;=0A}=
+=0A.bodyContent img{=0A    display:inline;=0A    height:auto;=0A    /*max-w=
+idth:560px;*/=0A}=0A/* =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D Footer Styles =3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D */=0A#templateFooter{=0A    background-color:#ffff=
+ff;=0A    border-top:0;=0A}=0A.footerContent{=0A    color:#808080;=0A    fo=
+nt-family:Helvetica;=0A    font-size:13px;=0A    line-height:150%;=0A    pa=
+dding-top:20px;=0A    padding-bottom:20px;=0A    padding-left:20px;=0A    p=
+adding-right:20px;=0A    text-align:center;=0A}=0A.footerContent a:link, .f=
+ooterContent a:visited, /* Yahoo! Mail Override */ .footerContent a .yshort=
+cuts, .footerContent a span /* Yahoo! Mail Override */{=0A    color:#606060=
+;=0A    font-weight:normal;=0A    text-decoration:underline;=0A}=0A.button =
+{=0A    text-align: center;=0A    font-size: 16px;=0A}=0A/* /\/\/\/\/\/\/\/=
+\/ MOBILE STYLES /\/\/\/\/\/\/\/\/ */=0A@media only screen and (max-width: =
+641px){=0A    #templateContainer{width:auto !important;}=0A}=0A@media only =
+screen and (max-width: 480px){=0A    /* /\/\/\/\/\/\/ CLIENT-SPECIFIC MOBIL=
+E STYLES /\/\/\/\/\/\/ */=0A    body, table, td, p, a, li, blockquote{-webk=
+it-text-size-adjust:none !important;} /* Prevent Webkit platforms from chan=
+ging default text sizes */=0A    body{width:100% !important; min-width:100%=
+ !important;} /* Prevent iOS Mail from adding padding to the body */=0A    =
+/* /\/\/\/\/\/\/ MOBILE RESET STYLES /\/\/\/\/\/\/ */=0A    td[id=3D"bodyCe=
+ll"]{padding:10px !important;}=0A    /* /\/\/\/\/\/\/ MOBILE TEMPLATE STYLE=
+S /\/\/\/\/\/\/ */=0A    /* =3D=3D=3D=3D=3D=3D=3D=3D Page Styles =3D=3D=3D=
+=3D=3D=3D=3D=3D */=0A    table[id=3D"templateContainer"]{=0A      max-width=
+:600px !important;=0A      width:100% !important;=0A    }=0A    h1{=0A     =
+ font-size:24px !important;=0A      line-height:100% !important;=0A    }=0A=
+    h2{=0A      font-size:20px !important;=0A      line-height:100% !import=
+ant;=0A    }=0A    h3{=0A      font-size:18px !important;=0A      line-heig=
+ht:100% !important;=0A    }=0A    h4{=0A      font-size:16px !important;=0A=
+      line-height:100% !important;=0A    }=0A    /* =3D=3D=3D=3D=3D=3D=3D=
+=3D Header Styles =3D=3D=3D=3D=3D=3D=3D=3D */=0A    table[id=3D"templatePre=
+header"]{display:none !important;} /* Hide the template preheader to save s=
+pace */=0A    td[class=3D"preheaderContent"] {=0A      font-size: 16px;=0A =
+   }=0A    img[id=3D"headerImage"]{=0A      height:auto !important;=0A     =
+ max-width:600px !important;=0A      width:100% !important;=0A    }=0A    t=
+d[class=3D"headerContent"]{=0A      font-size:20px !important;=0A      line=
+-height:125% !important;=0A    }=0A    /* =3D=3D=3D=3D=3D=3D=3D=3D Body Sty=
+les =3D=3D=3D=3D=3D=3D=3D=3D */=0A    td[class=3D"bodyContent"]{=0A      fo=
+nt-size:18px !important;=0A      line-height:125% !important;=0A    }=0A   =
+ /* =3D=3D=3D=3D=3D=3D=3D=3D Footer Styles =3D=3D=3D=3D=3D=3D=3D=3D */=0A  =
+  td[class=3D"footerContent"]{=0A      font-size:14px !important;=0A      l=
+ine-height:115% !important;=0A    }=0A}=0A</style></head><body marginwidth=
+=3D"0" offset=3D"0" leftmargin=3D"0" topmargin=3D"0" marginheight=3D"0">=0D=
+=0A<div style=3D"color:transparent;visibility:hidden;opacity:0;font-size:0p=
+x;border:0;max-height:1px;width:1px;margin:0px;padding:0px;border-width:0px=
+!important;display:none!important;line-height:0px!important;"><img border=
+=3D"0" width=3D"1" height=3D"1" src=3D"http://click.mail.coursera.org/q/nhF=
+L7WtAIiPnUwnPGoyOlw~~/AAAAAQA~/RgRpcVyqPVcIY291cnNlcmFCCmd_qteOZ-HSDqlSGGFu=
+dXNoLnNhbmthcmFuQGdtYWlsLmNvbVgEAAAAAA~~" alt=3D""/></div>=0D=0A<center><ta=
+ble id=3D"bodyTable" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" align=3D"center" height=3D"100%"><tr><td id=3D"bodyCell" valign=
+=3D"top" align=3D"center"><table id=3D"templateContainer" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" style=3D"max-width: 600px; border: 0; backg=
+round-color: #f6f6f6;"><tr><td valign=3D"top" align=3D"center"><table borde=
+r=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"backgro=
+und-color: #F6F6F6;"><tr><td class=3D"preheaderContent" valign=3D"top" styl=
+e=3D"padding: 0 0 15px 0"></td></tr></table></td></tr><tr><td valign=3D"top=
+" align=3D"center"><table id=3D"templateBody" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" width=3D"100%" style=3D"background-color: #F6F6F6;"><tr=
+><td valign=3D"top" align=3D"center"><table id=3D"bodyContentBlock" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"backgrou=
+nd-color: #F6F6F6;"><tr><td class=3D"bodyContent" valign=3D"top" style=3D"c=
+olor:#505050; font-size: 16px; line-height: 150%;padding: 20px 18px 32px"><=
+table style=3D"width: 100%;background-color:#ffffff; font-family: 'Arial'; =
+word-wrap:break-word;" align=3D"left"><tr><td id=3D"CMLContent" style=3D"pa=
+dding: 28px 38px 0px; word-wrap:break-word;"><div>=0A <p variant=3D"body1" =
+style=3D"margin-bottom:14px;min-height:20px;">Dear Anush Sankaran, <strong>=
+ </strong></p>=0A <p variant=3D"body1" style=3D"margin-bottom:14px;min-heig=
+ht:20px;">Generative AI is reshaping industries at an incredible pace, brin=
+ging with it exciting opportunities alongside questions about security, pri=
+vacy, and potential risks. As a leader, how can you cut through the hype, s=
+eparate fact from fiction, and harness this transformative technology respo=
+nsibly=3F</p>=0A <p variant=3D"body1" style=3D"margin-bottom:14px;min-heigh=
+t:20px;">We=E2=80=99re excited to introduce our new specialization:&nbsp;<s=
+trong>"</strong><a href=3D"https://eventing.coursera.org/redirect/eOkJLAMk_=
+s-GNMiqNDBjiDneZKSouf7pyfyhwcuotjuDnrKIDwLLq0AEa40hfHtKhzD1AhpDIkdC-8qBk5jR=
+kg.l0bLP8dhAdexT7XZA7roHQ.knTcxcqBqrIpzXnY-04JLTp5AO0EYvEgRO76NN0I1lLaVeAbT=
+BsRY6WYozqQlB6nzt0fLdEkfQL7TJUdVukLV2AN9bxO7eOCUSqxaoPsw8KGeoIaA3_2yfpQcVDk=
+7Cu3bGvzoEHr-94hPGbOw4QXy7Dug1f_WmssAhc3-BFNSI8Cy7tnGjMHZqA5KpXEzHoLQb3xQLu=
+bA2s6ftCd1BeG9xzIYfqQMmeaunt1K3GeIPAdTo555NOiZB7d-HSi-vD3TZ9_uZt-IN_Q82UmvG=
+ENdZcH9knrd768i9rEh6cHipVJ8ivGA6JTQVmdw4xgWwx7HZ3gTlEL0N3xecbLdYgxQOJntoPA3=
+NNP4KKHz9q9DQE5K0B7T1I8KjiQFuov-NzjXWd1_o2K6PUsLP7vsDtvjrwi-heMkgo6pX3CvW-8=
+vLm6T8ffh72pR6cyRkYP1lT5UHtFt9Oa0JVRPIEAKYj1G7GqmXJHcg3NuKUt7wD8IF-JWk1eTo4=
+CrgHSHwx7JHjCQwhpmRXy6ZhuH9nwU7GXUi6vXyjnMNDLb4RHnaqJM2qe96Blt_1wcQ_O6AkERh=
+jFSRygG53kTTSia3lZINVNfrft3vmEWLxgLIASRvPzzoTEecZENFJb2iVStMDsH-LlR6-wvVmjo=
+tfSTZTNlGfOHFPzmcZ7TdC57VfWoSHXjg6wb6Wu57EgMt6ylgWqrVnxCNp8ApdPwzcnknjZpIWr=
+iqLTHsgvBbX52Hip2LClR8c" title=3D""><strong>Generative AI Cybersecurity &am=
+p; Privacy for Leaders</strong></a><strong>."</strong></p>=0A <p variant=3D=
+"body1" style=3D"margin-bottom:14px;min-height:20px;">This specialization e=
+quips leaders like you with the knowledge and tools to address AI=E2=80=99s=
+ unique challenges while tackling one of the hardest areas of cybersecurity=
+: improving our own practice.</p>=0A <p variant=3D"body1" style=3D"margin-b=
+ottom:14px;min-height:20px;"><strong>Here=E2=80=99s what you=E2=80=99ll gai=
+n:</strong></p>=0A <ul style=3D"padding-left:10px;margin-left:8px;">=0A  <l=
+i style=3D"margin-bottom: 14px;"><p variant=3D"body1" style=3D"margin-botto=
+m:14px;min-height:20px;"><strong>Clarity on AI-Specific Security Issues. </=
+strong>In the course&nbsp;<em>"</em><a href=3D"https://eventing.coursera.or=
+g/redirect/WoaWLJdWrcHT7bxj5qIX4Nr3xLQOOzoa1WETzhSpoQs3lTN2ew6414D-fgnrvKb6=
+ULGsmsnsDQ8ss8OpJ_VsJA.LHATE0AtPqKGQqerIJyuWQ.yjP01ExfuQfcOMK7EYmO2XbcctQyh=
+AVUN59b9QxzgSFyGxNOdbo5_HMtb641-lxcfbMo5QaS49nyzwzqCXigFdLqADBMnNGqlG-wUrf2=
+al1gx4q2kuUQLGGALWIIjMpONBUyMBssGz05YpLoySlHpgmv5-CRiNZk7FmVPwz8k2gBhnDdbov=
+fY6xQery1y7fPtP_omYFtN2rIJjQTZVg3Xr1GOn4ONDQcD3H1q1LsP2pQIIzZhuLha60bqIZwGX=
+5eb1hV9J19LeEXZpvuj4CQw6oZ3NGKiMtOsDZ-lhJZEjJqLhVOxlW7PeQsjBWSb_oZTTgKUscL7=
+Cy9jzsuKJKBxUbPNMTF3rbjX9Ih4oHqon6FOCInxQoS268bbW-iZExdn71FP9voI8pvyj_ByjLG=
+TD6iy3Cwy1ykxJCcz-wclEdATMDGOyIB8Ewh-nTqY9GFub65GtrFl6ccwa-nkpAbD0v4pNUBJIi=
+qOi9Eb0bG38m5gOBKEvpND7jMAY2t7KlVXap-ZwYpESVRtc-mm2a03BGziUUHlIqzMtRnZgjzHA=
+Ct-JkOmqD5eSNnua5g3eNwX4Ol8dXNKod6Wcha4t-tA6Or7eJx9J2wa5XIlc-oksRzWnuzyaZaC=
+wFToL9zzDKjfKjKYc-0eUuB_mg-Trw8g0kFAcaM-YoH6GWbo_xF8s9gW_dQaZAfxTnwUXC3tfpu=
+g8MMBFdMLU29wGfTdXuY_Q" title=3D""><em>Generative AI Cybersecurity &amp; Pr=
+ivacy for Leaders: A Primer</em></a><em>,=E2=80=9D</em>&nbsp;we explore the=
+ real vulnerabilities of generative AI=E2=80=94like prompt injection and de=
+epfakes=E2=80=94and how to prepare for them. You'll learn to separate legit=
+imate concerns from overblown fears, empowering you to make informed, strat=
+egic decisions.</p></li>=0A  <li style=3D"margin-bottom: 14px;"><p variant=
+=3D"body1" style=3D"margin-bottom:14px;min-height:20px;"><strong>Proven Too=
+ls to Strengthen Cybersecurity Preparedness. </strong>In&nbsp;<em>"</em><a =
+href=3D"https://eventing.coursera.org/redirect/th6qIU8LNmJOTvu7Lfla9oiCgYFM=
+cq4eeFtesuXa9kaOQKCbj4ak9l0OyyEUJcGcseqqF_qfrAzpCsCmUo8hAA.dsdDkcKEra9EGu5e=
+vlwNhw.uyAqlmkjUMTtoG7CfHVJV_3ffLekl4Br2Q34Rvj6OOwb2jTKwl7GqU1jvbPeYXBXcZ14=
+8hqHgI53dqr2P9oBk4_gh9H27__9zJD7ggc-0Fe9Ph0gqRh0B6N30FyML2T4DfJb6DS_6oKJ72C=
+N-IG4xBRTtmJkidITBssVSOK5AVYaTWn5l5zeDfmrk9vG4qrjBqxGqzgWuRKzMBgrg9a75esaq9=
+tgkIka_GM1HY9Vb2ajN4H-JWWIviKbf5heA9Xc7VXQF5flrL-6eqPpqtQRjnBHGAuHLiukonK-Z=
+D1rU9UuPsNcRnUZhYSDlUDYJlsjwT8KTzG5nt7dDWWKpCZmxh8OGQJjscYAanEFpN08HyK9qHH8=
+CEQ3eK6PP-MzIgnctMOiydXluonjeWVjVUSByRL9koJRZzjTNJ4dkCCzTVJ8ft0gumvBDIBqgVC=
+0Q61QYbHd7uJ1haOvuwcE-h9PISfmLq8eKn8JDB09BnE-d2rh69zsgPa7NpsudqYg8ghCXZcx8t=
+VpIWmCYk-Pffp_1oMIcZ-WwfT3maqG7AwlAw74IvdG7mQzWGX6Kyc5fowbFQGSnyJfQ7O-zEGKr=
+6iH73a_iyKiaiTZReoaKORl-pJ1wqjiGk_QsC7lZYLKoqaV6s_nPdTBX8udiYD1JgiCC_AxwSa7=
+XE3UN58jrhTYC1h6qHKx2F3c6DjGmb-c_AptHHCp0F9J2rsvMl253Me9iw" title=3D""><em>=
+ChatGPT + Cybersecurity: AI-Powered Tabletops &amp; Training</em></a><em>,=
+=E2=80=9D</em>&nbsp;you=E2=80=99ll discover how generative AI can enhance y=
+our organization=E2=80=99s readiness. Use GPTs to test your cybersecurity p=
+osture, uncover areas for improvement, and create opportunities for your te=
+am to practice more often with AI-driven Micro-Tabletops. With hyper-realis=
+tic, adaptive scenarios, your team can train for real-world cybersecurity c=
+hallenges more effectively and frequently.</p></li>=0A </ul>=0A <p variant=
+=3D"body1" style=3D"margin-bottom:14px;min-height:20px;">Whether you're jus=
+t beginning to explore generative AI or looking to strengthen your organiza=
+tion=E2=80=99s overall readiness, this specialization provides the tools an=
+d insights to lead securely and effectively. </p>=0A <p variant=3D"body1" s=
+tyle=3D"margin-bottom:14px;min-height:20px;"><strong>Join today: </strong><=
+a href=3D"https://eventing.coursera.org/redirect/NMueJGCii1pWATL3t0ZLrUuCRu=
+AeT2cfF33bJh1znVVoK2ChSAAsY5_IXHQ49UM1zWgW_-BnqpZH-XY5Zb45WQ.9aDCgQUMkTzMIi=
+axoW63gA.koAR6ba-oEPD4bJdZPUWtQJ5LqKJQZl03fhRzvjcvSvUWoSE21n319Onzan46xiw4T=
+9qFWw-U_Z1wMEzoQF7gZaYBNja6927RmNRwG_sTDPozV16bOAnRffxpcvY8n5gRtDDYlBb3ezQC=
+Yc-ZMdx3hT-4AmZyleUKoF22tx4JtbxtG3sHsHaN7Nxej-N7JpgAZXOBgx7X9rgwmAgTKH0B5z5=
+4Bamz9PBDhtyEftWz2j_rUQ3a_bMP34a60HMr3cmYUQ7Yy4vvv_Yt4OnBX32L1uhKEV82rx7TLW=
+5T_3jFPiD_XVY9dIGpwXQisOan0lC7y7L8w5wFyQIb4HeKD0j88fEsibaFkTTs_ZMZt1lBHLLvg=
+9GrYwzWb-L92MuA3LfyeKusgXR-tV44Q0XEWsNFCkEh-0YdqSN8_DOIqjgWIT4mjUEnPsZ_byvI=
+As7G5muiW7CGbziJjdLKr8cprOJfwdAvPUS_FQDj7Bixmx7mH86Av9gN-1yeG--cfYr9PmTw-WB=
+mX8LaTqp6wGnQ9AtLEI7WwQmQLVxHlWYbxIWdb1EgQsZLs0vPVcNp1oRifDpxoFvNMhEAPg1-Tu=
+qKDhmRURAhUoJvsMT0z5PmHuejBBvgfVTNxf29GlYAy9fu1BdG3gDhImkIraeJ2m-aCBlvf8BHn=
+OzVb9wOLjFibi6r0Xthyo2EfzbmPSO-4Of309_sO7poxBszrojGfXTUbjvu_EFp_gODSQ9nRoPI=
+-8WW6Y" title=3D""><strong>Generative AI Cybersecurity &amp; Privacy for Le=
+aders</strong></a></p>=0A <p variant=3D"body1" style=3D"margin-bottom:14px;=
+min-height:20px;">Best, Jules &amp; Sam</p>=0A <p style=3D"margin-bottom:14=
+px;min-height:20px;"></p>=0A <p style=3D"margin-bottom:14px;min-height:20px=
+;"></p>=0A</div></td></tr><tr><td style=3D"padding: 0px 38px 28px"><a href=
+=3D"https://eventing.coursera.org/redirect/1i5q5S3wy52VAMX6OKId2uBqmSHLcuRd=
+bWAcEF58nwJbwLOkxt0KI_ia_snnCBQqrWtUk5mORZDoLBQV0pjLDg.A6UswRm3eDlt_3_2odNI=
+DQ.XIu7mAeY6Lwu-A-QHFJHx4xjpMkVU6-dH4ZyUF3FSxeMH6a-kbNGx_qQNgaJNuCfTzp3Wwsl=
+XpOD35kOvR1BrM-8GoO3IyHmj1ljiGUTdiTOUa0IWZWVmEpiZSo8HA9ZvprZyyvaCWOdO7D-_i9=
+L-F_kLs4Vnw75Ta7NEPe6_cBOWXNVXDxKfc5-cyEnW9AJxLwA0BEJWYRtUMSkj5YxhYAmimQllY=
+vI5JogFMe52nKCLnXbPV7tgF_vyLyQWvSsMSzOba2Xrx5gxIxg5wqeKh09pEcMDxUrTvS06XaZC=
+9yvlqHSLVty1Xt7YpM5Tf-SCHJnLkqxADFi3f61IvqSTTbdzy20AYCHb7b20S6_eubPAwUrtV7m=
+EByL9-YpR2-p0HDedI9TPb40BV0O362kUNLABmqePRf0IgyPQ3QPOQjUK14axZktztGnEF46_4f=
+hsu0DG4G29KOmeqFeyL0Pg0LPt90BoSJMl2w2OBrwLBP4KZuyR6F9rT9wV_taDiPueikJTRdIFe=
+Slv89kzGpeoNdVtq5trnQoifI4-sIa8gHdSzIw5kQkOxfKcSirht_vhW5dNIaVBoECYULf3Ow4D=
+4ghZFSlj-aqtHeU1863g6UX31MlYk2zul6Ohlxt05pS3eh1_5bt1h1jIuRi5nnh7Bn3yuGShH0m=
+38N-gY7NLtF4tjXlMsEviveOYOjOBEhYm693mMCj5wW7KkBb2NnNvw" style=3D"text-decor=
+ation: none;vertical-align:top;"><span style=3D"font-size: 14px; padding: 1=
+6px 35px; font-weight: bold; background-color: #0056D2; line-height: 22px; =
+display: inline-block; color: white; border-radius: 4px; text-align: center=
+;margin-top:10px;">Go to course</span></a></td></tr></table></td></tr></tab=
+le></td></tr></table></td></tr><tr><td valign=3D"top" align=3D"center"><tab=
+le id=3D"templateFooter" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" w=
+idth=3D"100%" style=3D"background-color: #F6F6F6;font-family: 'Arial';"><tr=
+><td class=3D"footerContent" valign=3D"top" style=3D"padding-top:20px; padd=
+ing-right:0; padding-bottom:20px; padding-left:0; text-align:center;"><a hr=
+ef=3D"https://eventing.coursera.org/redirect/5c4N4vMd53I6BMBTo2VjAtCnKigdmk=
+FoeqPtLX-2ZrnXx1uiwCMeVk_Fao4UeEhGXJ9CAGxX1Bj4z1GH59XFqg.5JuIbv4BjkGzC8sfv9=
+j8nA.9zP3Pon2ISw6I41BncFgFXEGMBz-WNT-wYGMB71y1VBrg1TzcBGwcnvXqNly3PQ1uecjus=
+VDuy4xIPWvUyjHs_-kwIeIOuxiHA6df1CC0hFSAYp9L2baVTcRepKxcFTN8qQ8jUvQyeSw4jo7l=
+WlY5POjYV1QZmWMUXapDIo-J5gOVK4FmspeZu3fLjQcA_UjBh6YkMsDaoIDRyzUzJ0_TLbO9cDu=
+i31Kccz2ubZTpnLrcPcDsC7hNf_c-r0yCRCSpr9NjoT8rt-tQqpXFUcSYXxROTOTquPM0rUpnVN=
+8FNU_0ufPQmzFtxCR9Fy19cA3yblpEokOn9sHP1JGffy57Z8a8CyxdKcEa_Jw0vGH5pvmm-ty9z=
+NPOqin_onlgZt4ulafdaGb2OQ8gn5WEUxWH3Qcy8vy8v5U-iEzkOzN_MhhUp0B-BFGKlP6CJ2-8=
+AA_9O0dck0nVkf-E4_gI8MjnmjNmO5tjX_Ey98nV7Oo7uY9Gk3QM5FQw4PJoJVcC93JSefyKHWt=
+jajQTZcqMWHPjyhrjjG1PsIxEtgLl5rDzGalqYNVnzwFBPKk1G_Kz__b4XFtXUag5b05uMbdBxd=
+MYL4Ky2QdlxeVFntN3fzCLzjepx4WLABstgptMd-X37J2GkxDCL0gF3nOlYDTsKGi_A" ><img =
+border=3D"0" src=3D"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/=
+imageproxy/https://coursera-misc.s3.amazonaws.com/mailspin/prod/11_03_2020_=
+19_18_29_coursera-wordmark-black.png=3Fw=3D260&amp;fit=3Dscale" width=3D"13=
+0" alt=3D" Coursera " style=3D"width: 130px; height: auto; " align=3D"botto=
+m" class=3D"coursera-logo-black-image" height=3D"auto"/></a></td></tr><tr><=
+td valign=3D"top" style=3D"background-color: #F6F6F6; border: 1px solid #F2=
+F2F2;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100=
+%"><tr><td class=3D"footerContent" valign=3D"top" style=3D"padding-top:0; p=
+adding-right:0; padding-bottom:20px; padding-left:0; text-align:center;"><i=
+mg src=3D"https://coursera-course-photos.s3.amazonaws.com/bc/aafcbe96e84554=
+8c0d92ed8c507dfd/sparc_small.png" alt=3D"Co-branding logo" style=3D"padding=
+:10px 20px 20px 15px;max-width:400px;max-height:110px;"/></td></tr></table>=
+</td></tr><tr><td class=3D"footerContent" style=3D"vertical-align: top; tex=
+t-align: center;padding-bottom:20px;padding-top:0;padding-left:0;padding-ri=
+ght:0;"><div><a href=3D"https://eventing.coursera.org/redirect/7I-4SLXO68Ka=
+On-Hp2pxRAe5OXb9LDVgeGw6HNxWFSmtEKGhuMHQ9q-okkULs0V9k0BRpEkmCO8Mmx8vgzDbtQ.=
+RKsDYhSecxfRzhHcDuWMbw.vAQrQxZOztxp6xYYCKFb8_KpOHlUhFf8aMWNdUiVOLD3qh728tQD=
+dUnMmT2fQrzgin01wwUSI609FixFUWWzR9fJhQfnIRqbvfYTz-QxrZpYxsZNLzJStCQ3-twnLEc=
+SrX1JrtUQp9SedO5a0YDjIhEdN_dahKf1LJHOU5qGkipFDJMbwAs91j1M2w_XO8tE38dTg7plCp=
+c1EZM25PcKN3yBHNOsgcyXhm-UdwZmBJk1iK2aTmnGifkK51b5z8YMBFJyBiEfI58GyHjTK1uea=
+O3GAIPvbeL5r5iE0SpXlOvd1tVU4Nfmh_y6a3XUXjD4MIghaLImVxVp-TDKzWoFFn5OMemqJ4YX=
+bjgVefrIu7RvmX5pRVLy_M6cuuR_a7Q6HXtkWrsf9bmiI1hD8mctQs3HWIx6YkjJwK3b-wTj7sn=
+uhStbDWrIb1qdYbkoJ176-asJL3S0I6T9Q-kp0qhKJj9sPo7Z_dWECFl8PkJE6BImLkO8a1S6HN=
+nf3-MN1ZKuTNuDiQuib_DJ1tiZdLIit3ik70GBmRujEd1_Af0Pq4TbyHqAmcUXOICZpcx9P-xPI=
+5c7qX7evC3rMZ-SHV0cfxTsTa6Ca5Kx87QaDbhXKMJGq858nM_EVeTDv0UjobKxTHv9DrOuy73o=
+7T-wyvV5NYRF2zv9PIYOmxB8S7XQtFo" rel=3D"nofollow" style=3D"margin: 0 7px;" =
+target=3D"_blank"><img src=3D"https://dt5zaw6a98blc.cloudfront.net/site-sta=
+tic/images/footer/facebook.png" alt=3D"facebook" width=3D"24" style=3D"bord=
+er: none; width: 24px; height: 24px; opacity: 0.6;" height=3D"24"/></a><a h=
+ref=3D"https://eventing.coursera.org/redirect/MBNggJGS4i0igvyRwQ_SToCxdEvM4=
+AqsHAzDUMwOKc3DRK67XFan13rUhOXJEGmTAbNAjD-ZvWmTQm1dslTdBQ.f6mec8TqliCQTqEHm=
+XTBqQ.D9pgpykv8KGExR_QNCXyFqOUx4fjjkcAbSG1Sw9BcobIsIpnxP1ajHVNGn5jmtLD_4BFJ=
+Xd6rMmdDG1YZgiozfrN4_lEmFBiYKhzOvS-xU1P770zs5Ch0Uoj2FtBhmqLGNxscgs0XckIkMY8=
+2V7SYUFd7qjR-rX6ZFVLefW7cssW09PSnaZNp8i76jqNf1mxAz380EVP_yrXcfoDoLNOXGtFmUw=
+zNW6Gl-YltUHpQ1rISo-GCm_9Xh0L6Yr65iOPKzF6UUocRL70SuI27W46YQoNpy6R40qRdWKeBw=
+ZGTN3yYR_3lr54sPHoqtH9EqHVl6_ICqHDeUjumZlYKnY2iqDC9-1qscS9Qj55winA23PJKY0F6=
+6Is_iqer2QZMZ-BH8SrumwaNga4yX_FSSF4dy1K09y4svTLVgb-fVk1Fk_5Vfp6JgHr4kjHMXUk=
+tgC1bNO_RD-RFx0v8tbbEaZZ_9eMn04HWrvM8rsAQUxpeFa0tnq6O7QtbdKdAEGK-4Q-rYOlEa1=
+T53nywM1ZnycRoVXinmShnM2zWJAKub6Gr4RtaqK2KYaLhmQbv6-2KI2zElqRG06gTAZ89WQUI-=
+AdjcufRmaqW5T6ekSWxdO6Wme4oc3EykBHgTWJ8NNgLO7ZFLpR1poSLe_Q67Ng3Dn9gp40_gImC=
+ial11vk99BnhBo" rel=3D"nofollow" style=3D"margin: 0 7px;" target=3D"_blank"=
+><img src=3D"https://dt5zaw6a98blc.cloudfront.net/site-static/images/footer=
+/twitter.png" alt=3D"twitter" width=3D"24" style=3D"border: none; width: 24=
+px; height: 24px; opacity: 0.6;" height=3D"24"/></a><a href=3D"https://even=
+ting.coursera.org/redirect/0Yo0ICUPrGERob_Mqnh2a9hDCIvR2-d4SR3r65YjscdqFt0S=
+rMLddWZabxgjn_cUOA4W_U2laajVmuiUxnZP2g.kfURZ41Os47AnA_35zW_qg.8OFkzgJvNqcWZ=
+rtqFuxcPIPQWnp-JEEhVzA3m3RodCarkJSL8spgFlvuIWk3ZHi1wy1tH592JxP8i8GS9zGD2hUk=
+m6tuM2op1ARjDJUejDdHUjahR-myHjiO2wC40yMVA-86gNdwpiZ0ZHRpCTZjU8OP0mrTH7lQff9=
+CZyZyaKLhConZhRR_qUP7W8O4tcKKa4FN7UpiGYdP2fUS9jHcr5wROGFOgj7Pl5qMsozivykCUd=
+4_E8GllUjbE1cI4l45m-PIB9qgPM6C72my8yqWepreqjgm_1MsLxTXYoo3taMa8Uaqy41fHxP3S=
+e79u2HTVUwBxUDtz5DgmRdMa7J9ncTIEhqFwvzOxDR6KVOl5VoAqpbmw5bzos6oDi6-3enGGTGZ=
+WlxeJAkYi5EKg0mRanYZWe3yd8OEIGOAZfyuVDoz9vDStXmwyqTQk-ah1wqWAboTwZ5OdU8L4JN=
+yGfs2WKfRDK0a8S06zRN5z_CDPu-x0bEYKvqwWtrnu1AAkk70sOFM6I_fZhSIkwfzwfspR1YAjy=
+ODAwD8VyVyLxU-WUqtZjlA5nCz5_XcSUVay2Lgoe269xT2vbHlGbYIyIvPD_v5dyo_4IHHRKx9x=
+g9pws6JLjecfBsKZAUzal5tDLM591pAcWjad8zMOQoCpOrKxw" rel=3D"nofollow" style=
+=3D"margin: 0 7px;" target=3D"_blank"><img src=3D"https://dt5zaw6a98blc.clo=
+udfront.net/site-static/images/footer/blog.png" alt=3D"blog" width=3D"24" s=
+tyle=3D"border: none; width: 24px; height: 24px; opacity: 0.6;" height=3D"2=
+4"/></a><a href=3D"https://eventing.coursera.org/redirect/RituyZ2iUiRo68bXp=
+iPUz04ujmm4mDivRwj8cLzWCm8bjdXA1Xu4XQnskwf-b7V_q-3roGeBwJ1l8wzlLRehWw.4r6un=
+l8Jjep06J7hV0_RTA.N8yiRbCWbvx_iXMFnf-Nb-BS3fR2toHWZBjI8tjPWzZNh09TWXnOLjQ8x=
+B9dx6tBpkzwi-YE03a3chho-3AMWW4N4rA3XB9dvOz1jocGu0pXnx6-VCwwpHnanpxr6n60owmL=
+gS69n5r8GdMIQW1gJw0nXLwaJVc3_pX8leMrHElPOWvMyQR36piOtnybSily7MiY1xdtYHx_AlK=
+F8yRzG8WEveL1y3d4Ivq0_OkwrKG5oktaUsgcSx39yLirrnVXHmToMY2jJ0fsxqSsgk8twXFGuT=
+BN_v1BKLfcnuxL2LyH8v-U-dUQP95BihCHfXEQkljBs9iy8Gys_I3Hd9g22fw4_657QBAwehAme=
+fgDpHYfhn1V5yHRJPjCWdQ2jsyux85pJ1HlXyJn2PXDlvf8t6Gi5K012msOC_UhsdQEMKe3eDXv=
+Z4iAVsYwuEagy8z_miw15KSNLHBIYBvvRxjLu7cA9GOtn3wGa5Ezm5_zfXnBULtceX9EscD3CVr=
+xmKNEsawpAFxUU2cbVLZrAJFqlWMuUvYV0lNXVsetnz4chDlViAU4nYyhSzx7QtFdCv1BNgNvrY=
+M2_WhMyCv_3YRIBfMRABTOO8R5ttFl7QTZTOCDdXaHni0pjRSEqnSD4y7wKsir5FLh9ipVWZUOW=
+nBpXlZ-Falik92J3eCGTbLMEe1pw36502PSBxoIricP8IJN" rel=3D"nofollow" style=3D"=
+margin: 0 7px;" target=3D"_blank"><img src=3D"https://dt5zaw6a98blc.cloudfr=
+ont.net/site-static/images/footer/googleplus.png" alt=3D"blog" width=3D"24"=
+ style=3D"border: none; width: 24px; height: 24px; opacity: 0.6;" height=3D=
+"24"/></a></div></td></tr><tr><td class=3D"footerContent" style=3D"color:#8=
+08080; font-size:12px; line-height:150%; padding: 0 20px 0 20px; text-align=
+:center;"><div>You are receiving this email because anush.sankaran@gmail.co=
+m is registered to the</div><div>Prompt Engineering for ChatGPT course at C=
+oursera.</div></td></tr><!--Helplink--><tr><td class=3D"footerContent" styl=
+e=3D"color:#808080; font-size:12px; line-height:150%;padding: 0 20px 20px 2=
+0px; text-align:center;"><div>Please do not reply directly to this email. I=
+f you have any questions or feedback,</div><div>please visit our <a href=3D=
+"https://eventing.coursera.org/redirect/q1D495qi74qPGEhXi2qiAP21nWhlqTl0__r=
+kR0nQjjSyzko3skCyJ5huELBo93BF17UTgwzGaptbg_D2ccuavw.at-UouwWiWGiuM7mLAtolQ.=
+ONNnOW-eND2CHt68fAJg9CMeL1BEOEvPvO749NSNhu2jbjmh7cy9UkpRWcFOkg4hfFZjy9B3ohM=
+0bZc8WBdu2awIVnyP9LzfCxHyxLdz96SDjBzCe-xSJUA0IAeCZbCppm1-ohhgFIfiBHdWZv5iuL=
+AYXpIc6CTCj2G2HvVTelwdHKWQMyP1BTgAHrGy_e4neoIWMG74ILMmifwadRRocRo4Ceg0CtWOH=
+H0tjf8kUjakwjVEuDmVL3rXH_l93-_pkBBwiBr9BakX9nC2CnpkeJe4l9UHR1lxlSwsK2U4WHFl=
+HqX0E5KT_6vqP31XVoYH_IJVQAUNc3joCnl4GHcEe6jhNGtM-0ree0X2zOdkWMhc0fIIwV6v_jw=
+blMQKBCEvGTxZO_vJU6adjJa3Ub7nQvHqJKFq8Da-EuNYGE8kIPCMlat46qocX76zA9g-noj-ZS=
+fJ4-Cq2S3Shrt2PXibPRZhrsHR6z6h2H-25ViP0fP2aO-DOJ08F4Kd3cXwwGglsOFdjTo2k14Vl=
+t3RzjVxvJsJbSBZx4IMaxbXfsys6dRF6DwbPvYHrXc-yCmEn2ltangDC0PeVsJio7Z_nqHnaRUo=
+OwuIFtGbvTudhBYZK_Eyl4hNGenrafFwBfPjpmtnUxBRQZYpJ-oihJO9BV27PZ0lDSB7FTlGfj6=
+RgI9Of3lBFj7Lz9kv5qlteXBxw1d5" style=3D"color: #606060" target=3D"_blank">l=
+earner help center</a>.</div></td></tr><!--Address--><tr><td class=3D"foote=
+rContent" style=3D"color:#808080; font-size:12px; line-height:150%; padding=
+: 0 20px 20px 20px; text-align:center;" valign=3D"top">Copyright (c) 2025 C=
+oursera, Inc&nbsp;|&nbsp;381 E. Evelyn Avenue, Mountain View, CA 94041 USA<=
+/td></tr><!--Unsubscribe--><tr><td class=3D"footerContent" valign=3D"top" s=
+tyle=3D"padding:0 20px 20px 20px;text-align:center;"><a href=3D"https://eve=
+nting.coursera.org/redirect/RtLJM9Pxcw51AGnCpUBa1GERoEAzEYRX2UvosiD57bsSWJf=
+9_VrbnhRg6KYAwmD2YLOVv2vym9xByME7DY4MjA.6jQRgrPjgk6wnkx2wEyUag.pWmfSUifVCZG=
+0naJJGR-ayxSRNhl7ShzzUcZPQQ5bzvBzLsUnSjWkK4SMyjSpIDxsQVj7GviYylakwVlnHfwPBz=
+ckGZW8dRJ6uuOLixd9R5JYfmsAgOFfu-nDA9GB_kFoWer44J6WiMjIBivPyTOjuUBMTOCUr3IWT=
+zKrU2mcScEv_Lc2z2tVuAB707BVWlc08K2K1_xyRe11OdcNAtsfnC_ZkeF2op_ndntCCzY4tOb9=
+EBwuisoXxTrdQP3hN1PvFXPgSFNS70ecgJQpdmDuk_anst5RoX23Fvw8izRaspQJVNjNY4vrA1Q=
+dsBSutwJTiuwQCzhn8cSSdO0H8bjsIf3hKzJ7aFiMsEXxcdHPkCNG73qb-M8-BFStruBSRj4aol=
+ka8resM1NArxLS3TSI2Sjw0YIL2e3bH2I0fQ4IrOKfQk8JHExHcRXhojCcnY5p-dqGrhEBfe-aR=
+GuIN_xYeLPMuCVGHGhyt_hQkptfRYYvRlWtJELTHokxzSpOXXBYe39szBXNDVGYnOOepq2At4E5=
+S7UN9fv_w_aiuJC4ZIjh3y9klESG2PG8WgbUbZXpyTJWCmXCAC4aubo4a9f5uanxwySDeGAVOKl=
+6eHqLzxKJrhIU_k0YdACWCyDq_105s7hRvIe66R4vTyZ_Q4bHQ1FJboQEjwJ7nCqyODWaXeWHpY=
+EZuyxfzLUX3AMo7NeDPA8mDmJXjEkurDKmC47Ho7Hekps12hMzTK4nWl9L458nARFHyWh-uAeSr=
+Q-8vx6XWcVu9DqI83-_voeH785BxP0s0cy0wz5ht5Mb4OOASk6dfv7CabmsRlgicTbVN1u-WBvV=
+NauPjGXDOVObti_U6UDIHBhFBerBLRl6FTA6brkWDJ1x223bCZfVeParHA8sqQrdgUV2EmCHCEk=
+JsqLIxLwin-f-aui-iyMM-mGEpeiVPeGNlqi_ziQTx1jHyCO421Ndrna-M15Lb4NSeX-c6VSUxz=
+KS-9yptCiVr2Lbv_bV88pBUYcuTcm9BamWjf8HHc2makTTQ2GIdqYwSHaT8TwDKG954LeAmBn-G=
+Zmp3I" style=3D"font-size:12px;line-height:150%;font-weight:bold;color: #60=
+6060"> unsubscribe from this list</a></td></tr></table></td></tr></table></=
+td></tr></table></center><img src=3D"https://eventing.coursera.org/img/yc-o=
+YFnXmPZao63Ct-KAspsziPtEjQMNtGnsvEg8TsVsx2C8AG9pnunPTI9zRQAjDiZolhev94j_afl=
+w7axW0Q.vTQb17D5idSTLZ95hCr9Fg.exh7HMt9-vZJELvNh_vS25-tOS8z4W3uvtmQn6P_U6IQ=
+Z92sHnVYK7rgRlu6A8QHmU6V5hDgiWdfTLz92fgpRMo_oU2vm59KE7UsM-qBCC8eZUE8dfk-4BA=
+CFp9m3NOpuLGDxbsWveYlxO9h0VA56_HDH3upZ02fikIc123JdSW1MLQtlh6Sk4gCkl3h023OkY=
+moQ-labin6voD_mz-g9t-hmGo08sHSMsGfotDUePA3hZyLzgTcF2PsCVT31acWFszMY4fKERrvp=
+U-GXtEXfTBxOtyDRFpmWZDAmW-atJxSI2AtCqcZtukAD5hmoZQe6RMqz4oxB93_0SHkf8q7QSG8=
+Y6DKazMkxRXPCQ8BSBOjF19KDP73vEnrn6a3LkeBHdrjbCTP74puM0TVKErnrD1qKK2Vk8UAeav=
+LF8KpapY" border=3D"0" width=3D"1" height=3D"1">=0D=0A<img border=3D"0" wid=
+th=3D"1" height=3D"1" alt=3D"" src=3D"http://click.mail.coursera.org/q/HWF3=
+lR5nCDUzFy7XsqQYJw~~/AAAAAQA~/RgRpcVyqPlcIY291cnNlcmFCCmd_qteOZ-HSDqlSGGFud=
+XNoLnNhbmthcmFuQGdtYWlsLmNvbVgEAAAAAA~~">=0D=0A</body></html>
+--_----s7QV9Z4kd2FHdY/DhI2EfQ===_6A/E8-53892-AA7DE876--
+

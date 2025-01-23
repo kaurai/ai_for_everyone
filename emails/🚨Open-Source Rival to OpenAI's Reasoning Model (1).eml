@@ -1,0 +1,2166 @@
+Delivered-To: anush.sankaran@gmail.com
+Received: by 2002:a05:6130:f83:b0:85c:96ba:6fb with SMTP id cy3csp6281341uab;
+        Mon, 20 Jan 2025 11:39:07 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IE/pGWute7fOnFRxlSg/KEMbapBbq3Eg773KAw3E7Zmz2Tyqp66E0L6QIqDjWSCkAkKqM+/
+X-Received: by 2002:a05:690c:7084:b0:6ef:7f34:fe1f with SMTP id 00721157ae682-6f6eb677dbfmr111644017b3.13.1737401946983;
+        Mon, 20 Jan 2025 11:39:06 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1737401946; cv=none;
+        d=google.com; s=arc-20240605;
+        b=Hzjy+f6mHxZfQKDbT4bBKZkUOIx7yJhfzdyjcR3nAIt8LwnGLFfXf6Jh4MBZ4x3Ll+
+         K4AG9q/MUPKZHi4IUDmeeE3X+X6xqpzepnd0Ey1HwOEcHQ+aMHq+/9t/J6YZx0k4pVWs
+         1rmH4Ms0gTh8vYZyWR9USGAbD6er2Q1WjPPkD8qyQChywa6Y4YuSMhU8/cfMpOwMdQcv
+         oXqT6SRRleDUmjUh7EDlBokdyirKWc/xUurCJPBxiGNncDDYRxOFcZs+kM5X9vSR7na+
+         SX3+PW3etzUV1RHrvW7sCkomkFJvcx/1NiS7Y+5wzKkvBHFecxhjqk2/+/Zwoa5zjoK4
+         F1WQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:message-id:date:mime-version:list-unsubscribe-post
+         :list-unsubscribe:subject:to:from:dkim-signature:dkim-signature;
+        bh=IbxIelTWMVxqTGfiu/hjvBf+85I11Cw5IHJbXHVDmro=;
+        fh=y3xtKXzYBBSqO84iLPzdBTM3tMeyJBeQZKn7O+AjBYA=;
+        b=Y5qmi4GMSwNLGziQ0JUi9q/y8aTHDwF6gAvA+oifAcONQPHE2RTn1G3f47W1KVmmKW
+         7YtZdSaIWx7bRnmpQetDsZdv2KjW3fOZZu5VZFekMX+6xFLGzloarU9FBfRAENEhHfc8
+         NF2GjKz6JvSK5i4yXTyYC9dS1J2rTJdv1uAj2K4SEst/VcPKy1pGdMfdv+JmsFMQBAiU
+         V+ipInLb3Q2H6A2HYzPLFQACHvA+bS9yPKNGASNxF34siITvsBZcN6MqsxkoGvTHaLxL
+         KvSiKHUSQwNtdEcZrQNUAKs3q+CflLzT0AQ/jzJZfrhxlWEl7d1dLbVpZP5v7nYlBEyd
+         GfBw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@alphasignal.ai header.s=w4qfptbszmkm6ywqx5argun6nf2fhwoa header.b="bZ6rC/B+";
+       dkim=pass header.i=@amazonses.com header.s=xplzuhjr4seloozmmorg6obznvt7ijlt header.b=fDqWbhc4;
+       spf=pass (google.com: domain of 010f01948539d120-9d8c65ee-32e1-42aa-9bee-a1a3d10dfcf0-000000@news.alphasignal.ai designates 54.240.115.225 as permitted sender) smtp.mailfrom=010f01948539d120-9d8c65ee-32e1-42aa-9bee-a1a3d10dfcf0-000000@news.alphasignal.ai;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=alphasignal.ai
+Return-Path: <010f01948539d120-9d8c65ee-32e1-42aa-9bee-a1a3d10dfcf0-000000@news.alphasignal.ai>
+Received: from a115-225.smtp-out.us-east-2.amazonses.com (a115-225.smtp-out.us-east-2.amazonses.com. [54.240.115.225])
+        by mx.google.com with ESMTPS id 00721157ae682-6f6e6420333si73499027b3.111.2025.01.20.11.39.06
+        for <anush.sankaran@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 20 Jan 2025 11:39:06 -0800 (PST)
+Received-SPF: pass (google.com: domain of 010f01948539d120-9d8c65ee-32e1-42aa-9bee-a1a3d10dfcf0-000000@news.alphasignal.ai designates 54.240.115.225 as permitted sender) client-ip=54.240.115.225;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@alphasignal.ai header.s=w4qfptbszmkm6ywqx5argun6nf2fhwoa header.b="bZ6rC/B+";
+       dkim=pass header.i=@amazonses.com header.s=xplzuhjr4seloozmmorg6obznvt7ijlt header.b=fDqWbhc4;
+       spf=pass (google.com: domain of 010f01948539d120-9d8c65ee-32e1-42aa-9bee-a1a3d10dfcf0-000000@news.alphasignal.ai designates 54.240.115.225 as permitted sender) smtp.mailfrom=010f01948539d120-9d8c65ee-32e1-42aa-9bee-a1a3d10dfcf0-000000@news.alphasignal.ai;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=alphasignal.ai
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=w4qfptbszmkm6ywqx5argun6nf2fhwoa; d=alphasignal.ai; t=1737401946;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type;
+	bh=B6ofj0c/UaPBx8DkWCoqYaktokCjVGe0NKLsnfB2HXs=;
+	b=bZ6rC/B+FmwRYolKK/ZDagerGkLzu+EF6BHRXMdYmjde9RipJIWWCQxntn8BA+1k
+	3nvxPXdAIvLsNlMegh6Xv8/ePeKTLWKuaIeCghFmAdGp2FNsyma+cetUQCi8jkvpn6u
+	gAqS8ey0v7ES0PkpMNlmqRfRvYH9xcTmD+0xHfhWquOmbsbCWhNw34d9/3qLOQpMNSg
+	EvzhjwVJOPmaVmtUaUKG3QSt3WkIimlyRkf7X6sSzpi12FYY1rnU7kIZpYECNfhi9Fe
+	cDdiU2H4T5qeMd6tEvQLNs9HtJ+oDkSQKm4fODXYY6jn1dKNW+ImWrgLVlDqXB79Eaj
+	CkwD4qhKww==
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=xplzuhjr4seloozmmorg6obznvt7ijlt; d=amazonses.com; t=1737401946;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type:Feedback-ID;
+	bh=B6ofj0c/UaPBx8DkWCoqYaktokCjVGe0NKLsnfB2HXs=;
+	b=fDqWbhc41qdi9nVSvl4QQshytDJ+Tc5IFEteyuWYa8DktV+4WETJqrXZhbVNw4RW
+	If3STOuC38h/ukTRG11aW9J8gmPvCtZLiQIBi7mXCCSYChxmxKqA51KBXekOS3DjG6A
+	aawfetQGa1YCozfBN6VlFnR6lNYkhKQLvfV9k+lY=
+From: AlphaSignal <news@alphasignal.ai>
+To: anush.sankaran@gmail.com
+Subject: =?utf-8?Q?=F0=9F=9A=A8Open-Source?= Rival to OpenAI's Reasoning
+ Model
+X-Entity-Ref-Id: 2ce2c7d5-0348-4155-b8a4-184de79d0229
+X-EmailOctopus-Parent-Id: 71f931ae-d764-11ef-933b-8992040d91a9
+X-EmailOctopus-Parent-Type-Id: campaign
+X-EmailOctopus-List-Id: 9a4eb768-071d-11ef-b70b-19296a53e269
+X-EmailOctopus-List-Contact-Id: 7988f182-4b4d-11ef-9f27-45aafcfcef5f
+X-EmailOctopus-Started-Preparing-At: 2025-01-20T19:28:36+00:00
+X-EmailOctopus-Sent-At: 2025-01-20T19:39:06+00:00
+X-EmailOctopus-Team-Id: beb05674-f5da-11ee-b96a-cd9bbdb9abd6
+X-EmailOctopus-Version: 4
+List-Unsubscribe: <https://araneoides.eomail1.com/unsubscribe?ep=1&l=9a4eb768-071d-11ef-b70b-19296a53e269&lc=7988f182-4b4d-11ef-9f27-45aafcfcef5f&p=71f931ae-d764-11ef-933b-8992040d91a9&pt=campaign&pv=4&spa=1737401316&t=1737401946&s=a7b2b743050f53b8d76745ec76da964843072df66563376fb89c791f5604749a>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-EmailOctopus-Ses-Configuration-Set-Name: emailoctopus-cd92f6921fea9592a4281b549a1ba432
+MIME-Version: 1.0
+Date: Mon, 20 Jan 2025 19:39:06 +0000
+Message-ID: <010f01948539d120-9d8c65ee-32e1-42aa-9bee-a1a3d10dfcf0-000000@us-east-2.amazonses.com>
+Content-Type: multipart/alternative; boundary=bpcBHDy6
+Feedback-ID: ::1.us-east-2.jAR5U7QBOAP7Zz6aQYGcElD40cTATkRIc5pck9uHLa4=:AmazonSES
+X-SES-Outgoing: 2025.01.20-54.240.115.225
+
+--bpcBHDy6
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+On OpenAI's Custom Instruction update, Runway's new image generation
+mode=
+l,...=C2=A0
+
+SIGNUP [1]=C2=A0=C2=A0|=C2=A0=C2=A0WORK WITH US [2]=C2=
+=A0=C2=A0|=C2=A0=C2=A0FOLLOW ON X
+[3]=C2=A0=C2=A0|=C2=A0=C2=A0READ ON WEB=
+ [4]
+
+ .=20
+
+HEY ,
+
+Welcome to AlphaSignal =E2=80=93 the most rea=
+d newsletter by AI
+developers.=C2=A0
+
+We bring you the top 1% of news=
+, papers, models, and repos, all
+summarized to keep you updated on the la=
+test in AI.
+
+IN TODAY'S SIGNAL
+
+_Read time: 4 min 39 sec_
+
+=
+=F0=9F=8E=96=EF=B8=8F TOP NEWS
+
+ =09*
+DeepSeek Releases R1 [5]: Open-=
+Source RL-Only Model Matching OpenAI-o1
+in Reasoning Tasks.
+
+ =09* =
+
+
+=F0=9F=93=8C HUBSPOT
+
+ =09*
+Learn practical ways to use ChatGPT=
+ at work [6] with 100 ready-to-use
+prompts and examples.
+
+=E2=9A=
+=A1=EF=B8=8F TRENDING SIGNALS
+
+ =09*
+OpenAI updates ChatGPT custom in=
+structions [7] UI for easier
+personalization across platforms.
+
+ =09*=
+=20
+
+ =09*=20
+
+ =09*
+Runway releases an image generation model [8] th=
+at provides
+high-quality photorealism and stylistic precision.
+
+ =09*=
+
+Cognition Labs launches Devin 1.2 [9], improving PR accuracy, adding
+e=
+nterprise accounts, and pay-as-you-go billing.
+
+ =09*=20
+
+ =09*=20
+=
+
+ =09*
+Codeium unveils Windsurf Wave 2 [10], adding web search, automat=
+ed
+Memories, and code execution improvements.
+
+ =09*
+Andrew Ng expl=
+ores future of AI Product Management [11]: key skills
+and growing opportu=
+nities.
+
+=F0=9F=92=BB TOP TUTORIALS
+
+ =09*
+Implement OpenAI's fun=
+ction calling [12] to integrate external
+services, handle data, and execu=
+te actions.
+
+ =09*=20
+
+ =09*
+Build AI agents and chatbots [13] with=
+ LangGraph.
+
+ =09*=20
+
+ =09*
+How to use Anthropic's MCP Server [14]=
+ with open LLMs or Google Gemini
+to build a CLI Agent with SQLite.
+
+=
+=F0=9F=A7=A0 HOW TO
+
+ =09*
+Learn how to build and prototype a multi-a=
+gent voice app in under 20
+minutes using the Realtime API.
+
+IF YOU'RE=
+ ENJOYING ALPHASIGNAL PLEASE FORWARD THIS EMAIL TO A
+COLLEAGUE.=C2=A0
+=
+
+It helps us keep this content free.
+
+TOP NEWS
+
+Open Source LLM=
+
+
+=09=09DEEPSEEK INTRODUCES AN OPEN-SOURCE MODEL SURPASSING CLAUDE 3.5 =
+AND
+OPENAI-O1=C2=A0IN REASONING, MATH AND CODE
+
+=E2=87=A7 6,438 Likes=
+
+
+=09=09 [5]=20
+
+WHAT'S NEW
+
+DeepSeek-R1 is an open-source reason=
+ing model that matches OpenAI-o1
+in math, reasoning, and code tasks.=
+=C2=A0This release provides developers
+access to advanced reasoning capab=
+ilities without relying on
+proprietary systems. A technical report accomp=
+anies the model for
+transparency.
+
+CORE INNOVATION
+The key technica=
+l advancement DeepSeek introduces is that you can
+train the models withou=
+t Supervised Fine Tuning. DeepSeek-R1 starts
+from DeepSeek-R1-Zero, a mod=
+el trained with reinforcement learning
+(RL) alone. RL drives reasoning be=
+haviors like:
+
+ =09* Self-verification
+
+ =09* Reflection
+
+ =09*=
+ Chain-of-thought (CoT) solutions
+
+PERFORMANCE METRICS
+
+ =09* BENCH=
+MARKS: Matches OpenAI-o1 in reasoning tasks and surpasses
+Claude 3.5 Sonn=
+et and OpenAI-o1-mini.
+
+ =09* CAPABILITIES: Enhanced readability, reduc=
+ed repetition, and
+stronger multi-step reasoning compared to DeepSeek-R1-=
+Zero.
+
+OPEN-SOURCE ECOSYSTEM
+The release includes DeepSeek-R1, DeepSe=
+ek-R1-Zero, and six distilled
+models built on Llama and Qwen architecture=
+s.
+
+ =09* _DeepSeek-R1-Distill-Qwen-32B_ outperforms OpenAI-o1-mini on=
+
+benchmarks.
+
+ =09* Distilled models provide competitive performance =
+with reduced
+resource requirements.
+
+AVAILABILITY AND ACCESS
+
+ =
+=09*
+You can interact with DeepSeek-R1 directly on the official website.=
+
+Enable the "DeepThink" option to explore its reasoning capabilities.
+=
+
+ =09*
+For API integration, use the OpenAI-compatible API. Th API integ=
+rates
+into your projects with support for reasoning tasks.
+
+ =09*
+T=
+o run DeepSeek-R1 locally, visit the DeepSeek-V3 repository for setup
+ins=
+tructions and resources. Access the open-source models, including
+distill=
+ed versions, to deploy them in your own environment.
+
+=09=09TRY NOW [5]=
+=20
+
+=09=09 [6]=20
+
+HOW TO USE CHATGPT AT WORK
+
+Learn how to integr=
+ate ChatGPT into your workflow with this ready to
+use guide.
+
+What=
+=E2=80=99s included:
+
+ =09*
+A clear breakdown of ChatGPT=E2=80=99s fe=
+atures and capabilities.
+
+ =09*
+Examples of tasks like automating ema=
+ils, generating content, and
+analyzing data.
+
+ =09*
+100 pre-built p=
+rompts for common workplace tasks.
+
+ =09*
+Solutions to common issues =
+when implementing AI tools.
+
+Start using ChatGPT now to streamline your=
+ tasks and save time.
+
+=09=09DOWNLOAD NOW [6]=20
+
+_partner with us [2=
+]=C2=A0_=E2=86=92
+
+TRENDING SIGNALS
+
+Custom AI Feature
+
+OPENAI =
+ROLLS OUT NEW CHATGPT UI, ENABLING CUSTOMIZABLE INSTRUCTIONS
+FOR GREATER =
+CONTROL OVER RESPONSES [7]
+
+=E2=87=A7 5,104 Likes
+
+AI Tool
+
+RUN=
+WAY LAUNCHES FRAMES, AN IMAGE GENERATION MODEL OFFERING
+CUSTOMIZABLE STYL=
+ISTIC CONTROL FOR HIGH-QUALITY IMAGE GENERATION [8]
+
+=E2=87=A7 1,536 Li=
+kes
+
+Coding Assistant
+
+COGNITION LABS UPDATES ITS AI CODING ASSISTA=
+NT, DEVIN, ENHANCING
+CONTEXT REASONING AND INTRODUCING VOICE MESSAGES FOR=
+ SLACK [9]
+
+=E2=87=A7 539 Likes
+
+AI Tool
+
+CODEIUM RELEASES WIND=
+SURF WAVE 2, AN UPDATE TO ITS AI POWERED IDE,
+ADDING REAL-TIME WEB SEARCH=
+=C2=A0AND PERSONALIZED LEARNING [10]
+
+=E2=87=A7 2,583 Likes
+
+AI Ind=
+ustry
+
+ANDREW NG HIGHLIGHTS AI PRODUCT MANAGEMENT=E2=80=99S GROWTH AS S=
+OFTWARE
+BECOMES CHEAPER TO BUILD [11]
+
+=E2=87=A7 5,258 Likes
+
+TOP=
+ TUTORIALS
+
+Coding Assistant
+
+OPENAI'S GUIDE TO FUNCTION CALLING [1=
+2]
+
+=E2=87=A7 1,475 Likes
+
+Learn to use OpenAI's function calling t=
+o integrate AI with external
+services and your code. This guide explains =
+defining functions,
+handling calls, and streaming responses. Discover how=
+ to fetch data,
+perform actions like submitting forms, and stream results=
+ back into
+the model=E2=80=99s response, all through example codes.
+
+=
+Agents
+
+BUILD AI AGENTS WITH LANGGRAPH [13]
+
+=E2=87=A7 515 Likes
+=
+
+Explore how to build AI agents and chatbots using LangGraph. This
+guid=
+e covers creating a StateGraph, managing state, and integrating
+LLMs with=
+ real code examples. You'll set up Python, use LangGraph to
+design agent =
+interactions, and create a basic chatbot. The tutorial
+also includes API =
+key setup and implementation steps.
+
+Agents
+
+HOW TO USE ANTHROPIC M=
+CP SERVER WITH OPEN LLMS, OPENAI OR GOOGLE
+GEMINI [14]
+
+=E2=87=A7 654=
+ Likes
+
+This tutorial demonstrates how to use Anthropic's Model Context=
+
+Protocol (MCP) Server with open LLMs, OpenAI, or Google Gemini. It
+exp=
+lains how to build a CLI agent capable of interacting with a SQLite
+datab=
+ase. Understand how MCP decouples components, defines interfaces,
+and imp=
+roves scalability for managing and deploying complex AI
+systems.
+
+HOW=
+ TO
+
+Voice App Development
+
+HOW TO USE THE REALTIME API FOR MULTI-A=
+GENT VOICE APPS
+
+This guide walks you through setting up and using the =
+Realtime API to
+build a multi-agent voice app with sequential agent hando=
+ffs.
+
+Here is how use the Realtime API for Multi-Agent Voice Apps:
+=
+
+STEP 1
+Clone the repo [15] and install the dependencies:
+' npm i '=
+
+
+STEP 2
+Add your OpenAI API key to your .env file.
+
+STEP 3
+Sta=
+rt the development server:
+' npm run dev '
+
+STEP 4
+Open 'http://loc=
+alhost:3000' in your browser to access the app and
+automatically connect =
+to the simpleExample agent set.
+
+STEP 5
+Configure agents by modifying=
+ 'src/app/agentConfigs/simpleExample.ts'
+to define your agents and their =
+handoff logic.
+
+STEP 6
+Test different agent scenarios like 'frontDesk=
+Authentication' and
+'customerServiceRetail' from the dropdown menu.
+
+=
+HOW WAS TODAY=E2=80=99S EMAIL?
+
+AWESOME=C2=A0 =C2=A0=C2=A0DECENT=C2=
+=A0 =C2=A0 =C2=A0NOT GREAT
+
+At Alpha Signal, our mission is to build a =
+sharp, engaged community
+focused on AI, machine learning, and cutting-edg=
+e language models,
+helping over 200,000 developers stay informed and ahea=
+d. We=E2=80=99re
+passionate about curating the best in AI, from top resea=
+rch and
+trending technical blogs to expert insights and tailored job
+op=
+portunities. We keep you connected to the breakthroughs and
+discussions t=
+hat matter, so you can stay in the loop without endless
+searching. We als=
+o work closely with partners who value the future of
+AI, including employ=
+ers and advertisers who want to reach an audience
+as passionate about AI =
+as we are.
+
+Our partnerships are based on shared values of ethics, resp=
+onsibility,
+and a commitment to building a better world through technolog=
+y.Privacy
+is a priority at Alpha Signal. Our Privacy Policy clearly expla=
+ins how
+we collect, store, and use your personal and non-personal informa=
+tion.
+By using our website, you accept these terms, which you can review =
+on
+our website. This policy applies across all Alpha Signal pages,
+outl=
+ining your rights and how to contact us if you want to adjust the
+use of =
+your information. We=E2=80=99re based in the United States. By using
+our =
+site, you agree to be governed by U.S. laws.
+
+Looking to promote your c=
+ompany, product, service, or event to
+200,000+ AI developers? Let's work =
+together.
+
+=09=09WORK WITH US [2]=20
+
+Stop receiving emails here [16]=
+
+
+214 Barton Springs Rd, Austin, Texas, 78704, United States of America=
+
+
+=20
+
+Links:
+------
+[1] https://link.alphasignal.ai/HWyWVm
+[2]=
+ https://link.alphasignal.ai/qBDJtP
+[3] https://link.alphasignal.ai/uIKFt=
+p
+[4] https://araneoides.eomail1.com/web-version?ep=3D1&lc=3D7988f182-4b4=
+d-11ef-9f27-45aafcfcef5f&p=3D71f931ae-d764-11ef-933b-8992040d91a9&pt=3Dcamp=
+aign&t=3D1737401946&s=3D7d229ec2d793d5c64e6c67eb3e9275326e2f19a2c26c3ad4164=
+eca5db1c793c7
+[5] https://link.alphasignal.ai/Vovy2h
+[6] https://link.a=
+lphasignal.ai/xwXUpv
+[7] https://link.alphasignal.ai/kGyWuN
+[8] https:/=
+/link.alphasignal.ai/FXgTLn
+[9] https://link.alphasignal.ai/4xqo7d
+[10]=
+ https://link.alphasignal.ai/ngW9jn
+[11] https://link.alphasignal.ai/BngL=
+EN
+[12] https://link.alphasignal.ai/MjAk6N
+[13] https://link.alphasigna=
+l.ai/Pza6S0
+[14] https://link.alphasignal.ai/B00K7q
+[15] https://link.a=
+lphasignal.ai/DWKiJR
+[16] https://araneoides.eomail1.com/unsubscribe?ep=
+=3D1&l=3D9a4eb768-071d-11ef-b70b-19296a53e269&lc=3D7988f182-4b4d-11ef-9f27-=
+45aafcfcef5f&p=3D71f931ae-d764-11ef-933b-8992040d91a9&pt=3Dcampaign&pv=3D4&=
+spa=3D1737401316&t=3D1737401946&s=3Da7b2b743050f53b8d76745ec76da964843072df=
+66563376fb89c791f5604749a
+--bpcBHDy6
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html lang=3D"und" xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:o=3D"urn:sc=
+hemas-microsoft-com:office:office"><head><link id=3D"dark-mode-custom-link"=
+ rel=3D"stylesheet" type=3D"text/css"/><link id=3D"dark-mode-general-link" =
+rel=3D"stylesheet" type=3D"text/css"/><link id=3D"dark-mode-custom-link" re=
+l=3D"stylesheet" type=3D"text/css"/><link id=3D"dark-mode-general-link" rel=
+=3D"stylesheet" type=3D"text/css"/><meta charset=3D"utf-8"/><meta content=
+=3D"width=3Ddevice-width, initial-scale=3D1" name=3D"viewport"/><meta name=
+=3D"x-apple-disable-message-reformatting"/><meta content=3D"IE=3Dedge" http=
+-equiv=3D"X-UA-Compatible"/><meta content=3D"telephone=3Dno" name=3D"format=
+-detection"/><title></title>
+<!--[if (mso 16)]><style type=3D"text/css"> a { text-decoration: none; }=20
+</style><![endif]--><!--[if gte mso 9]><style> sup { font-size: 100% !impor=
+tant; } </style><![endif]--><!--[if gte mso 9]><noscript>
+         <xml>
+           <o:OfficeDocumentSettings>
+           <o:AllowPNG></o:AllowPNG>
+           <o:PixelsPerInch>96</o:PixelsPerInch>
+           </o:OfficeDocumentSettings>
+         </xml>
+      </noscript><![endif]--><!--[if gte mso 9]><style>sup { font-size: 100=
+% !important; }</style><![endif]--><!--[if mso]><xml>
+    <w:WordDocument xmlns:w=3D"urn:schemas-microsoft-com:office:word">
+      <w:DontUseAdvancedTypographyReadingMail></w:DontUseAdvancedTypography=
+ReadingMail>
+    </w:WordDocument>
+    </xml><![endif]--><!--[if !mso]><!-- --><link href=3D"https://fonts.goo=
+gleapis.com/css?family=3DRoboto:400,400i,700,700i" rel=3D"stylesheet"/><lin=
+k href=3D"https://fonts.googleapis.com/css2?family=3DIBM+Plex+Sans:ital,wgh=
+t@0,400;0,700;1,400;1,700&amp;display=3Dswap" rel=3D"stylesheet"/><!--<![en=
+dif]--><style type=3D"text/css">#outlook a {=09padding:0;}.es-button {=09ms=
+o-style-priority:100!important;=09text-decoration:none!important;}a[x-apple=
+-data-detectors] {=09color:inherit!important;=09text-decoration:none!import=
+ant;=09font-size:inherit!important;=09font-family:inherit!important;=09font=
+-weight:inherit!important;=09line-height:inherit!important;}.es-desk-hidden=
+ {=09display:none;=09float:left;=09overflow:hidden;=09width:0;=09max-height=
+:0;=09line-height:0;=09mso-hide:all;}@media only screen and (max-width:600p=
+x) {p, ul li, ol li, a { line-height:150%!important } h1, h2, h3, h1 a, h2 =
+a, h3 a { line-height:120%!important } h1 { font-size:30px!important; text-=
+align:left!important } h2 { font-size:20px!important; text-align:left!impor=
+tant } h3 { font-size:18px!important; text-align:left!important } .es-heade=
+r-body h1 a, .es-content-body h1 a, .es-footer-body h1 a { font-size:30px!i=
+mportant; text-align:left!important } .es-header-body h2 a, .es-content-bod=
+y h2 a, .es-footer-body h2 a { font-size:20px!important; text-align:left!im=
+portant } .es-header-body h3 a, .es-content-body h3 a, .es-footer-body h3 a=
+ { font-size:18px!important; text-align:left!important } .es-menu td a { fo=
+nt-size:13px!important } .es-header-body p, .es-header-body ul li, .es-head=
+er-body ol li, .es-header-body a { font-size:16px!important } .es-content-b=
+ody p, .es-content-body ul li, .es-content-body ol li, .es-content-body a {=
+ font-size:16px!important } .es-footer-body p, .es-footer-body ul li, .es-f=
+ooter-body ol li, .es-footer-body a { font-size:16px!important } .es-infobl=
+ock p, .es-infoblock ul li, .es-infoblock ol li, .es-infoblock a { font-siz=
+e:12px!important } *[class=3D"gmail-fix"] { display:none!important } .es-m-=
+txt-c, .es-m-txt-c h1, .es-m-txt-c h2, .es-m-txt-c h3 { text-align:center!i=
+mportant } .es-m-txt-r, .es-m-txt-r h1, .es-m-txt-r h2, .es-m-txt-r h3 { te=
+xt-align:right!important } .es-m-txt-l, .es-m-txt-l h1, .es-m-txt-l h2, .es=
+-m-txt-l h3 { text-align:left!important } .es-m-txt-r img, .es-m-txt-c img,=
+ .es-m-txt-l img { display:inline!important } .es-button-border { display:i=
+nline-block!important } a.es-button, button.es-button { font-size:16px!impo=
+rtant; display:inline-block!important; border-left-width:0px!important; bor=
+der-right-width:0px!important } .es-adaptive table, .es-left, .es-right { w=
+idth:100%!important } .ac-footer, .es-content table, .es-header table, .es-=
+footer table, .es-content, .es-footer, .es-header { width:100%!important; m=
+ax-width:600px!important } .ac-footer td, .ac-footer p, .es-adapt-td { disp=
+lay:block!important; width:100%!important } .adapt-img { width:100%!importa=
+nt; height:auto!important } .es-m-p0 { padding:0!important } .es-m-p0r { pa=
+dding-right:0!important } .es-m-p0l { padding-left:0!important } .es-m-p0t =
+{ padding-top:0!important } .es-m-p0b { padding-bottom:0!important } .es-m-=
+p20b { padding-bottom:20px!important } .es-mobile-hidden, .es-hidden { disp=
+lay:none!important } tr.es-desk-hidden, td.es-desk-hidden, table.es-desk-hi=
+dden { width:auto!important; overflow:visible!important; float:none!importa=
+nt; max-height:inherit!important; line-height:inherit!important } tr.es-des=
+k-hidden { display:table-row!important } table.es-desk-hidden { display:tab=
+le!important } td.es-desk-menu-hidden { display:table-cell!important } .es-=
+menu td { width:1%!important } table.es-table-not-adapt, .esd-block-html ta=
+ble { width:auto!important } table.es-social { display:inline-block!importa=
+nt } table.es-social td { display:inline-block!important } .es-desk-hidden =
+{ display:table-row!important; width:auto!important; overflow:visible!impor=
+tant; max-height:inherit!important } .es-m-p5 { padding:5px!important } .es=
+-m-p5t { padding-top:5px!important } .es-m-p5b { padding-bottom:5px!importa=
+nt } .es-m-p5r { padding-right:5px!important } .es-m-p5l { padding-left:5px=
+!important } .es-m-p10 { padding:10px!important } .es-m-p10t { padding-top:=
+10px!important } .es-m-p10b { padding-bottom:10px!important } .es-m-p10r { =
+padding-right:10px!important } .es-m-p10l { padding-left:10px!important } .=
+es-m-p15 { padding:15px!important } .es-m-p15t { padding-top:15px!important=
+ } .es-m-p15b { padding-bottom:15px!important } .es-m-p15r { padding-right:=
+15px!important } .es-m-p15l { padding-left:15px!important } .es-m-p20 { pad=
+ding:20px!important } .es-m-p20t { padding-top:20px!important } .es-m-p20r =
+{ padding-right:20px!important } .es-m-p20l { padding-left:20px!important }=
+ .es-m-p25 { padding:25px!important } .es-m-p25t { padding-top:25px!importa=
+nt } .es-m-p25b { padding-bottom:25px!important } .es-m-p25r { padding-righ=
+t:25px!important } .es-m-p25l { padding-left:25px!important } .es-m-p30 { p=
+adding:30px!important } .es-m-p30t { padding-top:30px!important } .es-m-p30=
+b { padding-bottom:30px!important } .es-m-p30r { padding-right:30px!importa=
+nt } .es-m-p30l { padding-left:30px!important } .es-m-p35 { padding:35px!im=
+portant } .es-m-p35t { padding-top:35px!important } .es-m-p35b { padding-bo=
+ttom:35px!important } .es-m-p35r { padding-right:35px!important } .es-m-p35=
+l { padding-left:35px!important } .es-m-p40 { padding:40px!important } .es-=
+m-p40t { padding-top:40px!important } .es-m-p40b { padding-bottom:40px!impo=
+rtant } .es-m-p40r { padding-right:40px!important } .es-m-p40l { padding-le=
+ft:40px!important } .h-auto { height:auto!important } .es-m-margin { paddin=
+g-left:5px!important; padding-right:5px!important; padding-top:5px!importan=
+t; padding-bottom:5px!important } }@media screen and (max-width:384px) {.ma=
+il-message-content { width:414px!important } }p a { text-decoration: underl=
+ine !important; text-decoration-color: #2d59f5 !important; color: #1177eb !=
+important; }</style>
+</head>
+<body class=3D"es-wrapper-color" data-new-gr-c-s-loaded=3D"14.1192.0" lang=
+=3D"und" marginheight=3D"0" marginwidth=3D"0" style=3D"font-family:roboto, =
+'helvetica neue', helvetica, arial, sans-serif;width:100%;-webkit-text-size=
+-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0;background-color:=
+#FFFFFF"><div style=3D"display:none; font-size:0px; line-height:0px; max-he=
+ight:0px; max-width:0px; opacity:0; overflow:hidden; visibility:hidden; mso=
+-hide:all;">On OpenAI&#039;s Custom Instruction update, Runway&#039;s new i=
+mage generation model,...=C2=A0</div><table cellpadding=3D"0" cellspacing=
+=3D"0" class=3D"es-wrapper" role=3D"none" style=3D"mso-table-lspace:0pt;mso=
+-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;padding:0;Mar=
+gin:0;width:100%;background-repeat:repeat;background-position:center top;he=
+ight:100%;background-color:#F7FAFC" width=3D"100%"><tbody><tr><td class=3D"=
+es-m-margin" style=3D"padding:0;Margin:0" valign=3D"top"><table align=3D"ce=
+nter" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-content" role=3D"none=
+" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collap=
+se;border-spacing:0px;table-layout:fixed !important;width:100%"><tbody><tr>=
+<td align=3D"center" class=3D"es-info-area" style=3D"padding:0;Margin:0"><t=
+able align=3D"center" bgcolor=3D"#00000000" cellpadding=3D"0" cellspacing=
+=3D"0" class=3D"es-content-body" role=3D"none" style=3D"mso-table-lspace:0p=
+t;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;backgrou=
+nd-color:transparent;width:600px"><tbody><tr><td align=3D"left" style=3D"pa=
+dding:0;Margin:0"><table cellpadding=3D"0" cellspacing=3D"0" role=3D"none" =
+style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse=
+;border-spacing:0px" width=3D"100%"><tbody><tr><td align=3D"center" style=
+=3D"padding:0;Margin:0;width:600px" valign=3D"top"><table cellpadding=3D"0"=
+ cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0pt;mso-=
+table-rspace:0pt;border-collapse:separate;border-spacing:0px;border-radius:=
+5px" width=3D"100%"><tbody><tr><td align=3D"right" class=3D"es-m-txt-c es-i=
+nfoblock" style=3D"padding:0;Margin:0;padding-top:5px;padding-bottom:5px;li=
+ne-height:15.6px;font-size:13px;color:#D3E5F6"><h4 style=3D"Margin:0;line-h=
+eight:14.4px;mso-line-height-rule:exactly;font-family:roboto, 'helvetica ne=
+ue', helvetica, arial, sans-serif;font-size:12px;color:#6a7788"><a href=3D"=
+https://link.alphasignal.ai/HWyWVm" style=3D"-webkit-text-size-adjust:none;=
+-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:none=
+;color:#6a7788;font-size:12px;line-height:14.4px" target=3D"_blank">Signup<=
+/a>=C2=A0=C2=A0|=C2=A0=C2=A0<a href=3D"https://link.alphasignal.ai/qBDJtP" =
+style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-h=
+eight-rule:exactly;text-decoration:none;color:#6a7788;font-size:12px;line-h=
+eight:14.4px" target=3D"_blank">Work With Us</a>=C2=A0=C2=A0|=C2=A0=C2=A0<a=
+ href=3D"https://link.alphasignal.ai/uIKFtp" style=3D"-webkit-text-size-adj=
+ust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decora=
+tion:none;color:#6a7788;font-size:12px;line-height:14.4px" target=3D"_blank=
+">Follow on X</a>=C2=A0=C2=A0|=C2=A0=C2=A0<a href=3D"https://araneoides.eom=
+ail1.com/web-version?ep=3D1&amp;lc=3D7988f182-4b4d-11ef-9f27-45aafcfcef5f&a=
+mp;p=3D71f931ae-d764-11ef-933b-8992040d91a9&amp;pt=3Dcampaign&amp;t=3D17374=
+01946&amp;s=3D7d229ec2d793d5c64e6c67eb3e9275326e2f19a2c26c3ad4164eca5db1c79=
+3c7" style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-l=
+ine-height-rule:exactly;text-decoration:none;color:#6a7788;font-size:12px;l=
+ine-height:14.4px" target=3D"_blank">Read on Web</a></h4>
+</td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></tab=
+le></td></tr></tbody></table>
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-hea=
+der" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;borde=
+r-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:=
+100%;background-color:transparent;background-repeat:repeat;background-posit=
+ion:center top"><tbody><tr><td align=3D"center" style=3D"padding:0;Margin:0=
+"><table align=3D"center" bgcolor=3D"#00000000" cellpadding=3D"0" cellspaci=
+ng=3D"0" class=3D"es-header-body" role=3D"none" style=3D"mso-table-lspace:0=
+pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;backgro=
+und-color:transparent;width:600px"><tbody><tr><td align=3D"left" bgcolor=3D=
+"#2D59F5" style=3D"padding:20px;Margin:0;border-radius:10px;background-colo=
+r:#2d59f5"><table cellpadding=3D"0" cellspacing=3D"0" role=3D"none" style=
+=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;bord=
+er-spacing:0px" width=3D"100%"><tbody><tr><td align=3D"center" style=3D"pad=
+ding:0;Margin:0;width:560px" valign=3D"top"><table cellpadding=3D"0" cellsp=
+acing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0pt;mso-table-r=
+space:0pt;border-collapse:collapse;border-spacing:0px" width=3D"100%"><tbod=
+y><tr><td align=3D"left" style=3D"padding:0;Margin:0;font-size:0px"><img al=
+t=3D"" data-cf-ir-is-resized=3D"true" src=3D"https://content.app-us1.com/cd=
+n-cgi/image/format=3Dauto,onerror=3Dredirect,width=3D650,dpr=3D2,fit=3Dscal=
+e-down/QMZOW/2024/10/25/5bcd33d4-f684-42c1-a3fa-f5a0d75a8274.png" style=3D"=
+display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-=
+mode:bicubic" width=3D"30"/></td>
+</tr><tr><td style=3D"padding:0;Margin:0"><div style=3D"opacity:0"> . </div=
+></td></tr><tr><td align=3D"left" style=3D"padding:0;Margin:0;padding-top:2=
+0px;padding-bottom:20px"><p style=3D"Margin:0;-webkit-text-size-adjust:none=
+;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto,=
+ 'helvetica neue', helvetica, arial, sans-serif;line-height:30px;color:#fff=
+fff;font-size:20px"><b>Hey  ,</b></p></td></tr><tr><td align=3D"left" style=
+=3D"padding:0;Margin:0"><p style=3D"Margin:0;-webkit-text-size-adjust:none;=
+-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, =
+'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#FFFF=
+FF;font-size:18px">Welcome to AlphaSignal =E2=80=93 the most read newslette=
+r by AI developers.=C2=A0<br/></p>
+<p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:non=
+e;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvet=
+ica, arial, sans-serif;line-height:27px;color:#FFFFFF;font-size:18px"><br/>=
+</p><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust=
+:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', he=
+lvetica, arial, sans-serif;line-height:27px;color:#FFFFFF;font-size:18px">W=
+e bring you the top 1% of news, papers, models, and repos, all summarized t=
+o keep you updated on the latest in AI.</p></td></tr></tbody></table></td><=
+/tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-con=
+tent" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;bord=
+er-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width=
+:100%"><tbody><tr><td align=3D"center" style=3D"padding:0;Margin:0"><table =
+align=3D"center" bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"es-content-body" role=3D"none" style=3D"mso-table-lspace:0pt;mso-tab=
+le-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:=
+transparent;width:600px"><tbody><tr><td align=3D"left" style=3D"padding:0;M=
+argin:0;padding-left:20px;padding-right:20px"><table cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:=
+0pt;border-collapse:collapse;border-spacing:0px" width=3D"100%"><tbody><tr>=
+<td align=3D"center" style=3D"padding:0;Margin:0;width:560px" valign=3D"top=
+"><table cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D=
+"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-=
+spacing:0px" width=3D"100%"><tbody><tr><td align=3D"center" style=3D"paddin=
+g:10px;Margin:0;font-size:0"><table border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" height=3D"100%" role=3D"presentation" style=3D"mso-table-lspace:0=
+pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px" width=
+=3D"100%"><tbody><tr><td style=3D"padding:0;Margin:0;border-bottom:0px soli=
+d #cccccc;background:unset;height:1px;width:100%;margin:0px"></td>
+</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></=
+td></tr></tbody></table></td></tr></tbody></table>
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-con=
+tent" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;bord=
+er-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width=
+:100%"><tbody><tr><td align=3D"center" style=3D"padding:0;Margin:0"><table =
+align=3D"center" bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"es-content-body" role=3D"none" style=3D"mso-table-lspace:0pt;mso-tab=
+le-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:=
+transparent;width:600px"><tbody><tr><td align=3D"left" style=3D"padding:0;M=
+argin:0"><table cellpadding=3D"0" cellspacing=3D"0" role=3D"none" style=3D"=
+mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-s=
+pacing:0px" width=3D"100%"><tbody><tr><td align=3D"center" style=3D"padding=
+:0;Margin:0;border-radius:5px;overflow:hidden;width:600px" valign=3D"top"><=
+table bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse=
+:separate;border-spacing:0px;border-left:1px solid #dfe3e8;border-right:1px=
+ solid #dfe3e8;border-top:1px solid #dfe3e8;border-bottom:1px solid #dfe3e8=
+;background-color:#ffffff;border-radius:5px" width=3D"100%"><tbody><tr><td =
+align=3D"left" class=3D"es-m-txt-l" style=3D"Margin:0;padding-bottom:10px;p=
+adding-top:20px;padding-left:20px;padding-right:20px"><h3 style=3D"Margin:0=
+;line-height:19.2px;mso-line-height-rule:exactly;font-family:'ibm plex sans=
+', sans-serif;font-size:16px;font-style:normal;font-weight:bold;color:#2d59=
+f5"><strong>IN TODAY'S SIGNAL</strong></h3>
+</td></tr><tr><td align=3D"left" class=3D"es-m-txt-l" style=3D"padding:0;Ma=
+rgin:0;padding-bottom:5px;padding-left:20px;padding-right:20px"><p style=3D=
+"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-=
+height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial,=
+ sans-serif;line-height:21px;color:#000000;font-size:14px"><em>Read time: 4=
+ min 39 sec</em></p></td></tr><tr><td align=3D"left" class=3D"es-m-txt-l" s=
+tyle=3D"Margin:0;padding-bottom:10px;padding-top:20px;padding-left:20px;pad=
+ding-right:20px"><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-tex=
+t-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvet=
+ica neue', helvetica, arial, sans-serif;line-height:24px;color:#000000;font=
+-size:16px"><strong>=F0=9F=8E=96=EF=B8=8F Top News</strong></p><ul>
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, ari=
+al, sans-serif;line-height:24px;margin-left:0;color:#000000;font-size:16px"=
+><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:no=
+ne;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helve=
+tica, arial, sans-serif;line-height:24px;color:#000000;font-size:16px"><a h=
+ref=3D"https://link.alphasignal.ai/Vovy2h" style=3D"-webkit-text-size-adjus=
+t:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decorati=
+on:none;color:#000000;font-size:16px" target=3D"_blank">DeepSeek Releases R=
+1</a>: Open-Source RL-Only Model Matching OpenAI-o1 in Reasoning Tasks.<br/=
+><br/></p></li>
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, ari=
+al, sans-serif;line-height:24px;margin-left:0;color:#000000;font-size:16px;=
+display:none"><br/></li> </ul><p style=3D"Margin:0;-webkit-text-size-adjust=
+:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:ro=
+boto, 'helvetica neue', helvetica, arial, sans-serif;line-height:24px;color=
+:#000000;font-size:16px"><strong>=F0=9F=93=8C HubSpot</strong></p><ul>
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, ari=
+al, sans-serif;line-height:24px;margin-left:0;color:#000000;font-size:16px"=
+><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:no=
+ne;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helve=
+tica, arial, sans-serif;line-height:24px;color:#000000;font-size:16px"><a h=
+ref=3D"" style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;m=
+so-line-height-rule:exactly;text-decoration:none;color:#000000;font-size:16=
+px" target=3D"_blank"></a><a href=3D"https://link.alphasignal.ai/xwXUpv" st=
+yle=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-hei=
+ght-rule:exactly;text-decoration:none;color:#000000;font-size:16px" target=
+=3D"_blank">Learn practical ways to use ChatGPT at work</a> with 100 ready-=
+to-use prompts and examples.<br/><br/></p></li> </ul>
+<p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:non=
+e;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvet=
+ica, arial, sans-serif;line-height:24px;color:#000000;font-size:16px"><stro=
+ng>=E2=9A=A1=EF=B8=8F Trending Signals</strong></p><ul>
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, ari=
+al, sans-serif;line-height:24px;margin-left:0;color:#000000;font-size:16px"=
+><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:no=
+ne;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helve=
+tica, arial, sans-serif;line-height:24px;color:#000000;font-size:16px"><a h=
+ref=3D"https://link.alphasignal.ai/kGyWuN" style=3D"-webkit-text-size-adjus=
+t:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decorati=
+on:none;color:#000000;font-size:16px" target=3D"_blank">OpenAI updates Chat=
+GPT custom instructions</a> UI for easier personalization across platforms.=
+<br/><br/></p></li>
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, ari=
+al, sans-serif;line-height:24px;margin-left:0;color:#000000;font-size:16px;=
+display:none"><br/></li> <li style=3D"-webkit-text-size-adjust:none;-ms-tex=
+t-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvet=
+ica neue', helvetica, arial, sans-serif;line-height:24px;margin-left:0;colo=
+r:#000000;font-size:16px;display:none"><br/></li>
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, ari=
+al, sans-serif;line-height:24px;margin-left:0;color:#000000;font-size:16px"=
+><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:no=
+ne;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helve=
+tica, arial, sans-serif;line-height:24px;color:#000000;font-size:16px"><a h=
+ref=3D"https://link.alphasignal.ai/FXgTLn" style=3D"-webkit-text-size-adjus=
+t:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decorati=
+on:none;color:#000000;font-size:16px" target=3D"_blank">Runway releases an =
+image generation model</a> that provides high-quality photorealism and styl=
+istic precision.</p><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-=
+text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'hel=
+vetica neue', helvetica, arial, sans-serif;line-height:24px;color:#000000;f=
+ont-size:16px;display:none"><br/></p><p style=3D"Margin:0;-webkit-text-size=
+-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-fa=
+mily:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:24p=
+x;color:#000000;font-size:16px"><br/></p></li>
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, ari=
+al, sans-serif;line-height:24px;margin-left:0;color:#000000;font-size:16px"=
+><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:no=
+ne;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helve=
+tica, arial, sans-serif;line-height:24px;color:#000000;font-size:16px"><a h=
+ref=3D"https://link.alphasignal.ai/4xqo7d" style=3D"-webkit-text-size-adjus=
+t:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decorati=
+on:none;color:#000000;font-size:16px" target=3D"_blank">Cognition Labs laun=
+ches Devin 1.2</a>, improving PR accuracy, adding enterprise accounts, and =
+pay-as-you-go billing.<br/><br/></p></li>
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, ari=
+al, sans-serif;line-height:24px;margin-left:0;color:#000000;font-size:16px;=
+display:none"><br/></li> <li style=3D"-webkit-text-size-adjust:none;-ms-tex=
+t-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvet=
+ica neue', helvetica, arial, sans-serif;line-height:24px;margin-left:0;colo=
+r:#000000;font-size:16px;display:none"><br/></li>
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, ari=
+al, sans-serif;line-height:24px;margin-left:0;color:#000000;font-size:16px"=
+><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:no=
+ne;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helve=
+tica, arial, sans-serif;line-height:24px;color:#000000;font-size:16px"><a h=
+ref=3D"https://link.alphasignal.ai/ngW9jn" style=3D"-webkit-text-size-adjus=
+t:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decorati=
+on:none;color:#000000;font-size:16px" target=3D"_blank">Codeium unveils Win=
+dsurf Wave 2</a>, adding web search, automated Memories, and code execution=
+ improvements.<br/><br/></p></li>
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, ari=
+al, sans-serif;line-height:24px;margin-left:0;color:#000000;font-size:16px"=
+><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:no=
+ne;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helve=
+tica, arial, sans-serif;line-height:24px;color:#000000;font-size:16px"><a h=
+ref=3D"https://link.alphasignal.ai/BngLEN" style=3D"-webkit-text-size-adjus=
+t:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decorati=
+on:none;color:#000000;font-size:16px" target=3D"_blank">Andrew Ng explores =
+future of AI Product Management</a>: key skills and growing opportunities.<=
+br/><br/></p></li> </ul>
+<h3 style=3D"Margin:0;line-height:19.2px;mso-line-height-rule:exactly;font-=
+family:roboto, 'helvetica neue', helvetica, arial, sans-serif;font-size:16p=
+x;font-style:normal;font-weight:bold;color:#000000"><strong style=3D"text-a=
+lign:center"><a href=3D"" style=3D"-webkit-text-size-adjust:none;-ms-text-s=
+ize-adjust:none;mso-line-height-rule:exactly;text-decoration:none;color:#00=
+0000;font-size:16px" target=3D"_blank"></a></strong>=F0=9F=92=BB <strong st=
+yle=3D"text-align:center"><a href=3D"" style=3D"-webkit-text-size-adjust:no=
+ne;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:n=
+one;color:#000000;font-size:16px" target=3D"_blank">Top Tutorials</a></stro=
+ng></h3><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-ad=
+just:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue'=
+, helvetica, arial, sans-serif;line-height:24px;color:#000000;font-size:16p=
+x;display:none"><br/></p>
+<p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:non=
+e;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvet=
+ica, arial, sans-serif;line-height:24px;color:#000000;font-size:16px;displa=
+y:none"><br/></p><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-tex=
+t-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvet=
+ica neue', helvetica, arial, sans-serif;line-height:24px;color:#000000;font=
+-size:16px;display:none"><br/></p><ul>
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, ari=
+al, sans-serif;line-height:24px;margin-left:0;color:#000000;font-size:16px"=
+><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:no=
+ne;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helve=
+tica, arial, sans-serif;line-height:24px;color:#000000;font-size:16px"><a h=
+ref=3D"" style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;m=
+so-line-height-rule:exactly;text-decoration:none;color:#000000;font-size:16=
+px" target=3D"_blank"></a><a href=3D"https://link.alphasignal.ai/MjAk6N" st=
+yle=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-hei=
+ght-rule:exactly;text-decoration:none;color:#000000;font-size:16px" target=
+=3D"_blank">Implement OpenAI's function calling</a> to integrate external s=
+ervices, handle data, and execute actions.<br/><br/></p></li>
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, ari=
+al, sans-serif;line-height:24px;margin-left:0;color:#000000;font-size:16px;=
+display:none"><br/></li>
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, ari=
+al, sans-serif;line-height:24px;margin-left:0;color:#000000;font-size:16px"=
+><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:no=
+ne;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helve=
+tica, arial, sans-serif;line-height:24px;color:#000000;font-size:16px"><a h=
+ref=3D"https://link.alphasignal.ai/Pza6S0" style=3D"-webkit-text-size-adjus=
+t:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decorati=
+on:none;color:#000000;font-size:16px" target=3D"_blank">Build AI agents and=
+ chatbots</a> with LangGraph.<br/><br/></p></li>
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, ari=
+al, sans-serif;line-height:24px;margin-left:0;color:#000000;font-size:16px;=
+display:none"><br/></li>
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, ari=
+al, sans-serif;line-height:24px;margin-left:0;color:#000000;font-size:16px"=
+><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:no=
+ne;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helve=
+tica, arial, sans-serif;line-height:24px;color:#000000;font-size:16px"><a h=
+ref=3D"" style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;m=
+so-line-height-rule:exactly;text-decoration:none;color:#000000;font-size:16=
+px" target=3D"_blank"></a><a href=3D"https://link.alphasignal.ai/B00K7q" st=
+yle=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-hei=
+ght-rule:exactly;text-decoration:none;color:#000000;font-size:16px" target=
+=3D"_blank">How to use Anthropic's MCP Server</a> with open LLMs or Google =
+Gemini to build a CLI Agent with SQLite.<br/><br/></p></li> </ul>
+<p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:non=
+e;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvet=
+ica, arial, sans-serif;line-height:24px;color:#000000;font-size:16px"><stro=
+ng>=F0=9F=A7=A0 How To</strong></p><ul> <li style=3D"-webkit-text-size-adju=
+st:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:=
+roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:24px;mar=
+gin-left:0;color:#000000;font-size:16px"><p style=3D"Margin:0;-webkit-text-=
+size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fon=
+t-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height=
+:24px;color:#000000;font-size:16px">Learn how to build and prototype a mult=
+i-agent voice app in under 20 minutes using the Realtime API.</p></li> </ul=
+></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></ta=
+ble></td></tr></tbody></table>
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-con=
+tent" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;bord=
+er-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width=
+:100%"><tbody><tr><td align=3D"center" style=3D"padding:0;Margin:0"><table =
+align=3D"center" bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"es-content-body" role=3D"none" style=3D"mso-table-lspace:0pt;mso-tab=
+le-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:=
+transparent;width:600px"><tbody><tr><td align=3D"left" style=3D"padding:0;M=
+argin:0;padding-left:20px;padding-right:20px"><table cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:=
+0pt;border-collapse:collapse;border-spacing:0px" width=3D"100%"><tbody><tr>=
+<td align=3D"center" style=3D"padding:0;Margin:0;width:560px" valign=3D"top=
+"><table cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D=
+"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-=
+spacing:0px" width=3D"100%"><tbody><tr><td align=3D"center" style=3D"paddin=
+g:10px;Margin:0;font-size:0"><table border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" height=3D"100%" role=3D"presentation" style=3D"mso-table-lspace:0=
+pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px" width=
+=3D"100%"><tbody><tr><td style=3D"padding:0;Margin:0;border-bottom:0px soli=
+d #cccccc;background:unset;height:1px;width:100%;margin:0px"></td>
+</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></=
+td></tr></tbody></table></td></tr></tbody></table>
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-con=
+tent" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;bord=
+er-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width=
+:100%"><tbody><tr><td align=3D"center" style=3D"padding:0;Margin:0"><table =
+align=3D"center" bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"es-content-body" role=3D"none" style=3D"mso-table-lspace:0pt;mso-tab=
+le-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:=
+transparent;width:600px"><tbody><tr><td align=3D"left" style=3D"padding:0;M=
+argin:0"><table cellpadding=3D"0" cellspacing=3D"0" role=3D"none" style=3D"=
+mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-s=
+pacing:0px" width=3D"100%"><tbody><tr><td align=3D"center" style=3D"padding=
+:0;Margin:0;border-radius:5px;overflow:hidden;width:600px" valign=3D"top"><=
+table bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse=
+:separate;border-spacing:0px;border-left:1px solid #9eaaef;border-right:1px=
+ solid #9eaaef;border-top:1px solid #9eaaef;border-bottom:1px solid #9eaaef=
+;background-color:#ffffff;border-radius:5px" width=3D"100%"><tbody><tr><td =
+align=3D"center" class=3D"es-m-txt-c" style=3D"padding:15px;Margin:0"><p st=
+yle=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso=
+-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, =
+arial, sans-serif;line-height:24px;color:#000000;font-size:16px"><strong>If=
+ you're enjoying AlphaSignal please forward this email to a colleague.=C2=
+=A0</strong></p>
+<p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:non=
+e;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvet=
+ica, arial, sans-serif;line-height:24px;color:#000000;font-size:16px">It he=
+lps us keep this content free.</p></td></tr></tbody></table></td></tr></tbo=
+dy></table></td></tr></tbody></table></td></tr></tbody></table>
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-con=
+tent" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;bord=
+er-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width=
+:100%"><tbody><tr><td align=3D"center" style=3D"padding:0;Margin:0"><table =
+align=3D"center" bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"es-content-body" role=3D"none" style=3D"mso-table-lspace:0pt;mso-tab=
+le-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:=
+transparent;width:600px"><tbody><tr><td align=3D"left" style=3D"padding:0;M=
+argin:0;padding-left:20px;padding-right:20px"><table cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:=
+0pt;border-collapse:collapse;border-spacing:0px" width=3D"100%"><tbody><tr>=
+<td align=3D"center" style=3D"padding:0;Margin:0;width:560px" valign=3D"top=
+"><table cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D=
+"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-=
+spacing:0px" width=3D"100%"><tbody><tr><td align=3D"center" style=3D"paddin=
+g:10px;Margin:0;font-size:0"><table border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" height=3D"100%" role=3D"presentation" style=3D"mso-table-lspace:0=
+pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px" width=
+=3D"100%"><tbody><tr><td style=3D"padding:0;Margin:0;border-bottom:0px soli=
+d #cccccc;background:unset;height:1px;width:100%;margin:0px"></td>
+</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></=
+td></tr></tbody></table></td></tr></tbody></table>
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-con=
+tent" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;bord=
+er-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width=
+:100%"><tbody><tr><td align=3D"center" style=3D"padding:0;Margin:0"><table =
+align=3D"center" bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"es-content-body" role=3D"none" style=3D"mso-table-lspace:0pt;mso-tab=
+le-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:=
+transparent;width:600px"><tbody><tr><td align=3D"left" style=3D"padding:0;M=
+argin:0"><table cellpadding=3D"0" cellspacing=3D"0" role=3D"none" style=3D"=
+mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-s=
+pacing:0px" width=3D"100%"><tbody><tr><td align=3D"center" style=3D"padding=
+:0;Margin:0;border-radius:5px;overflow:hidden;width:600px" valign=3D"top"><=
+table bgcolor=3D"#FFFFFF" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse=
+:separate;border-spacing:0px;border-left:1px solid #dfe3e8;border-right:1px=
+ solid #dfe3e8;border-top:1px solid #dfe3e8;border-bottom:1px solid #dfe3e8=
+;background-color:#ffffff;border-radius:5px" width=3D"100%"><tbody><tr><td =
+align=3D"left" class=3D"es-m-txt-l" style=3D"padding:20px;Margin:0"><h3 sty=
+le=3D"Margin:0;line-height:19.2px;mso-line-height-rule:exactly;font-family:=
+'ibm plex sans', sans-serif;font-size:16px;font-style:normal;font-weight:bo=
+ld;color:#2d59f5">TOP NEWS</h3>
+</td></tr><tr><td align=3D"left" class=3D"es-m-txt-l" style=3D"Margin:0;pad=
+ding-bottom:5px;padding-top:10px;padding-left:20px;padding-right:20px"><p s=
+tyle=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;ms=
+o-line-height-rule:exactly;font-family:'ibm plex sans', sans-serif;line-hei=
+ght:21px;color:#4e80ee;font-size:14px"><span style=3D"background-color:#edf=
+2fb">Open Source LLM</span></p></td></tr><tr><td align=3D"left" style=3D"pa=
+dding:0;Margin:0;padding-bottom:5px;padding-left:20px;padding-right:20px"><=
+span style=3D"font-size:22px"><b>DeepSeek introduces an open-source model s=
+urpassing Claude 3.5 and OpenAI-o1</b></span><span style=3D"font-size:22px"=
+><b>=C2=A0in reasoning, math and code</b></span>
+<p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:non=
+e;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvet=
+ica, arial, sans-serif;line-height:24px;color:#000000;font-size:16px;displa=
+y:none"><br/></p></td></tr><tr><td align=3D"left" class=3D"es-m-txt-l" styl=
+e=3D"padding:0;Margin:0;padding-left:20px;padding-right:20px"><p style=3D"M=
+argin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-he=
+ight-rule:exactly;font-family:'ibm plex sans', sans-serif;line-height:19.5p=
+x;color:#2d59f5;font-size:13px">=E2=87=A7 6,438 Likes</p></td></tr>
+<tr><td align=3D"center" style=3D"padding:10px;Margin:0;font-size:0px"><a h=
+ref=3D"https://link.alphasignal.ai/Vovy2h" style=3D"-webkit-text-size-adjus=
+t:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decorati=
+on:none;color:#000000;font-size:16px" target=3D"_blank"><img alt=3D"" class=
+=3D"adapt-img" data-cf-ir-is-resized=3D"true" src=3D"https://content.app-us=
+1.com/cdn-cgi/image/format=3Dauto,onerror=3Dredirect,width=3D650,dpr=3D2,fi=
+t=3Dscale-down/QMZOW/2025/01/20/aa11510d-c596-492a-9e8f-df7f9ef5e546.jpeg" =
+style=3D"display:block;border:0;outline:none;text-decoration:none;-ms-inter=
+polation-mode:bicubic" width=3D"573"/></a>
+</td></tr><tr><td align=3D"left" class=3D"es-m-txt-l" style=3D"Margin:0;pad=
+ding-bottom:5px;padding-top:20px;padding-left:20px;padding-right:20px"><h3 =
+style=3D"Margin:0;line-height:21.6px;mso-line-height-rule:exactly;font-fami=
+ly:roboto, 'helvetica neue', helvetica, arial, sans-serif;font-size:18px;fo=
+nt-style:normal;font-weight:bold;color:#2d59f5">What's New</h3></td></tr>
+<tr><td align=3D"left" class=3D"es-m-txt-l" style=3D"padding:0;Margin:0;pad=
+ding-left:20px;padding-right:20px"><p style=3D"Margin:0;-webkit-text-size-a=
+djust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-fami=
+ly:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:24px;=
+color:#000000;font-size:16px">DeepSeek-R1 is an open-source reasoning model=
+ that matches OpenAI-o1 in math, reasoning, and code tasks.=C2=A0This relea=
+se provides developers access to advanced reasoning capabilities without re=
+lying on proprietary systems. A technical report accompanies the model for =
+transparency.</p>
+<p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:non=
+e;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvet=
+ica, arial, sans-serif;line-height:24px;color:#000000;font-size:16px"><br/>=
+<u><strong>Core Innovation</strong></u><br/>The key technical advancement D=
+eepSeek introduces is that you can train the models without Supervised Fine=
+ Tuning. DeepSeek-R1 starts from DeepSeek-R1-Zero, a model trained with rei=
+nforcement learning (RL) alone. RL drives reasoning behaviors like:</p><ul>=
+ <li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-l=
+ine-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, ar=
+ial, sans-serif;line-height:24px;margin-left:0;color:#000000;font-size:16px=
+">Self-verification<br/></li>
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, ari=
+al, sans-serif;line-height:24px;margin-left:0;color:#000000;font-size:16px"=
+>Reflection<br/></li> <li style=3D"-webkit-text-size-adjust:none;-ms-text-s=
+ize-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica=
+ neue', helvetica, arial, sans-serif;line-height:24px;margin-left:0;color:#=
+000000;font-size:16px">Chain-of-thought (CoT) solutions<br/><br/></li> </ul=
+><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:no=
+ne;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helve=
+tica, arial, sans-serif;line-height:24px;color:#000000;font-size:16px"><u><=
+strong>Performance Metrics</strong></u></p><ul>
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, ari=
+al, sans-serif;line-height:24px;margin-left:0;color:#000000;font-size:16px"=
+><strong>Benchmarks</strong>: Matches OpenAI-o1 in reasoning tasks and surp=
+asses Claude 3.5 Sonnet and OpenAI-o1-mini.<br/><br/></li> <li style=3D"-we=
+bkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:e=
+xactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;l=
+ine-height:24px;margin-left:0;color:#000000;font-size:16px"><strong>Capabil=
+ities</strong>: Enhanced readability, reduced repetition, and stronger mult=
+i-step reasoning compared to DeepSeek-R1-Zero.<br/><br/></li> </ul>
+<p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:non=
+e;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvet=
+ica, arial, sans-serif;line-height:24px;color:#000000;font-size:16px"><u><s=
+trong>Open-Source Ecosystem</strong></u><br/>The release includes DeepSeek-=
+R1, DeepSeek-R1-Zero, and six distilled models built on Llama and Qwen arch=
+itectures.</p><ul> <li style=3D"-webkit-text-size-adjust:none;-ms-text-size=
+-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica ne=
+ue', helvetica, arial, sans-serif;line-height:24px;margin-left:0;color:#000=
+000;font-size:16px"><em>DeepSeek-R1-Distill-Qwen-32B</em> outperforms OpenA=
+I-o1-mini on benchmarks.<br/></li>
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, ari=
+al, sans-serif;line-height:24px;margin-left:0;color:#000000;font-size:16px"=
+>Distilled models provide competitive performance with reduced resource req=
+uirements.<br/><br/></li> </ul><p style=3D"Margin:0;-webkit-text-size-adjus=
+t:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:r=
+oboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:24px;colo=
+r:#000000;font-size:16px"><u><strong>Availability and Access</strong></u></=
+p><ul>
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, ari=
+al, sans-serif;line-height:24px;margin-left:0;color:#000000;font-size:16px"=
+><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:no=
+ne;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helve=
+tica, arial, sans-serif;line-height:24px;color:#000000;font-size:16px">You =
+can interact with DeepSeek-R1 directly on the official website. Enable the =
+"DeepThink" option to explore its reasoning capabilities.<br/><br/></p></li=
+>
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, ari=
+al, sans-serif;line-height:24px;margin-left:0;color:#000000;font-size:16px"=
+><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:no=
+ne;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helve=
+tica, arial, sans-serif;line-height:24px;color:#000000;font-size:16px">For =
+API integration, use the OpenAI-compatible API. Th API integrates into your=
+ projects with support for reasoning tasks.<br/></p></li>
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, ari=
+al, sans-serif;line-height:24px;margin-left:0;color:#000000;font-size:16px"=
+><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:no=
+ne;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helve=
+tica, arial, sans-serif;line-height:24px;color:#000000;font-size:16px">To r=
+un DeepSeek-R1 locally, visit the DeepSeek-V3 repository for setup instruct=
+ions and resources. Access the open-source models, including distilled vers=
+ions, to deploy them in your own environment.</p></li> </ul><p style=3D"Mar=
+gin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-heig=
+ht-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, san=
+s-serif;line-height:24px;color:#000000;font-size:16px;display:none"><br/></=
+p></td></tr>
+<tr><td align=3D"left" style=3D"padding:0;Margin:0;padding-left:20px;paddin=
+g-right:20px"><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-s=
+ize-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica=
+ neue', helvetica, arial, sans-serif;line-height:24px;color:#000000;font-si=
+ze:16px"><strong></strong><strong></strong></p></td></tr>
+<tr><td align=3D"center" class=3D"es-m-txt-c" style=3D"Margin:0;padding-lef=
+t:10px;padding-right:10px;padding-top:15px;padding-bottom:20px"><!--[if mso=
+]><a href=3D"https://link.alphasignal.ai/Vovy2h" target=3D"_blank" hidden>
+=09<v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:sc=
+hemas-microsoft-com:office:word" esdevVmlButton href=3D"https://link.alphas=
+ignal.ai/Vovy2h"=20
+                style=3D"height:49px; v-text-anchor:middle; width:124px" ar=
+csize=3D"10%" stroke=3D"f"  fillcolor=3D"#2d59f5">
+=09=09<w:anchorlock></w:anchorlock>
+=09=09<center style=3D'color:#ffffff; font-family:arial, "helvetica neue", =
+helvetica, sans-serif; font-size:16px; font-weight:700; line-height:16px;  =
+mso-text-raise:1px'>TRY NOW</center>
+=09</v:roundrect></a>
+<![endif]--><!--[if !mso]><!-- --><span class=3D"msohide es-button-border" =
+style=3D"border-style:solid;border-color:transparent;background:#2d59f5;bor=
+der-width:0px;display:inline-block;border-radius:5px;width:auto;mso-hide:al=
+l"><a class=3D"es-button" href=3D"https://link.alphasignal.ai/Vovy2h" style=
+=3D"mso-style-priority:100 !important;text-decoration:none;-webkit-text-siz=
+e-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:=
+#FFFFFF;font-size:16px;display:inline-block;background:#2d59f5;border-radiu=
+s:5px;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-weigh=
+t:bold;font-style:normal;line-height:19.2px;width:auto;text-align:center;pa=
+dding:15px;mso-padding-alt:0;mso-border-alt:10px solid #2d59f5" target=3D"_=
+blank">TRY NOW</a>
+</span><!--<![endif]--></td></tr></tbody></table></td></tr></tbody></table>=
+</td></tr></tbody></table></td></tr></tbody></table>
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-con=
+tent" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;bord=
+er-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width=
+:100%"><tbody><tr><td align=3D"center" style=3D"padding:0;Margin:0"><table =
+align=3D"center" bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"es-content-body" role=3D"none" style=3D"mso-table-lspace:0pt;mso-tab=
+le-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:=
+transparent;width:600px"><tbody><tr><td align=3D"left" style=3D"padding:0;M=
+argin:0;padding-left:20px;padding-right:20px"><table cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:=
+0pt;border-collapse:collapse;border-spacing:0px" width=3D"100%"><tbody><tr>=
+<td align=3D"center" style=3D"padding:0;Margin:0;width:560px" valign=3D"top=
+"><table cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D=
+"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-=
+spacing:0px" width=3D"100%"><tbody><tr><td align=3D"center" style=3D"paddin=
+g:10px;Margin:0;font-size:0"><table border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" height=3D"100%" role=3D"presentation" style=3D"mso-table-lspace:0=
+pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px" width=
+=3D"100%"><tbody><tr><td style=3D"padding:0;Margin:0;border-bottom:0px soli=
+d #cccccc;background:unset;height:1px;width:100%;margin:0px"></td>
+</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></=
+td></tr></tbody></table></td></tr></tbody></table>
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-con=
+tent" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;bord=
+er-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width=
+:100%"><tbody><tr><td align=3D"center" style=3D"padding:0;Margin:0"><table =
+align=3D"center" bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"es-content-body" role=3D"none" style=3D"mso-table-lspace:0pt;mso-tab=
+le-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:=
+transparent;width:600px"><tbody><tr><td align=3D"left" style=3D"padding:0;M=
+argin:0"><table cellpadding=3D"0" cellspacing=3D"0" role=3D"none" style=3D"=
+mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-s=
+pacing:0px" width=3D"100%"><tbody><tr><td align=3D"center" style=3D"padding=
+:0;Margin:0;border-radius:5px;overflow:hidden;width:600px" valign=3D"top"><=
+table bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse=
+:separate;border-spacing:0px;border-left:1px solid #9EAAEF;border-right:1px=
+ solid #9EAAEF;border-top:1px solid #9EAAEF;border-bottom:1px solid #9EAAEF=
+;background-color:#ffffff;border-radius:5px" width=3D"100%"><tbody><tr><td =
+align=3D"center" style=3D"Margin:0;padding-left:10px;padding-right:10px;pad=
+ding-top:20px;padding-bottom:20px;font-size:0px"><a href=3D"https://link.al=
+phasignal.ai/xwXUpv" style=3D"-webkit-text-size-adjust:none;-ms-text-size-a=
+djust:none;mso-line-height-rule:exactly;text-decoration:none;color:#000000;=
+font-size:16px" target=3D"_blank"><img alt=3D"" class=3D"adapt-img" data-cf=
+-ir-is-resized=3D"true" src=3D"https://content.app-us1.com/cdn-cgi/image/fo=
+rmat=3Dauto,onerror=3Dredirect,width=3D650,dpr=3D2,fit=3Dscale-down/QMZOW/2=
+025/01/20/f3c85e36-e0cd-4e9a-ab1d-caf34d250aa0.jpeg" style=3D"display:block=
+;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic"=
+ width=3D"564"/></a>
+</td></tr><tr><td align=3D"left" style=3D"Margin:0;padding-top:10px;padding=
+-bottom:20px;padding-left:20px;padding-right:20px"><h2 style=3D"Margin:0;li=
+ne-height:24px;mso-line-height-rule:exactly;font-family:roboto, 'helvetica =
+neue', helvetica, arial, sans-serif;font-size:20px;font-style:normal;font-w=
+eight:bold;color:#000000">How to Use ChatGPT at Work</h2></td></tr><tr><td =
+align=3D"left" class=3D"es-m-txt-l" style=3D"padding:0;Margin:0;padding-bot=
+tom:10px;padding-left:20px;padding-right:20px"><p style=3D"Margin:0;-webkit=
+-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exact=
+ly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-=
+height:24px;color:#000000;font-size:16px">Learn how to integrate ChatGPT in=
+to your workflow with this ready to use guide.<br/><br/></p>
+<p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:non=
+e;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvet=
+ica, arial, sans-serif;line-height:24px;color:#000000;font-size:16px">What=
+=E2=80=99s included:</p><ul> <li style=3D"-webkit-text-size-adjust:none;-ms=
+-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'he=
+lvetica neue', helvetica, arial, sans-serif;line-height:24px;margin-left:0;=
+color:#000000;font-size:16px"><p style=3D"Margin:0;-webkit-text-size-adjust=
+:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:ro=
+boto, 'helvetica neue', helvetica, arial, sans-serif;line-height:24px;color=
+:#000000;font-size:16px">A clear breakdown of ChatGPT=E2=80=99s features an=
+d capabilities.<br/><br/></p></li>
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, ari=
+al, sans-serif;line-height:24px;margin-left:0;color:#000000;font-size:16px"=
+><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:no=
+ne;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helve=
+tica, arial, sans-serif;line-height:24px;color:#000000;font-size:16px">Exam=
+ples of tasks like automating emails, generating content, and analyzing dat=
+a.<br/><br/></p></li>
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, ari=
+al, sans-serif;line-height:24px;margin-left:0;color:#000000;font-size:16px"=
+><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:no=
+ne;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helve=
+tica, arial, sans-serif;line-height:24px;color:#000000;font-size:16px">100 =
+pre-built prompts for common workplace tasks.<br/><br/></p></li>
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, ari=
+al, sans-serif;line-height:24px;margin-left:0;color:#000000;font-size:16px"=
+><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:no=
+ne;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helve=
+tica, arial, sans-serif;line-height:24px;color:#000000;font-size:16px">Solu=
+tions to common issues when implementing AI tools.</p></li> </ul><p style=
+=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, ari=
+al, sans-serif;line-height:24px;color:#000000;font-size:16px">Start using C=
+hatGPT now to streamline your tasks and save time.</p></td></tr>
+<tr><td align=3D"center" class=3D"es-m-txt-c" style=3D"padding:15px;Margin:=
+0"><!--[if mso]><a href=3D"https://link.alphasignal.ai/xwXUpv" target=3D"_b=
+lank" hidden>
+=09<v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:sc=
+hemas-microsoft-com:office:word" esdevVmlButton href=3D"https://link.alphas=
+ignal.ai/xwXUpv"=20
+                style=3D"height:49px; v-text-anchor:middle; width:189px" ar=
+csize=3D"10%" stroke=3D"f"  fillcolor=3D"#2d59f5">
+=09=09<w:anchorlock></w:anchorlock>
+=09=09<center style=3D'color:#ffffff; font-family:arial, "helvetica neue", =
+helvetica, sans-serif; font-size:16px; font-weight:700; line-height:16px;  =
+mso-text-raise:1px'>DOWNLOAD NOW</center>
+=09</v:roundrect></a>
+<![endif]--><!--[if !mso]><!-- --><span class=3D"msohide es-button-border" =
+style=3D"border-style:solid;border-color:transparent;background:#2d59f5;bor=
+der-width:0px;display:inline-block;border-radius:5px;width:auto;mso-hide:al=
+l"><a class=3D"es-button" href=3D"https://link.alphasignal.ai/xwXUpv" style=
+=3D"mso-style-priority:100 !important;text-decoration:none;-webkit-text-siz=
+e-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:=
+#FFFFFF;font-size:16px;display:inline-block;background:#2D59F5;border-radiu=
+s:5px;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-weigh=
+t:bold;font-style:normal;line-height:19.2px;width:auto;text-align:center;pa=
+dding:15px;mso-padding-alt:0;mso-border-alt:10px solid #2d59f5" target=3D"_=
+blank">DOWNLOAD NOW</a>
+</span><!--<![endif]--></td></tr><tr><td align=3D"right" class=3D"es-m-txt-=
+r" style=3D"Margin:0;padding-top:5px;padding-bottom:5px;padding-left:10px;p=
+adding-right:10px"><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-t=
+ext-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helv=
+etica neue', helvetica, arial, sans-serif;line-height:19.5px;color:#000000;=
+font-size:13px"><em><a href=3D"https://link.alphasignal.ai/qBDJtP" style=3D=
+"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-ru=
+le:exactly;text-decoration:none;color:#000000;font-size:13px" target=3D"_bl=
+ank">partner with us</a>=C2=A0</em>=E2=86=92</p></td></tr></tbody></table><=
+/td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></tabl=
+e>
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-con=
+tent" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;bord=
+er-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width=
+:100%"><tbody><tr><td align=3D"center" style=3D"padding:0;Margin:0"><table =
+align=3D"center" bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"es-content-body" role=3D"none" style=3D"mso-table-lspace:0pt;mso-tab=
+le-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:=
+transparent;width:600px"><tbody><tr><td align=3D"left" style=3D"padding:0;M=
+argin:0;padding-left:20px;padding-right:20px"><table cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:=
+0pt;border-collapse:collapse;border-spacing:0px" width=3D"100%"><tbody><tr>=
+<td align=3D"center" style=3D"padding:0;Margin:0;width:560px" valign=3D"top=
+"><table cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D=
+"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-=
+spacing:0px" width=3D"100%"><tbody><tr><td align=3D"center" style=3D"paddin=
+g:10px;Margin:0;font-size:0"><table border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" height=3D"100%" role=3D"presentation" style=3D"mso-table-lspace:0=
+pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px" width=
+=3D"100%"><tbody><tr><td style=3D"padding:0;Margin:0;border-bottom:0px soli=
+d #cccccc;background:unset;height:1px;width:100%;margin:0px"></td>
+</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></=
+td></tr></tbody></table></td></tr></tbody></table>
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-con=
+tent" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;bord=
+er-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width=
+:100%"><tbody><tr><td align=3D"center" style=3D"padding:0;Margin:0"><table =
+align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-content-bo=
+dy" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border=
+-collapse:collapse;border-spacing:0px;background-color:transparent;width:60=
+0px"><tbody><tr><td align=3D"left" style=3D"padding:0;Margin:0"><table cell=
+padding=3D"0" cellspacing=3D"0" role=3D"none" style=3D"mso-table-lspace:0pt=
+;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px" width=3D=
+"100%"><tbody><tr><td align=3D"center" style=3D"padding:0;Margin:0;border-r=
+adius:5px;overflow:hidden;width:600px" valign=3D"top"><table bgcolor=3D"#FF=
+FFFF" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"ms=
+o-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:separate;border-spa=
+cing:0px;border-left:1px solid #DFE3E8;border-right:1px solid #DFE3E8;borde=
+r-top:1px solid #DFE3E8;border-bottom:1px solid #DFE3E8;background-color:#f=
+fffff;border-radius:5px" width=3D"100%"><tbody><tr><td align=3D"left" class=
+=3D"es-m-txt-l" style=3D"padding:20px;Margin:0"><h3 style=3D"Margin:0;line-=
+height:19.2px;mso-line-height-rule:exactly;font-family:'ibm plex sans', san=
+s-serif;font-size:16px;font-style:normal;font-weight:bold;color:#2d59f5"><s=
+trong>TRENDING</strong> SIGNALS</h3>
+</td></tr><tr><td align=3D"left" class=3D"es-m-txt-l" style=3D"Margin:0;pad=
+ding-bottom:5px;padding-top:10px;padding-left:20px;padding-right:20px"><p s=
+tyle=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;ms=
+o-line-height-rule:exactly;font-family:'ibm plex sans', sans-serif;line-hei=
+ght:21px;color:#4e80ee;font-size:14px;text-align:left"><span style=3D"backg=
+round-color:#edf2fb">Custom AI Feature</span></p></td></tr>
+<tr><td align=3D"left" style=3D"padding:0;Margin:0;padding-bottom:5px;paddi=
+ng-left:20px;padding-right:20px"><h3 style=3D"Margin:0;line-height:21.6px;m=
+so-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica=
+, arial, sans-serif;font-size:18px;font-style:normal;font-weight:bold;color=
+:#000000;text-align:left"><a href=3D"https://link.alphasignal.ai/kGyWuN" st=
+yle=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-hei=
+ght-rule:exactly;text-decoration:none;color:#000000;font-size:18px;text-ali=
+gn:left" target=3D"_blank">OpenAI rolls out new ChatGPT UI, enabling custom=
+izable instructions for greater control over responses</a></h3></td></tr>
+<tr><td align=3D"left" class=3D"es-m-txt-l" style=3D"padding:0;Margin:0;pad=
+ding-bottom:10px;padding-left:20px;padding-right:20px"><p style=3D"Margin:0=
+;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-ru=
+le:exactly;font-family:'ibm plex sans', sans-serif;line-height:19.5px;color=
+:#2d59f5;font-size:13px">=E2=87=A7 5,104 Likes</p></td></tr><tr><td align=
+=3D"center" style=3D"padding:10px;Margin:0;font-size:0"><table border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" height=3D"100%" role=3D"presentation" =
+style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse=
+;border-spacing:0px" width=3D"95%"><tbody><tr><td style=3D"padding:0;Margin=
+:0;border-bottom:1px solid #cccccc;background:unset;height:1px;width:100%;m=
+argin:0px"></td></tr></tbody></table></td></tr>
+<tr><td align=3D"left" class=3D"es-m-txt-l" style=3D"Margin:0;padding-botto=
+m:5px;padding-top:10px;padding-left:20px;padding-right:20px"><p style=3D"Ma=
+rgin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-hei=
+ght-rule:exactly;font-family:'ibm plex sans', sans-serif;line-height:21px;c=
+olor:#4e80ee;font-size:14px;text-align:left"><span style=3D"background-colo=
+r:#edf2fb">AI Tool</span></p></td></tr>
+<tr><td align=3D"left" style=3D"padding:0;Margin:0;padding-bottom:5px;paddi=
+ng-left:20px;padding-right:20px"><h3 style=3D"Margin:0;line-height:21.6px;m=
+so-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica=
+, arial, sans-serif;font-size:18px;font-style:normal;font-weight:bold;color=
+:#000000"><a href=3D"https://link.alphasignal.ai/FXgTLn" style=3D"-webkit-t=
+ext-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly=
+;text-decoration:none;color:#000000;font-size:18px" target=3D"_blank">Runwa=
+y launches Frames, an image generation model offering customizable stylisti=
+c control for high-quality image generation</a></h3></td></tr>
+<tr><td align=3D"left" class=3D"es-m-txt-l" style=3D"padding:0;Margin:0;pad=
+ding-bottom:10px;padding-left:20px;padding-right:20px"><p style=3D"Margin:0=
+;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-ru=
+le:exactly;font-family:'ibm plex sans', sans-serif;line-height:19.5px;color=
+:#2d59f5;font-size:13px">=E2=87=A7 1,536 Likes</p></td></tr><tr><td align=
+=3D"center" style=3D"padding:10px;Margin:0;font-size:0"><table border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" height=3D"100%" role=3D"presentation" =
+style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse=
+;border-spacing:0px" width=3D"95%"><tbody><tr><td style=3D"padding:0;Margin=
+:0;border-bottom:1px solid #cccccc;background:unset;height:1px;width:100%;m=
+argin:0px"></td></tr></tbody></table></td></tr>
+<tr><td align=3D"left" class=3D"es-m-txt-l" style=3D"Margin:0;padding-botto=
+m:5px;padding-top:10px;padding-left:20px;padding-right:20px"><p style=3D"Ma=
+rgin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-hei=
+ght-rule:exactly;font-family:'ibm plex sans', sans-serif;line-height:21px;c=
+olor:#4e80ee;font-size:14px;text-align:left"><span style=3D"background-colo=
+r:#edf2fb">Coding Assistant</span></p></td></tr>
+<tr><td align=3D"left" style=3D"padding:0;Margin:0;padding-bottom:5px;paddi=
+ng-left:20px;padding-right:20px"><h3 style=3D"Margin:0;line-height:21.6px;m=
+so-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica=
+, arial, sans-serif;font-size:18px;font-style:normal;font-weight:bold;color=
+:#000000"><a href=3D"https://link.alphasignal.ai/4xqo7d" style=3D"-webkit-t=
+ext-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly=
+;text-decoration:none;color:#000000;font-size:18px" target=3D"_blank">Cogni=
+tion Labs updates its AI coding assistant, Devin, enhancing context reasoni=
+ng and introducing voice messages for Slack</a></h3></td></tr>
+<tr><td align=3D"left" class=3D"es-m-txt-l" style=3D"padding:0;Margin:0;pad=
+ding-bottom:10px;padding-left:20px;padding-right:20px"><p style=3D"Margin:0=
+;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-ru=
+le:exactly;font-family:'ibm plex sans', sans-serif;line-height:19.5px;color=
+:#2d59f5;font-size:13px">=E2=87=A7 539 Likes</p></td></tr><tr><td align=3D"=
+center" style=3D"padding:10px;Margin:0;font-size:0"><table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" height=3D"100%" role=3D"presentation" styl=
+e=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;bor=
+der-spacing:0px" width=3D"95%"><tbody><tr><td style=3D"padding:0;Margin:0;b=
+order-bottom:1px solid #cccccc;background:unset;height:1px;width:100%;margi=
+n:0px"></td></tr></tbody></table></td></tr>
+<tr><td align=3D"left" class=3D"es-m-txt-l" style=3D"Margin:0;padding-botto=
+m:5px;padding-top:10px;padding-left:20px;padding-right:20px"><p style=3D"Ma=
+rgin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-hei=
+ght-rule:exactly;font-family:'ibm plex sans', sans-serif;line-height:21px;c=
+olor:#4e80ee;font-size:14px"><span style=3D"background-color:#edf2fb">AI To=
+ol</span></p></td></tr>
+<tr><td align=3D"left" style=3D"padding:0;Margin:0;padding-bottom:5px;paddi=
+ng-left:20px;padding-right:20px"><h3 style=3D"Margin:0;line-height:21.6px;m=
+so-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica=
+, arial, sans-serif;font-size:18px;font-style:normal;font-weight:bold;color=
+:#000000;text-align:left"><a href=3D"https://link.alphasignal.ai/ngW9jn" st=
+yle=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-hei=
+ght-rule:exactly;text-decoration:none;color:#000000;font-size:18px;text-ali=
+gn:left" target=3D"_blank">Codeium releases Windsurf Wave 2, an update to i=
+ts AI powered IDE, adding real-time web search=C2=A0and personalized learni=
+ng</a></h3></td></tr>
+<tr><td align=3D"left" class=3D"es-m-txt-l" style=3D"padding:0;Margin:0;pad=
+ding-bottom:10px;padding-left:20px;padding-right:20px"><p style=3D"Margin:0=
+;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-ru=
+le:exactly;font-family:'ibm plex sans', sans-serif;line-height:19.5px;color=
+:#2d59f5;font-size:13px">=E2=87=A7 2,583 Likes</p></td></tr><tr><td align=
+=3D"center" style=3D"padding:10px;Margin:0;font-size:0"><table border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" height=3D"100%" role=3D"presentation" =
+style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse=
+;border-spacing:0px" width=3D"95%"><tbody><tr><td style=3D"padding:0;Margin=
+:0;border-bottom:1px solid #cccccc;background:unset;height:1px;width:100%;m=
+argin:0px"></td></tr></tbody></table></td></tr>
+<tr><td align=3D"left" class=3D"es-m-txt-l" style=3D"Margin:0;padding-botto=
+m:5px;padding-top:10px;padding-left:20px;padding-right:20px"><p style=3D"Ma=
+rgin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-hei=
+ght-rule:exactly;font-family:'ibm plex sans', sans-serif;line-height:21px;c=
+olor:#4e80ee;font-size:14px"><span style=3D"background-color:#edf2fb">AI In=
+dustry</span></p></td></tr>
+<tr><td align=3D"left" style=3D"padding:0;Margin:0;padding-bottom:5px;paddi=
+ng-left:20px;padding-right:20px"><h3 style=3D"Margin:0;line-height:21.6px;m=
+so-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica=
+, arial, sans-serif;font-size:18px;font-style:normal;font-weight:bold;color=
+:#000000"><a href=3D"https://link.alphasignal.ai/BngLEN" style=3D"-webkit-t=
+ext-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly=
+;text-decoration:none;color:#000000;font-size:18px" target=3D"_blank">Andre=
+w Ng highlights AI Product Management=E2=80=99s growth as software becomes =
+cheaper to build</a></h3></td></tr>
+<tr><td align=3D"left" class=3D"es-m-txt-l" style=3D"padding:0;Margin:0;pad=
+ding-bottom:10px;padding-left:20px;padding-right:20px"><p style=3D"Margin:0=
+;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-ru=
+le:exactly;font-family:'ibm plex sans', sans-serif;line-height:19.5px;color=
+:#2d59f5;font-size:13px">=E2=87=A7 5,258 Likes</p></td></tr><tr><td align=
+=3D"center" style=3D"padding:5px;Margin:0;font-size:0"><table border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" height=3D"100%" role=3D"presentation" s=
+tyle=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;=
+border-spacing:0px" width=3D"95%"><tbody><tr><td style=3D"padding:0;Margin:=
+0;border-bottom:0px solid #cccccc;background:unset;height:1px;width:100%;ma=
+rgin:0px"></td></tr></tbody></table></td></tr><tr><td align=3D"left" style=
+=3D"padding:0;Margin:0"></td></tr></tbody></table></td></tr>
+<tr><td align=3D"center" style=3D"padding:0;Margin:0;width:600px" valign=3D=
+"top"><table bgcolor=3D"#FFFFFF" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border=
+-collapse:collapse;border-spacing:0px;background-color:#ffffff" width=3D"10=
+0%"><tbody><tr><td align=3D"left" style=3D"padding:0;Margin:0"></td></tr></=
+tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr=
+></tbody></table>
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-con=
+tent" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;bord=
+er-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width=
+:100%"><tbody><tr><td align=3D"center" style=3D"padding:0;Margin:0"><table =
+align=3D"center" bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"es-content-body" role=3D"none" style=3D"mso-table-lspace:0pt;mso-tab=
+le-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:=
+transparent;width:600px"><tbody><tr><td align=3D"left" style=3D"padding:0;M=
+argin:0;padding-left:20px;padding-right:20px"><table cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:=
+0pt;border-collapse:collapse;border-spacing:0px" width=3D"100%"><tbody><tr>=
+<td align=3D"center" style=3D"padding:0;Margin:0;width:560px" valign=3D"top=
+"><table cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D=
+"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-=
+spacing:0px" width=3D"100%"><tbody><tr><td align=3D"center" style=3D"paddin=
+g:10px;Margin:0;font-size:0"><table border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" height=3D"100%" role=3D"presentation" style=3D"mso-table-lspace:0=
+pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px" width=
+=3D"100%"><tbody><tr><td style=3D"padding:0;Margin:0;border-bottom:0px soli=
+d #cccccc;background:unset;height:1px;width:100%;margin:0px"></td>
+</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></=
+td></tr></tbody></table></td></tr></tbody></table>
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-con=
+tent" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;bord=
+er-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width=
+:100%"><tbody><tr><td align=3D"center" style=3D"padding:0;Margin:0"><table =
+align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-content-bo=
+dy" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border=
+-collapse:collapse;border-spacing:0px;background-color:transparent;width:60=
+0px"><tbody><tr><td align=3D"left" style=3D"padding:0;Margin:0"><table cell=
+padding=3D"0" cellspacing=3D"0" role=3D"none" style=3D"mso-table-lspace:0pt=
+;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px" width=3D=
+"100%"><tbody><tr><td align=3D"center" style=3D"padding:0;Margin:0;width:60=
+0px" valign=3D"top"><table bgcolor=3D"#FFFFFF" cellpadding=3D"0" cellspacin=
+g=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0pt;mso-table-rspac=
+e:0pt;border-collapse:collapse;border-spacing:0px;background-color:#ffffff"=
+ width=3D"100%"><tbody><tr><td align=3D"left" style=3D"padding:0;Margin:0">=
+</td>
+</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></=
+td></tr></tbody></table>
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-con=
+tent" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;bord=
+er-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width=
+:100%"><tbody><tr><td align=3D"center" style=3D"padding:0;Margin:0"><table =
+align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-content-bo=
+dy" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border=
+-collapse:collapse;border-spacing:0px;background-color:transparent;width:60=
+0px"><tbody><tr><td align=3D"left" style=3D"padding:0;Margin:0"><table cell=
+padding=3D"0" cellspacing=3D"0" role=3D"none" style=3D"mso-table-lspace:0pt=
+;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px" width=3D=
+"100%"><tbody><tr><td align=3D"center" style=3D"padding:0;Margin:0;border-r=
+adius:5px;overflow:hidden;width:600px" valign=3D"top"><table bgcolor=3D"#FF=
+FFFF" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"ms=
+o-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:separate;border-spa=
+cing:0px;border-left:1px solid #DFE3E8;border-right:1px solid #DFE3E8;borde=
+r-top:1px solid #DFE3E8;border-bottom:1px solid #DFE3E8;background-color:#f=
+fffff;border-radius:5px" width=3D"100%"><tbody><tr><td align=3D"left" class=
+=3D"es-m-txt-l" style=3D"padding:20px;Margin:0"><h3 style=3D"Margin:0;line-=
+height:19.2px;mso-line-height-rule:exactly;font-family:'ibm plex sans', san=
+s-serif;font-size:16px;font-style:normal;font-weight:bold;color:#2d59f5">TO=
+P TUTORIALS</h3>
+</td></tr><tr><td align=3D"left" class=3D"es-m-txt-l" style=3D"Margin:0;pad=
+ding-bottom:5px;padding-top:10px;padding-left:20px;padding-right:20px"><p s=
+tyle=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;ms=
+o-line-height-rule:exactly;font-family:'ibm plex sans', sans-serif;line-hei=
+ght:21px;color:#4e80ee;font-size:14px;text-align:left"><span style=3D"backg=
+round-color:#edf2fb">Coding Assistant</span></p></td></tr>
+<tr><td align=3D"left" style=3D"padding:0;Margin:0;padding-bottom:5px;paddi=
+ng-left:20px;padding-right:20px"><h2 style=3D"Margin:0;line-height:21.6px;m=
+so-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica=
+, arial, sans-serif;font-size:18px;font-style:normal;font-weight:bold;color=
+:#000000"><a href=3D"https://link.alphasignal.ai/MjAk6N" style=3D"-webkit-t=
+ext-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly=
+;text-decoration:none;color:#000000;font-size:18px" target=3D"_blank">OpenA=
+I's Guide to Function Calling</a></h2></td></tr><tr><td align=3D"left" clas=
+s=3D"es-m-txt-l" style=3D"padding:0;Margin:0;padding-left:20px;padding-righ=
+t:20px"><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-ad=
+just:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue'=
+, helvetica, arial, sans-serif;line-height:19.5px;color:#2d59f5;font-size:1=
+3px">=E2=87=A7 1,475 Likes</p></td></tr>
+<tr><td align=3D"left" class=3D"es-m-txt-l" style=3D"Margin:0;padding-top:1=
+0px;padding-bottom:10px;padding-left:20px;padding-right:35px"><p style=3D"M=
+argin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-he=
+ight-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, s=
+ans-serif;line-height:24px;color:#000000;font-size:16px">Learn to use OpenA=
+I's function calling to integrate AI with external services and your code. =
+This guide explains defining functions, handling calls, and streaming respo=
+nses. Discover how to fetch data, perform actions like submitting forms, an=
+d stream results back into the model=E2=80=99s response, all through exampl=
+e codes.</p></td></tr>
+<tr><td align=3D"center" style=3D"padding:20px;Margin:0;font-size:0"><table=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0" height=3D"100%" role=3D"p=
+resentation" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-coll=
+apse:collapse;border-spacing:0px" width=3D"100%"><tbody><tr><td style=3D"pa=
+dding:0;Margin:0;border-bottom:1px solid #cccccc;background:unset;height:1p=
+x;width:100%;margin:0px"></td></tr></tbody></table></td></tr><tr><td align=
+=3D"left" class=3D"es-m-txt-l" style=3D"Margin:0;padding-bottom:5px;padding=
+-top:10px;padding-left:20px;padding-right:20px"><p style=3D"Margin:0;-webki=
+t-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exac=
+tly;font-family:'ibm plex sans', sans-serif;line-height:21px;color:#4e80ee;=
+font-size:14px"><span style=3D"background-color:#edf2fb">Agents</span></p><=
+/td></tr>
+<tr><td align=3D"left" style=3D"padding:0;Margin:0;padding-bottom:5px;paddi=
+ng-left:20px;padding-right:20px"><h2 style=3D"Margin:0;line-height:21.6px;m=
+so-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica=
+, arial, sans-serif;font-size:18px;font-style:normal;font-weight:bold;color=
+:#000000"><a href=3D"https://link.alphasignal.ai/Pza6S0" style=3D"-webkit-t=
+ext-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly=
+;text-decoration:none;color:#000000;font-size:18px" target=3D"_blank">Build=
+ AI Agents with LangGraph</a></h2></td></tr><tr><td align=3D"left" class=3D=
+"es-m-txt-l" style=3D"padding:0;Margin:0;padding-left:20px;padding-right:20=
+px"><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust=
+:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', he=
+lvetica, arial, sans-serif;line-height:19.5px;color:#2d59f5;font-size:13px"=
+>=E2=87=A7 515 Likes</p></td></tr>
+<tr><td align=3D"left" class=3D"es-m-txt-l" style=3D"Margin:0;padding-top:1=
+0px;padding-bottom:10px;padding-left:20px;padding-right:35px"><p style=3D"M=
+argin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-he=
+ight-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, s=
+ans-serif;line-height:24px;color:#000000;font-size:16px">Explore how to bui=
+ld AI agents and chatbots using LangGraph. This guide covers creating a Sta=
+teGraph, managing state, and integrating LLMs with real code examples. You'=
+ll set up Python, use LangGraph to design agent interactions, and create a =
+basic chatbot. The tutorial also includes API key setup and implementation =
+steps.</p></td></tr>
+<tr><td align=3D"center" style=3D"padding:20px;Margin:0;font-size:0"><table=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0" height=3D"100%" role=3D"p=
+resentation" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-coll=
+apse:collapse;border-spacing:0px" width=3D"100%"><tbody><tr><td style=3D"pa=
+dding:0;Margin:0;border-bottom:1px solid #cccccc;background:unset;height:1p=
+x;width:100%;margin:0px"></td></tr></tbody></table></td></tr><tr><td align=
+=3D"left" class=3D"es-m-txt-l" style=3D"Margin:0;padding-bottom:5px;padding=
+-top:10px;padding-left:20px;padding-right:20px"><p style=3D"Margin:0;-webki=
+t-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exac=
+tly;font-family:'ibm plex sans', sans-serif;line-height:21px;color:#4e80ee;=
+font-size:14px"><span style=3D"background-color:#edf2fb">Agents</span></p><=
+/td></tr>
+<tr><td align=3D"left" style=3D"padding:0;Margin:0;padding-bottom:5px;paddi=
+ng-left:20px;padding-right:20px"><h2 style=3D"Margin:0;line-height:21.6px;m=
+so-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica=
+, arial, sans-serif;font-size:18px;font-style:normal;font-weight:bold;color=
+:#000000"><a href=3D"https://link.alphasignal.ai/B00K7q" style=3D"-webkit-t=
+ext-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly=
+;text-decoration:none;color:#000000;font-size:18px" target=3D"_blank">How t=
+o use Anthropic MCP Server with open LLMs, OpenAI or Google Gemini</a></h2>=
+</td></tr><tr><td align=3D"left" class=3D"es-m-txt-l" style=3D"padding:0;Ma=
+rgin:0;padding-left:20px;padding-right:20px"><p style=3D"Margin:0;-webkit-t=
+ext-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly=
+;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-he=
+ight:19.5px;color:#2d59f5;font-size:13px">=E2=87=A7 654 Likes</p></td>
+</tr><tr><td align=3D"left" class=3D"es-m-txt-l" style=3D"Margin:0;padding-=
+top:10px;padding-bottom:10px;padding-left:20px;padding-right:35px"><p style=
+=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, ari=
+al, sans-serif;line-height:24px;color:#000000;font-size:16px">This tutorial=
+ demonstrates how to use Anthropic's Model Context Protocol (MCP) Server wi=
+th open LLMs, OpenAI, or Google Gemini. It explains how to build a CLI agen=
+t capable of interacting with a SQLite database. Understand how MCP decoupl=
+es components, defines interfaces, and improves scalability for managing an=
+d deploying complex AI systems.</p></td></tr>
+<tr><td align=3D"center" style=3D"padding:10px;Margin:0;font-size:0"><table=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0" height=3D"100%" role=3D"p=
+resentation" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-coll=
+apse:collapse;border-spacing:0px" width=3D"100%"><tbody><tr><td style=3D"pa=
+dding:0;Margin:0;border-bottom:0px solid #ffffff;background:unset;height:1p=
+x;width:100%;margin:0px"></td></tr></tbody></table></td></tr><tr><td align=
+=3D"left" style=3D"padding:0;Margin:0"></td></tr></tbody></table></td></tr>=
+<tr><td align=3D"center" style=3D"padding:0;Margin:0;width:600px" valign=3D=
+"top"><table bgcolor=3D"#FFFFFF" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border=
+-collapse:collapse;border-spacing:0px;background-color:#ffffff" width=3D"10=
+0%"><tbody><tr><td align=3D"left" style=3D"padding:0;Margin:0"></td></tr></=
+tbody></table></td></tr></tbody></table></td></tr></tbody></table>
+</td></tr></tbody></table>
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-con=
+tent" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;bord=
+er-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width=
+:100%"><tbody><tr><td align=3D"center" style=3D"padding:0;Margin:0"><table =
+align=3D"center" bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"es-content-body" role=3D"none" style=3D"mso-table-lspace:0pt;mso-tab=
+le-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:=
+transparent;width:600px"><tbody><tr><td align=3D"left" style=3D"padding:0;M=
+argin:0;padding-left:20px;padding-right:20px"><table cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:=
+0pt;border-collapse:collapse;border-spacing:0px" width=3D"100%"><tbody><tr>=
+<td align=3D"center" style=3D"padding:0;Margin:0;width:560px" valign=3D"top=
+"><table cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D=
+"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-=
+spacing:0px" width=3D"100%"><tbody><tr><td align=3D"center" style=3D"paddin=
+g:10px;Margin:0;font-size:0"><table border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" height=3D"100%" role=3D"presentation" style=3D"mso-table-lspace:0=
+pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px" width=
+=3D"100%"><tbody><tr><td style=3D"padding:0;Margin:0;border-bottom:0px soli=
+d #cccccc;background:unset;height:1px;width:100%;margin:0px"></td>
+</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></=
+td></tr></tbody></table></td></tr></tbody></table>
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-con=
+tent" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;bord=
+er-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width=
+:100%"><tbody><tr><td align=3D"center" style=3D"padding:0;Margin:0"><table =
+align=3D"center" bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"es-content-body" role=3D"none" style=3D"mso-table-lspace:0pt;mso-tab=
+le-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:=
+transparent;width:600px"><tbody><tr><td align=3D"left" style=3D"padding:0;M=
+argin:0"><table cellpadding=3D"0" cellspacing=3D"0" role=3D"none" style=3D"=
+mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-s=
+pacing:0px" width=3D"100%"><tbody><tr><td align=3D"center" style=3D"padding=
+:0;Margin:0;border-radius:5px;overflow:hidden;width:600px" valign=3D"top"><=
+table bgcolor=3D"#FFFFFF" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse=
+:separate;border-spacing:0px;border-left:1px solid #dfe3e8;border-right:1px=
+ solid #dfe3e8;border-top:1px solid #dfe3e8;border-bottom:1px solid #dfe3e8=
+;background-color:#ffffff;border-radius:5px" width=3D"100%"><tbody><tr><td =
+align=3D"left" class=3D"es-m-txt-l" style=3D"padding:20px;Margin:0"><h3 sty=
+le=3D"Margin:0;line-height:19.2px;mso-line-height-rule:exactly;font-family:=
+'ibm plex sans', sans-serif;font-size:16px;font-style:normal;font-weight:bo=
+ld;color:#2d59f5">HOW TO</h3>
+</td></tr><tr><td align=3D"center" class=3D"es-m-txt-l" style=3D"Margin:0;p=
+adding-bottom:5px;padding-top:10px;padding-left:20px;padding-right:20px"><p=
+ style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;=
+mso-line-height-rule:exactly;font-family:'ibm plex sans', sans-serif;line-h=
+eight:21px;color:#4e80ee;font-size:14px;text-align:left"><span style=3D"bac=
+kground-color:#edf2fb">Voice App Development</span></p></td></tr>
+<tr><td align=3D"left" style=3D"padding:0;Margin:0;padding-bottom:10px;padd=
+ing-left:20px;padding-right:20px"><h2 style=3D"Margin:0;line-height:26.4px;=
+mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetic=
+a, arial, sans-serif;font-size:22px;font-style:normal;font-weight:bold;colo=
+r:#000000;text-align:left"><a href=3D"" style=3D"-webkit-text-size-adjust:n=
+one;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:=
+none;color:#000000;font-size:22px;line-height:26.4px;text-align:left;font-f=
+amily:roboto, 'helvetica neue', helvetica, arial, sans-serif" target=3D"_bl=
+ank">How to Use the Realtime API for Multi-Agent Voice Apps</a></h2></td></=
+tr>
+<tr><td align=3D"left" style=3D"padding:0;Margin:0;padding-top:10px;padding=
+-left:20px;padding-right:20px"><p style=3D"Margin:0;-webkit-text-size-adjus=
+t:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:r=
+oboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:24px;colo=
+r:#000000;font-size:16px">This guide walks you through setting up and using=
+ the Realtime API to build a multi-agent voice app with sequential agent ha=
+ndoffs.<br/><br/></p><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms=
+-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'he=
+lvetica neue', helvetica, arial, sans-serif;line-height:24px;color:#000000;=
+font-size:16px">Here is how use the Realtime API for Multi-Agent Voice Apps=
+:<br/><br/></p>
+<p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:non=
+e;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvet=
+ica, arial, sans-serif;line-height:24px;color:#000000;font-size:16px"><u><s=
+trong>Step 1</strong></u><br/>Clone the <a href=3D"https://link.alphasignal=
+.ai/DWKiJR" style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:non=
+e;mso-line-height-rule:exactly;text-decoration:underline;color:#000000;font=
+-size:16px" target=3D"_blank">repo</a> and install the dependencies:<br/>' =
+npm i '<br/><br/></p><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms=
+-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'he=
+lvetica neue', helvetica, arial, sans-serif;line-height:24px;color:#000000;=
+font-size:16px"><u><strong>Step 2</strong></u><br/>Add your OpenAI API key =
+to your .env file.<br/><br/></p>
+<p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:non=
+e;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvet=
+ica, arial, sans-serif;line-height:24px;color:#000000;font-size:16px"><u><s=
+trong>Step 3</strong></u><br/>Start the development server:<br/>' npm run d=
+ev '<br/><br/></p><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-te=
+xt-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helve=
+tica neue', helvetica, arial, sans-serif;line-height:24px;color:#000000;fon=
+t-size:16px"><u><strong>Step 4</strong></u><br/>Open 'http://localhost:3000=
+' in your browser to access the app and automatically connect to the simple=
+Example agent set.<br/><br/></p>
+<p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:non=
+e;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvet=
+ica, arial, sans-serif;line-height:24px;color:#000000;font-size:16px"><u><s=
+trong>Step 5</strong></u><br/>Configure agents by modifying 'src/app/agentC=
+onfigs/simpleExample.ts' to define your agents and their handoff logic.<br/=
+><br/></p><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-=
+adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neu=
+e', helvetica, arial, sans-serif;line-height:24px;color:#000000;font-size:1=
+6px"><u><strong>Step 6</strong></u><br/>Test different agent scenarios like=
+ 'frontDeskAuthentication' and 'customerServiceRetail' from the dropdown me=
+nu.</p></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbod=
+y></table></td></tr></tbody></table>
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-foo=
+ter" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;borde=
+r-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:=
+100%;background-color:transparent;background-repeat:repeat;background-posit=
+ion:center top"><tbody><tr><td align=3D"center" style=3D"padding:0;Margin:0=
+"><table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-f=
+ooter-body" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0p=
+t;border-collapse:collapse;border-spacing:0px;background-color:transparent;=
+width:600px"><tbody><tr><td align=3D"left" style=3D"padding:0;Margin:0"><ta=
+ble cellpadding=3D"0" cellspacing=3D"0" role=3D"none" style=3D"mso-table-ls=
+pace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px" =
+width=3D"100%"><tbody><tr><td align=3D"center" style=3D"padding:0;Margin:0;=
+width:600px" valign=3D"top"><table bgcolor=3D"#ffffff" cellpadding=3D"0" ce=
+llspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0pt;mso-tab=
+le-rspace:0pt;border-collapse:collapse;border-spacing:0px;border-left:1px d=
+ashed #e0e3e7;border-right:1px dashed #e0e3e7;background-color:#ffffff" wid=
+th=3D"100%"><tbody><tr><td align=3D"left" style=3D"padding:0;Margin:0"><p s=
+tyle=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;ms=
+o-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica,=
+ arial, sans-serif;line-height:22.5px;color:#333333;font-size:15px"><strong=
+></strong></p>
+</td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td align=
+=3D"left" style=3D"padding:0;Margin:0"><table cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;bor=
+der-collapse:collapse;border-spacing:0px" width=3D"100%"><tbody><tr><td ali=
+gn=3D"center" style=3D"padding:0;Margin:0;width:600px" valign=3D"top"><tabl=
+e bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:col=
+lapse;border-spacing:0px;border-left:1px dashed #e0e3e7;border-right:1px da=
+shed #e0e3e7;background-color:#ffffff" width=3D"100%"><tbody><tr><td align=
+=3D"left" style=3D"padding:0;Margin:0"><p style=3D"Margin:0;-webkit-text-si=
+ze-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-=
+family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:2=
+2.5px;color:#333333;font-size:15px"><strong></strong></p></td></tr>
+</tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></=
+tr></tbody></table>
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-con=
+tent" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;bord=
+er-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width=
+:100%"><tbody><tr><td align=3D"center" style=3D"padding:0;Margin:0"><table =
+align=3D"center" bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"es-content-body" role=3D"none" style=3D"mso-table-lspace:0pt;mso-tab=
+le-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:=
+transparent;width:600px"><tbody><tr><td align=3D"left" style=3D"padding:0;M=
+argin:0;padding-left:20px;padding-right:20px"><table cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:=
+0pt;border-collapse:collapse;border-spacing:0px" width=3D"100%"><tbody><tr>=
+<td align=3D"center" style=3D"padding:0;Margin:0;width:560px" valign=3D"top=
+"><table cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D=
+"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-=
+spacing:0px" width=3D"100%"><tbody><tr><td align=3D"center" style=3D"paddin=
+g:10px;Margin:0;font-size:0"><table border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" height=3D"100%" role=3D"presentation" style=3D"mso-table-lspace:0=
+pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px" width=
+=3D"100%"><tbody><tr><td style=3D"padding:0;Margin:0;border-bottom:0px soli=
+d #cccccc;background:unset;height:1px;width:100%;margin:0px"></td>
+</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></=
+td></tr></tbody></table></td></tr></tbody></table>
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-foo=
+ter" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;borde=
+r-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:=
+100%;background-color:transparent;background-repeat:repeat;background-posit=
+ion:center top"><tbody><tr><td align=3D"center" style=3D"padding:0;Margin:0=
+"><table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-f=
+ooter-body" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0p=
+t;border-collapse:collapse;border-spacing:0px;background-color:transparent;=
+width:600px"><tbody><tr><td align=3D"left" style=3D"padding:0;Margin:0"><ta=
+ble cellpadding=3D"0" cellspacing=3D"0" role=3D"none" style=3D"mso-table-ls=
+pace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px" =
+width=3D"100%"><tbody><tr><td align=3D"center" style=3D"padding:0;Margin:0;=
+border-radius:5px;overflow:hidden;width:600px" valign=3D"top"><table bgcolo=
+r=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" sty=
+le=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:separate;bo=
+rder-spacing:0px;border-left:1px solid #e0e3e7;border-right:1px solid #e0e3=
+e7;border-top:1px solid #e0e3e7;border-bottom:1px solid #e0e3e7;background-=
+color:#ffffff;border-radius:5px" width=3D"100%"><tbody><tr><td align=3D"cen=
+ter" class=3D"es-m-txt-c" style=3D"padding:0;Margin:0;padding-left:10px;pad=
+ding-right:10px;padding-top:25px"><h2 style=3D"Margin:0;line-height:26.4px;=
+mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetic=
+a, arial, sans-serif;font-size:22px;font-style:normal;font-weight:bold;colo=
+r:#2b2f31;text-align:center"><strong>How was today=E2=80=99s email?</strong=
+></h2>
+</td></tr>
+<tr><td align=3D"center" class=3D"es-m-txt-c" style=3D"Margin:0;padding-lef=
+t:10px;padding-right:10px;padding-top:20px;padding-bottom:20px"><h3 style=
+=3D"Margin:0;line-height:27px;mso-line-height-rule:exactly;font-family:robo=
+to, 'helvetica neue', helvetica, arial, sans-serif;font-size:18px;font-styl=
+e:normal;font-weight:bold;color:#000000"><strong><a href=3D"mailto:news@alp=
+hasignal.ai?subject=3DLiked%20today's%20picks%3F&amp;body=3DA%20lot%20%F0%9=
+F%98%8D%0D%0A-%0D%0A*Have%2030%20seconds%3F%20Please%20Help%20us%20improve%=
+3A*%0D%0A%0D%0A1.%20My%20favorite%20section%20of%20the%20email%20is%3A%0D%0=
+A%0D%0A2.%20I%20would%20like%20to%20see%20more%20of%3A%0D%0A%0D%0A3.%20I%20=
+would%20like%20to%20see%20less%20of%3A%0D%0A%0D%0A4.%20Is%20this%20your%20f=
+avorite%20newsletter%3F%0D%0A%0D%0A5.%20If%20not%2C%20who%20is%20and%20why%=
+3F" style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;text-decoration:none;color:#2d59f5;font-size:18px" t=
+arget=3D"_blank">Awesome</a>=C2=A0 =C2=A0=C2=A0<a href=3D"mailto:news@alpha=
+signal.ai?subject=3DLiked%20today's%20picks%3F&amp;body=3DYes%20%F0%9F%99%8=
+2%0D%0A-%0D%0A*Have%2030%20seconds%3F%20Please%20Help%20us%20improve%3A*%0D=
+%0A%0D%0A1.%20My%20favorite%20section%20of%20the%20email%20is%3A%0D%0A%0D%0=
+A2.%20I%20would%20like%20to%20see%20more%20of%3A%0D%0A%0D%0A3.%20I%20would%=
+20like%20to%20see%20less%20of%3A%0D%0A%0D%0A4.%20Is%20this%20your%20favorit=
+e%20newsletter%3F%0D%0A%0D%0A5.%20If%20not%2C%20who%20is%20and%20why%3F" st=
+yle=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-hei=
+ght-rule:exactly;text-decoration:none;color:#2d59f5;font-size:18px" target=
+=3D"_blank">Decent</a>=C2=A0 =C2=A0 =C2=A0<a href=3D"mailto:news@alphasigna=
+l.ai?subject=3DLiked%20today's%20picks%3F&amp;body=3DNot%20much%20%F0%9F%98=
+%95%0D%0A-%0D%0A*Have%2030%20seconds%3F%20Please%20Help%20us%20improve%3A*%=
+0D%0A%0D%0A1.%20My%20favorite%20section%20of%20the%20email%20is%3A%0D%0A%0D=
+%0A2.%20I%20would%20like%20to%20see%20more%20of%3A%0D%0A%0D%0A3.%20I%20woul=
+d%20like%20to%20see%20less%20of%3A%0D%0A%0D%0A4.%20Is%20this%20your%20favor=
+ite%20newsletter%3F%0D%0A%0D%0A5.%20If%20not%2C%20who%20is%20and%20why%3F" =
+style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-h=
+eight-rule:exactly;text-decoration:none;color:#2d59f5;font-size:18px" targe=
+t=3D"_blank">Not Great</a></strong></h3>
+</td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></tab=
+le></td></tr></tbody></table>
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-con=
+tent" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;bord=
+er-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width=
+:100%"><tbody><tr><td align=3D"center" style=3D"padding:0;Margin:0"><table =
+align=3D"center" bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"es-content-body" role=3D"none" style=3D"mso-table-lspace:0pt;mso-tab=
+le-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:=
+transparent;width:600px"><tbody><tr><td align=3D"left" style=3D"padding:0;M=
+argin:0;padding-left:20px;padding-right:20px"><table cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:=
+0pt;border-collapse:collapse;border-spacing:0px" width=3D"100%"><tbody><tr>=
+<td align=3D"center" style=3D"padding:0;Margin:0;width:560px" valign=3D"top=
+"><table cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D=
+"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-=
+spacing:0px" width=3D"100%"><tbody><tr><td align=3D"center" style=3D"paddin=
+g:10px;Margin:0;font-size:0"><table border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" height=3D"100%" role=3D"presentation" style=3D"mso-table-lspace:0=
+pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px" width=
+=3D"100%"><tbody><tr><td style=3D"padding:0;Margin:0;border-bottom:0px soli=
+d #cccccc;background:unset;height:1px;width:100%;margin:0px"></td>
+</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></=
+td></tr></tbody></table></td></tr></tbody></table>
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-foo=
+ter" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;borde=
+r-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:=
+100%;background-color:transparent;background-repeat:repeat;background-posit=
+ion:center top"><tbody><tr><td align=3D"center" style=3D"padding:0;Margin:0=
+"><table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-f=
+ooter-body" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0p=
+t;border-collapse:collapse;border-spacing:0px;background-color:transparent;=
+width:600px"><tbody><tr><td align=3D"left" style=3D"padding:0;Margin:0"><ta=
+ble cellpadding=3D"0" cellspacing=3D"0" role=3D"none" style=3D"mso-table-ls=
+pace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px" =
+width=3D"100%"><tbody><tr><td align=3D"center" style=3D"padding:0;Margin:0;=
+border-radius:5px;overflow:hidden;width:600px" valign=3D"top"><table bgcolo=
+r=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" sty=
+le=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:separate;bo=
+rder-spacing:0px;border-left:1px solid #e0e3e7;border-right:1px solid #e0e3=
+e7;border-top:1px solid #e0e3e7;border-bottom:1px solid #e0e3e7;background-=
+color:#ffffff;border-radius:5px" width=3D"100%"><tbody><tr><td align=3D"lef=
+t" class=3D"es-m-txt-c" style=3D"padding:20px;Margin:0"><p style=3D"Margin:=
+0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-r=
+ule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-se=
+rif;line-height:18px;color:#6a7788;font-size:12px">At Alpha Signal, our mis=
+sion is to build a sharp, engaged community focused on AI, machine learning=
+, and cutting-edge language models, helping over 200,000 developers stay in=
+formed and ahead. We=E2=80=99re passionate about curating the best in AI, f=
+rom top research and trending technical blogs to expert insights and tailor=
+ed job opportunities. We keep you connected to the breakthroughs and discus=
+sions that matter, so you can stay in the loop without endless searching. W=
+e also work closely with partners who value the future of AI, including emp=
+loyers and advertisers who want to reach an audience as passionate about AI=
+ as we are.</p>
+<p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:non=
+e;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvet=
+ica, arial, sans-serif;line-height:18px;color:#6a7788;font-size:12px"><br/>=
+</p>
+<p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:non=
+e;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvet=
+ica, arial, sans-serif;line-height:18px;color:#6a7788;font-size:12px">Our p=
+artnerships are based on shared values of ethics, responsibility, and a com=
+mitment to building a better world through technology.Privacy is a priority=
+ at Alpha Signal. Our Privacy Policy clearly explains how we collect, store=
+, and use your personal and non-personal information. By using our website,=
+ you accept these terms, which you can review on our website. This policy a=
+pplies across all Alpha Signal pages, outlining your rights and how to cont=
+act us if you want to adjust the use of your information. We=E2=80=99re bas=
+ed in the United States. By using our site, you agree to be governed by U.S=
+. laws.</p></td></tr></tbody></table></td></tr></tbody></table></td></tr></=
+tbody></table></td></tr></tbody></table>
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-con=
+tent" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;bord=
+er-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width=
+:100%"><tbody><tr><td align=3D"center" style=3D"padding:0;Margin:0"><table =
+align=3D"center" bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"es-content-body" role=3D"none" style=3D"mso-table-lspace:0pt;mso-tab=
+le-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:=
+transparent;width:600px"><tbody><tr><td align=3D"left" style=3D"padding:0;M=
+argin:0;padding-left:20px;padding-right:20px"><table cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:=
+0pt;border-collapse:collapse;border-spacing:0px" width=3D"100%"><tbody><tr>=
+<td align=3D"center" style=3D"padding:0;Margin:0;width:560px" valign=3D"top=
+"><table cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D=
+"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-=
+spacing:0px" width=3D"100%"><tbody><tr><td align=3D"center" style=3D"paddin=
+g:10px;Margin:0;font-size:0"><table border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" height=3D"100%" role=3D"presentation" style=3D"mso-table-lspace:0=
+pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px" width=
+=3D"100%"><tbody><tr><td style=3D"padding:0;Margin:0;border-bottom:0px soli=
+d #cccccc;background:unset;height:1px;width:100%;margin:0px"></td>
+</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></=
+td></tr></tbody></table></td></tr></tbody></table>
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-foo=
+ter" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;borde=
+r-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:=
+100%;background-color:transparent;background-repeat:repeat;background-posit=
+ion:center top"><tbody><tr><td align=3D"center" style=3D"padding:0;Margin:0=
+"><table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-f=
+ooter-body" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0p=
+t;border-collapse:collapse;border-spacing:0px;background-color:transparent;=
+width:600px"><tbody><tr><td align=3D"left" style=3D"padding:0;Margin:0"><ta=
+ble cellpadding=3D"0" cellspacing=3D"0" role=3D"none" style=3D"mso-table-ls=
+pace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px" =
+width=3D"100%"><tbody><tr><td align=3D"center" style=3D"padding:0;Margin:0;=
+border-radius:5px;overflow:hidden;width:600px" valign=3D"top"><table bgcolo=
+r=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" sty=
+le=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:separate;bo=
+rder-spacing:0px;border-left:1px solid #3358c5;border-right:1px solid #3358=
+c5;border-top:1px solid #3358c5;border-bottom:1px solid #3358c5;background-=
+color:#ffffff;border-radius:5px" width=3D"100%"><tbody><tr><td align=3D"cen=
+ter" class=3D"es-m-txt-c" style=3D"padding:20px;Margin:0"><p style=3D"Margi=
+n:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height=
+-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-=
+serif;line-height:25.5px;color:#000000;font-size:17px">Looking to promote y=
+our company, product, service, or event to 200,000+ AI developers? Let's wo=
+rk together.</p>
+</td></tr>
+<tr><td align=3D"center" class=3D"es-m-txt-c" style=3D"Margin:0;padding-top=
+:10px;padding-left:15px;padding-right:15px;padding-bottom:20px"><!--[if mso=
+]><a href=3D"https://link.alphasignal.ai/qBDJtP" target=3D"_blank" hidden>
+=09<v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:sc=
+hemas-microsoft-com:office:word" esdevVmlButton href=3D"https://link.alphas=
+ignal.ai/qBDJtP"=20
+                style=3D"height:49px; v-text-anchor:middle; width:172px" ar=
+csize=3D"10%" stroke=3D"f"  fillcolor=3D"#2d59f5">
+=09=09<w:anchorlock></w:anchorlock>
+=09=09<center style=3D'color:#ffffff; font-family:arial, "helvetica neue", =
+helvetica, sans-serif; font-size:16px; font-weight:700; line-height:16px;  =
+mso-text-raise:1px'>WORK WITH US</center>
+=09</v:roundrect></a>
+<![endif]--><!--[if !mso]><!-- --><span class=3D"msohide es-button-border" =
+style=3D"border-style:solid;border-color:transparent;background:#2d59f5;bor=
+der-width:0px;display:inline-block;border-radius:5px;width:auto;mso-hide:al=
+l"><a class=3D"es-button es-button-1711644616961" href=3D"https://link.alph=
+asignal.ai/qBDJtP" style=3D"mso-style-priority:100 !important;text-decorati=
+on:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-he=
+ight-rule:exactly;color:#FFFFFF;font-size:16px;display:inline-block;backgro=
+und:#2d59f5;border-radius:5px;font-family:arial, 'helvetica neue', helvetic=
+a, sans-serif;font-weight:bold;font-style:normal;line-height:19.2px;width:a=
+uto;text-align:center;padding:15px;mso-padding-alt:0;mso-border-alt:10px so=
+lid #2d59f5" target=3D"_blank">WORK WITH US</a>
+</span><!--<![endif]--></td></tr></tbody></table></td></tr></tbody></table>=
+</td></tr></tbody></table></td></tr></tbody></table>
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-con=
+tent" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;bord=
+er-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width=
+:100%"><tbody><tr><td align=3D"center" class=3D"es-info-area" style=3D"padd=
+ing:0;Margin:0"><table align=3D"center" bgcolor=3D"#00000000" cellpadding=
+=3D"0" cellspacing=3D"0" class=3D"es-content-body" role=3D"none" style=3D"m=
+so-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-sp=
+acing:0px;background-color:transparent;width:600px"><tbody><tr><td align=3D=
+"left" style=3D"Margin:0;padding-top:10px;padding-bottom:10px;padding-left:=
+20px;padding-right:20px"><table cellpadding=3D"0" cellspacing=3D"0" role=3D=
+"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:c=
+ollapse;border-spacing:0px" width=3D"100%"><tbody><tr><td align=3D"center" =
+style=3D"padding:0;Margin:0;width:560px" valign=3D"top"><table cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0p=
+t;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px" width=
+=3D"100%"><tbody><tr><td align=3D"center" class=3D"es-infoblock" style=3D"M=
+argin:0;padding-bottom:15px;padding-left:15px;padding-right:15px;padding-to=
+p:20px;line-height:15.6px;font-size:13px;color:#D3E5F6"><p style=3D"Margin:=
+0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-r=
+ule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-se=
+rif;line-height:15.6px;color:#1941dd;font-size:13px"><a href=3D"https://ara=
+neoides.eomail1.com/unsubscribe?ep=3D1&amp;l=3D9a4eb768-071d-11ef-b70b-1929=
+6a53e269&amp;lc=3D7988f182-4b4d-11ef-9f27-45aafcfcef5f&amp;p=3D71f931ae-d76=
+4-11ef-933b-8992040d91a9&amp;pt=3Dcampaign&amp;pv=3D4&amp;spa=3D1737401316&=
+amp;t=3D1737401946&amp;s=3Da7b2b743050f53b8d76745ec76da964843072df66563376f=
+b89c791f5604749a" style=3D"-webkit-text-size-adjust:none;-ms-text-size-adju=
+st:none;mso-line-height-rule:exactly;text-decoration:none;color:#1941dd;fon=
+t-size:13px" target=3D"_blank">Stop receiving emails <u>here</u></a></p><p>=
+214 Barton Springs Rd, Austin, Texas, 78704, United States of America</p>
+</td></tr><tr><td align=3D"center" class=3D"es-infoblock" style=3D"padding:=
+0;Margin:0;padding-bottom:15px;padding-left:15px;padding-right:15px;line-he=
+ight:15.6px;font-size:13px;color:#D3E5F6"><p style=3D"Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-heigh=
+t:15.6px;color:#9fc5e8;font-size:13px"></p></td></tr></tbody></table></td><=
+/tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></t=
+d></tr></tbody></table>
+<img alt=3D"" src=3D"https://y1mnw3w8.r.us-east-2.awstrack.me/I0/010f019485=
+39d120-9d8c65ee-32e1-42aa-9bee-a1a3d10dfcf0-000000/AmJO_B7_i5l4Hsgdr03kA1OZ=
+dG4=3D194" style=3D"display: none; width: 1px; height: 1px;">
+</body></html>
+--bpcBHDy6--

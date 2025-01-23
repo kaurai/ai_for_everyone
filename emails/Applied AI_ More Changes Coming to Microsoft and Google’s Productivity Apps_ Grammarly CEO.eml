@@ -1,0 +1,1572 @@
+Delivered-To: anush.sankaran@gmail.com
+Received: by 2002:ab0:7307:0:b0:85c:96ba:6fb with SMTP id v7csp230384uao;
+        Tue, 21 Jan 2025 10:01:05 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IHzbWzxPTZro93jUOPXC1mxdYX2P1BxhlqPTm2P98v604Cmc9JAgIxl9h4/iRoMAy0NUaDf
+X-Received: by 2002:a05:600c:1389:b0:431:52f5:f48d with SMTP id 5b1f17b1804b1-43891460bbemr190916085e9.31.1737482464924;
+        Tue, 21 Jan 2025 10:01:04 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1737482464; cv=none;
+        d=google.com; s=arc-20240605;
+        b=TIgsWSNJP8JcFCLssc950x2PKzs1lDDbu9GpX6Q6NzyXAPeqUodIceZrClcq1HGjfm
+         XK8wXszfRsiijxPjUuHU+5YxgazaHYjIX0SMXBAbjUVD6aW9f3a2fkTOW/TWTVRJOw/o
+         uLPNikUU8rdFVNpO7csE0opxOqEANcIv4b422F+Zr1v0nQJHzUxeCEjXar0y6G++RLAY
+         H42oBZHyPbJ2Q0kFacXd2q6YhYTJNyxX9v5AqzqAr4LFYUqLeSwTYGYGJj9wOfwyVy95
+         JhWannmLDsMngZ435l/Du/1vWyt3fp7MfhHdG9UAdWesrNdIuh54qXtUCxCdohiI8g3g
+         X2bg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:list-unsubscribe-post:list-unsubscribe:reply-to:subject
+         :message-id:mime-version:from:date:dkim-signature:dkim-signature;
+        bh=73QNxoEo8x+9hozvm5Jqf1DWjUVNqNgCILEuIT8hzj4=;
+        fh=8AJWU0E7BA/5wAQvaPbFfHUmyLr12+uigv4ylnirS4U=;
+        b=VZ4lt+nPEkr2EUwdUpcamMXNVzKp8vzxakvSrZPzGQsfIQVGL8zq8nORDv9D9KvUj0
+         YLBQDBRjZNZwKcd/8wVfQ0kNYzHSpzZyXqhWdK1dlO0k7vbBnoDgGhDJRcDpTaMnekjR
+         b/yuD3SoGjU/+HYPtW2Y+KyEcVcGmZbXFPCErswnnvTToFyoPvr4n4qQ+6VDY2zBWjhl
+         jnR4Fzkr8mv1y+OgjlUyxO504Vs+1T4hpe2Nlt6Ed/S4Nhbe8GrnnbyuWjtUGL8jm0qg
+         2V2uVeC6oLxPmxTFOu92I5PE/bEdMw7/ueahqEEtkfoeQU7hJVGqnz0epuRbDwAG7Ngc
+         4gLg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@theinformation.com header.s=m1 header.b=VgVtG9m5;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=ms54N3dj;
+       spf=pass (google.com: domain of bounces+10194542-dd16-anush.sankaran=gmail.com@em8796.theinformation.com designates 159.183.148.166 as permitted sender) smtp.mailfrom="bounces+10194542-dd16-anush.sankaran=gmail.com@em8796.theinformation.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=theinformation.com
+Return-Path: <bounces+10194542-dd16-anush.sankaran=gmail.com@em8796.theinformation.com>
+Received: from o4.ptr2972.theinformation.com (o4.ptr2972.theinformation.com. [159.183.148.166])
+        by mx.google.com with ESMTPS id ffacd0b85a97d-38bf3284317si8653032f8f.560.2025.01.21.10.01.04
+        for <anush.sankaran@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Tue, 21 Jan 2025 10:01:04 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounces+10194542-dd16-anush.sankaran=gmail.com@em8796.theinformation.com designates 159.183.148.166 as permitted sender) client-ip=159.183.148.166;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@theinformation.com header.s=m1 header.b=VgVtG9m5;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=ms54N3dj;
+       spf=pass (google.com: domain of bounces+10194542-dd16-anush.sankaran=gmail.com@em8796.theinformation.com designates 159.183.148.166 as permitted sender) smtp.mailfrom="bounces+10194542-dd16-anush.sankaran=gmail.com@em8796.theinformation.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=theinformation.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=theinformation.com;
+	h=content-type:from:mime-version:subject:reply-to:list-unsubscribe:
+	list-unsubscribe-post:x-feedback-id:to:cc:content-type:from:subject:to;
+	s=m1; bh=73QNxoEo8x+9hozvm5Jqf1DWjUVNqNgCILEuIT8hzj4=;
+	b=VgVtG9m5PsQlqnAD6bcIldxDzQafjpuvxW6K9EyRo7nkbX55yg1JDR/BYKvMinK7UBEU
+	7XJlH2mEUOPPmWuwjgNHZ05iI88hB/s7fiijv1DzH+zH2EM264UAdooP71gekRhZYI6HOC
+	of9J5lBoYqaIzTG069z0f/Iz1m8+1OuLPi8mvphJExQUMPPP3Dvh0OE3/a1q4f8Ue2gGeS
+	5ln7+JBc6MekkPC7uN0/CEGAxKDu0XoyNtKPrwzDv2XWhLyw17s67jnbh7vlAYc5LEQaAX
+	ZFao50yKPY0TcjRyiQpUI29KwbJigKBYgLiSzJzPppPK/WwtuU+wOoVtb3vm94Pg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=content-type:from:mime-version:subject:reply-to:list-unsubscribe:
+	list-unsubscribe-post:x-feedback-id:to:cc:content-type:from:subject:to;
+	s=smtpapi; bh=73QNxoEo8x+9hozvm5Jqf1DWjUVNqNgCILEuIT8hzj4=;
+	b=ms54N3dj6EJPTwyyuZ+PuN9SnkCSGz8gZDXHMSsW7xm16mGBgko0MVhjHvvKg7QScOEh
+	ylWYOwNXymtvzgUSIjUIdYgJp9UYWrZAlReS+2NW9YIhJ1a7+CYLBsZ+Oo8IBclABcWmCf
+	4TIySHictCvrcB39s4su50u69+px4sSUA=
+Received: by recvd-7ccc6fd6d7-zsl4v with SMTP id recvd-7ccc6fd6d7-zsl4v-1-678FE0DD-22
+	2025-01-21 18:01:01.091295292 +0000 UTC m=+5863108.126595414
+Received: from MTAxOTQ1NDI (unknown)
+	by geopod-ismtpd-28 (SG) with HTTP
+	id fcwg3cNOQbiQhdVWUrY8hA
+	Tue, 21 Jan 2025 18:01:01.040 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=7adfe1037e2804c2e1fc4dd5b9c5658e33c3e65447d864823da6d77657ee
+Date: Tue, 21 Jan 2025 18:01:03 +0000 (UTC)
+From: The Information <hello@theinformation.com>
+Mime-Version: 1.0
+Message-ID: <fcwg3cNOQbiQhdVWUrY8hA@geopod-ismtpd-28>
+Subject: Applied AI: More Changes Coming to Microsoft and
+ =?UTF-8?B?R29vZ2xl4oCZcw==?= Productivity Apps: Grammarly CEO
+Reply-To: The Information <hello@theinformation.com>
+List-Unsubscribe: 
+ =?us-ascii?Q?=3Chttps=3A=2F=2Fwww=2Etheinformation=2Ecom=2Funsubscribe=3Fjwt=3DeyJhbGciOiJIUz?=
+ =?us-ascii?Q?I1NiJ9=2EeyJleHAiOjE4OTUyNDg4NTksInN1YiI6?=
+ =?us-ascii?Q?ImFudXNoLnNhbmthcmFuQGdtYWlsLmNvbSIsInB?=
+ =?us-ascii?Q?lcm1zIjpbImVtYWlsLXNldHRpbmdzIl19=2EEadPj?=
+ =?us-ascii?Q?7sak0uix1o9Q3oAR9nayidtsYNzfYreQ2sv6ig&?=
+ =?us-ascii?Q?unsubscribe=5Ffrom=3Dnl=5F103=3E?=
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-InboxMonster-CID: SENDGRID_ARTICLE_14366
+X-Mock: False
+X-Test: True
+X-Feedback-ID: 10194542:SG
+X-SG-EID: 
+ =?us-ascii?Q?u001=2Etjdh0aj8nKRD1b7hLc5+WBq1YOxeByFRgkK0JUDBrFRRskkh8r8H2XlBI?=
+ =?us-ascii?Q?GWToEhO9pKi6ckzj4tXNdZipLE=2FLt28ylGiSXiZ?=
+ =?us-ascii?Q?HfJaccN23IcE=2Fl6mDsp9sAleVIUhe9xwB05jo4A?=
+ =?us-ascii?Q?9maAvSK9zxQWbPg4D9lnhqGG7b2=2FRUAe9LOGXDd?=
+ =?us-ascii?Q?s7l2oCPNbPfl6JYZGpQNd3lUagTlgJ0yZEKvTdA?=
+ =?us-ascii?Q?PgXnSS8PvekFcVri9zMJVSe=2F1GKlHGWtq2Jhq5l?= =?us-ascii?Q?mmW4?=
+X-SG-ID: 
+ =?us-ascii?Q?u001=2ESdBcvi+Evd=2FbQef8eZF3BpTL9BgbK5wfSJMJGMsmprAoqsI0w368suenb?=
+ =?us-ascii?Q?dwfJgseP=2FadYNRuMZjVWJ9z7QS3I7Y4Q8NsvPGI?=
+ =?us-ascii?Q?JSdWkX09pXUNXNFhIv0s4a3apRWm28DuvY25irl?=
+ =?us-ascii?Q?E0hIoGqX9UAEqojscNP29XRZVyBN8rUshyoM=3D?=
+To: Anush Sankaran <anush.sankaran@gmail.com>
+X-Entity-ID: u001.lpyvzRVyOedDc9oh7NNGVg==
+
+--7adfe1037e2804c2e1fc4dd5b9c5658e33c3e65447d864823da6d77657ee
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=utf-8
+Mime-Version: 1.0
+
+%title%=20
+
+
+  Applied AI
+  By Jon Victor
+  Jan 21, 2025
+
+    Hi! If you=E2=80=99re finding value in our Applied AI newsletter, I enc=
+ourage you to consider subscribing to The Information. It contains exclusiv=
+e reporting on the most important stories in tech,=C2=A0like=C2=A0this stor=
+y from Amir and Steph on the=C2=A0OpenAI-Microsoft negotiations=C2=A0and th=
+e price tag they're putting on AGI.=C2=A0Save up to $250 on your first year=
+ of access.Welcome back! Jon and Kevin here.Microsoft and Google=E2=80=99s =
+injection of generative artificial intelligence features into apps like Doc=
+s and Word is just the start of a dramatic shift for enterprise apps in the=
+ coming years, says Shishir Mehrotra, CEO of Grammarly, which develops writ=
+ing assistant software.Instead of a chatbot like Google=E2=80=99s Gemini or=
+ Microsoft=E2=80=99s Copilot that responds to customers=E2=80=99 questions,=
+ Mehrotra says the future of productivity software involves AI bots that wi=
+ll proactively suggest information customers could include in the documents=
+, based on internet sources or the customer=E2=80=99s own corporate systems=
+.That might feel like collaborating on a Google Doc with a bunch of teammat=
+es in real time=E2=80=94except the suggestions are coming from different AI=
+s.=E2=80=9CWe're going to quickly see a much, much broader set of agents th=
+at'll present themselves to the user as much smarter suggestions,=E2=80=9D =
+Mehrotra told us. (Mehrotra, who previously ran much of YouTube, spent the =
+last 10 years trying to compete with Google and Microsoft as the CEO of pro=
+ductivity app Coda, which Grammarly just acquired for an undisclosed sum.)H=
+e used the example of someone writing a corporate press release that mentio=
+ns a company=E2=80=99s customers. An AI system could suggest information to=
+ include about those customers based on news reports or other data the comp=
+any has about them.Microsoft and Google haven=E2=80=99t gone this direction=
+=E2=80=94yet. Microsoft has some features in its Dynamics 365 customer mana=
+gement app that summarize information about customers from internal data an=
+d internet sources. But the Copilot and Gemini AI assistants in the compani=
+es=E2=80=99 productivity apps still require customers to explicitly ask for=
+ such information.=C2=A0AI that makes suggestions could help software buyer=
+s automate more work and spend less time searching for information from dif=
+ferent apps. The document =E2=80=9Cworks with you as if it were a human,=E2=
+=80=9D Mehrotra said.=C2=A0That=E2=80=99s the type of product he=E2=80=99s =
+now trying to build at Grammarly.Grammarly is an interesting story. Its cor=
+e business has been selling enterprise software that integrates with Docs, =
+Gmail, Outlook and Word through a web browser extension or desktop app and =
+automatically suggests grammar and spelling corrections as customers type.=
+=C2=A0The company now has 40 million daily active users, up from 30 million=
+ in 2020. It was valued at $13 billion in a private financing in late 2021=
+=E2=80=94a recent peak for software valuations. (Grammarly wouldn=E2=80=99t=
+ share updated financial information or the number of paid customers.)Gramm=
+arly faced a threat from ChatGPT, given that OpenAI=E2=80=99s chatbot effec=
+tively does the same thing for free=E2=80=94minus the integration with ente=
+rprise apps. Those integrations could be a reason Grammarly hasn=E2=80=99t =
+cratered, though it=E2=80=99s not unreasonable to think OpenAI will take st=
+eps in that direction; it=E2=80=99s even been working on its own web browse=
+r!For now, =E2=80=9CChatGPT is a thing you go to, Grammarly is a thing that=
+ comes to you and is working alongside you, helping you with your actual wo=
+rk,=E2=80=9D Mehrotra said. =E2=80=9CThe heart of what we're trying to get =
+done here is take that current unique advantage and turn it into a platform=
+.=E2=80=9D=C2=A0Goldman=E2=80=99s AI-Generated IPO ProspectusesGoldman Sach=
+s CEO David Solomon=E2=80=99s comment to the Financial Times last week=E2=
+=80=94that AI can now write 95% of a filing needed for a firm to go public=
+=E2=80=94has been making the rounds on X. According to Solomon, AI can get =
+done in minutes what would have taken a six-person team two weeks to comple=
+te.=C2=A0Given the limitations of AI, that seems like a risky proposition: =
+the technology is still making plenty of mistakes. Not to mention the conse=
+quences that could come with messing up a legal document like that.Still, i=
+f he=E2=80=99s right that humans will only need to handle the most importan=
+t 5% of the work, it=E2=80=99s yet another example of the dynamic Turing CE=
+O Jonathan Siddharth described for AI in coding: More advanced work becomes=
+ far more valuable, while less differentiated work becomes essentially wort=
+hless.
+
+A message from Google Cloud
+
+Explore Google Cloud's AI Trends 2025 in Financial Services
+
+Want a strategic look at AI's future impact? Five AI trends are set to shap=
+e Financial Services in 2025. Discover how multimodal AI, AI agents, assist=
+ive search, AI-powered CX, and AI-enabled security could impact your busine=
+ss, and see how Google Cloud predicts these trends will come to life. Learn=
+ more.
+
+New From Our Reporters
+
+ExclusiveVenture Capital=E2=80=99s Latest Strategy: Private Equity=E2=80=93=
+Style Roll-Ups
+By Natasha Mascarenhas
+
+AI AgendaA Competitor of Scale AI Doubles Its Revenue, Thanks to Reasoning
+By Stephanie Palazzolo
+
+Recommended Newsletter
+Dealmaker was named the "Best in Business" newsletter for its insightful co=
+verage of private technology and the AI hype cycle. Start receiving the new=
+sletter=C2=A0here.
+
+What We=E2=80=99re Reading
+Can a Computer Learn to Speak Trader?
+
+Legal AI Is Reaching Deep Into the Workplace
+
+Upcoming Events
+Thursday, February 27          =E2=80=94AI Agenda Live - SF
+Join us for our first AI event of 2025, AI Agenda Live on February 27 in Sa=
+n Francisco. We=E2=80=99ll bring together the leaders shaping the future of=
+ AI to tackle the industry=E2=80=99s most critical questions. Space is limi=
+ted. Purchase your ticket today.
+More details
+
+Thank you for reading the Applied AI newsletter! I=E2=80=99d love your feed=
+back, ideas and tips:=C2=A0jon.victor@theinformation.com.If you think someo=
+ne else might enjoy this newsletter, please pass it forward or they can sig=
+n up=C2=A0here.
+
+--7adfe1037e2804c2e1fc4dd5b9c5658e33c3e65447d864823da6d77657ee
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+Mime-Version: 1.0
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns=3D"http://www.w3.org/199=
+9/xhtml">
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8=
+" />
+    <meta charset=3D"utf-8" /> <!-- utf-8 works for most cases -->
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width" /> <!-- Suppor=
+ted on some email clients -->
+    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge" /> <!-- Use =
+the latest (edge) version of IE rendering engine -->
+    <title>%title%</title> <!-- The title tag shows in email notifications,=
+ like Android 4.4. -->
+   =20
+    <style>
+    </style>
+    <!--[if mso]>
+      <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG/>
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+      </xml>
+      <![endif]-->
+      <!--[if lte mso 11]>
+      <style type=3D"text/css">
+        .outlook-group-fix {
+          width:100% !important;
+        }
+      </style>
+    <![endif]-->
+  </head>
+  <body>
+    <table class=3D"container" cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" width=3D"100%" bgcolor=3D"#ffffff" style=3D"max-width: 600px !import=
+ant; margin: auto;">
+      <tbody>
+        <tr>
+          <td class=3D"content-wrapper main format-content" style=3D"max-wi=
+dth: 600px;">
+           =20
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Applied AI</title>
+    <meta charset=3D"utf-8">
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1">
+    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"/>
+    <meta name=3D"x-apple-disable-message-reformatting"/>
+    <style type=3D"text/css">
+  body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-size-adjust: =
+100%;}
+  table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;}
+  img{-ms-interpolation-mode: bicubic;}
+  img{border: 0; height: auto; line-height: 100%; outline: none; text-decor=
+ation: none;}
+  table{border-collapse: collapse !important;}
+  body{height: 100% !important; margin: 0 auto !important; padding: 0 !impo=
+rtant; width: 100% !important;}
+  p {font-family: 'Noto Serif', Georgia, serif; padding-bottom: 28px;}
+  a {
+    color: #f32a52;
+    font-weight: bold;
+  }
+  a:hover {color: #f32a52 !important;}
+  h1, h2, h3 {
+    line-height: 1.4 !important;
+    font-weight: 500;
+    font-family: 'Suisse Works', Georgia, serif;
+  }
+  h1, h2 {
+    font-size: 26px;
+  }
+  ul, ol {
+    margin-top: 0;
+  }
+  li {
+    font-family: 'Noto Serif', Georgia, serif;
+    font-size: 19px !important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.7 !important;
+    margin-top: 12px;
+    Margin-Top: 12px;
+  }
+  hr {
+    border: 1px solid #f32a52;
+  }
+  a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+  }
+  .ad-corporate-container td {
+    padding: 0 !important;
+  }
+  @media screen and (max-width: 525px) {
+    .mobile-button-container {
+      margin: 0 auto;
+      width: 100% !important;
+    }
+    .mobile-hide {
+      display: none !important;
+    }
+    .mobile-logo {
+      width: 116px !important;
+    }
+    .mobile-date, .mobile-byline, .supported-by {
+      font-size: 12px !important;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .responsive-table tr td,
+    .responsive-table tr td ul li,
+    .responsive-table tr td ol li,
+    p {
+      font-size: inherit;
+      line-height: inherit;
+    }
+    .img-max {
+      max-width: 100% !important;
+      width: 100% !important;
+      height: auto !important;
+      display: block !important;
+      margin: 0 auto 16px !important;
+    }
+    .img-container {
+      margin-bottom: 12px !important;
+    }
+    .responsive-table {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+    .padding {
+      padding-left: 5% !important;
+      padding-right: 5% !important;
+    }
+    .mobile-padding {
+      padding-left: 5% !important;
+      padding-right: 5% !important;
+    }
+    .no-padding {
+      padding: 0 !important;
+    }
+    .mobile-button {
+      font-size: 14px !important;
+      line-height: 1 !important;
+      padding: 16px 32px !important;
+      display: block !important;
+    }
+    .tablet-hide {
+      display: none !important;
+      visibility: hidden !important;
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    /* Your dark mode styles: */
+    body {
+      background: #2F3538;
+      color: #dfdfdf;
+      background: #2F3538 !important;
+      color: #dfdfdf !important;
+    }
+    .background-dark {
+      background: #2F3538;
+      color: #dfdfdf;
+      background: #2f3538 !important;
+      color: #dfdfdf !important;
+    }
+    h1, h2, h3, h4,
+    p {
+      color: #dfdfdf;
+      color: #dfdfdf !important;
+    }
+    p a {
+      color: #f32a52;
+    }
+    .logo-light {
+      display: none;
+      display: none !important;
+      visibility: hidden;
+      visibility: hidden !important;
+    }
+    .logo-dark {
+      display: block;
+      display: block !important;
+      visibility: visible;
+      visibility: visible !important;
+    }
+    .format-as-content li {
+      color: #dfdfdf !important;
+    }
+  }
+  .format-as-content h2, .format-as-content h3 {font-family: Georgia, Times=
+, serif;font-weight: 400;font-size: 26px;line-height: 36px;margin-bottom: 2=
+6px;margin-top: 0}
+  .format-as-content a {
+    color: #f32a52;
+    text-decoration: none !important;
+    font-weight: 400;
+  }
+  .format-as-content p {font-size: 19px;padding-bottom: 28px !important;}
+  .format-as-content li {
+    color: #000;
+  }
+  .format-as-content p + a {display: block;margin-bottom: 24px !important;}
+  .format-as-content section > hr {
+    margin-top: 0;
+    margin-bottom: 24px;
+  }
+  div[style*=3D"margin: 16px 0"] { margin: 0 !important; }
+  html, body, h1, h2, h3, h4, h5, p, ul li, ol li { margin: 0; padding: 0; =
+}
+  .mobile-button, a, img {
+    transition: color 0.2s, opacity 0.2s;
+  }
+  a:hover {
+    color: #f32a52 !important;
+  }
+  .button-link {
+    color: #ffffff !important;
+    text-decoration: none;
+  }
+  .button-link:hover {
+    background-color: #fec6cc !important;
+  }
+  .mobile-button:hover {
+    color: #ffffff !important;
+    background: #ea685e !important;
+    border: 2px solid #ea685e !important;
+  }
+ =20
+</style>
+
+    <style>
+  .footer-link {
+    color: #ffffff !important;
+    text-decoration: underline !important;
+    font-weight: normal;
+  }
+  .footer-link:hover {
+    color: $magenta !important;
+  }
+  @media screen and (max-width: 600px) {
+    .responsive-table tr td,
+    .responsive-table tr td ul li,
+    .responsive-table tr td ol li {
+      font-size: inherit;
+      line-height: inherit;
+    }
+
+    .responsive-table {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    .background-dark {
+      background: #2f3538 !important;
+      color: #dfdfdf !important;
+    }
+  }
+</style>
+
+  </head>
+  <body class=3D"body" style=3D"margin: 0 !important; padding: 0 !important=
+">
+    <div
+      style=3D"display: none; font-size: 1px; line-height: 1px; max-height:=
+ 0px; max-width: 0px; opacity: 0; overflow: hidden"
+    >
+      <!-- Visually Hidden Preheader Text : BEGIN -->
+<div class=3D"preheader" style=3D"display: none !important;font-size: 1px;l=
+ine-height: 1px;max-height: 0px;max-width: 0px;opacity: 0;overflow: hidden;=
+mso-hide: all;font-family: sans-serif;color: #fff;">
+  Microsoft and Google=E2=80=99s injection of generative artificial intelli=
+gence features into apps like Docs and Word is just the start of a dramatic=
+ shift for enterprise apps in the coming years, says Shishir Mehrotra, CEO =
+of Grammarly, which develops writing assistant software. Instead of a chatb=
+ot like Google=E2=80=99s Gemini or Microsoft=E2=80=99s Copilot that respond=
+s to customers=E2=80=99 questions, Mehrotra says the future of productivity=
+ software involves AI bots that will proactively suggest information custom=
+ers could include in the documents, based on internet sources or the custom=
+er=E2=80=99s own corporate systems.
+</div>
+
+    </div>
+    <table
+      border=3D"0"
+      cellpadding=3D"0"
+      cellspacing=3D"0"
+      width=3D"100%"
+    >
+      <tr>
+        <td bgcolor=3D"#ffffff" align=3D"center" class=3D"background-dark">
+          <!--[if (gte mso 9)|(IE)]>
+            <table align=3D"center" border=3D"0" cellspacing=3D"0" cellpadd=
+ing=3D"0" width=3D"600">
+              <tr>
+                <td align=3D"center" width=3D"600">
+          <![endif]-->
+          <table
+            border=3D"0"
+            cellpadding=3D"0"
+            cellspacing=3D"0"
+            width=3D"100%"
+            style=3D"max-width: 600px"
+            class=3D"responsive-table"
+          >
+            <tr>
+              <td bgcolor=3D"#ffffff" class=3D"divider">
+                <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0">
+                  <tr>
+                    <td
+                      bgcolor=3D"#ffffff"
+                      align=3D"left"
+                      valign=3D"top"
+                      style=3D"padding: 24px 20px"
+                      class=3D"background-dark mobile-padding"
+                    >
+                      <a
+                        href=3D"https://url3396.theinformation.com/ls/click=
+?upn=3Du001.71kYkaWDpGOJSzbGrs4y1TNF0-2FB-2Bh5pDUdkL0JSEoBmN-2BtioNXgRiKmS6=
+QeiVMUmf1kk36DAm-2FsCscr1R8-2FpHXzZj8DFSUZAew8jPs4IufBLI3wRAAXiAgWrU7vfVTXX=
+LasIXio9VM0NZ40-2B2cK13WSstm8xm35SmtDD8whP8ag-3D6DtO_iEov0s5HvVnGoiYJdVyZps=
+-2F8PjnnqKoLDpY2honFu2U45V0jv994vXrML8Mj3ERHo-2BROdctDEBpoawhoWbF6rs-2B2GZJ=
+1KV2gVIdPwsc4sCUKK-2B50dFWBMMgmU33OHaE5REE2k2k5o45Y8medzhaW-2FTfCs4hDMhHclk=
+L1OdKx2ZMy4NThoRA1gFbAjYpyJTBoHtC64qyeRKUoK-2FjBIQikqmDRejmsHu0fqk-2B7AseG-=
+2Fofet6pYRsXCnRiHbucQjNfDp1Ff-2FEvgKJg6Z7DQ-2BCsR4BvIK99hfMnPJyNnEn-2FfMpEM=
+td1YvvVEN9AhuFyIxdkR-2BmdakfyKTeBVYN6jmPtUVQ-3D-3D"
+                        target=3D"_blank"
+                        style=3D"text-decoration: none; color: #ffffff; lin=
+e-height: 0; margin: 0; padding: 0; display: block"
+                      >
+                        <img
+                          alt=3D"The Information logo"
+                          src=3D"https://tii.imgix.net/logos/theinformation=
+/the-information-black-text-logo-white-bg.jpg?pad=3D20&amp;bg=3Dffffff"
+                          class=3D"mobile-logo"
+                          width=3D"145"
+                          border=3D"0"
+                          style=3D"width: 145px; max-width: 145px; border: =
+0"
+                        />
+                      </a>
+                    </td>
+                    <td
+                      bgcolor=3D"#ffffff"
+                      align=3D"right"
+                      valign=3D"top"
+                      style=3D"padding: 24px 20px"
+                      class=3D"background-dark mobile-padding"
+                    >
+                      <span
+                        class=3D"mobile-date"
+                        style=3D"font-family: 'Suisse Int&rsquo;l Mono', mo=
+nospace, Helvetica, Arial, sans-serif; font-size: 14px; line-height: 18px; =
+color: #6D686E"
+                      >Jan 21, 2025</span>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor=3D"#ffffff" class=3D"divider">
+                <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0">
+                  <tr>
+                    <td
+                      bgcolor=3D"#ffffff"
+                      align=3D"center"
+                      valign=3D"top"
+                      style=3D"padding: 0 20px"
+                      class=3D"background-dark mobile-padding"
+                    >
+                      <h1
+                        style=3D"font-family: 'Suisse Works', Georgia, 'Tim=
+es New Roman', Times, serif; font-weight: normal; font-size: 36px; line-hei=
+ght: 54px"
+                      >Applied AI</h1>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td
+                class=3D"divider"
+                align=3D"center"
+                style=3D"padding-bottom: 16px;padding-top: 4px"
+              >
+                <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0">
+                  <tr>
+                    <td
+                      width=3D"48"
+                      bgcolor=3D"#ffffff"
+                      align=3D"middle"
+                      valign=3D"middle"
+                      class=3D"background-dark"
+                    >
+                      <img
+                        src=3D"https://tii.imgix.net/production/avatars/182=
+971/IMG_2775.jpg?w=3D94&amp;compressed=3Dtrue"
+                        width=3D"47"
+                        height=3D"47"
+                        style=3D"width: 47px; border-radius: 47px; vertical=
+-align: middle; margin-left: auto; margin-right: 8px"
+                      />
+                      <span
+                        class=3D"mobile-byline"
+                        style=3D"font-family: Helvetica, Arial, sans-serif;=
+ font-size: 16px; line-height: 27px; color: inherit"
+                      >By Jon Victor</span>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+              <tr>
+                <td bgcolor=3D"#ffffff" class=3D"divider">
+                  <table width=3D"100%" border=3D"0" cellspacing=3D"0" cell=
+padding=3D"0">
+                    <tr>
+                      <td style=3D"padding: 0 20px" class=3D"background-dar=
+k padding">
+                        <table width=3D"100%" border=3D"0" cellspacing=3D"0=
+" cellpadding=3D"0">
+                          <tr>
+                            <td align=3D"center" style=3D"padding: 0;">
+                           =20
+<div style=3D"text-align: center">
+  <span class=3D"supported-by" style=3D"display: inline-block;vertical-alig=
+n: middle;font-family: Verdana, serif !important;font-weight: normal;font-s=
+tyle: normal;font-size: 14px;line-height: 1.7;color: #6D686E;border-bottom:=
+ 1px solid #f0ece5;border-top: 1px solid #f0ece5;width: 100%;padding: 8px 0=
+;">
+    <span style=3D"vertical-align: middle; margin-right:6px;">Supported by<=
+/span>
+<a href=3D"https://url3396.theinformation.com/ls/click?upn=3Du001.71kYkaWDp=
+GOJSzbGrs4y1TNF0-2FB-2Bh5pDUdkL0JSEoBktahOKn6t4gN5PLT1hemN-2F3W27NcXnj8g0FU=
+t-2Blqw8z7oHLaxB7zqHbXRuJ2fEnpazM-2BbVBSmOznlxOr9QFbzX5FJlL5-2B2Vy5IDtf3xXJ=
+LqaIin-2Bl4Iw1kYt1j03ka5vgA8jX1rCTG9RmHge1vQRuk0t-2B5eKnKJpXw8xN14vryETRMeG=
+HOA44kmIfv5v05hLc-3Db6ZE_iEov0s5HvVnGoiYJdVyZps-2F8PjnnqKoLDpY2honFu2U45V0j=
+v994vXrML8Mj3ERHo-2BROdctDEBpoawhoWbF6rs-2B2GZJ1KV2gVIdPwsc4sCUKK-2B50dFWBM=
+MgmU33OHaE5REE2k2k5o45Y8medzhaW-2FTfCs4hDMhHclkL1OdKx2ZMy4NThoRA1gFbAjYpyJT=
+Bot6jYv5VEnAunP-2Fm5pwqSO2NFt4n1woiESe2CkyUcwJ99Vp8-2Fjdlp8ZsrXC5ZyYBSI-2F5=
+VaXeSK5nLwm2Ax3nsEXnUjwgsx57DLuLSwh-2B6xGQZSpbe9NVoxVZ5KwVAZMFXYwStYet2Wtg1=
+V1B-2BRsg3xg-3D-3D" style=3D"vertical-align: middle;">
+  <img src=3D"https://tii.imgix.net/production/advertisements/640/sponsor-6=
+40-txv4hrqR.png?h=3D100&pad=3D2&bg=3Dffffff" style=3D"width: auto;height: a=
+uto; max-height: 42px;vertical-align: middle;"/>
+</a>
+
+  </span>
+</div>
+
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            <!-- Email Content -->
+            <tr>
+              <td bgcolor=3D"#ffffff" class=3D"divider format-as-content">
+                <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0">
+                  <tr>
+                    <td style=3D"padding: 0 20px" class=3D"background-dark =
+padding">
+                      <table width=3D"100%" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0">
+                        <tr>
+                          <td
+                            align=3D"left"
+                            style=3D"padding: 16px 0 0; font-size: 19px; li=
+ne-height: 32px; color: #000000; font-weight: 400;"
+                          >
+                            <section class=3D"leads-only"><p style=3D"paddi=
+ng-bottom: 32px;"><i>Hi! If you=E2=80=99re finding value in our Applied AI =
+newsletter, I encourage you to consider subscribing to The Information. It =
+contains exclusive reporting on the most important stories in tech,=C2=A0</=
+i><i>like=C2=A0this story from Amir and Steph on the=C2=A0<a href=3D"https:=
+//url3396.theinformation.com/ls/click?upn=3Du001.71kYkaWDpGOJSzbGrs4y1TNF0-=
+2FB-2Bh5pDUdkL0JSEoBmbIlaCwUAb-2B2vhxG1AFBaNo6l1XGxwSGaIHKMfcQyO4gCso9cSFmV=
+mODZsHJhk4ph6KHuH3r2B306vs409j5uyHpWhTDHb3pXJAYheKFQo2cCX5R-2BnFuuK8Dnu6g1j=
+qogLQz1RSiluvhx17qz2YgGBaQSoyuzeRTBOPQhBMa32joboSIevEWfbhS1vJeqvHPi4SPIiZC8=
+OZ9gO7oq4yZSDQHvv55SMq58XMiRyvR5KuA-3D-3DOP26_iEov0s5HvVnGoiYJdVyZps-2F8Pjn=
+nqKoLDpY2honFu2U45V0jv994vXrML8Mj3ERHo-2BROdctDEBpoawhoWbF6rs-2B2GZJ1KV2gVI=
+dPwsc4sCUKK-2B50dFWBMMgmU33OHaE5REE2k2k5o45Y8medzhaW-2FTfCs4hDMhHclkL1OdKx2=
+ZMy4NThoRA1gFbAjYpyJTBoszDkxMTDbBsIinIBpZtYEPg-2FNdhebxBhur8jC7PW0iI4B8T3dT=
+cfHqZbue6G1SapL5SFXETt35YbXdsrbVcFuWozoOJBzNLwMVI-2BOo1gnAgTK7yy8iGxFmyx9RR=
+mjCPs6Y7DG-2BVyS0AkIzCfpHynFg-3D-3D">OpenAI-Microsoft negotiations</a>=C2=
+=A0and the price tag they're putting on AGI.=C2=A0<a href=3D"https://url339=
+6.theinformation.com/ls/click?upn=3Du001.71kYkaWDpGOJSzbGrs4y1TNF0-2FB-2Bh5=
+pDUdkL0JSEoBmVSASZdfm2J-2BwXbSht7IlNKRt5snGqhI1H7hI8FWZNyVgeAK5tOyDxiVllqEQ=
+Lp9Z7j5vDNfwiLkPHDacoD-2BsFs65omDioYUln19czZX4ajMBZhbIs38wIGc1gE5QHVz5dqAaR=
+hL5zgrtVW5RIpZ2Z19dlnxqaZr-2B89eeUuEpqsG-2FF71tlzoSbH6RcjKIUMe-2FO5Fsj28vlQ=
+DekFiI4-2FfqeXfI0_iEov0s5HvVnGoiYJdVyZps-2F8PjnnqKoLDpY2honFu2U45V0jv994vXr=
+ML8Mj3ERHo-2BROdctDEBpoawhoWbF6rs-2B2GZJ1KV2gVIdPwsc4sCUKK-2B50dFWBMMgmU33O=
+HaE5REE2k2k5o45Y8medzhaW-2FTfCs4hDMhHclkL1OdKx2ZMy4NThoRA1gFbAjYpyJTBowkn6K=
+8pUfDZbA3zjc7FgPRIJrncPPOLReQNDA2kPRfS7RVkSf7QdAp09-2FpKjyxNNPDEaTee8wqg9W6=
+TRqSX1QsBhAh6HKsETJcS3WMDlUXKK-2F1q74eSL0LJPcpmrB-2BJyK7D4j4uRBpiGCR-2BmLD2=
+nIg-3D-3D">Save up to $250 on your first year of access.</a></i></p></secti=
+on><section class=3D"leads-only"><hr></section><p style=3D"padding-bottom: =
+32px;">Welcome back! Jon and Kevin here.</p><p style=3D"padding-bottom: 32p=
+x;">Microsoft and Google=E2=80=99s injection of generative artificial intel=
+ligence features into apps like Docs and Word is just the start of a dramat=
+ic shift for enterprise apps in the coming years, says Shishir Mehrotra, CE=
+O of Grammarly, which develops writing assistant software.</p><p style=3D"p=
+adding-bottom: 32px;">Instead of a chatbot like Google=E2=80=99s Gemini or =
+Microsoft=E2=80=99s Copilot that responds to customers=E2=80=99 questions, =
+Mehrotra says the future of productivity software involves AI bots that wil=
+l proactively suggest information customers could include in the documents,=
+ based on internet sources or the customer=E2=80=99s own corporate systems.=
+</p><p style=3D"padding-bottom: 32px;">That might feel like collaborating o=
+n a Google Doc with a bunch of teammates in real time=E2=80=94except the su=
+ggestions are coming from different AIs.</p><p style=3D"padding-bottom: 32p=
+x;">=E2=80=9CWe're going to quickly see a much, much broader set of agents =
+that'll present themselves to the user as much smarter suggestions,=E2=80=
+=9D Mehrotra told us. (Mehrotra, who previously ran much of YouTube, spent =
+the last 10 years trying to compete with Google and Microsoft as the CEO of=
+ productivity app Coda, which Grammarly just acquired for an undisclosed su=
+m.)</p><p style=3D"padding-bottom: 32px;">He used the example of someone wr=
+iting a corporate press release that mentions a company=E2=80=99s customers=
+. An AI system could suggest information to include about those customers b=
+ased on news reports or other data the company has about them.</p><p style=
+=3D"padding-bottom: 32px;">Microsoft and Google haven=E2=80=99t gone this d=
+irection=E2=80=94yet. Microsoft has some features in its Dynamics 365 custo=
+mer management app that summarize information about customers from internal=
+ data and internet sources. But the Copilot and Gemini AI assistants in the=
+ companies=E2=80=99 productivity apps still require customers to explicitly=
+ ask for such information.=C2=A0</p><p style=3D"padding-bottom: 32px;">AI t=
+hat makes suggestions could help software buyers automate more work and spe=
+nd less time searching for information from different apps. The document =
+=E2=80=9Cworks with you as if it were a human,=E2=80=9D Mehrotra said.=C2=
+=A0</p><p style=3D"padding-bottom: 32px;">That=E2=80=99s the type of produc=
+t he=E2=80=99s now trying to build at Grammarly.</p><p style=3D"padding-bot=
+tom: 32px;">Grammarly is an interesting story. Its core business has been s=
+elling enterprise software that integrates with Docs, Gmail, Outlook and Wo=
+rd through a web browser extension or desktop app and automatically suggest=
+s grammar and spelling corrections as customers type.=C2=A0</p><p style=3D"=
+padding-bottom: 32px;">The company now has 40 million daily active users, u=
+p from 30 million in 2020. It was valued at $13 billion in a private financ=
+ing in late 2021=E2=80=94a recent peak for software valuations. (Grammarly =
+wouldn=E2=80=99t share updated financial information or the number of paid =
+customers.)</p><p style=3D"padding-bottom: 32px;">Grammarly faced a threat =
+from ChatGPT, given that OpenAI=E2=80=99s chatbot effectively does the same=
+ thing for free=E2=80=94minus the integration with enterprise apps. Those i=
+ntegrations could be a reason Grammarly hasn=E2=80=99t cratered, though it=
+=E2=80=99s not unreasonable to think OpenAI will take steps in that directi=
+on; it=E2=80=99s even been <a href=3D"https://url3396.theinformation.com/ls=
+/click?upn=3Du001.71kYkaWDpGOJSzbGrs4y1TNF0-2FB-2Bh5pDUdkL0JSEoBmbIlaCwUAb-=
+2B2vhxG1AFBaNqUdei7dmzVHXJyBL0QOXRyMLmq13J7NowTKLlfrR4fjG3Ya-2FytSURzk8f0kG=
+RJNXNN7KIPXcCnjCzTMaJoZB-2B2730T9xiTXKqAN1rXC-2BTboM-2B00pdTnnDUAIvnnnbszGD=
+E33EUwLwy6Tycz1szN9EhDiCL8kmrWMw5678L38Xi9sMjfZ6j4Zcv-2FPH7lXc76H2EjF_iEov0=
+s5HvVnGoiYJdVyZps-2F8PjnnqKoLDpY2honFu2U45V0jv994vXrML8Mj3ERHo-2BROdctDEBpo=
+awhoWbF6rs-2B2GZJ1KV2gVIdPwsc4sCUKK-2B50dFWBMMgmU33OHaE5REE2k2k5o45Y8medzha=
+W-2FTfCs4hDMhHclkL1OdKx2ZMy4NThoRA1gFbAjYpyJTBoE-2FJ41EF-2BoaKWID1MB7mO5ueq=
+lwIhEmcAE1BJz0p0yjUw9SBxgD-2BXIorRUn9Vo75Nol6L94noJC1mr5YH1tDUx5WempPZC-2F9=
+4La3LbP4611fhPS1LsOI-2BZZDrPlJWe-2FSTA8wDdN7Pryd8qRWAPIrNCA-3D-3D">working =
+on its own web browser</a>!</p><p style=3D"padding-bottom: 32px;">For now, =
+=E2=80=9CChatGPT is a thing you go to, Grammarly is a thing that comes to y=
+ou and is working alongside you, helping you with your actual work,=E2=80=
+=9D Mehrotra said. =E2=80=9CThe heart of what we're trying to get done here=
+ is take that current unique advantage and turn it into a platform.=E2=80=
+=9D=C2=A0</p><p style=3D"padding-bottom: 32px;"><b>Goldman=E2=80=99s AI-Gen=
+erated IPO Prospectuses</b></p><p style=3D"padding-bottom: 32px;">Goldman S=
+achs CEO David Solomon=E2=80=99s comment to the <a href=3D"https://url3396.=
+theinformation.com/ls/click?upn=3Du001.71kYkaWDpGOJSzbGrs4y1UhSAYuEHfYWpT-2=
+FI8hDIsPx04VKctfp5A2OEHEQxNC-2F82ZXebCt-2FQ-2B5feUUzuoquBcLqd4fJL6mRUOX8AqO=
+59nstjmEHcqWTRe7ZARjNlU0zpxyWhfEPwSfKzXLFY5MagP-2B4VbbVa3Yck0ISSNyfCeb6RaFr=
+GbAav7XZtsUJsQLP66J8AOi533l6It5YNhqwaA-3D-3DLpFc_iEov0s5HvVnGoiYJdVyZps-2F8=
+PjnnqKoLDpY2honFu2U45V0jv994vXrML8Mj3ERHo-2BROdctDEBpoawhoWbF6rs-2B2GZJ1KV2=
+gVIdPwsc4sCUKK-2B50dFWBMMgmU33OHaE5REE2k2k5o45Y8medzhaW-2FTfCs4hDMhHclkL1Od=
+Kx2ZMy4NThoRA1gFbAjYpyJTBoFIyAPo6OzYssnhlRyQjAComdMe44Y-2BBj4EvtsZ9weP76z8f=
+R4Vm52lBZDcS-2FB-2F1Fn4YXU9jhfS3YUA5Hn9eGw1UkqRPQ7r4lsMH1fduceaz-2FSOjoTJ22=
+r3WY4yEFX-2FijS9nmqZ6uBXeDHO0GHStw6w-3D-3D">Financial Times</a> last week=
+=E2=80=94that AI can now write 95% of a filing needed for a firm to go publ=
+ic=E2=80=94has been making the rounds on X. According to Solomon, AI can ge=
+t done in minutes what would have taken a six-person team two weeks to comp=
+lete.=C2=A0</p><p style=3D"padding-bottom: 32px;">Given the limitations of =
+AI, that seems like a risky proposition: the technology is still making ple=
+nty of mistakes. Not to mention the consequences that could come with messi=
+ng up a legal document like that.</p><p style=3D"padding-bottom: 32px;">Sti=
+ll, if he=E2=80=99s right that humans will only need to handle the most imp=
+ortant 5% of the work, it=E2=80=99s yet another example of the dynamic Turi=
+ng CEO Jonathan Siddharth <a href=3D"https://url3396.theinformation.com/ls/=
+click?upn=3Du001.71kYkaWDpGOJSzbGrs4y1TNF0-2FB-2Bh5pDUdkL0JSEoBmbIlaCwUAb-2=
+B2vhxG1AFBaN8-2BOogh0swXYVsz0Iwf4R7X-2FBXRXfvA75N-2B5P2WoTnh5tIVnIlTiTZOCgq=
+orqf5imxH3C4PqJqWW0VlLk4rvEioQ6aNPKGaejG38MMqJbJ0jj-2FLbyUc7OMLyKYB6RpmLE6n=
+B2aJE1wolxxjl-2FJEUiIPZzNBtzW0ElM6UKJIGqp6DRmU-2BC7LbHe7U4WM6rbAe8mRxOS899R=
+GtaMlbSg6jTpZ5vMeI6VG7DPwlj07054SB7JCF7rtQcdlngsh8UpLRVL8di_iEov0s5HvVnGoiY=
+JdVyZps-2F8PjnnqKoLDpY2honFu2U45V0jv994vXrML8Mj3ERHo-2BROdctDEBpoawhoWbF6rs=
+-2B2GZJ1KV2gVIdPwsc4sCUKK-2B50dFWBMMgmU33OHaE5REE2k2k5o45Y8medzhaW-2FTfCs4h=
+DMhHclkL1OdKx2ZMy4NThoRA1gFbAjYpyJTBoILvK0MNbIH7mdLOXaNZoS0HRkf2EPtARmO5KHk=
+cVz0knGzjL0pW8Y0qoX60-2F1WgYWaQWV7TPPcRjV6j3yM-2FlKylxACZFGtmCsShL-2FMVXPVp=
+-2Bc5wXr0R-2BB9V70eXH3jGHrhk4nk9kpOFsjj-2BFFougog-3D-3D">described</a> for =
+AI in coding: More advanced work becomes far more valuable, while less diff=
+erentiated work becomes essentially worthless.</p><table width=3D"100%" bor=
+der=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tr>
+<td align=3D"left" style=3D"padding: 16px 0 0;font-size: 19px;line-height: =
+32px;font-family: Georgia, serif;color: #000;font-weight: 400;">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" clas=
+s=3D"ad-corporate-container">
+<tr>
+<td align=3D"left" style=3D"font-size: 19px;line-height: 32px;font-family: =
+Georgia, serif;color: #000;font-weight: 400">
+<p style=3D"font-family: Verdana, sans-serif;font-size: 14px;line-height: 1=
+8px;color: #6d686e;margin-bottom: 8px;margin-top: 0;padding-top: 32px;paddi=
+ng-bottom: 0 !important;border-top: 1px solid #f0ece5;-webkit-text-size-adj=
+ust: 100%;-ms-text-size-adjust: 100%;">
+<a href=3D"https://url3396.theinformation.com/ls/click?upn=3Du001.71kYkaWDp=
+GOJSzbGrs4y1TNF0-2FB-2Bh5pDUdkL0JSEoBktahOKn6t4gN5PLT1hemN-2FAYyXOKRWFra3jh=
+C-2BZQM4QjKuXM4wDH3lFmXSvdCfRcJ-2FpFdtcCyDIpHWAOggo7J-2FaZYRSpyjFiXB99Id8kP=
+5vSiRgwOHXy3qUxiGAdsj7u3-2FJ7ZmqhSOoPWYzJvxV373ChBPEF1SwwbA0EyPB3falw-3D-3D=
+Ldbn_iEov0s5HvVnGoiYJdVyZps-2F8PjnnqKoLDpY2honFu2U45V0jv994vXrML8Mj3ERHo-2B=
+ROdctDEBpoawhoWbF6rs-2B2GZJ1KV2gVIdPwsc4sCUKK-2B50dFWBMMgmU33OHaE5REE2k2k5o=
+45Y8medzhaW-2FTfCs4hDMhHclkL1OdKx2ZMy4NThoRA1gFbAjYpyJTBok0N6nTUq-2F31nwM5W=
+4THGpJKqq-2Fm3ysxrfv5od3pE8gyTpvu4muuAaeY57jjj84lTmOlGUIE3iMz62nLpPxz8Vk07y=
+f-2BCntvX746iFiCcRpR4Zk3LL8xwaZ2ifLfAHDoKw8Io8UNBCnlbILZ9oGZxoA-3D-3D" styl=
+e=3D"text-decoration: none; color: #6d686e !important;font-weight: 400 !imp=
+ortant;">
+A message from Google Cloud
+</a>
+</p>
+</td>
+</tr>
+<tr>
+<td align=3D"left">
+<figure style=3D"margin: 0 0 16px 0">
+<a href=3D"https://url3396.theinformation.com/ls/click?upn=3Du001.71kYkaWDp=
+GOJSzbGrs4y1TNF0-2FB-2Bh5pDUdkL0JSEoBktahOKn6t4gN5PLT1hemN-2FAYyXOKRWFra3jh=
+C-2BZQM4QjKuXM4wDH3lFmXSvdCfRcJ-2FpFdtcCyDIpHWAOggo7J-2FaZYRSpyjFiXB99Id8kP=
+5vSiRgwOHXy3qUxiGAdsj7u3-2FJ7ZmqhSOoPWYzJvxV373ChBPEF1SwwbA0EyPB3falw-3D-3D=
+oLW3_iEov0s5HvVnGoiYJdVyZps-2F8PjnnqKoLDpY2honFu2U45V0jv994vXrML8Mj3ERHo-2B=
+ROdctDEBpoawhoWbF6rs-2B2GZJ1KV2gVIdPwsc4sCUKK-2B50dFWBMMgmU33OHaE5REE2k2k5o=
+45Y8medzhaW-2FTfCs4hDMhHclkL1OdKx2ZMy4NThoRA1gFbAjYpyJTBoE6EbBSYMCai3Fh3hSf=
+2AQQOTjKLTgdN7jp1u4m731PGBm0fQw-2BYYeH9ZRmJyaH1CLTnj-2B9d11XO8TJ6e0XfgnV3LK=
+UTwIYPSEU9hRTXnn1buIhITveMHrZT1WlPdZa-2F3mMHs3RNwqUrW-2BDHhokPWaw-3D-3D" st=
+yle=3D"text-decoration: none;color: #000;display: block;">
+<img src=3D"https://tii.imgix.net/production/advertisements/640/640-Wp11Le.=
+png?w=3D570" alt=3D"" width=3D"560" border=3D"0" style=3D"width: 100%;max-w=
+idth: 560px;border: 0;display: block" class=3D"img-max">
+</a>
+</figure>
+</td>
+</tr>
+<tr>
+<td align=3D"left">
+<a href=3D"https://url3396.theinformation.com/ls/click?upn=3Du001.71kYkaWDp=
+GOJSzbGrs4y1TNF0-2FB-2Bh5pDUdkL0JSEoBktahOKn6t4gN5PLT1hemN-2FAYyXOKRWFra3jh=
+C-2BZQM4QjKuXM4wDH3lFmXSvdCfRcJ-2FpFdtcCyDIpHWAOggo7J-2FaZYRSpyjFiXB99Id8kP=
+5vSiRgwOHXy3qUxiGAdsj7u3-2FJ7ZmqhSOoPWYzJvxV373ChBPEF1SwwbA0EyPB3falw-3D-3D=
+JmVQ_iEov0s5HvVnGoiYJdVyZps-2F8PjnnqKoLDpY2honFu2U45V0jv994vXrML8Mj3ERHo-2B=
+ROdctDEBpoawhoWbF6rs-2B2GZJ1KV2gVIdPwsc4sCUKK-2B50dFWBMMgmU33OHaE5REE2k2k5o=
+45Y8medzhaW-2FTfCs4hDMhHclkL1OdKx2ZMy4NThoRA1gFbAjYpyJTBoVcst8m5etPOg9u7U-2=
+Fr94gCn0K5uBJGNjsvTCpUuI-2BV187kssbY9GWkimCPLVZy-2FEkCe6MrSCq6KWUXZbfro5DaJ=
+HQORs8DoJufHXcDsPYN-2Bv7rw3YpSxqwEBOLXdtOi5rXRjk4zVK-2BLmN5P28Rqzpw-3D-3D" =
+style=3D"text-decoration: none;color:#000 !important">
+<h3 style=3D"font-family: Verdana, sans-serif;font-weight: 700;font-size: 1=
+8px;line-height: 27px;margin: 0 !important;-webkit-text-size-adjust: 100%;-=
+ms-text-size-adjust: 100%;">
+Explore Google Cloud's AI Trends 2025 in Financial Services
+</h3>
+</a>
+</td>
+</tr>
+<tr>
+<td align=3D"left">
+<a href=3D"https://url3396.theinformation.com/ls/click?upn=3Du001.71kYkaWDp=
+GOJSzbGrs4y1TNF0-2FB-2Bh5pDUdkL0JSEoBktahOKn6t4gN5PLT1hemN-2FAYyXOKRWFra3jh=
+C-2BZQM4QjKuXM4wDH3lFmXSvdCfRcJ-2FpFdtcCyDIpHWAOggo7J-2FaZYRSpyjFiXB99Id8kP=
+5vSiRgwOHXy3qUxiGAdsj7u3-2FJ7ZmqhSOoPWYzJvxV373ChBPEF1SwwbA0EyPB3falw-3D-3D=
+RIfV_iEov0s5HvVnGoiYJdVyZps-2F8PjnnqKoLDpY2honFu2U45V0jv994vXrML8Mj3ERHo-2B=
+ROdctDEBpoawhoWbF6rs-2B2GZJ1KV2gVIdPwsc4sCUKK-2B50dFWBMMgmU33OHaE5REE2k2k5o=
+45Y8medzhaW-2FTfCs4hDMhHclkL1OdKx2ZMy4NThoRA1gFbAjYpyJTBoEy1wMvapJ0WZqNgqhr=
+g64eaVZBQRXh8SzSfEFxsJiHMO2OJYOuPCE-2B7QtBTpB0tE7e4iNwrRLGvBCDHkraU-2FGVb0q=
+qd09l-2FBbV7C-2B9rgf2OhzawFG7wKr7eQyaAZfcjD66tOx7coPo7Y2NXHMl8DDg-3D-3D" st=
+yle=3D"text-decoration: none;font-weight: 400;">
+<p style=3D"font-family: Verdana, sans-serif !important;font-weight: 400;fo=
+nt-size: 18px !important;line-height: 27px !important;margin: 8px 0 0 !impo=
+rtant;color: #2f3538;border-bottom: 1px solid #f0ece5 !important;padding-bo=
+ttom: 32px;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+Want a strategic look at AI's future impact? Five AI trends are set to shap=
+e Financial Services in 2025. Discover how multimodal AI, AI agents, assist=
+ive search, AI-powered CX, and AI-enabled security could impact your busine=
+ss, and see how Google Cloud predicts these trends will come to life. <b st=
+yle=3D"color: #F32A52;">Learn more.</b>
+</p>
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<tr>
+<td align=3D"left" style=3D"padding: 48px 0 0;font-size: 19px;line-height: =
+24px;font-family: Georgia, serif;color: #000;font-weight: 400;">
+<h2 style=3D"font-family: Georgia, Times, serif;font-weight: 400;font-size:=
+ 26px;line-height: 36px;margin-bottom: 16px;margin-top: 0;">New From Our Re=
+porters</h2>
+<!--[if (gte mso 9)|(IE)]>    <table border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"0" width=3D"164" dir=3D"ltr">    <tr>    <td width=3D"164" valign=
+=3D"middle">    <![endif]--><table align=3D"left" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" width=3D"164" class=3D"responsive-table img-contai=
+ner" style=3D"width: 164px"><tr><td style=3D"line-height: 0" class=3D"img-c=
+ontainer"><a href=3D"https://url3396.theinformation.com/ls/click?upn=3Du001=
+.71kYkaWDpGOJSzbGrs4y1TNF0-2FB-2Bh5pDUdkL0JSEoBmbIlaCwUAb-2B2vhxG1AFBaN0Ysb=
+cuddvhXMHHtlHURcEiPRyb4AJhh4Np5ysU6jJ1-2BeTVrIz2noe6kH-2FYNz-2FmfmIdK-2Fy5a=
+DOxWTokda7QdQSeoGXfdguiV6-2BsgPLm323ReGqBdMHNsOd5ivkHBs31PJYlVt4sFDGRDgo4Eq=
+3698bhzGVceMNQMkEsQDJEcqPEAJYqeaaZIZEhuqutWAMYZ5Er-2FuSE-2FPcdTrslTQgIf-2F5=
+Q-3D-3DIf8M_iEov0s5HvVnGoiYJdVyZps-2F8PjnnqKoLDpY2honFu2U45V0jv994vXrML8Mj3=
+ERHo-2BROdctDEBpoawhoWbF6rs-2B2GZJ1KV2gVIdPwsc4sCUKK-2B50dFWBMMgmU33OHaE5RE=
+E2k2k5o45Y8medzhaW-2FTfCs4hDMhHclkL1OdKx2ZMy4NThoRA1gFbAjYpyJTBoD4j95yrFS56=
+avWO-2FPYJqbR6-2FHomlUKCUbKT8SfPvfI4xF-2BL5N41dk7RORvQRgNf3qvy6MtMtHdAUBeAE=
+Axwl1qnDXFz5y0m8fpSV3-2BFTg5KcwxpVqwrdW6SwSMmnYmr06QGLH5kizsHVR52TbHCO4g-3D=
+-3D" target=3D"_blank"><img alt=3D"" width=3D"164" src=3D"https://tii.imgix=
+.net/production/articles/14360/a3fef184-6a64-44c2-ae64-67b283e8357d.jpg?aut=
+o=3Dcompress,format&amp;fit=3Dcrop&amp;w=3D560&amp;q=3D20" style=3D"max-wid=
+th: 164px;margin:0 20px 0 0 !important" class=3D"img-max" border=3D"0"></a>=
+</td></tr></table>
+<!--[if (gte mso 9)|(IE)]>    </td>    <td width=3D"16">&nbsp;</td>    <td =
+width=3D"363" valign=3D"middle" style=3D"font-size: 16px;line-height: 22px;=
+font-family: Georgia, serif;color: #000000">    <![endif]--><div style=3D"w=
+idth: 360px;float: left" class=3D"responsive-table">
+<span style=3D"font-family: Verdana, sans-serif;font-size: 14px;line-height=
+: 24px;color: #f32a52;display: block;margin-bottom: 8px">Exclusive</span><h=
+4 style=3D"font-family: Verdana, sans-serif;font-size: 18px;line-height: 27=
+px;margin: 0 0 4px;"><a href=3D"https://url3396.theinformation.com/ls/click=
+?upn=3Du001.71kYkaWDpGOJSzbGrs4y1TNF0-2FB-2Bh5pDUdkL0JSEoBmbIlaCwUAb-2B2vhx=
+G1AFBaN0YsbcuddvhXMHHtlHURcEiPRyb4AJhh4Np5ysU6jJ1-2BeTVrIz2noe6kH-2FYNz-2Fm=
+fmIdK-2Fy5aDOxWTokda7QdQSeoGXfdguiV6-2BsgPLm323ReGqBdMHNsOd5ivkHBs31PJYlVt4=
+sFDGRDgo4Eq3698bhzGVceMNQMkEsQDJEcqPEAJYqeaaZIZEhuqutWAMYZ5Er-2FuSE-2FPcdTr=
+slTQgIf-2F5Q-3D-3DtWoG_iEov0s5HvVnGoiYJdVyZps-2F8PjnnqKoLDpY2honFu2U45V0jv9=
+94vXrML8Mj3ERHo-2BROdctDEBpoawhoWbF6rs-2B2GZJ1KV2gVIdPwsc4sCUKK-2B50dFWBMMg=
+mU33OHaE5REE2k2k5o45Y8medzhaW-2FTfCs4hDMhHclkL1OdKx2ZMy4NThoRA1gFbAjYpyJTBo=
+iSwmoMmXzV1du5Kmi8yXZFUHQGpeRtC8KSM46towS-2BPkpcHvRaSTvksxIUncMxFc4x6zwKUXH=
+r1qOIo6BfOFewtdUEGravfaBdBIj-2FS3M8dHkjbdH7ICf-2BD4ZvZhpe-2BCQRldeUkmVpgAXE=
+85tPYiNw-3D-3D" target=3D"_blank" style=3D"text-decoration: none;color: #00=
+0 !important;font-weight: 400">Venture Capital=E2=80=99s Latest Strategy: P=
+rivate Equity=E2=80=93Style Roll-Ups</a></h4>
+<span style=3D"font-family: Verdana, sans-serif;font-size: 16px;line-height=
+: 27px;color: #6d686e">By Natasha Mascarenhas</span>
+</div>
+<!--[if (gte mso 9)|(IE)]>    </td>    </tr>    </table>    <![endif]--><di=
+v style=3D"clear: both"></div>
+<br><table align=3D"left" width=3D"100%" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0"><tr><td style=3D"background: #fec6cc;padding: 1px 0 0; line-=
+height: 0; font-size: 1px"></td></tr></table>
+<br><!--[if (gte mso 9)|(IE)]>    <table border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" width=3D"164" dir=3D"ltr">    <tr>    <td width=3D"164" vali=
+gn=3D"middle">    <![endif]--><table align=3D"left" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" width=3D"164" class=3D"responsive-table img-conta=
+iner" style=3D"width: 164px"><tr><td style=3D"line-height: 0" class=3D"img-=
+container"><a href=3D"https://url3396.theinformation.com/ls/click?upn=3Du00=
+1.71kYkaWDpGOJSzbGrs4y1TNF0-2FB-2Bh5pDUdkL0JSEoBmbIlaCwUAb-2B2vhxG1AFBaN7eS=
+E5JjR1P-2BvwbZsRQNy3LqbtfPhBbhh775Ds9A4ECykGgQG7iMWh-2FGLlEph32bA31E02cMQp6=
+IjtBNJiHM4NoOSSC4EcNg9lVa1MfQRZw0Mst7mskw05wtK5S54RWmdyplF6E2Ga2hUDCIJNOu0R=
+W6mZpj67kyS0wtI2VYZ5OefR5VkHTkX9AcAwqYDpiXt-2Bcbr7VzaYcp-2FxHAKq6RDnQ-3D-3D=
+o5AG_iEov0s5HvVnGoiYJdVyZps-2F8PjnnqKoLDpY2honFu2U45V0jv994vXrML8Mj3ERHo-2B=
+ROdctDEBpoawhoWbF6rs-2B2GZJ1KV2gVIdPwsc4sCUKK-2B50dFWBMMgmU33OHaE5REE2k2k5o=
+45Y8medzhaW-2FTfCs4hDMhHclkL1OdKx2ZMy4NThoRA1gFbAjYpyJTBoLy5HhThPLonEDApCCt=
+uSdhEFHwdS2lwmXeUngeb0xeO0NdwrLl0J1MWu9b5xgBn66o3MSQzEPZljd9ph9TyCarOxJ9xYu=
+-2BhM6OorjHSEwGIPbVKgRmtoXKMJLJmFfBKbbCh55BkmKerpDUfAhv3iOw-3D-3D" target=
+=3D"_blank"><img alt=3D"" width=3D"164" src=3D"https://tii.imgix.net/produc=
+tion/articles/14364/c87974b3-4b67-4652-a2a5-2beaff9d1f48-dViK72.png?auto=3D=
+compress,format&amp;fit=3Dcrop&amp;w=3D560&amp;q=3D20" style=3D"max-width: =
+164px;margin:0 20px 0 0 !important" class=3D"img-max" border=3D"0"></a></td=
+></tr></table>
+<!--[if (gte mso 9)|(IE)]>    </td>    <td width=3D"16">&nbsp;</td>    <td =
+width=3D"363" valign=3D"middle" style=3D"font-size: 16px;line-height: 22px;=
+font-family: Georgia, serif;color: #000000">    <![endif]--><div style=3D"w=
+idth: 360px;float: left" class=3D"responsive-table">
+<span style=3D"font-family: Verdana, sans-serif;font-size: 14px;line-height=
+: 24px;color: #f32a52;display: block;margin-bottom: 8px">AI Agenda</span><h=
+4 style=3D"font-family: Verdana, sans-serif;font-size: 18px;line-height: 27=
+px;margin: 0 0 4px;"><a href=3D"https://url3396.theinformation.com/ls/click=
+?upn=3Du001.71kYkaWDpGOJSzbGrs4y1TNF0-2FB-2Bh5pDUdkL0JSEoBmbIlaCwUAb-2B2vhx=
+G1AFBaN7eSE5JjR1P-2BvwbZsRQNy3LqbtfPhBbhh775Ds9A4ECykGgQG7iMWh-2FGLlEph32bA=
+31E02cMQp6IjtBNJiHM4NoOSSC4EcNg9lVa1MfQRZw0Mst7mskw05wtK5S54RWmdyplF6E2Ga2h=
+UDCIJNOu0RW6mZpj67kyS0wtI2VYZ5OefR5VkHTkX9AcAwqYDpiXt-2Bcbr7VzaYcp-2FxHAKq6=
+RDnQ-3D-3DhAa__iEov0s5HvVnGoiYJdVyZps-2F8PjnnqKoLDpY2honFu2U45V0jv994vXrML8=
+Mj3ERHo-2BROdctDEBpoawhoWbF6rs-2B2GZJ1KV2gVIdPwsc4sCUKK-2B50dFWBMMgmU33OHaE=
+5REE2k2k5o45Y8medzhaW-2FTfCs4hDMhHclkL1OdKx2ZMy4NThoRA1gFbAjYpyJTBoJG0pa66q=
+ppSJNnxzR44plceiX5M4-2FMXw1SjN1Zv1VCp-2BTCS4vMzUUBSqFTZMzm58AyuKoMUH-2BdWgL=
+Z0nlHc82osLxT2cx-2BeruPOKt3LH-2F-2FWXqRc7GvdCx0hHBnUkRhZA-2BxDYKQsS-2F-2FSl=
+0l0zb-2BgrCQ-3D-3D" target=3D"_blank" style=3D"text-decoration: none;color:=
+ #000 !important;font-weight: 400">A Competitor of Scale AI Doubles Its Rev=
+enue, Thanks to Reasoning</a></h4>
+<span style=3D"font-family: Verdana, sans-serif;font-size: 16px;line-height=
+: 27px;color: #6d686e">By Stephanie Palazzolo</span>
+</div>
+<!--[if (gte mso 9)|(IE)]>    </td>    </tr>    </table>    <![endif]--><di=
+v style=3D"clear: both"></div>
+<table align=3D"left" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"0" style=3D"margin-top: 40px;"><tr><td style=3D"background: #f0ece5=
+;padding: 1px 0 0; line-height: 0; font-size: 1px"></td></tr></table>
+</td>
+</tr><tr><td align=3D"left" style=3D"padding: 48px 0 0;font-size: 19px;line=
+-height: 24px;font-family: Georgia, serif;color: #000;font-weight: 400;">
+<h2 style=3D"font-family: Georgia, Times, serif;font-weight: 400;font-size:=
+ 26px;line-height: 36px;margin-bottom: 16px;margin-top: 0;">Recommended New=
+sletter</h2>
+<div style=3D"font-family: Verdana, sans-serif;font-weight: 400 !important;=
+font-size: 18px;line-height: 27px;color: #000000 !important"><span><div cla=
+ss=3D"c-message__message_blocks c-message__message_blocks--rich_text" data-=
+qa=3D"message-text"><div class=3D"p-block_kit_renderer" data-qa=3D"block-ki=
+t-renderer"><div class=3D"p-block_kit_renderer__block_wrapper p-block_kit_r=
+enderer__block_wrapper--first"><div class=3D"p-rich_text_block" dir=3D"auto=
+"><div class=3D"p-rich_text_section" data-empty=3D"false">Dealmaker was nam=
+ed the "Best in Business" newsletter for its insightful coverage of private=
+ technology and the AI hype cycle. Start receiving the newsletter<span>=C2=
+=A0</span><a target=3D"_blank" class=3D"c-link" data-stringify-link=3D"http=
+s://www.theinformation.com/features/dealmaker?utm_campaign=3Dgrowth&amp;utm=
++content=3Dnewsletter&amp;utm_medium=3Drecommended+newsletter" delay=3D"150=
+" data-sk=3D"tooltip_parent" href=3D"https://url3396.theinformation.com/ls/=
+click?upn=3Du001.71kYkaWDpGOJSzbGrs4y1TNF0-2FB-2Bh5pDUdkL0JSEoBnPCXMf7muTnP=
+AGZGawge6JFhPmwQFhANxlCzrfIQnAy1tFzB-2BlCTq-2Boh6vxKCN-2FlkRL8JLfIQjWwr07hE=
+iY21sxtVrkZIKp3QZ0C685pejDNZnK4mYT5fHyD0GKqPDJngHd2NkSRnQ-2FAec2-2Fxyzn32YN=
+iGQdKsZJNlWASfEsuCdPMoV5SeN99WnN6ORkYtKPyFM63JITGQ0FOJI0plv2QNkiFWKWv6wkJae=
+e8kCHhOFeAZjYJkbMFAQl4EWV09WR8-3D8aKO_iEov0s5HvVnGoiYJdVyZps-2F8PjnnqKoLDpY=
+2honFu2U45V0jv994vXrML8Mj3ERHo-2BROdctDEBpoawhoWbF6rs-2B2GZJ1KV2gVIdPwsc4sC=
+UKK-2B50dFWBMMgmU33OHaE5REE2k2k5o45Y8medzhaW-2FTfCs4hDMhHclkL1OdKx2ZMy4NTho=
+RA1gFbAjYpyJTBozRZn24Q73EN-2BjCxtEdykIV16I5wFJ-2FtwYssL-2BFSIcErKACM7FvVFk1=
+OXhZSVr2CKnlXf-2FH1dTW1D1Th-2Bx41IgWHp1taaCSmVKCZQlOuiXOHPZjFqSRnqwAlmt0v8a=
+xIRoiqjiqP6LjyxKMIQaX1dIw-3D-3D" rel=3D"noreferrer" style=3D"text-decoratio=
+n: none;color: #000000;font-weight: inherit;">here</a>.</div></div></div></=
+div></div></span></div>
+<table align=3D"left" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"0" style=3D"margin-top: 48px;"><tr><td style=3D"background: #f0ece5=
+;padding: 1px 0 0; line-height: 0; font-size: 1px"></td></tr></table>
+</td></tr><tr>
+<td align=3D"left" style=3D"padding: 48px 0 0;font-size: 19px;line-height: =
+24px;font-family: Georgia, serif;font-weight: 400;">
+<h2 style=3D"font-family: Georgia, Times, serif;font-weight: 400;font-size:=
+ 26px;line-height: 36px;margin-bottom: 16px;margin-top: 0;">What We=E2=80=
+=99re Reading</h2>
+<h4 style=3D"font-family: Verdana, sans-serif;font-weight: 400 !important;f=
+ont-size: 18px;line-height: 27px;color: inherit !important"><a href=3D"http=
+s://url3396.theinformation.com/ls/click?upn=3Du001.71kYkaWDpGOJSzbGrs4y1Z1x=
+UfcQUlNFqlyUgdGCvbL7-2BI7Bacop4UnowfSq5ItqJp8XtqVgB4lpjMFxao5n9WwMEkXJsPg9K=
+t8-2FqCgzABJKevVVHm35-2FY1Bt9dgkSWV-2BfusdN-2Fu1ZcX-2F2BXdlR6n7TrPE-2BSmGTQ=
+KjoXLcEYZN9wW1iYkLT4YCzeWx5ILygmR9hWIvu2JxNzmffwR0l7KixkK1MFvYyvhp1pqtw-2F2=
+0McnNOpS1y-2FzmtTcz3eYem2PM5l_iEov0s5HvVnGoiYJdVyZps-2F8PjnnqKoLDpY2honFu2U=
+45V0jv994vXrML8Mj3ERHo-2BROdctDEBpoawhoWbF6rs-2B2GZJ1KV2gVIdPwsc4sCUKK-2B50=
+dFWBMMgmU33OHaE5REE2k2k5o45Y8medzhaW-2FTfCs4hDMhHclkL1OdKx2ZMy4NThoRA1gFbAj=
+YpyJTBo24838HTPL1OPo4zEu2nnZdvehn-2F05QGxyuvEc32IzFN5x2sWHgtzM-2BxxfewFbBQ3=
+2LcKGcSS2H5YRcO8MtjpN9jYmkJDvJz-2B6lVBVgKbITqjTTYdoQMZFXWu-2BhTk9TfHM2RUFaP=
+8AQS-2FLc4bxRvdRQ-3D-3D" style=3D"text-decoration: none;color: inherit !imp=
+ortant;font-weight: 400!important;" rel=3D"noreferrer" target=3D"_blank">Ca=
+n a Computer Learn to Speak Trader?</a></h4>
+<hr style=3D"margin: 24px 0;background: #fec6cc;border: none !important;hei=
+ght: 1px;">
+<h4 style=3D"font-family: Verdana, sans-serif;font-weight: 400 !important;f=
+ont-size: 18px;line-height: 27px;color: inherit !important"><a href=3D"http=
+s://url3396.theinformation.com/ls/click?upn=3Du001.71kYkaWDpGOJSzbGrs4y1UhS=
+AYuEHfYWpT-2FI8hDIsPxdYiBTp3p8HxBCOccnuM8GlLa0vdK-2FP3DzpjlE8hDnbehPJkT6AjA=
+HFY-2FJtHgCAmximpU1w5j4AeV5Wq663VwflX5PUvCAVZnW-2BFOo27IBnn4YaAGwJnBrpGUWx6=
+vNteahXuJVyGcP0K8SzP5SVaJkvMKitSI80kPF2VWlBDYtOg-3D-3DwW8O_iEov0s5HvVnGoiYJ=
+dVyZps-2F8PjnnqKoLDpY2honFu2U45V0jv994vXrML8Mj3ERHo-2BROdctDEBpoawhoWbF6rs-=
+2B2GZJ1KV2gVIdPwsc4sCUKK-2B50dFWBMMgmU33OHaE5REE2k2k5o45Y8medzhaW-2FTfCs4hD=
+MhHclkL1OdKx2ZMy4NThoRA1gFbAjYpyJTBogkDTWRQuZ1sCgmO1o8wT646O3xT-2BM9zueVWeZ=
+sq6M-2FMh9c4fm07aTz3Ysf9kz0smAEQlWr09dkFugFapebjKcO8QS5I-2BORK-2FNOrudN0yK7=
+vb7-2B-2BF4DS238oMATMUeGnwY1nrmoN3hZJl67a-2B-2F6CY-2Fw-3D-3D" style=3D"text=
+-decoration: none;color: inherit !important;font-weight: 400!important;" re=
+l=3D"noreferrer" target=3D"_blank">Legal AI Is Reaching Deep Into the Workp=
+lace</a></h4>
+<table align=3D"left" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"0" style=3D"margin-top: 48px;"><tr><td style=3D"background: #f0ece5=
+;padding: 1px 0 0;line-height: 0;font-size: 1px"></td></tr></table>
+</td>
+</tr><tr>
+<td align=3D"left" style=3D"padding: 48px 0 0;font-size: 19px;line-height: =
+24px;font-family: Georgia, serif;color: #000;font-weight: 400;">
+<h2 style=3D"font-family: Georgia, Times, serif;font-weight: 400;font-size:=
+ 26px;line-height: 36px;margin-bottom: 16px;margin-top: 0;">Upcoming Events=
+</h2>
+<h4 style=3D"font-family: Verdana, sans-serif;font-weight: 700;font-size: 1=
+8px;line-height: 27px;margin-bottom: 8px;"><a href=3D"https://url3396.thein=
+formation.com/ls/click?upn=3Du001.71kYkaWDpGOJSzbGrs4y1TNF0-2FB-2Bh5pDUdkL0=
+JSEoBkEIPUtIoWXbN9lBo-2FxnTE-2BZ1TyCAqXIk-2F6aLlWJFWriS19jlFurkwHN-2B0cVp4c=
+YHufqRquDnUUjbkxlxHtetBgyCYAMZ6nrMd4R4B3Vexr023fCWmx-2BGTizZLagl4BFgdLzkcPo=
+TMtIxcx-2FzjUHwBJI7e8Vx8FqVimvHGht2TOkQ-3D-3D-K0S_iEov0s5HvVnGoiYJdVyZps-2F=
+8PjnnqKoLDpY2honFu2U45V0jv994vXrML8Mj3ERHo-2BROdctDEBpoawhoWbF6rs-2B2GZJ1KV=
+2gVIdPwsc4sCUKK-2B50dFWBMMgmU33OHaE5REE2k2k5o45Y8medzhaW-2FTfCs4hDMhHclkL1O=
+dKx2ZMy4NThoRA1gFbAjYpyJTBo26F-2F79b8l-2Fbd3yHzxwhh8v7Ka4wwCYt2FEWCJ137F7b-=
+2F68uhJ7empmgAwOI53kDwtSfZ-2FZ4exaMf-2BrALfuS4upvNX3mUx9-2B-2FBYxVUlnZxqJ9-=
+2FJRI3w-2BM-2FbmJXqxV183HtfIxHwgv-2BLlLTar7ZAPkFQ-3D-3D" target=3D"_blank" =
+style=3D"text-decoration: none;color: inherit;font-weight: 700;">Thursday, =
+February 27          =E2=80=94AI Agenda Live - SF</a></h4>
+<p style=3D"font-family: Verdana, sans-serif;font-size: 18px;line-height: 2=
+7px;font-weight: 400;color: #000;padding: 0!important;">Join us for our fir=
+st AI event of 2025, AI Agenda Live on February 27 in San Francisco. We=E2=
+=80=99ll bring together the leaders shaping the future of AI to tackle the =
+industry=E2=80=99s most critical questions. Space is limited. Purchase your=
+ ticket today.</p>
+<p style=3D"margin-top: 8px;padding-bottom: 0 !important;font-size: 16px;li=
+ne-height: 1.5;"><a href=3D"https://url3396.theinformation.com/ls/click?upn=
+=3Du001.71kYkaWDpGOJSzbGrs4y1TNF0-2FB-2Bh5pDUdkL0JSEoBkEIPUtIoWXbN9lBo-2Fxn=
+TE-2BZ1TyCAqXIk-2F6aLlWJFWriS19jlFurkwHN-2B0cVp4cYHufqRquDnUUjbkxlxHtetBgyC=
+YAMZ6nrMd4R4B3Vexr023fCWmx-2BGTizZLagl4BFgdLzkcPoTMtIxcx-2FzjUHwBJI7e8Vx8Fq=
+VimvHGht2TOkQ-3D-3DgYED_iEov0s5HvVnGoiYJdVyZps-2F8PjnnqKoLDpY2honFu2U45V0jv=
+994vXrML8Mj3ERHo-2BROdctDEBpoawhoWbF6rs-2B2GZJ1KV2gVIdPwsc4sCUKK-2B50dFWBMM=
+gmU33OHaE5REE2k2k5o45Y8medzhaW-2FTfCs4hDMhHclkL1OdKx2ZMy4NThoRA1gFbAjYpyJTB=
+o36ImLNOEGSQYQD4RrV9Tk6IGWDYHN5g0zDh-2BExlx6FxYIHEul7Ksi8qrnYhZyUdKfIkh0Zwg=
+kyYVrO-2BYYEF0r7RUb-2FjK-2BwvO9QWAxGH680rxSqeUvdrOtXQIhfUDaYi9bXGfZvVixK2n9=
+1DiM-2FD21Q-3D-3D" target=3D"_blank" style=3D"font-family: Verdana, sans-se=
+rif;font-weight: 400;line-height: 24px;font-size: 16px;text-decoration: und=
+erline !important;color: #f32a52;margin: 0;">More details</a></p>
+<table align=3D"left" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"0" style=3D"margin-top: 48px;"><tr><td style=3D"background: #f0ece5=
+;padding: 1px 0 0;line-height: 0;font-size: 1px"></td></tr></table>
+</td>
+</tr><p style=3D"margin: 28px 0;padding-bottom: 0 !important;"><i>Thank you=
+ for reading the Applied AI newsletter! I=E2=80=99d love your feedback, ide=
+as and tips:=C2=A0<a href=3D"https://url3396.theinformation.com/ls/click?up=
+n=3Du001.71kYkaWDpGOJSzbGrs4y1aSmIuCNUKe5ugNW2S45mcSR9r6N-2F-2BLMtOVFZI2vSU=
+GO4k-2BCQncvwyFM9ySMlz-2BCi3TVWL949Sh-2F1kzomLKPnYZEt5zRfRJKiE8bbwCxD3wwKLW=
+yMC7pdTejxBy7yV1zgqpYfgEb4z9TVzKoKXJkIsKTvQ-2B1WwnbNi9ODu1Htx4NchvqVauONFdl=
+-2FfzwQLacPoLF8VlrRovQkVBZMNkGSSltGSJE9jbHwB8WttLeBVZ0YM9A7GPlBkpmRWn0rZSWf=
+mF-2BrFAV7dkkbCA0WRr9V1GWo9njd7NXJwNAYYt8JZHjSly6HRo59jqUsAj1dxHVqG7-2Ffov8=
+aPHxfAylRVaVAgDx5ZqAdHRJvtnN5qicTB-2FZWwyXpl-2FH-2BNEWH12dAT-2FEeZQd0GD69qY=
+hEXIEbUSBfiYvynvfBlTBYJ-2BviVocmOQy69NgsWsRo8Ba-2Fy6yAHsw9GfbySC5Y2FVVzPyhQ=
+Tqn2QO3gApoi-2Bd6EpXFidgPV-2BTNQT-2BBt83m-2BISzGDto8q40SVoyT08Vrj2n0H72egd7=
+75UXEm-2F20J8eT0CuKellW7pgTuEyWiqGahBK-2BTNMj9qvHX-2BqeZBStMBt6vZJjWY-2BSI2=
+S4jnBgPLOc3VAbvpVAOBxWqWkSBX2-2FkJfLzopKDKKUBgXkJ-2FbOpZsA5mIdVdsLBlujg2X5I=
+1LLLNTjTy6SsYUrPVKd7v7FrE8r00OfO4u-2BlJS-2FRhXolTU17XQj2ECmQ-2BGtx3E6GyftTb=
+Sx3TlnhORaxI8UQMH7WLtctMLYLzE4ppFoP7raVVc2cjaIPf-2F-2BwpXWZ35vrVpiQFwY-2Fjd=
+s-2Fg9qigQJdQTyDfN4WWXZrNPhYF-2FuihfxAaYsdAR8gqCwQx2yr3jDvqxracP01QdIJIzUVx=
+pwA9sWB3e5Y1kajfmP9jrUb-2FCHmtbMLmKlg-2Br3tcjD7C98Oc0CAtZR0O-2Fh93ZJU__iEov=
+0s5HvVnGoiYJdVyZps-2F8PjnnqKoLDpY2honFu2U45V0jv994vXrML8Mj3ERHo-2BROdctDEBp=
+oawhoWbF6rs-2B2GZJ1KV2gVIdPwsc4sCUKK-2B50dFWBMMgmU33OHaE5REE2k2k5o45Y8medzh=
+aW-2FTfCs4hDMhHclkL1OdKx2ZMy4NThoRA1gFbAjYpyJTBoMtCMYEirMZ6ipc3uJQKGaApuA8b=
+SV68pT8nkKDJU0Ag3USqWvGLov-2FiDVawSzL37oH-2FIQgp2752BC7jGXHmKKqZnXs-2FFLJ46=
+wCCCDHebsYGvtgVXr8wDppSmwaSMj0r0Jy9C8Z6eervt0B35Z4w54A-3D-3D" target=3D"_bl=
+ank">jon.victor@theinformation.com</a>.</i></p><p style=3D"margin: 28px 0;p=
+adding-bottom: 0 !important;"><i>If you think someone else might enjoy this=
+ newsletter, please pass it forward or they can sign up=C2=A0<a href=3D"htt=
+ps://url3396.theinformation.com/ls/click?upn=3Du001.71kYkaWDpGOJSzbGrs4y1aS=
+mIuCNUKe5ugNW2S45mcSR9r6N-2F-2BLMtOVFZI2vSUGOSBLfewTTG5vYvgdI-2BafJOi-2B-2F=
+c6V4a76VCw-2FHp44qsGIjgB-2BbsHtJjnnZmqM9L-2BsTuDRdcC07tUY2uD27Zc9f6U5Hepgwy=
+8ErsnQIbnehOmB1o3Zcxw-2BW0XaXUGZMCifSQ-2FwYaR0PJ0bUjjeqyNaR4aClKF9L2-2BUzXi=
+FdNmuOKZMoZoOsQEeYs5J-2FEISH-2FQfcpRdht4xytT6boKiQx5apEOpymCJCAwfBWGKMJgqDZ=
+GlFc1K27Y2kTKQwqRtMynbb6QkEqfExymkrV4rheL7SyqL0XgP-2FNCylbKxK3S3h0dORN-2FIh=
+HTq4pCJu-2BXL6m5Rxm1q-2FNcjxqUt5kokMRkj7BW4lG6-2B2-2BTqrZjLKsDhiSAY02-2BLXQ=
+dTdFI5a0Gkf7uRCM25YUZIosRQ2sDP7NVDpZExILSQy7iEwds-2Ft24u5f-2Bwxl-2FtYopBfMj=
+QJqlfz1XLSo14DuML126vw5icslhtYok1Ro8asD1zr5nP1fT1PIx95YApRE6SjyYfgxonxsZuWD=
+yWggshGP4XbKV7thWSUO5M-2BiSSmjnHbWVqdkz774tToJ9aKkzCCeP-2B9CJfirBCOV-2BmSnY=
+C32rlKmsNl4jOqVee9bTylTHz5k2JiSqxhzqMyhh9llVA-2B-2Fvj4gTvOh9QrHzI7uwdT0qvEv=
+6Nx0f0jqEHDHUlV2aQhVEHh-2B6DsLL-2FFclQRf3uhwhzRVd0K1-2FgYjbDOX-2Ffkk3RsZhop=
+0DlbfAk8CvJtmyjHvlIRMPqdMi3zsU5R147O-2F7WJ7bl8On6aL4ZlM8fLSw5bDOi5VRnGWKjL8=
+CRB7y4S3H-2FXDfJQ5Pbmv01m3dhgwlK-2FzHeLuLnnY0fYCw-2BKoIH2VeMgyKq96zu4PnIAbJ=
+B3TE-2FWtE3yjE8JCEcPSANQ7AMUhAmdeVVe3LrD_iEov0s5HvVnGoiYJdVyZps-2F8PjnnqKoL=
+DpY2honFu2U45V0jv994vXrML8Mj3ERHo-2BROdctDEBpoawhoWbF6rs-2B2GZJ1KV2gVIdPwsc=
+4sCUKK-2B50dFWBMMgmU33OHaE5REE2k2k5o45Y8medzhaW-2FTfCs4hDMhHclkL1OdKx2ZMy4N=
+ThoRA1gFbAjYpyJTBoz2xZDir6n3m6yBi6-2FHK8kSVNB2FMgCSP0XApDC2pYd-2FRo5djNiDfq=
+T-2BgjpUidgpzoVSFLULbWF7Y4IiRerNS-2FTT6nMhftPXrdX0TBpEqsTltOS4kcpP5jRi6lom3=
+6rzK7z9B3PBJvM4DnFRUdK1piA-3D-3D" target=3D"_blank">here</a>.</i></p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- END Email Content -->
+            <tr>
+  <td bgcolor=3D"#ffffff" class=3D"divider">
+    <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+      <tr>
+        <td style=3D"padding: 0 20px" class=3D"background-dark padding">
+          <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0">
+            <tr>
+              <td align=3D"left" style=3D"padding: 48px 0 0;font-size: 18px=
+;line-height: 27px;font-family: Verdana, serif;color: #000;font-weight: 400=
+;">
+                <h2 style=3D"font-family: Georgia, Times, serif;font-weight=
+: 400;font-size: 26px;line-height: 36px;margin-bottom: 16px;margin-top: 0;"=
+>
+                  Opportunities
+                </h2>
+                <h4 style=3D"font-family: Verdana, sans-serif;font-size: 18=
+px;line-height: 27px;margin-bottom: 8px;margin-top: 0;">
+                  <a href=3D"https://url3396.theinformation.com/ls/click?up=
+n=3Du001.71kYkaWDpGOJSzbGrs4y1TNF0-2FB-2Bh5pDUdkL0JSEoBlgaThIaQhhxP-2B18aQk=
+VacQa-2BbGcb9fvNdGV7qVgiOyEIdSVCJFsORDX2dr1MYHCVQqMElygmvQBgh-2BUlG7u-2BYWF=
+qkzX-2BCzf0kIVanPG7iXn7SME53mN4HB7wdRN339qXAKIgX6fIrVWI8GrY-2BYSC8u7HiN_iEo=
+v0s5HvVnGoiYJdVyZps-2F8PjnnqKoLDpY2honFu2U45V0jv994vXrML8Mj3ERHo-2BROdctDEB=
+poawhoWbF6rs-2B2GZJ1KV2gVIdPwsc4sCUKK-2B50dFWBMMgmU33OHaE5REE2k2k5o45Y8medz=
+haW-2FTfCs4hDMhHclkL1OdKx2ZMy4NThoRA1gFbAjYpyJTBoMz55sbcK7SHczMmUKFKj1pYC-2=
+FwXkIJpxtp3ZssyvpYGyk9BWh8oTKphdsMDcF8UmQ-2F49BotQ5xqW8F0BypE1x8glqpZEz-2BA=
+pcmHWLeSE0Cs-2Fy9L7CgFvDmyBCWJVw9wWrQdJXdvEkmeLu-2FPImpWIQA-3D-3D" target=
+=3D"_blank" style=3D"text-decoration: none;color: inherit;font-weight: 700;=
+">
+                    Group subscriptions
+                  </a>
+                </h4>
+                <p style=3D"font-family: Verdana, sans-serif;margin: 8px 0;=
+font-weight: 400;">Empower your teams to stay ahead of market trends with t=
+he most trusted tech journalism.</p>
+                <p style=3D"margin: 0;"><a href=3D"https://url3396.theinfor=
+mation.com/ls/click?upn=3Du001.71kYkaWDpGOJSzbGrs4y1TNF0-2FB-2Bh5pDUdkL0JSE=
+oBlgaThIaQhhxP-2B18aQkVacQa-2BbGcb9fvNdGV7qVgiOyEIdSVCJFsORDX2dr1MYHCVQqMEl=
+ygmvQBgh-2BUlG7u-2BYWFqkzX-2BCzf0kIVanPG7iXn7SME53mN4HB7wdRN339qXAKIgX6fIrV=
+WI8GrY-2BYSC8ugzVb_iEov0s5HvVnGoiYJdVyZps-2F8PjnnqKoLDpY2honFu2U45V0jv994vX=
+rML8Mj3ERHo-2BROdctDEBpoawhoWbF6rs-2B2GZJ1KV2gVIdPwsc4sCUKK-2B50dFWBMMgmU33=
+OHaE5REE2k2k5o45Y8medzhaW-2FTfCs4hDMhHclkL1OdKx2ZMy4NThoRA1gFbAjYpyJTBoFjFB=
+FX7gqwyDJNrkUCh5th94T6NuVNyTGesfjqf1OSOxSmzpnGD2RKjcoMdQMotrXI5O5PoLAnmsbqs=
+JV77EeR6zSv1k3jK5QNY0CPZAvi-2B8zk3wi08UYI99ydtFXxgzU9guUXfpirkv-2BM06Sa6uGA=
+-3D-3D" target=3D"_blank" style=3D"font-family: Verdana, sans-serif;text-de=
+coration: underline;color: #f32a52;font-weight: 400;line-height:24px;font-s=
+ize: 16px;">Learn more</a></p>
+                <table align=3D"left" width=3D"100%" border=3D"0" cellspaci=
+ng=3D"0" cellpadding=3D"0" style=3D"margin: 24px 0"><tr><td style=3D"backgr=
+ound: #fec6cc;padding: 1px 0 0;line-height: 0;font-size: 1px"></td></tr></t=
+able><br>
+                <h4 style=3D"font-family: Verdana, sans-serif;font-size: 18=
+px;line-height: 27px;margin-bottom: 8px;margin-top: 0;">
+                  <a href=3D"https://url3396.theinformation.com/ls/click?up=
+n=3Du001.71kYkaWDpGOJSzbGrs4y1TNF0-2FB-2Bh5pDUdkL0JSEoBkXfGE0AkbtBrzl4aUS5O=
+2KNdNYXa5mgGSNJhsksQ21m75EruhwlHl0VwdpgyNrFiS16S8LmSEMKszbecuYgwpNhbORCMUrf=
+HN4lxXg7aMiVihJwycYW-2Busxm0E8zbiAolFttrhc-2Bv90P-2F-2FHjNxhHvV_w0O_iEov0s5=
+HvVnGoiYJdVyZps-2F8PjnnqKoLDpY2honFu2U45V0jv994vXrML8Mj3ERHo-2BROdctDEBpoaw=
+hoWbF6rs-2B2GZJ1KV2gVIdPwsc4sCUKK-2B50dFWBMMgmU33OHaE5REE2k2k5o45Y8medzhaW-=
+2FTfCs4hDMhHclkL1OdKx2ZMy4NThoRA1gFbAjYpyJTBotqCEm-2FYJmvJ-2FuNcPOPhwHPS09X=
+h-2BftoDiFC2tbbEAC0RU7BxHhWXkqoQvcQNrR85fh7KmU-2FaXpyv-2B7Tz1rh1ph102qdrnvV=
+9TYM-2FU1B-2Fj8B8yGeep1q26P7s-2Fe-2BOr-2FzxClQNIGOaYisqMopwfYPiKg-3D-3D" ta=
+rget=3D"_blank" style=3D"text-decoration: none;color: inherit;font-weight: =
+700;">
+                    Brand partnerships
+                  </a>
+                </h4>
+                <p style=3D"font-family: Verdana, sans-serif;margin: 8px 0;=
+font-weight: 400;">Reach The Information&rsquo;s influential audience with =
+your message.</p>
+                <p style=3D"margin: 0;"><a href=3D"https://url3396.theinfor=
+mation.com/ls/click?upn=3Du001.71kYkaWDpGOJSzbGrs4y1TNF0-2FB-2Bh5pDUdkL0JSE=
+oBkXfGE0AkbtBrzl4aUS5O2KNdNYXa5mgGSNJhsksQ21m75EruhwlHl0VwdpgyNrFiS16S8LmSE=
+MKszbecuYgwpNhbORCMUrfHN4lxXg7aMiVihJwycYW-2Busxm0E8zbiAolFttrhc-2Bv90P-2F-=
+2FHjNxhHvV7D5q_iEov0s5HvVnGoiYJdVyZps-2F8PjnnqKoLDpY2honFu2U45V0jv994vXrML8=
+Mj3ERHo-2BROdctDEBpoawhoWbF6rs-2B2GZJ1KV2gVIdPwsc4sCUKK-2B50dFWBMMgmU33OHaE=
+5REE2k2k5o45Y8medzhaW-2FTfCs4hDMhHclkL1OdKx2ZMy4NThoRA1gFbAjYpyJTBo-2BWvufx=
+1-2FIx8hn4sRD16Gmm8mOZZoyrQVUQ28W-2FR-2FLb2gpLQAF2FxxaTt77l1tkBvZlte8G-2FuV=
+MZfu02UTgXQ-2FF5PO3ovtvaWaGtL4YCjtXdJtFtn3nr4uiAq1hTwdco-2BuIJscZwD646LEFIp=
+aw4vHg-3D-3D" target=3D"_blank" style=3D"font-family: Verdana, sans-serif;t=
+ext-decoration: underline;color: #f32a52;font-weight: 400;line-height:24px;=
+font-size: 16px;">Connect with our team</a></p>
+                <table align=3D"left" width=3D"100%" border=3D"0" cellspaci=
+ng=3D"0" cellpadding=3D"0" style=3D"margin-top: 48px;"><tr><td style=3D"bac=
+kground: #f0ece5;padding: 1px 0 0;line-height: 0;font-size: 1px"></td></tr>=
+</table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+           =20
+<tr>
+  <td bgcolor=3D"#ffffff" class=3D"divider">
+    <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+      <tr>
+        <td style=3D"padding: 0 20px" class=3D"background-dark padding">
+          <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" style=3D"margin-bottom: 48px;">
+            <tr>
+              <td align=3D"left" style=3D"padding: 48px 0;font-size: 18px;l=
+ine-height: 27px;font-family: Verdana, serif;color: #000;font-weight: 400;"=
+>
+                <h2 style=3D"font-family: Georgia, Times, serif;font-weight=
+: 400;font-size: 26px;line-height: 36px;margin: 0;">
+                  About Applied AI
+                </h2>
+                <p style=3D"font-family: Verdana, sans-serif;font-weight: 4=
+00;margin-top: 4px;">A new The Information franchise that will take you ins=
+ide how businesses are using AI to automate all kinds of work.</p>
+                <p style=3D"font-family: Verdana, sans-serif;margin-top: 16=
+px"><a href=3D"https://url3396.theinformation.com/ls/click?upn=3Du001.71kYk=
+aWDpGOJSzbGrs4y1TNF0-2FB-2Bh5pDUdkL0JSEoBnPCXMf7muTnPAGZGawge6JmmapVMICsojO=
+W4Z11ZcJDrnfFnDbLqxIhtNj2vsG2rxTF3qQWFcrIkbB-2B2a2W-2Fv8NlJxkBFeQqnw5Yv4ajX=
+lmOYjT7HbqLeGkXRDpBenXNiGVd6HOIE0TYtcaC4OV5bbCv1e_iEov0s5HvVnGoiYJdVyZps-2F=
+8PjnnqKoLDpY2honFu2U45V0jv994vXrML8Mj3ERHo-2BROdctDEBpoawhoWbF6rs-2B2GZJ1KV=
+2gVIdPwsc4sCUKK-2B50dFWBMMgmU33OHaE5REE2k2k5o45Y8medzhaW-2FTfCs4hDMhHclkL1O=
+dKx2ZMy4NThoRA1gFbAjYpyJTBog0oIxRsEtCJTb-2Bqtw4d1GmI2PCvQnlZdWP28upq2Ep0J7C=
+VPyKrmiFL5037IwDXePjcCQI3APj3v3zZjI0QarJp7VwB-2BNA-2BlW4u9dG6vrUphFfh82Z5z1=
+4JnzSNqYzY5pfl5f8-2BeFLFtoe4cLaK0FQ-3D-3D" target=3D"_blank" style=3D"font-=
+family: Verdana, sans-serif; text-decoration: underline; color: #f32a52;fon=
+t-size: 16px;line-height: 24px;font-weight: 400">Read the archives</a></p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+            <!-- FOOTER START -->
+            <tr>
+  <td bgcolor=3D"#ffffff" class=3D"background-dark">
+    <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+      <tr>
+        <td align=3D"center">
+          <table
+            width=3D"600"
+            border=3D"0"
+            cellspacing=3D"0"
+            cellpadding=3D"0"
+            style=3D"width: 600px; max-width: 600px"
+            bgcolor=3D"#ffffff"
+            class=3D"responsive-table"
+          >
+            <tr>
+              <td
+                align=3D"center"
+                style=3D"padding: 45px 75px; padding-top: 45px !important; =
+padding-bottom: 45px !important; font-family: Suisse Screen, Helvetica, Ari=
+al, sans-serif; font-weight: normal; font-size: 12px; line-height: 24px; fo=
+nt-size: 12px !important; line-height: 24px !important; color: #ffffff; bac=
+kground: #2F3538;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;=
+"
+                class=3D"background-dark padding"
+              >
+                <span
+                  style=3D"font-family: 'Suisse Int\'l Mono', monospace, He=
+lvetica, Arial, sans-serif; font-size: 14px; color: #F32A52"
+                >Follow us</span>
+                <table width=3D"227.85" border=3D"0" cellspacing=3D"0" cell=
+padding=3D"0">
+                  <tr>
+                    <td width=3D"32" align=3D"center" style=3D"padding: 16p=
+x 0 48px; line-height: 1">
+                      <a
+                        href=3D"https://url3396.theinformation.com/ls/click=
+?upn=3Du001.71kYkaWDpGOJSzbGrs4y1T2Sl5PeJ-2FG7XEaBvfWxfrQHbwmq5gLU2ojiuowH6=
+4rJBj-2BXB6C9UBnLd5uDA0OPkzjJvALNAX05BKspQYMbXWDr6XS-2BAE62wwyNIq7swEjfJdtn=
+W3qZtF5sZhqpFecoe-2FdFZOz1eay-2BKuw4Kd0Vuw0-3DVCA8_iEov0s5HvVnGoiYJdVyZps-2=
+F8PjnnqKoLDpY2honFu2U45V0jv994vXrML8Mj3ERHo-2BROdctDEBpoawhoWbF6rs-2B2GZJ1K=
+V2gVIdPwsc4sCUKK-2B50dFWBMMgmU33OHaE5REE2k2k5o45Y8medzhaW-2FTfCs4hDMhHclkL1=
+OdKx2ZMy4NThoRA1gFbAjYpyJTBokwUTEPAcL9gS6JZQZ51BfwnXqPN-2Fdxjqn1sCSwJ4Vf7Yz=
+Hj9oYbMfuyfpMkrHU7-2FnwOl0kvZ41IoiQ5UKEvlh16R7nL5C4GXbudrpj6AZJn-2Bze6kV3-2=
+FWukeoFfKIBb79-2FWJzJUID6qBhKQ0V2S4eZQ-3D-3D"
+                        target=3D"_blank"
+                        style=3D"text-decoration: none;"
+                      >
+                        <img width=3D"32" src=3D"https://tii.imgix.net/glob=
+al/email/icon-X-v3.png" alt=3D"X" border=3D"0">
+                      </a><br>
+                    </td>
+                    <td width=3D"32" valign=3D"middle"></td>
+                    <td width=3D"32" align=3D"center" style=3D"padding: 16p=
+x 0 48px; line-height: 1">
+                      <a
+                        href=3D"https://url3396.theinformation.com/ls/click=
+?upn=3Du001.71kYkaWDpGOJSzbGrs4y1YCFIgUTnTtU9jcXdi5OlS4DnFensodraGNsXFNZLRK=
+sOkUFKt9aKkvfZp-2FSglSxfcQA5R6BJTwq1KR4o1rz281uE5YzM2dIrm1plX7HgGIInVXjVQKA=
+XghLnmQHCuuVRkApUO2YXhVnVluxGEgdPlh-2B6pwUcx51Kd2-2BF5jU-2FpwbySMa_iEov0s5H=
+vVnGoiYJdVyZps-2F8PjnnqKoLDpY2honFu2U45V0jv994vXrML8Mj3ERHo-2BROdctDEBpoawh=
+oWbF6rs-2B2GZJ1KV2gVIdPwsc4sCUKK-2B50dFWBMMgmU33OHaE5REE2k2k5o45Y8medzhaW-2=
+FTfCs4hDMhHclkL1OdKx2ZMy4NThoRA1gFbAjYpyJTBo-2BW-2F5g9pIGL37occp56o2SMYQLpt=
+I-2BfukgNPrd5CIvfbYMK8s7EEfqMMau0aK1SxG97Is4qtJqk3aDikJWVHygQYKGJeWptLT1BLY=
+GFp3xwlPjhg176SbfdNe7twoTimUjv6Txc1-2FxJBLjwr01zU28g-3D-3D"
+                        target=3D"_blank"
+                        style=3D"text-decoration: none"
+                      >
+                        <img width=3D"32" src=3D"https://tii.imgix.net/glob=
+al/email/icon-linkedin-v3.png" alt=3D"LinkedIn" border=3D"0">
+                      </a><br>
+                    </td>
+                    <td width=3D"32" valign=3D"middle"></td>
+                    <td width=3D"32" align=3D"center" style=3D"padding: 16p=
+x 0 48px; line-height: 1">
+                      <a
+                        href=3D"https://url3396.theinformation.com/ls/click=
+?upn=3Du001.71kYkaWDpGOJSzbGrs4y1dMu7bhLyA2t3R-2B-2Be0O7TUhTGcCztTV72-2BitQ=
+Z9RP9u7mPvffDgEtbfIxnCYoxVjmZwU-2F4wJBDbSU1NSG1isg34lEo-2BiWyPOebxPCDHxMyjD=
+0hu-2FOIekZD6KfR0DgHsqof3ekfVNiNuUWF30kYKXUy1oUpdwhfjmdGq6E7A32BSjxmEw_iEov=
+0s5HvVnGoiYJdVyZps-2F8PjnnqKoLDpY2honFu2U45V0jv994vXrML8Mj3ERHo-2BROdctDEBp=
+oawhoWbF6rs-2B2GZJ1KV2gVIdPwsc4sCUKK-2B50dFWBMMgmU33OHaE5REE2k2k5o45Y8medzh=
+aW-2FTfCs4hDMhHclkL1OdKx2ZMy4NThoRA1gFbAjYpyJTBoVQRSNc8AYbhmnPX4o3vu4TTm13g=
+nf8BgMJR6ylLV3k-2FUJ3tqAy-2Bls-2Bek4L-2FYa5RdXO5yWsyDewz1oNfzh1rn04Tn2wM-2F=
+AoMrhqyXV9phHBvYgQwY6IvsdDcYGTLe2FPv5CtNBUGbOa1piVLMd0sUtg-3D-3D"
+                        target=3D"_blank"
+                        style=3D"text-decoration: none"
+                      >
+                        <img width=3D"32" src=3D"https://tii.imgix.net/glob=
+al/email/icon-facebook-v3.png" alt=3D"Facebook" border=3D"0">
+                      </a><br>
+                    </td>
+                    <td width=3D"32" valign=3D"middle"></td>
+                    <td width=3D"32" align=3D"center" style=3D"padding: 16p=
+x 0 48px; line-height: 1">
+                      <a
+                        href=3D"https://url3396.theinformation.com/ls/click=
+?upn=3Du001.71kYkaWDpGOJSzbGrs4y1cH8QhuXOWazGIIpzuv5CPjwlNYj84mRAH9436zZAMW=
+ljvmgShg1z9AjH54DR-2FJmaxwE0lfdqeO6aF2rnrTc-2B6yV4vQ72eoUKuuQTG8zbqbFMXEcer=
+-2Bhn-2BqU20Wh0D8AJbTOzCbOX0mJ5fglqT-2FLpRZYwSPGfHilo-2BTD-2F-2BH7ULcvIW0K_=
+iEov0s5HvVnGoiYJdVyZps-2F8PjnnqKoLDpY2honFu2U45V0jv994vXrML8Mj3ERHo-2BROdct=
+DEBpoawhoWbF6rs-2B2GZJ1KV2gVIdPwsc4sCUKK-2B50dFWBMMgmU33OHaE5REE2k2k5o45Y8m=
+edzhaW-2FTfCs4hDMhHclkL1OdKx2ZMy4NThoRA1gFbAjYpyJTBoMk-2FjSALnBNSQD6iODwW0V=
+bfJtCKDKTuEdHckzmcwog4CS-2FUhclvct-2FmOkuB4DFi-2F7vDkYxCt25-2F5bu7u5MfYZW6U=
+cecf4QYGVhndrcXNB6ENkVC-2FWU3lKiONSyXqnTPP4bttQ2h92psoCPEyKYuYLQ-3D-3D"
+                        target=3D"_blank"
+                        style=3D"text-decoration: none"
+                      >
+                        <img width=3D"32" src=3D"https://tii.imgix.net/glob=
+al/email/icon-threads-v3.png" alt=3D"Threads" border=3D"0">
+                      </a><br>
+                    </td>
+                    <td width=3D"32" valign=3D"middle"></td>
+                    <td width=3D"32" align=3D"center" style=3D"padding: 16p=
+x 0 48px; line-height: 1">
+                      <a
+                        href=3D"https://url3396.theinformation.com/ls/click=
+?upn=3Du001.71kYkaWDpGOJSzbGrs4y1eYsgqOksHLUoTSKBWk98czesKR7FvhLK0QjueixeWf=
+EymYo67WgCfLTgN9bBamsRxs-2FfbX47PLmDZFfmR9ddZdchG9OlGO7Sr5lS5FAomr8BjCjmTxe=
+79I9gikgDcXlYx-2BSKrKV8SNa7wb5cQXexTPAEwY8q6nS31gT36dyOPtgnGj8_iEov0s5HvVnG=
+oiYJdVyZps-2F8PjnnqKoLDpY2honFu2U45V0jv994vXrML8Mj3ERHo-2BROdctDEBpoawhoWbF=
+6rs-2B2GZJ1KV2gVIdPwsc4sCUKK-2B50dFWBMMgmU33OHaE5REE2k2k5o45Y8medzhaW-2FTfC=
+s4hDMhHclkL1OdKx2ZMy4NThoRA1gFbAjYpyJTBohlEJc9Z7NISPc1pOomgI8y1uFBHl56fMlam=
+FQDgmGXyZWNWxDjJ9fSWWQQhPtZg1R7BbYYXJo8ugigtcUbAdYddZUOYDPuhxrK2KiG-2BpQnEN=
+2Fno0jPKM5Q8SvJ9YNa4YQvQLci5fcaUlWQh6MsiBw-3D-3D"
+                        target=3D"_blank"
+                        style=3D"text-decoration: none"
+                      >
+                        <img width=3D"32" src=3D"https://tii.imgix.net/glob=
+al/email/icon-instagram-v3.png" alt=3D"Instagram" border=3D"0">
+                      </a><br>
+                    </td>
+                  </tr>
+                </table>
+                Sent to anush.sankaran@gmail.c&#173;om
+                |
+                <a
+                  href=3D"https://url3396.theinformation.com/ls/click?upn=
+=3Du001.71kYkaWDpGOJSzbGrs4y1TNF0-2FB-2Bh5pDUdkL0JSEoBmRyOSkt-2B6tut-2FgIJZ=
+jZ88GSa6oVYM0I7-2FTSqls99-2BpFjBk4wPLczKh9A2juBJWw-2FAw0mk-2BHnUcP3JLTu0gkc=
+d5kt3VWZY5uBYhpGPISSlr2grBPUgwHarWxlTjkrWIiQ6JeAiqQTFWhha-2BfamrJdSo07aAfoi=
+tY6bOTUMY1QjLDGI7sa11oLlbVK7G3U29LXRMw9ez-2BrJ6xx1rDLUap-2BLtOn8eV85xOlfXNr=
+sdPA0zy7uJ-2Fg94LDpui3kfJSKjrkM3PAZuNb2kEg8VIPxb8PsGFajB-2Fjm4v2-2BytDl9Uuy=
+orqLXRRJ1jqmvm4x6zG2vQHwPpaBtpd5ZzMJc794k5OUfIyWllEj1u6zsIEjVRUK8WDnbuXaXKF=
+a6dtckUPtmyg8-3Dwfl1_iEov0s5HvVnGoiYJdVyZps-2F8PjnnqKoLDpY2honFu2U45V0jv994=
+vXrML8Mj3ERHo-2BROdctDEBpoawhoWbF6rs-2B2GZJ1KV2gVIdPwsc4sCUKK-2B50dFWBMMgmU=
+33OHaE5REE2k2k5o45Y8medzhaW-2FTfCs4hDMhHclkL1OdKx2ZMy4NThoRA1gFbAjYpyJTBoMZ=
+6gIe-2BXVD2aDWQiUd-2Bwq4fK7nuzrx8o-2Be-2FpAkygQveHjCW-2B38muWtHzYCbu2v-2BBD=
+A52r-2FmerIIzlqZPjGSBOB9c62D2k8nb7GpRtElaBzUxF61rFLT-2FDVMxwt8dGyk5hfR22mZI=
+fd7COxSjD3DiZg-3D-3D"
+                  target=3D"_blank"
+                  class=3D"footer-link"
+                >Manage your preferences or unsubscribe</a>
+                |
+                <a
+                  href=3D"https://url3396.theinformation.com/ls/click?upn=
+=3Du001.71kYkaWDpGOJSzbGrs4y1ZwsjdD8U8HPRHZODNtX5742xNsoxaJ40flKf35Cvt1CHBF=
+E8dGLv92qL5h-2BGtShTp2SxIPlu4MrAdMlBQtsNK3jikyGl1eYTmsCEjA2fD08ckr5iVjSSnJx=
+-2FJAovYCjarGoyq813hspl-2F0Nvaz8eL-2Bz8IWa08sKEaQkr31TYXzcNuuT_iEov0s5HvVnG=
+oiYJdVyZps-2F8PjnnqKoLDpY2honFu2U45V0jv994vXrML8Mj3ERHo-2BROdctDEBpoawhoWbF=
+6rs-2B2GZJ1KV2gVIdPwsc4sCUKK-2B50dFWBMMgmU33OHaE5REE2k2k5o45Y8medzhaW-2FTfC=
+s4hDMhHclkL1OdKx2ZMy4NThoRA1gFbAjYpyJTBomU4rIbQ303oOEw85nQDdxcECGRayLfudLHa=
+QKw-2Bo-2FQkoTzlFhP4kua-2BnjKgOmAeev1iDO0xm286db0mKZK0od1QfF9airhD-2BXLNfDs=
+8giyzD7Pezw7XYHcZmttgC-2FwD4tLcy0bpNEulzajV0Rm0SLQ-3D-3D"
+                  target=3D"_blank"
+                  class=3D"footer-link"
+                >Help</a>
+                <a href=3D"#" style=3D"color: #ffffff !important; text-deco=
+ration: none !important; font-weight: normal !important">The&nbsp;Informati=
+on &middot;&nbsp;251&nbsp;Rhode&nbsp;Island&nbsp;Street,&nbsp;Suite&nbsp;10=
+7,&nbsp;San Francisco,&nbsp;CA&nbsp;94103</a><br>
+                <br>
+                <a href=3D"https://url3396.theinformation.com/ls/click?upn=
+=3Du001.71kYkaWDpGOJSzbGrs4y1TNF0-2FB-2Bh5pDUdkL0JSEoBmN-2BtioNXgRiKmS6QeiV=
+MUmf1kk36DAm-2FsCscr1R8-2FpHXzZj8DFSUZAew8jPs4IufBLI3wRAAXiAgWrU7vfVTXXLasI=
+Xio9VM0NZ40-2B2cK13WSstm8xm35SmtDD8whP8ag-3DFR3B_iEov0s5HvVnGoiYJdVyZps-2F8=
+PjnnqKoLDpY2honFu2U45V0jv994vXrML8Mj3ERHo-2BROdctDEBpoawhoWbF6rs-2B2GZJ1KV2=
+gVIdPwsc4sCUKK-2B50dFWBMMgmU33OHaE5REE2k2k5o45Y8medzhaW-2FTfCs4hDMhHclkL1Od=
+Kx2ZMy4NThoRA1gFbAjYpyJTBo7FjnIvWPClWiR8mv7kJ0erG9MKA-2FKuOJ9VvCHDMEPGQCzlq=
+Dwg2od5XIVcv0YUfU5viTdinXNw2-2BP4laOaAEzbkJiXcknuiOiCmdGxpPTB51L9KnDegxEX5A=
+dr38TUpdho4G82QaGpnXM5IpCQ9jZQ-3D-3D" target=3D"_blank">
+                  <img
+                    alt=3D""
+                    width=3D"20"
+                    border=3D"0"
+                    src=3D"https://tii.imgix.net/global/email/logo.png"
+                    style=3D"width: 20px; max-width: 20px; height: auto; bo=
+rder: 0"
+                  >
+                </a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+            <!-- FOOTER END -->
+          </table>
+          <!--[if (gte mso 9)|(IE)]>
+            </td>
+          </tr>
+          </table>
+          <![endif]-->
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+
+          </tr>
+      </tbody>
+    </table>
+    <!--[if (gte mso 9)|(IE)]>
+          </td>
+        </tr>
+      </table>
+    <![endif]-->
+  <img src=3D"https://url3396.theinformation.com/wf/open?upn=3Du001.Uooob8o=
+PrWWrm98luLLvAGDpCsdkpxqgJjAZ5OTiQuCYmUjD5OlsoYDRQ-2B8F6-2BxYm9AhAQLLDzhq8D=
+JoQy86ETa8oEf8-2FubYCLUjWDzAPqoS0Jm99osrscbzQaSq2pJI-2FIKb4nW4LZ6dBzoQsWfr0=
+IbcLu9LaHo-2F8VmEW7-2FtQMMBQdaOvCTA8NX3VM1lbYYPOuUzsCFOFe9dEEpivjs11Ax8ltKa=
+IcZaygMzS6a-2B0SwGAYPJDZcqXDDBNqSouWcpg4tpXc-2FU8yYjeDAT2eh0dW7n0sutaLQ2DmX=
+mFGoj-2FUIt9qyDMVOq0D31iWaI1Sk2yhxWKRENJBOlvl0KskZ1mgWS-2B0R4qBuFarh2XrJ0-2=
+BbE-3D" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"height:1px =
+!important;width:1px !important;border-width:0 !important;margin-top:0 !imp=
+ortant;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !=
+important;padding-top:0 !important;padding-bottom:0 !important;padding-righ=
+t:0 !important;padding-left:0 !important;"/></body>
+</html>
+
+--7adfe1037e2804c2e1fc4dd5b9c5658e33c3e65447d864823da6d77657ee--

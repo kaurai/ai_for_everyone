@@ -56,3 +56,10 @@ emails/🔍Google Improves Diffusion Models with Noise Optimization.eml
 emails/😺 OpenAI's worst nightmare.eml
 emails/😺 Sam's WILD $500B bet.eml
 emails/🚨Open-Source Rival to OpenAI's Reasoning Model (1).eml
+data/Applied AI_ Automating Senior Software Engineers Will Take Longer Than OpenAI Says.eml
+data/Applied AI_ More Changes Coming to Microsoft and Google’s Productivity Apps_ Grammarly CEO.eml
+data/Generative AI Cybersecurity & Privacy for Leaders.eml
+data/New course! Building Towards Computer Use with Anthropic.eml
+data/Web of Science Alert - Anush Sankaran Profile Citation Alert - 2 results from articles.eml
+data/⚠️ Amazon Goes After GPT and Claude.eml
+data/⚡ OpenAI Unveils AGI Plans_ Workforce-Ready by 2025.eml

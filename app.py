@@ -10,7 +10,7 @@ data['ContentType'] = data.apply(lambda row: f"[{row['ContentType']}]({row['link
 data = data.drop(columns=['link'])  # Drop the 'link' column
 
 # Initialize Dash app with Bootstrap theme
-app = Dash(__name__, external_stylesheets=[dbc.themes.SOLAR])  # Change theme here
+app = Dash("AI.For.Everyone", external_stylesheets=[dbc.themes.SOLAR])  # Change theme here
 
 # Expose the Flask server instance for Gunicorn
 server = app.server
@@ -25,7 +25,7 @@ app.layout = dbc.Container(
                     dbc.Col(
                         html.A(
                             html.Img(
-                                src="logo.png",  # Path to your logo
+                                src="/assets/logo.PNG",  # Path to your logo
                                 style={"height": "30px", "margin-right": "1px"}
                             ),
                             href="https://kaurai.com",  # Link to company website
@@ -52,15 +52,6 @@ app.layout = dbc.Container(
                         width="auto"
                     )
                 ], align="center", justify="between")  # Adjust alignment to space elements
-            )
-        ),
-        # Dropdown to allow theme switching (optional, for demo purposes)
-        dbc.Row(
-            dbc.Col(
-                html.P(
-                    "Ignite a culture of innovation that drives meaningful change.",
-                    className="text-muted text-center",
-                )
             )
         ),
         dbc.Row(

@@ -12,6 +12,9 @@ data = data.drop(columns=['link'])  # Drop the 'link' column
 # Initialize Dash app with Bootstrap theme
 app = Dash(__name__, external_stylesheets=[dbc.themes.SOLAR])  # Change theme here
 
+# Expose the Flask server instance for Gunicorn
+server = app.server
+
 # App layout
 app.layout = dbc.Container(
     [

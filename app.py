@@ -60,7 +60,6 @@ app.layout = dbc.Container(
                 )
             )
         ),
-
         dbc.Row(
             dbc.Col(
                 html.P(

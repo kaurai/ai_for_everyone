@@ -63,3 +63,4 @@ data/New course! Building Towards Computer Use with Anthropic.eml
 data/Web of Science Alert - Anush Sankaran Profile Citation Alert - 2 results from articles.eml
 data/⚠️ Amazon Goes After GPT and Claude.eml
 data/⚡ OpenAI Unveils AGI Plans_ Workforce-Ready by 2025.eml
+data/⚡️ Anthropic releases improved Claude models that can control your computer.eml

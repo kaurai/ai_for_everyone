@@ -1,61 +1,3 @@
-emails/⚠️ Amazon Goes After GPT and Claude.eml
-emails/⚡ OpenAI Unveils AGI Plans_ Workforce-Ready by 2025.eml
-emails/⚡️ Anthropic releases improved Claude models that can control your computer.eml
-emails/⚡️ BitNet 1-Bit LLM_ Microsoft releases the code for 5x faster on-device AI.eml
-emails/⚡️ Claude 3.5 Haiku outperforms Opus, GPT-4o—priced 4x higher.eml
-emails/⚡️ GitHub Copilot integrates Claude 3.5, Gemini 1.5 Pro along with OpenAI models.eml
-emails/⚡️ Google Launches AI Video Generator, Dethrones Sora.eml
-emails/⚡️ IBM Granite 3.0 8B Surpasses Llama 3.1 on OpenLLM Benchmark.eml
-emails/⚡️ Meta Launches Mobile Llama 3.2_ 4x Faster, 56% Smaller.eml
-emails/⚡️ Ollama Integrates Llama Vision Models.eml
-emails/⚡️ Ollama Integrates Llama Vision Models_1.eml
-emails/⚡️ OpenAI Integrates Live Web Search in ChatGPT Using GPT-4o.eml
-emails/⚡️ Perplexity releases integrated enterprise knowledge search and team spaces.eml
-emails/⚡️Anthropic's New Universal Agent Connector System.eml
-emails/⚡️ChatGPT now on MacOS and Windows.eml
-emails/⚡️Google Launches Gemini 2.0_ Its Most Capable Model Yet.eml
-emails/⚡️New open-source LLM 4.3x faster than GPT-4o.eml
-emails/⚡️New reasoning model matches GPT-o1, _thinks_ like humans.eml
-emails/🌎 DeepMind's Model Can Build Playable 3D environments.eml
-emails/🏆 DeepSeek Unveils New Open-Source GPT-4o Rival.eml
-emails/🏆 Google Dethrones OpenAI in Chatbot Arena.eml
-emails/📅OpenAI Introduces Task Scheduling in ChatGPT.eml
-emails/📊 How High-Quality Data Beats Scaling Laws.eml
-emails/📚 Perplexity Upgrades to Claude 3.5 Haiku, Replaces Claude Opus.eml
-emails/🔍 Gemini Models Get New Search features.eml
-emails/🔍 Google Details LLM Agents_ Tools, Reasoning & Scalability.eml
-emails/🔓 A FULLY Open-Source Model Beats LLama-3.1.eml
-emails/🔓 How to Achieve o1 Performance with Open-Source.eml
-emails/🔥 AWS Unveils Bedrock Updates to Cut Latency Cost.eml
-emails/🔥 ChatGPT Web Now with Voice Mode.eml
-emails/🔥 Claude Sonnet gets PDF Analysis.eml
-emails/🔥 NVIDIA Launches Cosmos for Faster Synthetic Data Generation.eml
-emails/🔥 OpenAI Unveils o1 and $200_m Pro Plan.eml
-emails/🔥 The Best Open-Source Coding LLM_.eml
-emails/🚀 DeepSeek Unveils Janus_ Beats DALL-E 2 & SDXL in Generation.eml
-emails/🚀 Microsoft Launches GPT-4o-Powered Copilot Chat .eml
-emails/🚀 Mistral’s Free ChatGPT Rival.eml
-emails/🚀 New Cohere Model Unifies Text-Image Search Across 100+ Languages.eml
-emails/🚀 OpenAI releases o1 API and Tools For Developers.eml
-emails/🚀 Stable Diffusion 3.5 Releases 8B Parameter open models.eml
-emails/🚀Andrew Ng Releases Package to Switch LLMs Instantly.eml
-emails/🚨 Alibaba Launches OpenAI Rival_ Beats in Math & Code Reasoning.eml
-emails/🚨 Ilya Sutskever Signals End of LLM Scaling.eml
-emails/🚨 New Tool to Adjust Video Aspect Ratios Instantly.eml
-emails/🚨 OpenAI Launches Coding Assistant for All ChatGPT Users.eml
-emails/🚨 OpenAI Launches o3_ Near AGI with 87.5% on ARC-AGI.eml
-emails/🚨 OpenAI's Sora is finally out + Quantum Breakthrough.eml
-emails/🚨New Open-Source Code LLM Tackles What Claude Couldn't.eml
-emails/🧠 OpenAI’s o1 gets challenged by a new LLM reasoning layer.eml
-emails/🧰 A Data Scientist's GenAI Survival Guide.eml
-emails/Applied AI_ More Changes Coming to Microsoft and Google’s Productivity Apps_ Grammarly CEO.eml
-emails/Generative AI Cybersecurity & Privacy for Leaders.eml
-emails/New course! Building Towards Computer Use with Anthropic.eml
-emails/🌌 OpenAI Launches Stargate_ $500B AGI Infrastructure Project.eml
-emails/🔍Google Improves Diffusion Models with Noise Optimization.eml
-emails/😺 OpenAI's worst nightmare.eml
-emails/😺 Sam's WILD $500B bet.eml
-emails/🚨Open-Source Rival to OpenAI's Reasoning Model (1).eml
 data/Applied AI_ Automating Senior Software Engineers Will Take Longer Than OpenAI Says.eml
 data/Applied AI_ More Changes Coming to Microsoft and Google’s Productivity Apps_ Grammarly CEO.eml
 data/Generative AI Cybersecurity & Privacy for Leaders.eml
@@ -64,3 +6,62 @@ data/Web of Science Alert - Anush Sankaran Profile Citation Alert - 2 results fr
 data/⚠️ Amazon Goes After GPT and Claude.eml
 data/⚡ OpenAI Unveils AGI Plans_ Workforce-Ready by 2025.eml
 data/⚡️ Anthropic releases improved Claude models that can control your computer.eml
+data/⚡️ BitNet 1-Bit LLM_ Microsoft releases the code for 5x faster on-device AI.eml
+data/⚡️ Claude 3.5 Haiku outperforms Opus, GPT-4o—priced 4x higher.eml
+data/⚡️ GitHub Copilot integrates Claude 3.5, Gemini 1.5 Pro along with OpenAI models.eml
+data/⚡️ Google Launches AI Video Generator, Dethrones Sora.eml
+data/⚡️ IBM Granite 3.0 8B Surpasses Llama 3.1 on OpenLLM Benchmark.eml
+data/⚡️ Meta Launches Mobile Llama 3.2_ 4x Faster, 56% Smaller.eml
+data/⚡️ Ollama Integrates Llama Vision Models.eml
+data/⚡️ Ollama Integrates Llama Vision Models_1.eml
+data/⚡️ OpenAI Integrates Live Web Search in ChatGPT Using GPT-4o.eml
+data/⚡️ OpenAI Introduces AI Agent 'Operator'_ Automates Web Tasks Using GPT-4.eml
+data/⚡️ Perplexity releases integrated enterprise knowledge search and team spaces.eml
+data/⚡️Anthropic's New Universal Agent Connector System.eml
+data/⚡️ChatGPT now on MacOS and Windows.eml
+data/⚡️Google Launches Gemini 2.0_ Its Most Capable Model Yet.eml
+data/⚡️New open-source LLM 4.3x faster than GPT-4o.eml
+data/⚡️New reasoning model matches GPT-o1, _thinks_ like humans.eml
+data/🌌 OpenAI Launches Stargate_ $500B AGI Infrastructure Project.eml
+data/🌎 DeepMind's Model Can Build Playable 3D environments.eml
+data/🏆 DeepSeek Unveils New Open-Source GPT-4o Rival.eml
+data/🏆 Google Dethrones OpenAI in Chatbot Arena.eml
+data/📅OpenAI Introduces Task Scheduling in ChatGPT.eml
+data/📊 How High-Quality Data Beats Scaling Laws.eml
+data/📚 Perplexity Upgrades to Claude 3.5 Haiku, Replaces Claude Opus.eml
+data/🔍 Gemini Models Get New Search features.eml
+data/🔍 Google Details LLM Agents_ Tools, Reasoning & Scalability.eml
+data/🔍Google Improves Diffusion Models with Noise Optimization.eml
+data/🔓 A FULLY Open-Source Model Beats LLama-3.1.eml
+data/🔓 A FULLY Open-Source Model Beats LLama-3.1.eml
+data/🔓 How to Achieve o1 Performance with Open-Source.eml
+data/🔥 AWS Unveils Bedrock Updates to Cut Latency Cost.eml
+data/🔥 ChatGPT Web Now with Voice Mode.eml
+data/🔥 Claude Sonnet gets PDF Analysis.eml
+data/🔥 NVIDIA Launches Cosmos for Faster Synthetic Data Generation.eml
+data/🔥 OpenAI Unveils o1 and $200_m Pro Plan.eml
+data/🔥 The Best Open-Source Coding LLM_.eml
+data/😺 Anthropic's AI utopia.eml
+data/😺 GPT actually DOES stuff___.eml
+data/😺 OpenAI's worst nightmare.eml
+data/😺 Sam's WILD $500B bet.eml
+data/😺 Walk inside Van Gogh rn.eml
+data/😺Open AI that's ACTUALLY open.eml
+data/🚀 DeepSeek Unveils Janus_ Beats DALL-E 2 & SDXL in Generation.eml
+data/🚀 Microsoft Launches GPT-4o-Powered Copilot Chat .eml
+data/🚀 Mistral’s Free ChatGPT Rival.eml
+data/🚀 New Cohere Model Unifies Text-Image Search Across 100+ Languages.eml
+data/🚀 OpenAI releases o1 API and Tools For Developers.eml
+data/🚀 Stable Diffusion 3.5 Releases 8B Parameter open models.eml
+data/🚀 Zyphra unveils Zamba2-7B_ Open-source LLM beats Mistral, Gemma.eml
+data/🚀Andrew Ng Releases Package to Switch LLMs Instantly.eml
+data/🚨 Alibaba Launches OpenAI Rival_ Beats in Math & Code Reasoning.eml
+data/🚨 Ilya Sutskever Signals End of LLM Scaling.eml
+data/🚨 New Tool to Adjust Video Aspect Ratios Instantly.eml
+data/🚨 OpenAI Launches Coding Assistant for All ChatGPT Users.eml
+data/🚨 OpenAI Launches o3_ Near AGI with 87.5% on ARC-AGI.eml
+data/🚨 OpenAI's Sora is finally out + Quantum Breakthrough.eml
+data/🚨New Open-Source Code LLM Tackles What Claude Couldn't.eml
+data/🚨Open-Source Rival to OpenAI's Reasoning Model (1).eml
+data/🧠 OpenAI’s o1 gets challenged by a new LLM reasoning layer.eml
+data/🧰 A Data Scientist's GenAI Survival Guide.eml

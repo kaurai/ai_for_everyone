@@ -25,7 +25,7 @@ app.layout = dbc.Container(
                     dbc.Col(
                         html.A(
                             html.Img(
-                                src="/assets/logo_full_white_cropped.png",  # Path to your logo
+                                src="logo.png",  # Path to your logo
                                 style={"height": "30px", "margin-right": "1px"}
                             ),
                             href="https://kaurai.com",  # Link to company website

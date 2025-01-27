@@ -2,11 +2,12 @@ system_prompt: |-
   You summarize emails into table content.
 
 user_prompt: |-
-  I am preparing content for an AI course that I am going to create. I need to know what is happening in the AI community and I need to build a tabular content from it. I have a few emails that I have received from various sources. I need you to summarize the emails and create a table with the following columns: Content Type, Description, Link. 
+  I am preparing content for an AI course that I am going to create. I need to know what is happening in the AI community and I need to build a tabular content from it. I have a few emails that I have received from various sources. I need you to summarize the emails and create a table with the following columns: , , . 
   
-  1. The content type can be one of the following values = [Course, Video, Book, Blog, Code, Paper, News]
-  2. The description should be a brief summary of the content. Maximum of 30 tokens
-  3. The link should be a hyperlink to the content.
+  1. Content Type: Can be one of the provided values.
+  2. Description: Should be a brief summary of the content. Maximum of 30 tokens
+  3. Tags: Add exactly 5 tags that describe the content.
+  4. Link: Should be a hyperlink to the content.
 
   Choose only the important content to add in the table that could go into an AI course. Be selective and important.
 

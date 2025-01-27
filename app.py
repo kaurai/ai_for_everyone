@@ -5,8 +5,8 @@ import dash_bootstrap_components as dbc
 # Load your dataset
 data = pd.read_csv("data.csv")  # Replace with your dataset path
 
-# Modify the data to include hyperlinks in the 'content_type' column and remove the 'link' column
-data['content_type'] = data.apply(lambda row: f"[{row['content_type']}]({row['link']})", axis=1)
+# Modify the data to include hyperlinks in the 'ContentType' column and remove the 'link' column
+data['ContentType'] = data.apply(lambda row: f"[{row['ContentType']}]({row['link']})", axis=1)
 data = data.drop(columns=['link'])  # Drop the 'link' column
 
 # Initialize Dash app with Bootstrap theme
@@ -78,7 +78,7 @@ app.layout = dbc.Container(
                         {
                             "name": i, 
                             "id": i,
-                            "presentation": "markdown" if i == "content_type" else None  # Enable markdown for hyperlink column
+                            "presentation": "markdown" if i == "ContentType" else None  # Enable markdown for hyperlink column
                         } for i in data.columns
                     ],
                     data=data.to_dict('records'),
@@ -114,34 +114,20 @@ app.layout = dbc.Container(
                     ],
                     style_cell_conditional=[
                         {
-                            'if': {'column_id': 'description'},
+                            'if': {'column_id': 'Description'},
                             'maxWidth': '400px',
                             'whiteSpace': 'normal',
                             'overflow': 'hidden',
                             'textOverflow': 'ellipsis',
                         },
                         {
-                            'if': {'column_id': 'content_type'},
+                            'if': {'column_id': 'ContentType'},
                             'maxWidth': '140px',
                             'whiteSpace': 'normal',
                             'overflow': 'hidden',
                             'textOverflow': 'ellipsis',
                         },
                     ],
-                )
-            )
-        ),
-        # Footer
-        dbc.Row(
-            dbc.Col(
-                html.Footer(
-                    html.A(
-                        "Contact Kaur.AI",  # Replace with your email
-                        href="mailto:kaurdotai@gmail.com",  # Hyperlink to send an email
-                        className="text-center text-muted",
-                        style={"textDecoration": "none", "color": "inherit"}  # Ensures no underline and matches theme color
-                    ),
-                    className="text-center mt-4",
                 )
             )
         ),

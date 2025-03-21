@@ -807,3 +807,149 @@ Product/Tool,Tern AI is building a low cost GPS alternative using map data and v
 Funding,"Y Combinator startups are experiencing rapid growth and profitability due to AI, with 95% of code written by AI.",Y Combinator,Startups,AI,Funding,Venture Capital
 ContentType,Description,link,Tag1,Tag2,Tag3,Tag4,Tag5
 Product/Tool,Wealthsimple: Recurring investment failure due to insufficient funds. Options to add funds or backup payment.,https://clicks.wealthsimple.com/f/a/5SIbasKtfILnpbl0gseUTA~~/AAQRxRA~/dfVHs46ErCSCYHzCkK-Bkz8Zr-JBusL2yu83BmKAhJK7aGSu9zmKPDutgaQsIf4oOOnLth9HQE1qLvpLDsaZrgDdR0qj3V4b_wYPDZu4Im6_lTUgITkvyI_mEHejr4dr,Investment,Finance,Wealthsimple,Recurring Order,Insufficient Funds
+ContentType,Description,link,Tag1,Tag2,Tag3,Tag4,Tag5
+Product/Tool,Fiserv is developing an AI chatbot for financial firms using customer data.,https://www.theinformation.com,AI Chatbot,Financial Services,Data Analytics,Customer Support,Fiserv
+Product/Tool,Snowflake and Databricks are in talks with Google/Anthropic for AI data security.,https://www.theinformation.com,Data Security,Snowflake,Databricks,Google Gemini,Anthropic
+Funding,ServiceNow acquires Moveworks for $2.9B to enhance IT automation.,https://www.theinformation.com,Acquisition,ServiceNow,Moveworks,IT Automation,AI Startup
+NewModel,Discussion of the Einstein AI Model and its impact.,https://www.theinformation.com,Einstein AI,AI Model,Deep Learning,Innovation,Technology
+Funding,OpenAI to pay CoreWeave $11.9B for AI data centers and services.,https://www.theinformation.com,OpenAI,CoreWeave,Data Centers,AI Infrastructure,Cloud Services
+Course,AI Agents: What's Working and What's Not - March 27 event.,https://www.theinformation.com,AI Agents,Salesforce,Grammarly,Webinar,Customer Support
+Funding,Financing the AI Revolution Summit in New York on April 28.,https://www.theinformation.com,AI Funding,Investment,AI Startups,Venture Capital,AI Revolution
+ContentType,Description,Tag1,Tag2,Tag3,Tag4,Tag5
+Product/Tool,"Pinterest leverages AI for ads, improving targeting and automation, leading to increased click-through rates.",AI,Advertising,Pinterest,Machine Learning,Targeting
+Product/Tool,"Pinterest uses GitHub Copilot for code generation, enhancing developer productivity with AI assistance.",AI,GitHub Copilot,Coding Assistant,Productivity,Software Engineering
+Product/Tool,Pinterest utilizes internal AI chatbot powered by GPT-4o to assist employees with company information retrieval.,AI Chatbot,GPT-4o,Internal Tool,Employee Assistance,Information Retrieval
+Product/Tool,Google Cloud provides insights on AI trends impacting Media & Entertainment in 2025.,AI Trends,Media,Entertainment,Google Cloud,Industry Analysis
+Funding,Upcoming event: Financing the AI Revolution Summit in New York on April 28th,AI,Investment,Funding,Summit,Networking
+ContentType,Description,Tag1,Tag2,Tag3,Tag4,Tag5
+NewModel,"xAI releases Grok-3, surpassing GPT-4o in math, science and coding.",xAI,Grok-3,LLM,Reasoning,Benchmarks
+Product/Tool,"Perplexity launches Deep Research, an AI tool for in-depth reports.",Perplexity,Deep Research,AI Tool,Reporting,Research
+NewModel,Mistral AI releases custom-trained models for specific regions/markets.,Mistral AI,Custom Models,Localization,Regional AI,Saba
+Product/Tool,"Microsoft releases OmniParser V2, turning LLMs into computer agents.",Microsoft,OmniParser V2,GUI Automation,LLM Agent,Automation
+Code,"Unsloth: fine-tune large models like Llama, improving performance.",Unsloth,Fine-tuning,LLM,Optimization,Open-source
+Code,"vLLM: library for fast, memory-efficient LLM inference and serving.",vLLM,Inference,Serving,Memory-efficient,Optimization
+Code,"Potpie: create AI agents for code analysis, debugging, and testing.",Potpie,AI Agents,Code Analysis,Debugging,Testing
+Tutorial,Learn to train reasoning models using GRPO technique.,GRPO,Reasoning Models,AI Optimization,Training,DeepSeek-R1
+ContentType,Description,Tag1,Tag2,Tag3,Tag4,Tag5
+Product/Tool,"OpenAI unveils Responses API with web search and file retrieval, and Agents SDK.",OpenAI,API,Agents,Web Search,File Retrieval
+Product/Tool,"Atla AI provides tools for custom evaluations, featuring Selene 1 LLM Judge.",Atla AI,LLM Judge,Evaluations,Selene 1,Benchmarks
+NewModel,Sam Altman discusses new OpenAI model excelling in creative metafiction writing.,OpenAI,New Model,Creative Writing,Metafiction,Altman
+NewModel,"Alibaba's Qwen Chat integrates vision-language models, adds video support.",Qwen,Chatbot,Multimodal AI,Video Analysis,Mobile
+Product/Tool,Perplexity AI launches Windows desktop app with voice and AI search.,Perplexity AI,Windows App,AI Search,Voice Dictation,Shortcuts
+Product/Tool,LangChain introduces an open-source app for LangGraph interaction.,LangChain,LangGraph,Open-Source,Interaction,Agent Chat UI
+Product/Tool,"Qodo releases Qodo Gen 1.0, an IDE plugin with agentic workflows.",Qodo,IDE Plugin,Agentic Workflow,MCP Integration,Code Generation
+Tutorial,Learn to set up MCP server with Typescript connecting to Claude code.,MCP,TypeScript,Claude,Server Setup,Integration
+Tutorial,How to set up Cursor's Project Rules for better AI-generated code.,Cursor,Project Rules,Code Generation,Scalability,Accuracy
+Tutorial,Hugging Face guide to run LLMs locally on mobile devices using React Native.,Hugging Face,Mobile LLMs,React Native,Offline Models,Privacy
+Tutorial,Connect Claude to the internet using MCP servers for web searches.,Claude,MCP Servers,Web Search,Brave Search API,Integration
+Product/Tool,"Run precise AI evals with Selene 1, an LLM Judge that outperforms frontier models.",AI Evals,LLM Judge,Selene 1,Benchmarking,Custom Evals
+ContentType,Description,Tag1,Tag2,Tag3,Tag4,Tag5
+NewModel,"Microsoft is training MAI-1, an in-house model to rival OpenAI and Google.",Microsoft,MAI-1,New Model,Competition,Innovation
+Product/Tool,OctoML's OctoStack delivers 5x superior results when handling sensitive data.,OctoML,OctoStack,Data processing,Optimization,Efficiency
+Product/Tool,Stack Overflow partners with OpenAI integrating coding solutions into ChatGPT.,Stack Overflow,OpenAI,ChatGPT,Coding,Partnership
+Product/Tool,"Galileo Protect stops AI hallucinations, prompt attacks, and security threats.",Galileo Protect,AI Security,Hallucination,Prompt attacks,Real-time
+Product/Tool,GitHub Copilot is the preferred coding tool for 55% of developers.,GitHub Copilot,Coding tool,AI assistant,Productivity,Development
+ContentType,Description,Tag1,Tag2,Tag3,Tag4,Tag5
+Product/Tool,Google unveils Gemini tools: Canvas for coding and Audio Overview for summaries.,AI Tools,Coding,Summarization,Gemini,Multimodal AI
+Tutorial,Learn how Reinforcement Fine-Tuning boosts LLM performance with minimal data.,LLM,Fine-tuning,Reinforcement Learning,DeepSeek-R1,RFT
+Book,Karpathy shares digital hygiene tips to improve privacy and security.,Privacy,Security,Digital Hygiene,Karpathy,Online Safety
+Product/Tool,"Stability AI releases Stable Virtual Camera, converting 2D images into 3D videos.",Generative AI,3D Video,Virtual Camera,Stability AI,Image Processing
+Product/Tool,Podcastle unveils a voice model offering lifelike AI voices with customizable options.,AI Voice Synthesis,Voice Cloning,API,Audio,Podcastle
+NewModel,"NVIDIA presents GR00T N1, an open-source humanoid robot foundation model.",AI Model,Robotics,Humanoid Robot,NVIDIA,Open-Source
+Product/Tool,"OpenAI adds PDF support for its API, enabling text and image context processing.",API Updates,PDF Processing,GPT-4o,OpenAI,Text Extraction
+Product/Tool,Zep enhances AI agents' memory and learning with a temporal knowledge graph.,AI Agents,Knowledge Graph,Memory,Reasoning,Zep
+NewModel,"CSM-1B is an open-source speech model by Sesame, generating high-quality speech.",Conversational AI,Speech Model,Open-Source,Audio Generation,Sesame
+NewModel,"Gemma-3-27B by Google handles text and image inputs, generates text.",Generative AI,Multimodal,Text Generation,Image Understanding,Google
+NewModel,"Phi-4-Multimodal-Instruct by Microsoft processes text, image, and audio inputs.",Multimodal AI,Text,Image,Audio,Microsoft
+Code,Optimize PyTorch models for production with TorchScript for improved speed.,PyTorch,TorchScript,Optimization,Deployment,Inference
+ContentType,Description,link,Tag1,Tag2,Tag3,Tag4,Tag5
+Course,"Stanford CS224N: NLP with Deep Learning. Covers word vectors, attention, transformers, etc.",https://web.stanford.edu/class/cs224n/,NLP,Deep Learning,CS224N,Stanford,Transformers
+Tutorial,Hugging Face Transformers tutorial. Introduction to using transformers for various NLP tasks.,https://huggingface.co/transformers/,Transformers,Hugging Face,NLP,Tutorial,Python
+Book,"Deep Learning by Goodfellow, Bengio, and Courville. Comprehensive resource on DL.",https://www.deeplearningbook.org/,Deep Learning,Book,Goodfellow,Bengio,Courville
+NewModel,"Introducing LLaMA: A foundational, 65B-parameter language model.",https://ai.facebook.com/blog/llama-open-and-efficient-foundation-language-models/,LLaMA,Meta,Language Model,Large Language Model,Open Source
+Funding,Funding round for AI startup focused on autonomous driving tech.,https://techcrunch.com/2023/03/15/ai-autonomous-driving-funding/,Funding,Autonomous Driving,AI Startup,Venture Capital,Investment
+ContentType,Description,Tag1,Tag2,Tag3,Tag4,Tag5
+Funding,Elon Musk offered to buy OpenAI for $97.4B with a deadline of May 10.,OpenAI,Acquisition,Elon Musk,AI,Business
+Product/Tool,UK Trial for Brain Implant using ultrasound to boost mood for conditions like depression.,Brain Implant,Ultrasound,Mental Health,Neurotech,Healthcare
+Product/Tool,Uber Eats expands with Avride to include autonomous sidewalk delivery bots in Jersey City.,Delivery Bots,Autonomous Delivery,Uber Eats,Avride,Robotics
+Code,"Automate macOS tasks using folder actions: convert MOV to MP4, download videos, and more.",macOS,Automation,Folder Actions,CLI,Scripting
+NewModel,Discussion about Large Language Models and the remaining functions they are capable of.,LLMs,Scaling,AGI,AI,Intelligence
+Product/Tool,AI stifles technology adoption due to training data cutoffs and system prompt influence.,,,,,
+Funding,Story of turning a doomed open-source project into a fast-growing AI company.,,,,,
+ContentType,Description,link,Tag1,Tag2,Tag3,Tag4,Tag5
+Course,Learn attention mechanism for transformer-based LLMs using PyTorch. Taught by Josh Starmer.,https://info.deeplearning.ai/e3t/Ctc/LX+113/cJhC404/MX3rLnW1wHhN6T5pPQz42wvW54fY-N5rZn2rN3wqV6g5m_5PW50kH_H6lZ3mPM4rJ19L0gnDW1NJCP48vLNmlW6RH7Dy4-4lCBN7B2Bt33V6_tW1xzq8f224LNzW5tHgz-5BfvFZW5m4Qcm7HNrLRW8tk3yF3cx7znW2Pzqvb4M6kpbN83v80hRjs01W2-RXpw3n8_s1W6t2Qhr7rSnVKN80t93y-t7cnW4x192C2hgvmpW6LTnj840Kd9lW5tT3Hv6Hp-rYW7Wr4dg70gLs6W2qpjkJ6YnHDNW15RvrC7QplSbW3mdJKX5JPrfjW22H_Sd1dyvjQV7M1DQ6PxV0SW3ynxpf4lnM83W4yRpfy1rNWj6W4lTyxJ6RY4HnMsYBYl9zbF4W1TYFmq8X8b9YW3Sx7lZ2CmPK_W8K5GxQ33vnYHW951VVz7RSC6zW6MWKSn3yF5jqW6PSfFx1HFHdKf3gJ-hg04,Attention Mechanism,Transformers,LLMs,PyTorch,Deep Learning
+ContentType,Description,link,Tag1,Tag2,Tag3,Tag4,Tag5
+Funding,Figure AI is in talks to raise $1.5B at a $39B+ valuation.,https://www.bloomberg.com/news/articles/2025-02-14/robotics-startup-figure-ai-in-talks-for-new-funding-at-39-5-billion-valuation,Figure AI,Robotics,Funding,Valuation,AI
+Product/Tool,The NY Times will use AI tool Echo to write social copy and SEO headlines.,https://www.semafor.com/article/02/16/2025/new-york-times-goes-all-in-on-internal-ai-tools,AI Tool,NY Times,Echo,SEO,Content Creation
+Product/Tool,Galileo released a guide about how to build reliable agents.,https://www.galileo.ai/ebook-mastering-agents?utm_medium=paid&utm_source=the_neuron&utm_campaign=sponsorship,AI Agents,Reliability,Guide,Ebook,Galileo
+Product/Tool,Jeff Su uses Projects to set up a “home base” document in Claude.,https://www.youtube.com/watch?v=RudrWy9uPZE,Claude,AI Tool,Productivity,Home Base,Workflow
+NewModel,"Elon hosted a livestream to release Grok 3, which will be in beta.",https://finance.yahoo.com/news/musk-says-xai-grok-3-051702714.html,Grok 3,AI Model,Elon Musk,xAI,Beta
+ContentType,Description,Tag1,Tag2,Tag3,Tag4,Tag5
+Product/Tool,Amazon unveils Alexa+ with deep personalization and autonomous multi-step tasks.,AI Assistant,Personalization,Multi-step tasks,Autonomous,Integration
+Product/Tool,OpenAI expands advanced voice access to free users with GPT-4o.,AI Assistant,Voice,GPT-4o,Free Access,Conversational AI
+Product/Tool,ElevenLabs releases highly accurate speech-to-text model with multi-speaker support.,Speech-to-Text,AI Model,Multi-speaker,Low-latency,Real-time
+Product/Tool,DeepSeek optimizes pipeline parallelism for faster training of large AI models.,AI Optimization,Pipeline Parallelism,Large Models,DeepSeek,GPU utilization
+Product/Tool,Perplexity introduces interactive voice search with real-time answers.,AI Assistant,Voice Search,Real-time,Interactive,Customizable
+Product/Tool,Allen AI unveils open-source OCR beating top PDF tools.,,,,,
+Product/Tool,Speechmatics provides real-time speech transcription with high speed & accuracy.,,,,,
+Course,Learn how to evaluate AI agents by adding observability and structured experimentation.,,,,,
+Course,Learn how to implement LLMs from scoping to deployment effectively.,,,,,
+Course,Automate Jira project management with Gemini 2.0 and Crew AI agents.,,,,,
+Tutorial,Build a Slack clone with Claude 3.7 Sonnet and Cursor Agent from scratch.,,,,,
+ContentType,Description,Tag1,Tag2,Tag3,Tag4,Tag5
+NewModel,"OpenAI urges the US to ban DeepSeek models, citing security concerns and potential IP theft.",OpenAI,DeepSeek,Ban,Security,Models
+Product/Tool,"Bounti: AI teammate for sales research and prep. Closes target accounts, and helps with pitches.",Sales,AI,Bounti,Prospecting,Automation
+NewModel,Google advocates for weaker copyright laws to train AI models with publicly available data with minimal restrictions.,Copyright,Google,AI Training,Fair Use,Data Mining
+Product/Tool,Aragon AI headshot generator: AI-powered tool for creating professional headshots for better brand image.,AI,Headshot,Generator,Aragon,Personal Branding
+Product/Tool,"Automate up to 90% of compliance for SOC 2, ISO 27001, and more with Vanta.",Compliance,Automation,SOC 2,ISO 27001,Vanta
+Product/Tool,Mem AI is an AI-powered note-taking app that makes note-taking more efficient.,,,,,
+Tutorial,Prompt Inspiration: Create contingency plans for potential issues like supplier failures using Prompt Engineer GPT.,,,,,
+Course,"The AI Accelerator offers courses, masterminds, consultation, and audit from AI experts.",,,,,
+Book,NVIDIA chip smugglers were granted bail after being arrested by Singaporean authorities. ,,,,,
+Funding,Mem AI value: $110M,,,,,
+Product/Tool,"ChatNode is for building custom, advanced AI chatbots that enhance customer support and user engagement",,,,,
+Product/Tool,Tufa is an AI tool that streamlines social media management,,,,,
+ContentType,Description,link,Tag1,Tag2,Tag3,Tag4,Tag5
+Product/Tool,"Startups are debuting AI agents for supply chain management, but adoption faces skepticism due to trust concerns.",https://www.theinformation.com/articles/applied-ai,AI Agents,Supply Chain,Logistics,Automation,E-commerce
+NewModel,"Anthropic is focused on selling AI models to app developers, potentially challenging OpenAI's API dominance.",https://www.theinformation.com/articles/applied-ai,Anthropic,OpenAI,API,AI Models,App Development
+Product/Tool,Google Cloud's AI Trends 2025 in Media & Entertainment highlights key trends for leveraging AI.,https://www.theinformation.com/articles/applied-ai,Google Cloud,AI Trends,Media,Entertainment,Cloud AI
+Funding,Legal AI Startup Eudia Gets $105 Million,https://www.theinformation.com/articles/applied-ai,Eudia,Legal AI,Funding,Startup,Venture Capital
+NewModel,Ex-DeepMind Scientist Launches AI Drug Discovery Venture,https://www.theinformation.com/articles/applied-ai,DeepMind,Drug Discovery,Venture,AI,NewModel
+Course,AI Agenda Live - SF event on February 27 features top AI leaders discussing industry questions.,https://www.theinformation.com/articles/applied-ai,,,,,
+Course,Financing the AI Revolution Summit in New York on April 28 will explore deals and trends.,https://www.theinformation.com/articles/applied-ai,,,,,
+ContentType,Description,Tag1,Tag2,Tag3,Tag4,Tag5
+NewModel,"Anthropic releases Claude 3.7 Sonnet, designed to 'think' longer, costing $3 per million input tokens.",Anthropic,Claude 3.7 Sonnet,AI Model,Reasoning,Pricing
+Product/Tool,"Perplexity teases Comet, a browser for agentic search, expanding its AI-powered product portfolio.",Perplexity,Comet,AI Browser,Search Engine,Agentic Search
+Code,Claude Code is an agentic coding tool for faster development via natural language commands in the terminal.,Claude Code,Agentic Coding,Development Tool,Natural Language,Codebase Management
+NewModel,The new generation of AI models are smarter and the jump in capabilities is striking.,AI Models,Claude 3.7,Grok 3,Complex Tasks,Capabilities
+ContentType,Description,link,Tag1,Tag2,Tag3,Tag4,Tag5
+NewModel,"Sam Altman's three observations on AI development, costs and exponential returns",https://blog.samaltman.com/three-observations,AGI,AI Economics,Predictions,Future,OpenAI
+Tutorial,Tutorial on building GenAI systems accessing company data securely.,https://unstructured.io/webinars/secure-ai-assistants-onyx-webinar,GenAI,Data Access,Security,Webinar,Unstructured
+Product/Tool,Incogni removes personal data from the internet (55% off).,https://deal.incogni.io/aff_c?offer_id=6&aff_id=1011&url_id=1,Privacy,Data Removal,Security,Online Safety,Tool
+Product/Tool,Prompt to get ChatGPT to be a sparring partner.,https://www.reddit.com/r/ChatGPT/comments/1ijr08f/a_prompt_to_avoid_chatgpt_simply_agreeing_with/,ChatGPT,Prompt Engineering,Critical Thinking,AI interaction,Sparring
+NewModel,Apple's self-driving AI excelled in virtual testing,https://arxiv.org/abs/2502.03349,Self-driving,AI,Apple,Virtual Testing,Autonomous Vehicles
+ContentType,Description,Tag1,Tag2,Tag3,Tag4,Tag5
+Product/Tool,Microsoft launches Copilot+ PCs with local generative AI processing capabilities and features like Recall.,Copilot+,Local AI,Recall,Microsoft,NPU
+NewModel,OpenAI pauses ChatGPT voice 'Sky' resembling Scarlett Johansson after controversy.,OpenAI,ChatGPT,Voice,GPT-4o,Ethics
+Funding,Google to invest $1.1B to expand its Finnish data center and grow its AI business in Europe.,Google,Investment,Data Center,Europe,AI Expansion
+Course,JPMorgan Chase is training all new banking hires in AI and prompt engineering.,JPMorgan,AI Training,Prompt Engineering,Banking,Hiring
+Product/Tool,"Three filmmakers founded Late Night Labs, a generative AI film and animation studio.",Generative AI,Film,Animation,Studio,Late Night Labs
+NewModel,"OpenAI's latest chatbot technology, GPT-4o, will launch for Microsoft Copilot.",,,,,
+NewModel,British AI Safety Institute to open first overseas office in U.S.,,,,,
+ContentType,Description,Tag1,Tag2,Tag3,Tag4,Tag5
+Product/Tool,"OpenAI releases o1-pro, a more powerful but expensive AI model with improved reasoning capabilities.",OpenAI,AI Model,Reasoning,o1-pro,API
+Product/Tool,"Google launches the Pixel 9a with Tensor G4, featuring camera and battery improvements.",Google,Pixel 9a,Tensor G4,Smartphone,Camera
+Tutorial,"Tutorial on using Elasticsearch, Ollama, and Kibana for local RAG with DeepSeek R1.",DeepSeek R1,Elasticsearch,Ollama,Kibana,RAG
+Product/Tool,"xAI launches an API for generating images, offering 10 images per request.",xAI,Image Generation,API,Grok-2-image-1212,AI
+Code,"Discussion on AI's coding blindspots, specifically focusing on the Sonnet family of models.",AI,Blindspots,Coding,Sonnet,LLM
+ContentType,Description,Tag1,Tag2,Tag3,Tag4,Tag5
+NewModel,xAI offers free Grok 3 access with DeepSearch and Think mode.,Grok3,xAI,DeepSearch,ThinkMode,AIModelFreeAccess
+NewModel,Perplexity open-sources DeepSeek R1 variant without censorship.,Perplexity,DeepSeekR1,OpenSourceAI,UncensoredAI,LanguageModel
+Product/Tool,"Microsoft introduces Majorana 1, a quantum chip.",Microsoft,QuantumComputing,Majorana1,QuantumChip,Topoconductors
+Product/Tool,GitHub launches GPT-4o Copilot model for VS Code.,GitHub,GPT-4o,Copilot,VSCode,CodeCompletion
+Product/Tool,Sakana AI releases AI CUDA Engineer for CUDA optimization.,SakanaAI,AICUDAEngineer,CUDA,KernelOptimization,AIOptimization
+Course,Learn app development with OpenAI o1-Pro.,,,,,
+Book,Hugging Face book on scaling LLMs.,,,,,
+Course,Microsoft's course teaches core AI agents concepts.,,,,,
+Tutorial,"AI Co-Scientist, a multi-agent system by Google.",,,,,
+NewModel,Microsoft's Satya Nadella discusses AI and quantum leap.,,,,,

@@ -75,3 +75,21 @@ data/😺 GPT5 will be FREE_!.eml
 data/😺 Satya slams AGI hype.eml
 data/Siri all-hands leaks 📱, YC's historic cohort 📈, running major projects 👨‍💻.eml
 data/Action Required_ Recurring buys failed - please add funds to your Wealthsimple account.eml
+data/Applied AI_ $120 Billion Fintech Firm Trains Chatbot—on Customer Data.eml
+data/Applied AI_ What’s Working at Pinterest.eml
+data/🏆 xAI unveils Grok-3_ Smartest AI Model Yet.eml
+data/⚡ OpenAI Releases New Tools for Building Agents.eml
+data/😺 Less $$$, more power.eml
+data/🔥 Google Unveils AI Podcast Summaries & Code Editor in Gemini.eml
+data/.DS_Store
+data/Elon's OpenAI offer letter 📝, TikTok's app store return 📱, macOS Folder Actions 👨‍💻.eml
+data/New course taught by Josh Starmer! Attention in Transformers_ Concepts and Code in PyTorch.eml
+data/😺 Robot money printer go BRR.eml
+data/🚀 Amazon Unveils Alexa+_ Handles Multi-Step Tasks Autonomously.eml
+data/⛔ OpenAI urges US to ban DeepSeek.eml
+data/Applied AI_ Agents Hit Trust Roadblock With Logistics Execs.eml
+data/Anthropic's next-gen AI 🧠, Perplexity browser 🌎, Claude Code 👨‍💻.eml
+data/😺 Sam drops 2035 AI bombshell.eml
+data/Microsoft's new Copilot+ PCs have built-in AI _ OpenAI pauses ChatGPT voice resembling Scarlett Johansson _ Colorado governor signs AI law.eml
+data/Google Pixel 9a 📱, OpenAI o1-pro API 🤖, AI in legacy codebases 👨‍💻.eml
+data/🔍 Google Unveils Multi-Agent AI For  Hypothesis Generation.eml

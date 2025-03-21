@@ -57,7 +57,7 @@ app.layout = dbc.Container(
         dbc.Row(
             dbc.Col(
                 html.P(
-                    "Disclaimer: Information collected from various internet sources. Please verify the information before making any decisions.",
+                    "Disclaimer: Information presented here is collected from various internet sources. Please verify the information before making any decisions.",
                     className="text-muted text-center",
                 )
             )

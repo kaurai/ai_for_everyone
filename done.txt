@@ -64,4 +64,14 @@ data/🚨 OpenAI's Sora is finally out + Quantum Breakthrough.eml
 data/🚨New Open-Source Code LLM Tackles What Claude Couldn't.eml
 data/🚨Open-Source Rival to OpenAI's Reasoning Model (1).eml
 data/🧠 OpenAI’s o1 gets challenged by a new LLM reasoning layer.eml
-data/🧰 A Data Scientist's GenAI Survival Guide.eml
+data/Scale AI raises $1B _ First European AI rules to take effect in weeks _ Google to show ads in AI-generated search summaries.eml
+data/🧐 OpenAI further increases Microsoft tensions_.eml
+data/GenAI with Python_ Build Agents from Scratch (Complete Tutorial) _ Mauro Di Pietro in TDS Archive.eml
+data/😺 AI work habits REVEALED.eml
+data/Amazon Alexa+ 🤖, Instagram Reels app 📱, Nvidia squeezes partners 💰.eml
+data/Apple's robot lamp 💡, Google AI Mode 🤖, TikTok's dev exodus 👨‍💻.eml
+data/😺 Spot the AI Katy Perry.eml
+data/😺 GPT5 will be FREE_!.eml
+data/😺 Satya slams AGI hype.eml
+data/Siri all-hands leaks 📱, YC's historic cohort 📈, running major projects 👨‍💻.eml
+data/Action Required_ Recurring buys failed - please add funds to your Wealthsimple account.eml

@@ -736,3 +736,74 @@ Tutorial,Develop AI workloads on Intel Tiber AI Cloud.,https://link.alphasignal.
 Tutorial,Accelerate text generation with LSTM using Intel® Extension for TensorFlow.,https://link.alphasignal.ai/HDE8Rt,LSTM,Text Generation,TensorFlow,Intel Extension,Deep Learning
 Tutorial,Build chat model using DialoGPT and PyTorch.,https://link.alphasignal.ai/yIFIHk,DialoGPT,PyTorch,Chat Model,Hugging Face,Deep Learning
 Tutorial,End-to-end ML workflow on census data using Modin and scikit-learn,https://link.alphasignal.ai/NuKDaE,Modin,Scikit-learn,Machine Learning,Census Data,Data Analysis
+ContentType,Description,Tag1,Tag2,Tag3,Tag4,Tag5
+Funding,"Scale AI raises $1B in late-stage funding, valuing the company at $13.8B.",Data Labeling,AI Training,Funding Round,Venture Capital,Scale AI
+Product/Tool,"Microsoft unveils Copilot Agents, AI business assistants for automated task performance.",Copilot,Agents,Microsoft,AI Assistant,Automation
+NewModel,"Microsoft launched Phi-3-vision, a compact AI model for mobile text and image analysis.",Phi-3-vision,AI Model,Microsoft,Image Analysis,Mobile AI
+Product/Tool,"Microsoft's Team Copilot manages meetings, projects, and tasks within Microsoft Teams.",Team Copilot,AI Assistant,Microsoft Teams,Project Management,Collaboration
+Product/Tool,Microsoft Edge translates YouTube videos in real-time using AI.,Edge,Translation,YouTube,AI,Real-time
+Course,Microsoft and Khan Academy partner to offer free access to Khanmigo for K-12 teachers.,Khanmigo,Khan Academy,Microsoft,Education,AI Teaching Assistant
+Funding,PwC report: Jobs needing AI skills get paid more than jobs that don't,AI Skills,Salary,PwC,Job Market,Wage Premium
+NewModel,IBM will release AI models as open-source and help Saudi Arabia to create an Arabic AI model,AI Model,IBM,Open Source,Arabic AI,Saudi Arabia
+ContentType,Description,Tag1,Tag2,Tag3,Tag4,Tag5
+NewModel,"OpenAI signed a $11.9B agreement with CoreWeave, escalating tensions with Microsoft.",OpenAI,Microsoft,CoreWeave,AI Infrastructure,Partnership
+Funding,DeepSeek rejects funding offers from Tencent and Alibaba to maintain control.,DeepSeek,Funding,AI Startup,Venture Capital,China
+Product/Tool,"Microsoft is building 3D games for its AI chatbot, Copilot, integrating AI in gaming.",Microsoft,Copilot,AI Gaming,3D Games,Muse AI Model
+Course,Innovating with AI offers a program to build a 6-figure AI consulting business.,AI Consulting,Business,Training Program,AI Transformation,Consultancy Project
+Product/Tool,Jotform AI Agents lets you customize and train your own personal AI Agents.,AI Agents,Jotform,Automation,Customer Experience,Workflow
+Funding,"Suno, an AI music creation platform, raised $125M in Series B funding.",Suno,AI Music,Music Generation,Funding,ChatGPT
+ContentType,Description,Tag1,Tag2,Tag3,Tag4,Tag5
+Tutorial,"Build GenAI agents from scratch with Python, Ollama, LangChain and LangGraph without GPU or API key.",GenAI,Python,LangChain,LangGraph,Ollama
+Tutorial,A walkthrough of creating a Udemy dashboard for getting a Data Analyst job.,Data Analysis,Dashboard,Udemy,Data Visualization,Career
+Tutorial,An overview of using Token Log-Probabilities to predict LLM hallucinations in applications.,LLM,Hallucinations,Token Log-Probabilities,AI,Applications
+Code,"Guide on how to create and publish your own crypto token, using BEP-20.",Crypto,Token,BEP-20,Blockchain,Guide
+Tutorial,Data Science projects that can help get you interviews and a job.,Data Science,Projects,Interviews,Career,Portfolio
+ContentType,Description,Tag1,Tag2,Tag3,Tag4,Tag5
+NewModel,Anthropic released a report on how Claude is used at work.,Claude,Anthropic,AI Usage,Workplace AI,AI Report
+Product/Tool,"Concierge AI assistant integrates with tools like Gmail, Slack.",AI Assistant,Concierge,Productivity,Integration,Automation
+Product/Tool,GitHub Copilot Agent Mode automates code writing/fixing.,GitHub Copilot,Agent Mode,Code Automation,AI Coding,Developer Tool
+Product/Tool,First HR manages HR tasks via chat interface.,HR Automation,AI Chatbot,HR Tasks,Employee Management,Productivity
+Product/Tool,One Shot LORA converts videos to consistent imagery.,Video Conversion,Image Generation,LORA,Fan Art,Character Design
+Product/Tool,ToolJet builds internal tools from text descriptions instantly.,Internal Tools,App Development,Low-Code,Text-to-App,Automation
+Product/Tool,Figr Identity generates design systems in Figma.,Figma Plugin,Design System,UI Design,Automation,Design Tool
+Product/Tool,Zonos clones voices and turns text to speech.,Text-to-Speech,Voice Cloning,Audio Generation,AI Voice,Speech Synthesis
+Tutorial,Guide to Prompt Engineering.,Prompt Engineering,Guide,LLM,AI,Formulas
+Funding,Invest in Elf Labs,Elf Labs,Investment,Entertainment,AI,AR
+ContentType,Description,Tag1,Tag2,Tag3,Tag4,Tag5
+Product/Tool,Amazon is rolling out a more capable and conversational version of Alexa to US Prime members.,Alexa,Amazon,AI,Voice Assistant,Smart Home 
+Code,Semaphore is a CI/CD platform that can be self-hosted or run on a cloud provider.,CI/CD,Platform,Devops,Automation,Cloud
+Code,Chicory allows developers to run WebAssembly (Wasm) programs with zero native dependencies or JNI.,WebAssembly,Wasm,JVM,Development,Programming
+ContentType,Description,Tag1,Tag2,Tag3,Tag4,Tag5
+NewModel,Google is internally testing a new search 'AI Mode' powered by Gemini 2.0.,Google,Gemini 2.0,AI Mode,Search,Testing
+Product/Tool,"Apple built a non-anthropomorphic robot lamp prototype with expressive, human-like gestures.",Apple,Robotics,Robot Lamp,Prototype,Expressive Design
+Product/Tool,"OpenAI demoed an AI sales agent in Tokyo, showcasing customer information management.",OpenAI,Sales Agent,AI,Tokyo,Deep Research
+NewModel,OpenAI reveals more of its O3-mini model's thought process after rivals' pressure.,OpenAI,O3-mini,AI Model,Transparency,DeepSeek
+Product/Tool,Mistral releases its AI assistant on iOS and Android with a Pro tier.,Mistral,AI Assistant,Mobile App,iOS,Android
+ContentType,Description,Tag1,Tag2,Tag3,Tag4,Tag5
+NewModel,OpenAI is building an AI image detection tool with 98% accuracy.,OpenAI,Image Detection,DALL-E 3,AI Tool,Accuracy
+Funding,"Wayve, a self-driving car startup, raised $1B+ in funding.",Self-driving Cars,Wayve,Funding,Automotive AI,Investment
+Tutorial,"Visually explained attention in transformers. Chapter 6, Deep Learning.",Transformers,Attention Mechanism,Deep Learning,Tutorial,Visualization
+Product/Tool,"OpenAI is developing Media Manager, allowing opting out of AI training.",OpenAI,Media Manager,AI Training Data,Content Control,Privacy
+Funding,"Daloopa, an AI platform for financial data extraction, secured $18M.",AI Platform,Financial Data,Daloopa,Funding,Data Extraction
+ContentType,Description,Tag1,Tag2,Tag3,Tag4,Tag5
+Product/Tool,"Pika launched Pikaswaps, an AI video generator with Snapchat-like filters.",AI Video Generation,Filters,Pika,GenAI,Mobile App Development
+NewModel,Details on GPT-4o's differences and broken custom GPTs.,GPT-4o,OpenAI,AI Models,Language Models,Custom GPTs
+Product/Tool,Gradio Sketch enables no-code ML app building.,Gradio,Machine Learning,No-Code,App Development,HuggingFace
+NewModel,PaliGemma 2 Mix identifies content in photos.,Image Recognition,Google,AI Model,Object Detection,Computer Vision
+Code,Sakana AI's system makes GPU code run faster.,GPU,Code Optimization,Sakana AI,AI System,High Performance Computing
+ContentType,Description,Tag1,Tag2,Tag3,Tag4,Tag5
+NewModel,Grok 3's new thinking mode leaks system prompt.,LLM,System Prompt,Grok,xAI,Misinformation Detection
+Funding,OpenAI projects spending $325B on compute.,OpenAI,Investment,Compute,ASI,Infrastructure
+Funding,Amazon's investment in Anthropic is now worth $14B.,Anthropic,Amazon,Investment,Claude,AI Valuation
+Product/Tool,Google's Veo 2 AI video model is priced at $1800/hour.,Veo 2,Google,Video Generation,Pricing,AI Model
+Product/Tool,HubSpot's guide offers 100+ ChatGPT prompts.,ChatGPT,Prompts,Productivity,HubSpot,AI Guide
+Tutorial,Ultra-scale playbook for LLM training on GPUs.,LLM,Training,GPUs,Hugging Face,Efficiency
+Code,Hibiki converts speech to another language.,Speech Translation,Language Conversion,Hibiki,Kyutai,Multilingual AI
+Code,Microsoft's OmniParser-v2.0 turns screenshots into maps.,OmniParser,Microsoft,Screenshot Analysis,Interface Navigation,Automation
+Course,AI Agents for Beginners course by Microsoft.,AI Agents,Microsoft,Course,Coding,Hands-on Learning
+ContentType,Description,Tag1,Tag2,Tag3,Tag4,Tag5
+NewModel,"Apple's Siri chief acknowledges AI delays as ""ugly and embarrassing"" and promises fixes. Enhancements are expected next year.",Siri,Apple,AI Delays,Natural Language Processing,AI Assistants
+Product/Tool,Tern AI is building a low cost GPS alternative using map data and vehicle sensor data.,GPS,Localization,Sensor Fusion,Mapping,Autonomous Vehicles
+Funding,"Y Combinator startups are experiencing rapid growth and profitability due to AI, with 95% of code written by AI.",Y Combinator,Startups,AI,Funding,Venture Capital
+ContentType,Description,link,Tag1,Tag2,Tag3,Tag4,Tag5
+Product/Tool,Wealthsimple: Recurring investment failure due to insufficient funds. Options to add funds or backup payment.,https://clicks.wealthsimple.com/f/a/5SIbasKtfILnpbl0gseUTA~~/AAQRxRA~/dfVHs46ErCSCYHzCkK-Bkz8Zr-JBusL2yu83BmKAhJK7aGSu9zmKPDutgaQsIf4oOOnLth9HQE1qLvpLDsaZrgDdR0qj3V4b_wYPDZu4Im6_lTUgITkvyI_mEHejr4dr,Investment,Finance,Wealthsimple,Recurring Order,Insufficient Funds

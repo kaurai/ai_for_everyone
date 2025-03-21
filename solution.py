@@ -2,7 +2,6 @@
 from abc import ABC, abstractmethod
 import os
 from openai import OpenAI
-from ollama import Client
 import google.generativeai as genai
 from dotenv import load_dotenv
 load_dotenv()

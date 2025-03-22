@@ -805,9 +805,7 @@ ContentType,Description,Tag1,Tag2,Tag3,Tag4,Tag5
 NewModel,"Apple's Siri chief acknowledges AI delays as ""ugly and embarrassing"" and promises fixes. Enhancements are expected next year.",Siri,Apple,AI Delays,Natural Language Processing,AI Assistants
 Product/Tool,Tern AI is building a low cost GPS alternative using map data and vehicle sensor data.,GPS,Localization,Sensor Fusion,Mapping,Autonomous Vehicles
 Funding,"Y Combinator startups are experiencing rapid growth and profitability due to AI, with 95% of code written by AI.",Y Combinator,Startups,AI,Funding,Venture Capital
-ContentType,Description,link,Tag1,Tag2,Tag3,Tag4,Tag5
 Product/Tool,Wealthsimple: Recurring investment failure due to insufficient funds. Options to add funds or backup payment.,https://clicks.wealthsimple.com/f/a/5SIbasKtfILnpbl0gseUTA~~/AAQRxRA~/dfVHs46ErCSCYHzCkK-Bkz8Zr-JBusL2yu83BmKAhJK7aGSu9zmKPDutgaQsIf4oOOnLth9HQE1qLvpLDsaZrgDdR0qj3V4b_wYPDZu4Im6_lTUgITkvyI_mEHejr4dr,Investment,Finance,Wealthsimple,Recurring Order,Insufficient Funds
-ContentType,Description,link,Tag1,Tag2,Tag3,Tag4,Tag5
 Product/Tool,Fiserv is developing an AI chatbot for financial firms using customer data.,https://www.theinformation.com,AI Chatbot,Financial Services,Data Analytics,Customer Support,Fiserv
 Product/Tool,Snowflake and Databricks are in talks with Google/Anthropic for AI data security.,https://www.theinformation.com,Data Security,Snowflake,Databricks,Google Gemini,Anthropic
 Funding,ServiceNow acquires Moveworks for $2.9B to enhance IT automation.,https://www.theinformation.com,Acquisition,ServiceNow,Moveworks,IT Automation,AI Startup
@@ -862,7 +860,6 @@ NewModel,"CSM-1B is an open-source speech model by Sesame, generating high-quali
 NewModel,"Gemma-3-27B by Google handles text and image inputs, generates text.",Generative AI,Multimodal,Text Generation,Image Understanding,Google
 NewModel,"Phi-4-Multimodal-Instruct by Microsoft processes text, image, and audio inputs.",Multimodal AI,Text,Image,Audio,Microsoft
 Code,Optimize PyTorch models for production with TorchScript for improved speed.,PyTorch,TorchScript,Optimization,Deployment,Inference
-ContentType,Description,link,Tag1,Tag2,Tag3,Tag4,Tag5
 Course,"Stanford CS224N: NLP with Deep Learning. Covers word vectors, attention, transformers, etc.",https://web.stanford.edu/class/cs224n/,NLP,Deep Learning,CS224N,Stanford,Transformers
 Tutorial,Hugging Face Transformers tutorial. Introduction to using transformers for various NLP tasks.,https://huggingface.co/transformers/,Transformers,Hugging Face,NLP,Tutorial,Python
 Book,"Deep Learning by Goodfellow, Bengio, and Courville. Comprehensive resource on DL.",https://www.deeplearningbook.org/,Deep Learning,Book,Goodfellow,Bengio,Courville
@@ -876,9 +873,7 @@ Code,"Automate macOS tasks using folder actions: convert MOV to MP4, download vi
 NewModel,Discussion about Large Language Models and the remaining functions they are capable of.,LLMs,Scaling,AGI,AI,Intelligence
 Product/Tool,AI stifles technology adoption due to training data cutoffs and system prompt influence.,,,,,
 Funding,Story of turning a doomed open-source project into a fast-growing AI company.,,,,,
-ContentType,Description,link,Tag1,Tag2,Tag3,Tag4,Tag5
 Course,Learn attention mechanism for transformer-based LLMs using PyTorch. Taught by Josh Starmer.,https://info.deeplearning.ai/e3t/Ctc/LX+113/cJhC404/MX3rLnW1wHhN6T5pPQz42wvW54fY-N5rZn2rN3wqV6g5m_5PW50kH_H6lZ3mPM4rJ19L0gnDW1NJCP48vLNmlW6RH7Dy4-4lCBN7B2Bt33V6_tW1xzq8f224LNzW5tHgz-5BfvFZW5m4Qcm7HNrLRW8tk3yF3cx7znW2Pzqvb4M6kpbN83v80hRjs01W2-RXpw3n8_s1W6t2Qhr7rSnVKN80t93y-t7cnW4x192C2hgvmpW6LTnj840Kd9lW5tT3Hv6Hp-rYW7Wr4dg70gLs6W2qpjkJ6YnHDNW15RvrC7QplSbW3mdJKX5JPrfjW22H_Sd1dyvjQV7M1DQ6PxV0SW3ynxpf4lnM83W4yRpfy1rNWj6W4lTyxJ6RY4HnMsYBYl9zbF4W1TYFmq8X8b9YW3Sx7lZ2CmPK_W8K5GxQ33vnYHW951VVz7RSC6zW6MWKSn3yF5jqW6PSfFx1HFHdKf3gJ-hg04,Attention Mechanism,Transformers,LLMs,PyTorch,Deep Learning
-ContentType,Description,link,Tag1,Tag2,Tag3,Tag4,Tag5
 Funding,Figure AI is in talks to raise $1.5B at a $39B+ valuation.,https://www.bloomberg.com/news/articles/2025-02-14/robotics-startup-figure-ai-in-talks-for-new-funding-at-39-5-billion-valuation,Figure AI,Robotics,Funding,Valuation,AI
 Product/Tool,The NY Times will use AI tool Echo to write social copy and SEO headlines.,https://www.semafor.com/article/02/16/2025/new-york-times-goes-all-in-on-internal-ai-tools,AI Tool,NY Times,Echo,SEO,Content Creation
 Product/Tool,Galileo released a guide about how to build reliable agents.,https://www.galileo.ai/ebook-mastering-agents?utm_medium=paid&utm_source=the_neuron&utm_campaign=sponsorship,AI Agents,Reliability,Guide,Ebook,Galileo
@@ -909,7 +904,6 @@ Book,NVIDIA chip smugglers were granted bail after being arrested by Singaporean
 Funding,Mem AI value: $110M,,,,,
 Product/Tool,"ChatNode is for building custom, advanced AI chatbots that enhance customer support and user engagement",,,,,
 Product/Tool,Tufa is an AI tool that streamlines social media management,,,,,
-ContentType,Description,link,Tag1,Tag2,Tag3,Tag4,Tag5
 Product/Tool,"Startups are debuting AI agents for supply chain management, but adoption faces skepticism due to trust concerns.",https://www.theinformation.com/articles/applied-ai,AI Agents,Supply Chain,Logistics,Automation,E-commerce
 NewModel,"Anthropic is focused on selling AI models to app developers, potentially challenging OpenAI's API dominance.",https://www.theinformation.com/articles/applied-ai,Anthropic,OpenAI,API,AI Models,App Development
 Product/Tool,Google Cloud's AI Trends 2025 in Media & Entertainment highlights key trends for leveraging AI.,https://www.theinformation.com/articles/applied-ai,Google Cloud,AI Trends,Media,Entertainment,Cloud AI
@@ -922,7 +916,6 @@ NewModel,"Anthropic releases Claude 3.7 Sonnet, designed to 'think' longer, cost
 Product/Tool,"Perplexity teases Comet, a browser for agentic search, expanding its AI-powered product portfolio.",Perplexity,Comet,AI Browser,Search Engine,Agentic Search
 Code,Claude Code is an agentic coding tool for faster development via natural language commands in the terminal.,Claude Code,Agentic Coding,Development Tool,Natural Language,Codebase Management
 NewModel,The new generation of AI models are smarter and the jump in capabilities is striking.,AI Models,Claude 3.7,Grok 3,Complex Tasks,Capabilities
-ContentType,Description,link,Tag1,Tag2,Tag3,Tag4,Tag5
 NewModel,"Sam Altman's three observations on AI development, costs and exponential returns",https://blog.samaltman.com/three-observations,AGI,AI Economics,Predictions,Future,OpenAI
 Tutorial,Tutorial on building GenAI systems accessing company data securely.,https://unstructured.io/webinars/secure-ai-assistants-onyx-webinar,GenAI,Data Access,Security,Webinar,Unstructured
 Product/Tool,Incogni removes personal data from the internet (55% off).,https://deal.incogni.io/aff_c?offer_id=6&aff_id=1011&url_id=1,Privacy,Data Removal,Security,Online Safety,Tool
@@ -953,7 +946,5 @@ Book,Hugging Face book on scaling LLMs.,,,,,
 Course,Microsoft's course teaches core AI agents concepts.,,,,,
 Tutorial,"AI Co-Scientist, a multi-agent system by Google.",,,,,
 NewModel,Microsoft's Satya Nadella discusses AI and quantum leap.,,,,,
-ContentType,Description,link,Tag1,Tag2,Tag3,Tag4,Tag5
 Research Update,PCR-free kits enhance genome sequencing performance and productivity.,https://email.labxmediagroup.com/e3t/Ctc/LT+113/c3tLW04/VWf8vf8Q8QK5W6ZVPV954tb29W5r_q0D5tqNTtN3kz7Fq3qgyTW95jsWP6lZ3nKW6fX4fS6_X-BQW66Dbg080_ltnN3s5Yhb7cBtDW8WFqd87KWYtxN1cYS65Tpz5LN8qjvKB6YgFHVXN_fR3c_Hg7W1h4HbV2zx36RW8Wf7Bl4TNQNYW2kVBqK4VzSxLW51-BHT2cnqQVW3mhchY7qzbdhW6Cr42z3DX75rW2Rj7gC8rrW2MN27kyzR_1pvCN3T26tKnhwTYW4sPSSf7k8TvbVhqM7j3byjjJW3NlB9n5qSHRwW273x0Q4LMKwHW95LnBY5j9mRTW55FyXs42KbCrW3YmbFJ7PR-rXW1zNJhj6TB42xN1bd0RNtTMrPW3y5Xj72gt75DW6h_Yyk88RBcxW99yhGT5VKmMhW7nrScc9dMsqxVmk2pb8Pd34tf6w48Y404>,genomics,sequencing,PCR-free,library preparation,research
-ContentType,Description,link,Tag1,Tag2,Tag3,Tag4,Tag5
 BOOK,Optimizing whole genome sequencing using PCR-free methods.,https://email.labxmediagroup.com/e3t/Ctc/LT+113/c3tLW04/VWf8vf8Q8QK5W6ZVPV954tb29W5r_q0D5tqNTtN3kz7Fq3qgyTW95jsWP6lZ3pmW5tSvfC715YzyW1CZ--t3v1svHVcX6pj49y5s0W2LYpnB3Zz0bsW6DYJMP6cPJTqW7b1bS81yL_6CW6TS7tf1ps_jQW4bh8x63TJ6vLW1VWgQq2V5JVPW86lRpq3cLkw2W8kNR7X3Y-QwkVh9SwR4hXKSCW5FLdg16M06YFW4nfNC4892tFdW7dzbg55DX4w1W5hGkCn2Z4W6dW5fYwbk46Gb0tW3zKTqm2T3g8XW8zHfvP1Sl7PKW1qQnrR2yGW9mN7lVKQgS43j1W8nsKVY1wxXp8W2Y198F4TP0yzW1CtTkj77wQygW8tgBXH6L_5RGW5_hv1X3R_N84V2Qz5T8bjCklW2yLFhH5NpzcfW6dKCDx2zpn8cW1mfHBG4sdxtxf6mbLG204,"genomics,","PCR-free,","sequencing,",library,"preparation,"

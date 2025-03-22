@@ -6,7 +6,7 @@ user_prompt: |-
   
   1. Content Type: Can be one of the provided values.
   2. Description: Should be a brief summary of the content. Maximum of 30 tokens
-  3. Tags: Add exactly 5 tags that describe the content.
+  3. Tags: Add exactly 5 tags that describe the content. No more than 5 tags should be here. 
   4. Link: Should be a hyperlink to the content.
 
   Choose only the important content to add in the table that could go into an AI course. Be selective and important.

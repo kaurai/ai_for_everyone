@@ -93,3 +93,19 @@ data/😺 Sam drops 2035 AI bombshell.eml
 data/Microsoft's new Copilot+ PCs have built-in AI _ OpenAI pauses ChatGPT voice resembling Scarlett Johansson _ Colorado governor signs AI law.eml
 data/Google Pixel 9a 📱, OpenAI o1-pro API 🤖, AI in legacy codebases 👨‍💻.eml
 data/🔍 Google Unveils Multi-Agent AI For  Hypothesis Generation.eml
+data/[Model Launch] Gemma 3 Is Now on Kaggle!.eml
+data/🔥Alibaba unveils 1M-token Open-Source Models, Beats GPT-4o-mini.eml
+data/😺Hey Alexa+, stop watching me.eml
+data/Applied AI_ DeepSeek Attracts Surge of Business Users.eml
+data/😺DeepSeek’s big splash.eml
+data/Important information about enhanced Acrobat file sharing features.eml
+data/📢 OpenAI Reveals GPT-5 Roadmap_ Dynamic Intelligence, No Model Picker.eml
+data/😺 Apps without devs WTF.eml
+data/😺 We _were_ concerned.eml
+data/🚀 OpenAI’s major power shift.eml
+data/iPhone 16e 📱, Microsoft's quantum chip ⚛️, perfect book sorting algo 📚.eml
+data/AI News Weekly - Issue #430 _ Here’s why Google pitched its $32B Wiz acquisition as ‘multicloud’.eml
+data/AI News Weekly - Issue #424_  AI ‘godfather’ predicts another revolution in the tech in next five years.eml
+data/Microsoft preps for GPT-5 🤖, Amazon buys James Bond rights 🎥, drop in dev jobs 📉.eml
+data/Applied AI_ ChatGPT’s Most Underrated Use_ Writing Performance Reviews.eml
+data/GenAI Intensive Course With Google_ Registration Issue Resolved.eml

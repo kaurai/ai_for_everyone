@@ -946,5 +946,106 @@ Book,Hugging Face book on scaling LLMs.,,,,,
 Course,Microsoft's course teaches core AI agents concepts.,,,,,
 Tutorial,"AI Co-Scientist, a multi-agent system by Google.",,,,,
 NewModel,Microsoft's Satya Nadella discusses AI and quantum leap.,,,,,
-Research Update,PCR-free kits enhance genome sequencing performance and productivity.,https://email.labxmediagroup.com/e3t/Ctc/LT+113/c3tLW04/VWf8vf8Q8QK5W6ZVPV954tb29W5r_q0D5tqNTtN3kz7Fq3qgyTW95jsWP6lZ3nKW6fX4fS6_X-BQW66Dbg080_ltnN3s5Yhb7cBtDW8WFqd87KWYtxN1cYS65Tpz5LN8qjvKB6YgFHVXN_fR3c_Hg7W1h4HbV2zx36RW8Wf7Bl4TNQNYW2kVBqK4VzSxLW51-BHT2cnqQVW3mhchY7qzbdhW6Cr42z3DX75rW2Rj7gC8rrW2MN27kyzR_1pvCN3T26tKnhwTYW4sPSSf7k8TvbVhqM7j3byjjJW3NlB9n5qSHRwW273x0Q4LMKwHW95LnBY5j9mRTW55FyXs42KbCrW3YmbFJ7PR-rXW1zNJhj6TB42xN1bd0RNtTMrPW3y5Xj72gt75DW6h_Yyk88RBcxW99yhGT5VKmMhW7nrScc9dMsqxVmk2pb8Pd34tf6w48Y404>,genomics,sequencing,PCR-free,library preparation,research
-BOOK,Optimizing whole genome sequencing using PCR-free methods.,https://email.labxmediagroup.com/e3t/Ctc/LT+113/c3tLW04/VWf8vf8Q8QK5W6ZVPV954tb29W5r_q0D5tqNTtN3kz7Fq3qgyTW95jsWP6lZ3pmW5tSvfC715YzyW1CZ--t3v1svHVcX6pj49y5s0W2LYpnB3Zz0bsW6DYJMP6cPJTqW7b1bS81yL_6CW6TS7tf1ps_jQW4bh8x63TJ6vLW1VWgQq2V5JVPW86lRpq3cLkw2W8kNR7X3Y-QwkVh9SwR4hXKSCW5FLdg16M06YFW4nfNC4892tFdW7dzbg55DX4w1W5hGkCn2Z4W6dW5fYwbk46Gb0tW3zKTqm2T3g8XW8zHfvP1Sl7PKW1qQnrR2yGW9mN7lVKQgS43j1W8nsKVY1wxXp8W2Y198F4TP0yzW1CtTkj77wQygW8tgBXH6L_5RGW5_hv1X3R_N84V2Qz5T8bjCklW2yLFhH5NpzcfW6dKCDx2zpn8cW1mfHBG4sdxtxf6mbLG204,"genomics,","PCR-free,","sequencing,",library,"preparation,"
+NewModel,"Introduction of Gemma 3, lightweight open models built on Gemini 2.0 tech, designed for portability and speed.",https://www.kaggle.com,Open Source,AI Model,Gemma 3,Gemini 2.0,Kaggle
+ContentType,Description,Tag1,Tag2,Tag3,Tag4,Tag5
+NewModel,"Alibaba launches Qwen2.5-1M models: Open-source, 7x faster, supports 1M token context length.",Open-source,LLM,Long-context,Qwen2.5,Alibaba
+Product/Tool,"AssemblyAI's Speech-to-Text API for transcriptions, insights, and reliable voice-driven tools.",Speech-to-Text,API,Transcription,Voice Technology,AssemblyAI
+Code,Meta AI releases first stable version of Llama Stack with unified API for Llama Apps.,Llama Stack,Meta AI,API,Llama Apps,Plugin Architecture
+NewModel,"Hugging Face reproduces DeepSeek-R1: Open-source training, reasoning datasets, and RL pipeline.",DeepSeek-R1,Hugging Face,Open-source,Reasoning,AI Model
+Product/Tool,OpenAI rolls out Canvas updates in ChatGPT with o1 model support and HTML/React rendering.,OpenAI,ChatGPT,Canvas,HTML,React
+NewModel,"Alibaba introduces VideoLLaMA 3, surpassing traditional methods in video understanding.",,,,,
+Product/Tool,"xAI updates Grok with enhanced sports, finance, and location widgets.",,,,,
+Tutorial,"DeepSeek-R1 tutorial covers setup, testing, and improving local web research and summarization.",,,,,
+Tutorial,Use Smolagents' capabilities to enable web browsing with dynamic image handling and callback integration.,,,,,
+Tutorial,"Learn a quantitative, research-backed framework for evaluating LLM summaries, focusing on conciseness.",,,,,
+ContentType,Description,Tag1,Tag2,Tag3,Tag4,Tag5
+Product/Tool,"Amazon unveils Alexa+, next-gen assistant, re-architected with LLMs for helpful AI companion, integrates deeply with Amazon's ecosystem.",AI Assistant,Amazon,LLM,Integration,Smart Home Device Ecosystem 
+Course,"Section offers a free 60-minute crash course on AI, teaching practical skills. Learn prompt writing and setup workspace.",AI Workshop,Prompt Engineering,AI Skills,Practical AI,Crash Course
+Product/Tool,Inception's new AI model architecture generates text 10x faster and cheaper than other AI tools.,AI Model,Text Generation,Efficiency,Inception,HTML5
+Product/Tool,Hume's Octave TTS creates emotionally intelligent speech that understands the text's meaning and can adjust tone.,TTS,Emotion AI,Speech Synthesis,Hume AI,Tone Adjustment
+Product/Tool,Eleven Labs now has a speech-to-text transcription model ($0.40 per hour of transcribed audio).,Speech to Text,Transcription,Voice AI,Eleven Labs,Audio Processing
+NewModel,"Microsoft’s Phi-4, a new small language model family that can process speech, vision, and text on your device.",,,,,
+Product/Tool,Lonestar and Phison launched the world first “lunar data center” on a SpaceX rocket.,,,,,
+Tutorial,AI Engineering Summit talk from Vellum unpacks how TDD improves reliability. Get access here!,,,,,
+ContentType,Description,Tag1,Tag2,Tag3,Tag4,Tag5
+NewModel,"DeepSeek's R1 model is being adopted for its cost-effectiveness compared to OpenAI, impacting various AI applications.",DeepSeek,R1,OpenAI,Cost-Effective,AI Model Comparison
+Product/Tool,ZoomInfo is integrating DeepSeek's R1 to reduce AI costs in sales lead targeting and advice features.,ZoomInfo,DeepSeek R1,Sales Leads,AI Integration,Cost Reduction
+Product/Tool,"Perplexity is offering DeepSeek's R1 for answering questions, showcasing its versatility.",Perplexity,DeepSeek R1,Search Engine,AI Answering,Versatility
+NewModel,Meta faces competition as Chinese AI models match its capabilities.,Meta,Chinese AI,AI Competition,Silicon Valley,Model Comparison
+Course,AI Agenda Live - SF is an upcoming event focused on the future of AI.,AI Event,San Francisco,AI Leaders,Future of AI,AI Agenda Live
+ContentType,Description,Tag1,Tag2,Tag3,Tag4,Tag5
+NewModel,DeepSeek R1 model's impact on tech stocks and AI landscape.,DeepSeek,AI Model,Tech Stocks,Market Impact,Janus Pro 7B
+Product/Tool,"Attention: An AI tool for meetings, providing insights and follow-ups.",AI Tool,Meeting Assistant,Productivity,Sales Teams,Attention
+Tutorial,Julian Goldie's guide on using DeepSeek R1 for app development.,DeepSeek R1,App Development,Tutorial,AI Applications,Guide
+Product/Tool,Perplexity now uses DeepSeek R1 for web searches.,DeepSeek R1,Web Search,Perplexity,AI Search,Search Engine
+NewModel,Qwen2.5VL: Open-source agent models from Alibaba.,Open-source,Agent Models,Alibaba,Qwen2.5VL,AI Model
+Product/Tool,Kimi: Chinese AI model for web search and file analysis.,,,,,
+Product/Tool,Co.dev: Turns app ideas into working websites.,,,,,
+Product/Tool,Llamao: Offline AI chat on your phone.,,,,,
+Code,Extract Deepseek's reasoning and apply it to other models.,,,,,
+Code,Llama.vim: AI-powered code completion locally.,,,,,
+ContentType,Description,Tag1,Tag2,Tag3,Tag4,Tag5
+NewModel,"OpenAI plans to merge o-series into GPT-5, dynamically adjusting intelligence based on input complexity.",GPT-5,OpenAI,AI Model,Model Update,Dynamic AI Model Selection 
+Tutorial,"Galileo guide: build reliable AI agents with frameworks, optimization, & failure detection.",AI Agents,Framework,Optimization,Performance,Failure Detection
+NewModel,Luma AI upgrades Dream Machine with Ray2: realistic videos from images with lifelike motion.,Luma AI,Dream Machine,Ray2,Image-to-Video,Video Generation
+Product/Tool,OpenAI expands ChatGPT capabilities with file and image uploads in o1 and o3-mini.,ChatGPT,OpenAI,File Upload,Image Upload,AI Tool
+NewModel,"Perplexity releases Sonar, a Llama 3.3 70B model, 10x faster than Gemini Flash.",Perplexity,Sonar,LLama 3.3,AI Model,Gemini Flash
+NewModel,"Google Deepmind unveils Gemini 2.0 Flash, leading in LM Arena's cost-performance benchmark.",Google Deepmind,Gemini 2.0,LM Arena,Cost-Performance,AI Model
+Product/Tool,"AnythingLLM: Build a private, self-hosted chatbot using any document as context.",AnythingLLM,Chatbot,Self-Hosted,LLM,Vector Database
+Code,Browser-use automates browser interactions using AI agents for data extraction & navigation.,Browser Automation,AI Agents,Data Extraction,Navigation,Web Automation
+Code,GPT Researcher: Automate web and local research using autonomous AI agents for reports.,GPT Researcher,AI Agents,Research Reports,Web Research,Automation
+Tutorial,"Learn attention mechanism in transformers. Implement self-attention, masked attention, multi-head attention.",Attention Mechanism,Transformers,Self-Attention,PyTorch,Deep Learning
+Product/Tool,AI Prompt Manager (v0.1) built entirely with AI for sharing Deep Research prompts.,https://neuron-prompt-library.lovable.app/,AI Prompt Tool,Lovable,Supabase,ChatGPT,App Builder
+Product/Tool,"Overview of AI coding tools like Lovable, Bolt.new, Replit, Vercel V0, GitHub Spark, Copilot, Cursor.",https://www.theneurondaily.com/p/devs-getting-replaced,AI Coding,Development Tools,GitHub Copilot,Replit,Vercel
+Funding,Apptronik raised $350M to build humanoid robots for warehouse tasks.,https://techcrunch.com/2025/02/13/apptronik-raises-350m-to-build-humanoid-robots-with-help-from-google/,Robotics,Funding,Apptronik,Humanoid Robots,Automation
+Tutorial,SOC 2 compliance checklist for startups to streamline compliance.,https://www.vanta.com/downloads/the-soc-2-compliance-checklist?utm_campaign=vanta_for_startups&utm_source=the-neuron&utm_medium=newsletter,Compliance,Startups,SOC 2,Security,Vanta
+Product/Tool,Perplexity AI's Deep Research tool writes expert reports by reading hundreds of sources.,https://www.perplexity.ai/hub/blog/introducing-perplexity-deep-research,AI Research,Perplexity AI,Deep Research,Search Tool,Report Generation
+NewModel,"BBC ranked AI search tools' accuracy, ChatGPT Enterprise (GPT-4) had 15% significant errors.",https://www.bbc.co.uk/aboutthebbc/documents/bbc-research-into-ai-assistants.pdf,AI Accuracy,Hallucination,ChatGPT,Gemini,Copilot
+Book,Research paper argues that AI hallucination is inevitable with mathematical proof.,https://arxiv.org/pdf/2401.11817,AI Hallucination,Research Paper,LLMs,Machine Learning,Cognitive Edge
+Book,Research Paper outlining what LLMs know and what they don't,https://arxiv.org/pdf/2401.13835,LLM,Research,AI,Knowledge,Models
+NewModel,"OpenAI is actively training the next version of ChatGPT, potentially named something other than GPT-5.",OpenAI,ChatGPT,New Model,GPT-5,AI Safety
+Product/Tool,"AE Studio offers AI solutions for businesses, including building custom AI products with expert teams.",AI Solutions,Business AI,AI Development,Custom AI,AE Studio
+NewModel,"Gemini 1.5 Pro and Advanced rank highly on the LMSYS chatbot leaderboard, behind GPT-4o.",Gemini,Google AI,Chatbot,LMSYS,AI Model
+Product/Tool,Coactive AI uses multimodal AI for visual content analysis (raised $30M).,Multimodal AI,Visual Content,AI Analysis,Coactive AI,Image Processing
+Product/Tool,QA.tech is an AI that tests web apps and provides actionable feedback (raised $2.5M).,AI Testing,Web Apps,Bug Reports,QA.tech,AI Feedback
+NewModel,"OpenAI shifts focus to Softbank for computing power, reducing reliance on Microsoft.",OpenAI,Softbank,Microsoft,Computing Power,Stargate Project
+Product/Tool,"Acres Technology uses AI to personalize gambling experiences, increasing customer engagement and revenue.",AI,Gambling,Personalization,Revenue,Customer Engagement
+NewModel,"Grok 3 censored unflattering info about Musk/Trump, sparking bias, transparency debates.",Grok,Censorship,Bias,Transparency,Content Moderation
+Code,"DeepSeek open-sources five code repositories to accelerate tech innovation, challenging OpenAI.",DeepSeek,Open Source,Innovation,Code Repositories,AI Development
+Product/Tool,Innovating with AI offers tools/templates to become an AI consultant. ,AI Consulting,Business,Tools,Templates,Training
+Product/Tool,Sephora increased conversion rates by 30% using AI-powered personalization.,AI,Personalization,Retail,Conversion Rates,Case Study
+Product/Tool,LogicMonitor is a SaaS platform for IT enterprises,SaaS,IT,Integration,Platform,Monitoring
+Book,"Brilliant: Quick, interactive lessons in AI, programming, logic, and data science.",AI,Programming,Logic,Data Science,Education
+Product/Tool,Needle is for AI-powered knowledge discovery across data sources,AI,Knowledge Discovery,Data,Productivity,Assistant
+Product/Tool,Notis is a voice-powered Notion assistant for productivity.,Notion,Voice Assistant,AI,Productivity,Tool
+Course,Podcast discusses building AI products for law enterprises and UX considerations,AI,Legal,UX,Podcast,Harvey.ai
+Product/Tool,"Mastra is a TypeScript framework for building AI applications with workflows, agents, RAG, and integrations.",TypeScript,AI Framework,Workflows,RAG,Agents
+Product/Tool,"Postgres Language Server offers SQL tooling for Postgres development, with features accessible via LSP, CLI, HTTP APIs.",Postgres,SQL,Language Server Protocol,Tooling,Developer Experience
+NewModel,"Google's Gemini 2.0-based AI generates biomedical research hypotheses, aiding researchers in discovering new areas of study.",Gemini 2.0,AI,Hypothesis Generation,Biomedical Research,Multi-Agent System
+Funding,Arcade raises $12M to make AI agents less awful.,AI Agents,Funding,Startups,Infrastructure,Laude Ventures 
+NewModel,Nvidia shows NEO robot running GR00T N1 foundation model.,Robotics,Nvidia,GR00T N1,Foundation Model,GTC 2025
+NewModel,Il Foglio publishes world’s first AI-generated edition.,AI,Newspaper,Il Foglio,Generated Content,Publishing
+NewModel,First music album created entirely with AI.,AI,Music,Album,Creativity,Technology
+NewModel,Google DeepMind predicts AGI in 5-10 years.,AGI,Google DeepMind,Predictions,AI,Future
+Product/Tool,Transitioning to Usage-Based Pricing Webinar with Sam Lee.,Pricing,Webinar,AI,Hubspot,Metronome
+NewModel,"DeepSeek banned on government devices in South Korea, Australia, Taiwan.",DeepSeek,AI,Ban,Government,Regulation compliance 
+NewModel,"Google updates ethics policy, will use AI within international law.",AI,Ethics,Google,Policy,International Law
+Code,AI writing more code leading to security vulnerabilities.,AI,Code,Security,Vulnerabilities,Cybersecurity
+Funding,"Sweden invests €1.5bn in AI, aiming to regain tech leadership.",AI,Sweden,Investment,Technology,Government
+Tutorial,Overview of hospitality and tourism research trends in AI.,AI,Research,Tourism,Hospitality,Trends
+Code,Survey on Red Teaming for Generative Models and attack strategies.,AI,Generative Models,Red Teaming,Security,Survey
+Product/Tool,Ambi Robotics automates pallet packing with novel AmbiStack system.,Robotics,Automation,Pallet Packing,AmbiStack,Berkeley
+Course,Discover 10 AI topics with Essentials sister newsletter.,AI,Newsletter,Ethics,Use Cases,Research
+NewModel,"OpenAI may release GPT-4.5 soon, with GPT-5 potentially arriving in May.",GPT-4.5,GPT-5,OpenAI,Large Language Models,AI
+Code,DeepEval is an open-source framework for evaluating large language model systems.,LLM Evaluation,Open Source,Testing,RAG,DeepEval
+Code,"KubeVPN connects to Kubernetes clusters, enabling developers to run pods locally.",Kubernetes,Development,Cloud-Native,Docker,KubeVPN
+NewModel,"AI model trained on 128,000 genomes can write DNA on demand.",AI,Biology,DNA,Genomes,Model
+Code,DeepSeek open-sources repositories containing building blocks of its online service.,Open Source,DeepSeek,AI,Infrastructure,Transparency
+NewModel,"Grok 3 performs at a level comparable to models from OpenAI, Google, DeepMind.",Grok 3,AI Model,Performance,OpenAI,Google
+Product/Tool,"Moderna uses custom ChatGPT for performance reviews, integrated with Workday for trend analysis.",HR,ChatGPT,Performance Reviews,Automation,Moderna
+Product/Tool,"AWS offers Trainium 2 AI chips at a lower cost than Nvidia's H100, aiming for same performance.",AWS,Trainium 2,Nvidia,AI Chips,Cloud Computing
+Funding,"Google is buying Wiz, a cloud cybersecurity startup, for $32 billion.",Google,Wiz,Cybersecurity,Acquisition,Cloud
+NewModel,DeepSeek is being closely guarded,DeepSeek,China,AI Model,National Treasure,Guarded
+Product/Tool,Google Taps MediaTek for Cheaper AI Chips,Google,MediaTek,AI Chips,Cheaper,Hardware
+Product/Tool,Amazon Undercuts Nvidia With Aggressive AI Chip Discounts,Amazon,Nvidia,AI Chips,Discounts,Cloud
+Course,GenAI Intensive Course with Google registration is now open.,https://www.kaggle.com,GenAI,Kaggle,Google,AI Course,Registration
